@@ -1,0 +1,108 @@
+brynjar@node2:~$ sudo taskset -c 10,12 bpftrace -e 'kprobe:tctx_task_work { @[kstack] = count(); }' -c "/mnt/sdb/brynjar/fio-uring2/fio --ioengine=liburing --rw=randread --name=liburing-test --filename=/dev/nvme2n1 --numjobs=16 --direct=1 --bs=512 --iodepth=64 --size=512G --runtime=30 --group_reporting --coop_taskrun"
+Attaching 1 probe...
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=64
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=16): [r(16)][100.0%][r=203MiB/s][r=416k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=1086143: Wed Jan 17 16:58:45 2024
+  read: IOPS=417k, BW=204MiB/s (214MB/s)(6116MiB/30033msec)
+    slat (nsec): min=42, max=100011k, avg=343.30, stdev=113880.26
+    clat (usec): min=11, max=136337, avg=2438.67, stdev=10021.43
+     lat (usec): min=11, max=136337, avg=2439.01, stdev=10022.02
+    clat percentiles (usec):
+     |  1.00th=[   285],  5.00th=[   293], 10.00th=[   297], 20.00th=[   302],
+     | 30.00th=[   306], 40.00th=[   306], 50.00th=[   310], 60.00th=[   310],
+     | 70.00th=[   310], 80.00th=[   314], 90.00th=[   318], 95.00th=[ 11994],
+     | 99.00th=[ 52167], 99.50th=[ 56361], 99.90th=[ 92799], 99.95th=[ 95945],
+     | 99.99th=[104334]
+   bw (  KiB/s): min=174341, max=231190, per=99.46%, avg=207390.34, stdev=715.84, samples=945
+   iops        : min=348682, max=462382, avg=414780.75, stdev=1431.69, samples=945
+  lat (usec)   : 20=0.01%, 50=0.01%, 100=0.01%, 250=0.01%, 500=94.77%
+  lat (usec)   : 750=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.07%, 20=0.35%, 50=3.65%
+  lat (msec)   : 100=1.11%, 250=0.03%
+  cpu          : usr=2.13%, sys=10.45%, ctx=12528, majf=0, minf=43758
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+     issued rwts: total=12525223,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+   READ: bw=204MiB/s (214MB/s), 204MiB/s-204MiB/s (214MB/s-214MB/s), io=6116MiB (6413MB), run=30033-30033msec
+
+Disk stats (read/write):
+  nvme2n1: ios=12525222/0, sectors=12525222/0, merge=0/0, ticks=124078/0, in_queue=124078, util=99.30%
+
+
+@[
+    tctx_task_work+1
+    get_signal+1104
+    arch_do_signal_or_restart+47
+    exit_to_user_mode_prepare+245
+    irqentry_exit_to_user_mode+9
+    irqentry_exit+59
+    sysvec_call_function+102
+    asm_sysvec_call_function+27
+]: 1
+@[
+    tctx_task_work+1
+    exit_to_user_mode_prepare+399
+    irqentry_exit_to_user_mode+9
+    irqentry_exit+59
+    sysvec_apic_timer_interrupt+102
+    asm_sysvec_apic_timer_interrupt+27
+]: 3
+@[
+    tctx_task_work+1
+    exit_to_user_mode_prepare+399
+    syscall_exit_to_user_mode+38
+    do_syscall_64+105
+    entry_SYSCALL_64_after_hwframe+114
+]: 4
+@[
+    tctx_task_work+1
+    io_run_task_work+75
+    __do_sys_io_uring_enter+385
+    __x64_sys_io_uring_enter+34
+    do_syscall_64+89
+    entry_SYSCALL_64_after_hwframe+114
+]: 5
+@[
+    tctx_task_work+1
+    io_run_task_work+75
+    __do_sys_io_uring_enter+750
+    __x64_sys_io_uring_enter+34
+    do_syscall_64+89
+    entry_SYSCALL_64_after_hwframe+114
+]: 8
+@[
+    tctx_task_work+1
+    get_signal+1104
+    arch_do_signal_or_restart+47
+    exit_to_user_mode_prepare+245
+    irqentry_exit_to_user_mode+9
+    irqentry_exit+59
+    sysvec_apic_timer_interrupt+102
+    asm_sysvec_apic_timer_interrupt+27
+]: 3068
+@[
+    tctx_task_work+1
+    get_signal+1104
+    arch_do_signal_or_restart+47
+    exit_to_user_mode_prepare+245
+    irqentry_exit_to_user_mode+9
+    irqentry_exit+59
+    exc_page_fault+135
+    asm_exc_page_fault+39
+]: 18832
+@[
+    tctx_task_work+1
+    get_signal+1104
+    arch_do_signal_or_restart+47
+    exit_to_user_mode_prepare+245
+    syscall_exit_to_user_mode+38
+    do_syscall_64+105
+    entry_SYSCALL_64_after_hwframe+114
+]: 11661199

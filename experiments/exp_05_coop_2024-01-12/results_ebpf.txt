@@ -1,0 +1,188 @@
+brynjar@node2:~/exp_5_2024-01-12$ sudo sh run_ebpf.sh
+19 11 13 15 17 19 1 3 5 7 8 9
+stdin:1:129-136: ERROR: Argument mismatch for @: trying to access with arguments: [unsigned int64] when map expects arguments: [string[11]]
+kprobe:native_smp_send_reschedule { @["reschedule"] = count(); } kprobe:kick_process { @["kick"] = count(); } kprobe:nvme_irq { @[arg0] = count(); }
+                                                                                                                                ~~~~~~~
+stdin:1:129-136: ERROR: Argument mismatch for @: trying to access with arguments: [unsigned int64] when map expects arguments: [string[11]]
+kprobe:native_smp_send_reschedule { @["reschedule"] = count(); } kprobe:kick_process { @["kick"] = count(); } kprobe:nvme_irq { @[arg0] = count(); }
+                                                                                                                                ~~~~~~~
+stdin:1:129-136: ERROR: Argument mismatch for @: trying to access with arguments: [unsigned int64] when map expects arguments: [string[11]]
+kprobe:native_smp_send_reschedule { @["reschedule"] = count(); } kprobe:kick_process { @["kick"] = count(); } kprobe:nvme_irq { @[arg0] = count(); }
+                                                                                                                                ~~~~~~~
+stdin:1:129-136: ERROR: Argument mismatch for @: trying to access with arguments: [unsigned int64] when map expects arguments: [string[11]]
+kprobe:native_smp_send_reschedule { @["reschedule"] = count(); } kprobe:kick_process { @["kick"] = count(); } kprobe:nvme_irq { @[arg0] = count(); }
+                                                                                                                                ~~~~~~~
+brynjar@node2:~/exp_5_2024-01-12$ vim run_ebpf.sh
+brynjar@node2:~/exp_5_2024-01-12$ sudo sh run_ebpf.sh
+19 11 13 15 17 19 1 3 5 7 8 9
+Attaching 3 probes...
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=64
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 1 (f=1): [_(15),r(1)][6.3%][r=219MiB/s][r=449k IOPS][eta 37m:30s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=978500: Fri Jan 12 17:27:56 2024
+  read: IOPS=484k, BW=236MiB/s (248MB/s)(34.6GiB/150029msec)
+    slat (nsec): min=36, max=112010k, avg=334.19, stdev=126632.57
+    clat (usec): min=19, max=162441, avg=2107.01, stdev=10032.35
+     lat (usec): min=19, max=162441, avg=2107.34, stdev=10033.10
+    clat percentiles (usec):
+     |  1.00th=[   251],  5.00th=[   253], 10.00th=[   255], 20.00th=[   258],
+     | 30.00th=[   260], 40.00th=[   262], 50.00th=[   265], 60.00th=[   265],
+     | 70.00th=[   265], 80.00th=[   269], 90.00th=[   273], 95.00th=[   343],
+     | 99.00th=[ 56361], 99.50th=[ 60031], 99.90th=[104334], 99.95th=[108528],
+     | 99.99th=[112722]
+   bw (  KiB/s): min=166538, max=311439, per=99.89%, avg=241809.83, stdev=925.39, samples=4784
+   iops        : min=333076, max=622878, avg=483619.74, stdev=1850.77, samples=4784
+  lat (usec)   : 20=0.01%, 50=0.01%, 100=0.01%, 250=1.05%, 500=94.56%
+  lat (usec)   : 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.04%, 20=1.27%, 50=0.90%
+  lat (msec)   : 100=2.03%, 250=0.14%
+  cpu          : usr=2.48%, sys=10.04%, ctx=55616, majf=0, minf=1328597
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+     issued rwts: total=72637788,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+   READ: bw=236MiB/s (248MB/s), 236MiB/s-236MiB/s (248MB/s-248MB/s), io=34.6GiB (37.2GB), run=150029-150029msec
+
+Disk stats (read/write):
+  nvme2n1: ios=72618549/0, sectors=72618549/0, merge=0/0, ticks=820346/0, in_queue=820346, util=99.94%
+
+
+@[reschedule]: 51512330
+@[kick]: 51522555
+@b[84]: 34474122
+@b[83]: 35237179
+Attaching 3 probes...
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=64
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 2 (f=1): [E(1),_(1),f(1),_(2),E(2),_(2),E(1),_(4),E(1),r(1)][10.1%][r=246MiB/s][r=504k IOPS][eta 22m:30s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=978568: Fri Jan 12 17:30:28 2024
+  read: IOPS=528k, BW=258MiB/s (270MB/s)(37.8GiB/150037msec)
+    slat (nsec): min=35, max=120008k, avg=359.63, stdev=126419.85
+    clat (usec): min=15, max=140257, avg=1932.58, stdev=9010.39
+     lat (usec): min=15, max=140257, avg=1932.94, stdev=9011.21
+    clat percentiles (usec):
+     |  1.00th=[   231],  5.00th=[   233], 10.00th=[   235], 20.00th=[   237],
+     | 30.00th=[   239], 40.00th=[   239], 50.00th=[   241], 60.00th=[   241],
+     | 70.00th=[   243], 80.00th=[   245], 90.00th=[   249], 95.00th=[   318],
+     | 99.00th=[ 52167], 99.50th=[ 56361], 99.90th=[ 88605], 99.95th=[100140],
+     | 99.99th=[108528]
+   bw (  KiB/s): min=109264, max=387672, per=99.99%, avg=263832.90, stdev=7483.05, samples=4784
+   iops        : min=218528, max=775344, avg=527665.85, stdev=14966.11, samples=4784
+  lat (usec)   : 20=0.01%, 50=0.01%, 100=0.01%, 250=90.60%, 500=4.93%
+  lat (usec)   : 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.30%, 20=0.74%, 50=2.28%
+  lat (msec)   : 100=1.07%, 250=0.06%
+  cpu          : usr=2.65%, sys=9.87%, ctx=62954, majf=0, minf=1348416
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+     issued rwts: total=79179422,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+   READ: bw=258MiB/s (270MB/s), 258MiB/s-258MiB/s (270MB/s-270MB/s), io=37.8GiB (40.5GB), run=150037-150037msec
+
+Disk stats (read/write):
+  nvme2n1: ios=79164124/0, sectors=79164124/0, merge=0/0, ticks=946745/0, in_queue=946745, util=99.94%
+
+
+@[reschedule]: 62
+@[kick]: 7460
+@b[84]: 38397690
+@b[83]: 39216308
+Attaching 3 probes...
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=64
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 1 (f=1): [_(15),r(1)][6.3%][r=177MiB/s][r=363k IOPS][eta 37m:30s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=978623: Fri Jan 12 17:33:00 2024
+  read: IOPS=387k, BW=189MiB/s (198MB/s)(27.7GiB/150037msec)
+    slat (nsec): min=35, max=120022k, avg=675.09, stdev=180768.41
+    clat (usec): min=10, max=156358, avg=2630.39, stdev=11071.74
+     lat (usec): min=10, max=156358, avg=2631.07, stdev=11073.09
+    clat percentiles (usec):
+     |  1.00th=[   310],  5.00th=[   318], 10.00th=[   318], 20.00th=[   322],
+     | 30.00th=[   326], 40.00th=[   326], 50.00th=[   330], 60.00th=[   330],
+     | 70.00th=[   334], 80.00th=[   334], 90.00th=[   343], 95.00th=[ 10421],
+     | 99.00th=[ 56361], 99.50th=[ 66847], 99.90th=[101188], 99.95th=[106431],
+     | 99.99th=[112722]
+   bw (  KiB/s): min=90623, max=295823, per=100.00%, avg=193642.86, stdev=1744.60, samples=4784
+   iops        : min=181247, max=591646, avg=387285.89, stdev=3489.20, samples=4784
+  lat (usec)   : 20=0.01%, 50=0.01%, 100=0.01%, 250=0.01%, 500=94.50%
+  lat (usec)   : 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.06%, 20=1.57%, 50=1.06%
+  lat (msec)   : 100=2.67%, 250=0.12%
+  cpu          : usr=2.27%, sys=10.25%, ctx=55727, majf=0, minf=1366575
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+     issued rwts: total=58100279,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+   READ: bw=189MiB/s (198MB/s), 189MiB/s-189MiB/s (198MB/s-198MB/s), io=27.7GiB (29.7GB), run=150037-150037msec
+
+Disk stats (read/write):
+  nvme2n1: ios=58087316/0, sectors=58087316/0, merge=0/0, ticks=541872/0, in_queue=541872, util=99.97%
+
+
+@[reschedule]: 69
+@[kick]: 47459938
+@b[84]: 28629052
+@b[83]: 29390425
+Attaching 3 probes...
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=64
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 1 (f=1): [_(15),r(1)][6.3%][r=186MiB/s][r=381k IOPS][eta 37m:30s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=978679: Fri Jan 12 17:35:32 2024
+  read: IOPS=413k, BW=202MiB/s (211MB/s)(29.5GiB/150024msec)
+    slat (nsec): min=35, max=112017k, avg=716.49, stdev=184280.81
+    clat (usec): min=13, max=146010, avg=2464.77, stdev=10744.26
+     lat (usec): min=14, max=146010, avg=2465.49, stdev=10745.71
+    clat percentiles (usec):
+     |  1.00th=[   293],  5.00th=[   297], 10.00th=[   302], 20.00th=[   302],
+     | 30.00th=[   306], 40.00th=[   306], 50.00th=[   306], 60.00th=[   310],
+     | 70.00th=[   310], 80.00th=[   314], 90.00th=[   322], 95.00th=[ 10421],
+     | 99.00th=[ 56361], 99.50th=[ 66323], 99.90th=[104334], 99.95th=[106431],
+     | 99.99th=[110625]
+   bw (  KiB/s): min=141603, max=264780, per=99.89%, avg=206294.88, stdev=821.87, samples=4784
+   iops        : min=283206, max=529560, avg=412589.89, stdev=1643.74, samples=4784
+  lat (usec)   : 20=0.01%, 50=0.01%, 100=0.01%, 250=0.01%, 500=94.83%
+  lat (usec)   : 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.06%, 20=1.48%, 50=1.06%
+  lat (msec)   : 100=2.40%, 250=0.14%
+  cpu          : usr=2.54%, sys=9.98%, ctx=55781, majf=0, minf=1340038
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+     issued rwts: total=61965860,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+   READ: bw=202MiB/s (211MB/s), 202MiB/s-202MiB/s (211MB/s-211MB/s), io=29.5GiB (31.7GB), run=150024-150024msec
+
+Disk stats (read/write):
+  nvme2n1: ios=61948110/0, sectors=61948110/0, merge=0/0, ticks=578144/0, in_queue=578144, util=99.96%
+
+
+@[reschedule]: 48
+@[kick]: 4307
+@b[84]: 30541181
+@b[83]: 31368339
+brynjar@node2:~/exp_5_2024-01-12$ for name in `ls /sys/class/nvme/nvme2/device/msi_irqs/`; do cat /proc/irq/$name/effective_affinity_list; done | paste -sd " ";
+19 11 13 15 17 19 1 3 5 7 8 9
+brynjar@node2:~/exp_5_2024-01-12$ cat /proc/irq/83/effective_affinity_list
+11
+brynjar@node2:~/exp_5_2024-01-12$ cat /proc/irq/84/effective_affinity_list
+13
+brynjar@node2:~/exp_5_2024-01-12$

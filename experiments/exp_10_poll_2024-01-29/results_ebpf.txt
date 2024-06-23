@@ -1,0 +1,34 @@
+@[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_reschedule_ipi+133
+    asm_sysvec_reschedule_ipi+27
+]: 44
+@[
+    exit_to_user_mode_prepare+1
+    ret_from_fork+31
+]: 148
+@[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_call_function_single+102
+    asm_sysvec_call_function_single+27
+]: 226
+@[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_apic_timer_interrupt+102
+    asm_sysvec_apic_timer_interrupt+27
+]: 21871
+@[
+    exit_to_user_mode_prepare+1
+    do_syscall_64+105
+    entry_SYSCALL_64_after_hwframe+114
+]: 90502
+@[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    exc_page_fault+135
+    asm_exc_page_fault+39
+]: 1027524
+

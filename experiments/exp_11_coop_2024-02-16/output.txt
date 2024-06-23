@@ -1,0 +1,52 @@
+brynjar@node2:~/exp_12_2024_02_19$ sudo sh run.sh
+16 26 36
+Using QD 1
+New thread PID: 246349
+Time elapsed: 37197107392
+Using COOP_TASKRUN
+Using QD 1
+New thread PID: 246359
+Time elapsed: 37188454385
+Using QD 2
+New thread PID: 246375
+Time elapsed: 19840508659
+Using COOP_TASKRUN
+Using QD 2
+New thread PID: 246386
+Time elapsed: 19868158438
+Using QD 4
+New thread PID: 246396
+Time elapsed: 10679553222
+Using COOP_TASKRUN
+Using QD 4
+New thread PID: 246405
+Time elapsed: 10589671858
+Using QD 8
+New thread PID: 246413
+Time elapsed: 10305731288
+Using COOP_TASKRUN
+Using QD 8
+New thread PID: 246421
+Time elapsed: 10276367314
+Using QD 16
+New thread PID: 246429
+Time elapsed: 10286990267
+Using COOP_TASKRUN
+Using QD 16
+New thread PID: 246437
+Time elapsed: 10320721184
+Using QD 32
+New thread PID: 246445
+Time elapsed: 10347169518
+Using COOP_TASKRUN
+Using QD 32
+New thread PID: 246453
+Time elapsed: 10310908439
+Using QD 64
+New thread PID: 246461
+Time elapsed: 10274360445
+Using COOP_TASKRUN
+Using QD 64
+New thread PID: 246469
+Time elapsed: 10295861101
+

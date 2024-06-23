@@ -1,0 +1,516 @@
+brynjar@node2:~$ cd exp_12_2024_02_19/
+brynjar@node2:~/exp_12_2024_02_19$ sudo sh run_ebpf.sh
+16 26 36
+Attaching 5 probes...
+Using QD 1
+New thread PID: 246090
+Time elapsed: 38749360173
+
+
+@[reschedule]: 111
+@b[task_work_add]: 2006887
+@c[87]: 49
+@c[72]: 2000000
+@kick[37]: 1
+@kick[6]: 1
+@kick[20]: 1
+@kick[10]: 1
+@kick[27]: 1
+@kick[7]: 2
+@kick[1]: 2
+@kick[4]: 2
+@kick[25]: 3
+@kick[34]: 3
+@kick[30]: 3
+@kick[21]: 4
+@kick[38]: 5
+@kick[31]: 5
+@kick[0]: 6
+@kick[16]: 6
+@kick[24]: 8
+@kick[33]: 9
+@kick[2]: 9
+@kick[35]: 14
+@kick[26]: 15
+@kick[32]: 45
+@kick[15]: 63
+@kick[12]: 111
+@kick[3]: 166
+@kick[13]: 208
+@kick[14]: 363
+@kick[11]: 1527
+@kick[39]: 4313
+@wake[0]: 60
+@wake[1]: 2000052
+Attaching 5 probes...
+Using COOP_TASKRUN
+Using QD 1
+New thread PID: 246113
+Time elapsed: 38734965672
+
+
+@[reschedule]: 84
+@b[task_work_add]: 2002674
+@c[87]: 49
+@c[72]: 2000000
+@kick[34]: 1
+@kick[27]: 1
+@kick[11]: 1
+@kick[25]: 1
+@kick[20]: 1
+@kick[10]: 1
+@kick[22]: 2
+@kick[12]: 2
+@kick[39]: 2
+@kick[16]: 2
+@kick[13]: 2
+@kick[7]: 3
+@kick[4]: 3
+@kick[30]: 3
+@kick[23]: 3
+@kick[1]: 5
+@kick[38]: 6
+@kick[0]: 8
+@kick[21]: 8
+@kick[24]: 11
+@kick[2]: 13
+@kick[36]: 41
+@kick[35]: 49
+@kick[33]: 58
+@kick[32]: 99
+@kick[3]: 166
+@kick[15]: 226
+@kick[14]: 408
+@kick[19]: 1525
+@wake[0]: 42
+@wake[1]: 1999997
+Attaching 5 probes...
+Using QD 2
+New thread PID: 246132
+Time elapsed: 20474160346
+
+
+@[reschedule]: 432404
+@b[task_work_add]: 1946440
+@c[87]: 49
+@c[72]: 1999984
+@kick[8]: 1
+@kick[12]: 1
+@kick[1]: 1
+@kick[37]: 1
+@kick[6]: 1
+@kick[13]: 1
+@kick[30]: 1
+@kick[17]: 2
+@kick[18]: 2
+@kick[20]: 3
+@kick[39]: 3
+@kick[16]: 3
+@kick[2]: 4
+@kick[27]: 4
+@kick[33]: 6
+@kick[32]: 8
+@kick[0]: 10
+@kick[5]: 12
+@kick[24]: 13
+@kick[36]: 21
+@kick[35]: 46
+@kick[31]: 52
+@kick[3]: 83
+@kick[10]: 100
+@kick[15]: 119
+@kick[14]: 212
+@kick[19]: 1525
+@kick[26]: 528017
+@wake[0]: 528049
+@wake[1]: 1416217
+Attaching 5 probes...
+Using COOP_TASKRUN
+Using QD 2
+New thread PID: 246147
+Time elapsed: 20313195658
+
+
+@[reschedule]: 74
+@b[task_work_add]: 1920466
+@c[87]: 49
+@c[72]: 1999997
+@kick[10]: 1
+@kick[27]: 1
+@kick[37]: 1
+@kick[1]: 2
+@kick[5]: 3
+@kick[8]: 3
+@kick[21]: 3
+@kick[32]: 4
+@kick[33]: 4
+@kick[2]: 4
+@kick[24]: 8
+@kick[0]: 8
+@kick[26]: 9
+@kick[36]: 20
+@kick[35]: 46
+@kick[31]: 54
+@kick[3]: 82
+@kick[30]: 98
+@kick[15]: 121
+@kick[14]: 204
+@kick[19]: 1524
+@wake[0]: 522177
+@wake[1]: 1396043
+Attaching 5 probes...
+Using QD 4
+New thread PID: 246161
+Time elapsed: 10777178970
+
+
+@[reschedule]: 648069
+@b[task_work_add]: 1668564
+@c[87]: 49
+@c[72]: 1990629
+@kick[30]: 1
+@kick[16]: 1
+@kick[27]: 2
+@kick[1]: 2
+@kick[28]: 3
+@kick[5]: 3
+@kick[2]: 4
+@kick[21]: 4
+@kick[0]: 8
+@kick[24]: 8
+@kick[6]: 9
+@kick[36]: 10
+@kick[33]: 10
+@kick[3]: 41
+@kick[12]: 48
+@kick[35]: 49
+@kick[15]: 67
+@kick[10]: 98
+@kick[14]: 106
+@kick[19]: 1524
+@kick[26]: 717223
+@wake[0]: 717225
+@wake[1]: 949386
+Attaching 5 probes...
+Using COOP_TASKRUN
+Using QD 4
+New thread PID: 246173
+Time elapsed: 10765874354
+
+
+@[reschedule]: 31
+@b[task_work_add]: 1663607
+@c[87]: 49
+@c[72]: 1990445
+@kick[10]: 1
+@kick[16]: 1
+@kick[18]: 1
+@kick[27]: 1
+@kick[1]: 2
+@kick[2]: 3
+@kick[28]: 3
+@kick[5]: 3
+@kick[12]: 4
+@kick[33]: 4
+@kick[0]: 7
+@kick[24]: 8
+@kick[26]: 9
+@kick[36]: 10
+@kick[3]: 41
+@kick[35]: 46
+@kick[11]: 54
+@kick[15]: 68
+@kick[30]: 98
+@kick[14]: 107
+@kick[19]: 1525
+@wake[0]: 629845
+@wake[1]: 1031835
+Attaching 5 probes...
+Using QD 8
+New thread PID: 246185
+Time elapsed: 10251624270
+
+
+@[reschedule]: 377835
+@b[task_work_add]: 1526956
+@c[87]: 49
+@c[72]: 1988688
+@kick[39]: 1
+@kick[16]: 1
+@kick[9]: 3
+@kick[2]: 3
+@kick[12]: 4
+@kick[24]: 8
+@kick[0]: 9
+@kick[27]: 10
+@kick[36]: 10
+@kick[33]: 14
+@kick[35]: 46
+@kick[11]: 54
+@kick[15]: 68
+@kick[3]: 84
+@kick[30]: 99
+@kick[14]: 106
+@kick[19]: 1525
+@kick[26]: 461783
+@wake[0]: 461782
+@wake[1]: 1063266
+Attaching 5 probes...
+Using COOP_TASKRUN
+Using QD 8
+New thread PID: 246197
+Time elapsed: 10336221969
+
+
+@[reschedule]: 89
+@b[task_work_add]: 1538380
+@c[87]: 49
+@c[72]: 1989748
+@kick[37]: 1
+@kick[27]: 1
+@kick[4]: 1
+@kick[26]: 1
+@kick[13]: 1
+@kick[20]: 1
+@kick[34]: 2
+@kick[8]: 2
+@kick[10]: 3
+@kick[38]: 3
+@kick[31]: 3
+@kick[29]: 3
+@kick[22]: 4
+@kick[28]: 6
+@kick[18]: 6
+@kick[16]: 6
+@kick[6]: 6
+@kick[39]: 7
+@kick[21]: 7
+@kick[24]: 8
+@kick[0]: 9
+@kick[2]: 9
+@kick[7]: 9
+@kick[36]: 10
+@kick[33]: 12
+@kick[12]: 12
+@kick[3]: 43
+@kick[35]: 46
+@kick[11]: 51
+@kick[15]: 68
+@kick[30]: 100
+@kick[14]: 104
+@kick[19]: 1527
+@wake[0]: 387192
+@wake[1]: 1149368
+Attaching 5 probes...
+Using QD 16
+New thread PID: 246210
+Time elapsed: 10269858831
+
+
+@[reschedule]: 309116
+@b[task_work_add]: 1505795
+@c[87]: 49
+@c[72]: 1989443
+@kick[38]: 1
+@kick[14]: 3
+@kick[6]: 3
+@kick[29]: 3
+@kick[2]: 4
+@kick[34]: 5
+@kick[13]: 6
+@kick[24]: 8
+@kick[33]: 9
+@kick[27]: 10
+@kick[0]: 10
+@kick[3]: 43
+@kick[35]: 46
+@kick[31]: 52
+@kick[15]: 68
+@kick[30]: 99
+@kick[12]: 102
+@kick[19]: 502
+@kick[39]: 1022
+@kick[26]: 371242
+@wake[0]: 371243
+@wake[1]: 1132643
+Attaching 5 probes...
+Using COOP_TASKRUN
+Using QD 16
+New thread PID: 246223
+Time elapsed: 10269231815
+
+
+@[reschedule]: 15
+@b[task_work_add]: 1490296
+@c[87]: 49
+@c[72]: 1989739
+@kick[26]: 1
+@kick[18]: 1
+@kick[38]: 1
+@kick[2]: 3
+@kick[21]: 4
+@kick[27]: 4
+@kick[1]: 5
+@kick[0]: 6
+@kick[32]: 7
+@kick[24]: 8
+@kick[9]: 9
+@kick[33]: 18
+@kick[3]: 41
+@kick[35]: 46
+@kick[31]: 48
+@kick[15]: 67
+@kick[30]: 99
+@kick[12]: 107
+@kick[39]: 1524
+@wake[0]: 315081
+@wake[1]: 1173284
+Attaching 5 probes...
+Using QD 32
+New thread PID: 246235
+Time elapsed: 10250550276
+
+
+@[reschedule]: 262141
+@b[task_work_add]: 1481382
+@c[87]: 49
+@c[72]: 1989521
+@kick[16]: 1
+@kick[13]: 1
+@kick[11]: 1
+@kick[25]: 1
+@kick[27]: 1
+@kick[38]: 1
+@kick[20]: 1
+@kick[23]: 1
+@kick[22]: 1
+@kick[37]: 1
+@kick[30]: 2
+@kick[28]: 2
+@kick[6]: 3
+@kick[17]: 4
+@kick[2]: 4
+@kick[34]: 5
+@kick[18]: 5
+@kick[0]: 6
+@kick[1]: 6
+@kick[32]: 6
+@kick[33]: 9
+@kick[24]: 9
+@kick[29]: 9
+@kick[3]: 42
+@kick[35]: 46
+@kick[31]: 52
+@kick[15]: 71
+@kick[10]: 99
+@kick[12]: 106
+@kick[39]: 1528
+@kick[26]: 318490
+@wake[0]: 318520
+@wake[1]: 1160968
+Attaching 5 probes...
+Using COOP_TASKRUN
+Using QD 32
+New thread PID: 246247
+Time elapsed: 10287111131
+
+
+@[reschedule]: 76
+@b[task_work_add]: 1468807
+@c[87]: 49
+@c[72]: 1989595
+@kick[1]: 1
+@kick[38]: 1
+@kick[37]: 2
+@kick[17]: 2
+@kick[20]: 2
+@kick[6]: 3
+@kick[2]: 3
+@kick[36]: 3
+@kick[27]: 4
+@kick[34]: 4
+@kick[10]: 4
+@kick[23]: 5
+@kick[29]: 7
+@kick[14]: 8
+@kick[32]: 8
+@kick[24]: 10
+@kick[33]: 11
+@kick[8]: 12
+@kick[0]: 13
+@kick[3]: 46
+@kick[35]: 48
+@kick[11]: 53
+@kick[15]: 72
+@kick[30]: 101
+@kick[12]: 107
+@kick[39]: 1524
+@wake[0]: 258471
+@wake[1]: 1208483
+Attaching 5 probes...
+Using QD 64
+New thread PID: 246259
+Time elapsed: 10261167276
+
+
+@[reschedule]: 292664
+@b[task_work_add]: 1551492
+@c[87]: 49
+@c[72]: 1989623
+@kick[30]: 1
+@kick[38]: 1
+@kick[27]: 1
+@kick[9]: 3
+@kick[6]: 3
+@kick[2]: 3
+@kick[21]: 3
+@kick[14]: 4
+@kick[24]: 8
+@kick[7]: 9
+@kick[0]: 9
+@kick[13]: 10
+@kick[33]: 10
+@kick[3]: 43
+@kick[35]: 46
+@kick[32]: 48
+@kick[15]: 68
+@kick[11]: 98
+@kick[12]: 104
+@kick[39]: 1524
+@kick[26]: 351114
+@wake[0]: 351115
+@wake[1]: 1198456
+Attaching 5 probes...
+Using COOP_TASKRUN
+Using QD 64
+New thread PID: 246271
+Time elapsed: 10305145522
+
+
+@[reschedule]: 50
+@b[task_work_add]: 1574910
+@c[87]: 49
+@c[72]: 1989712
+@kick[11]: 1
+@kick[36]: 1
+@kick[27]: 1
+@kick[38]: 1
+@kick[2]: 3
+@kick[28]: 3
+@kick[6]: 3
+@kick[14]: 4
+@kick[33]: 4
+@kick[0]: 7
+@kick[24]: 8
+@kick[4]: 9
+@kick[13]: 16
+@kick[3]: 43
+@kick[35]: 46
+@kick[32]: 49
+@kick[15]: 68
+@kick[31]: 98
+@kick[12]: 107
+@kick[39]: 1524
+@wake[0]: 380015
+@wake[1]: 1192988
+brynjar@node2:~/exp_12_2024_02_19$

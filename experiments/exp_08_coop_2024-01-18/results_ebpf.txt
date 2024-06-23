@@ -1,0 +1,1918 @@
+brynjar@node2:~/exp_8-2024-01-18$ sudo sh run.sh
+sh: 0: cannot open run.sh: No such file
+brynjar@node2:~/exp_8-2024-01-18$ sudo sh run_ebpf.sh
+Attaching 2 probes...
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iode
+pth=64
+fio-3.36-41-g9eef-dirty
+Starting 1 process
+Jobs: 1 (f=1): [r(1)][100.0%][r=93.6MiB/s][r=192k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=1): err= 0: pid=1108588: Thu Jan 18 13:20:38 2024
+  read: IOPS=192k, BW=93.6MiB/s (98.1MB/s)(5616MiB/60001msec)
+    slat (nsec): min=36, max=381598, avg=60.03, stdev=227.96
+    clat (usec): min=18, max=1107, avg=333.30, stdev=10.40
+     lat (usec): min=18, max=1107, avg=333.36, stdev=10.40
+    clat percentiles (usec):
+     |  1.00th=[  318],  5.00th=[  326], 10.00th=[  326], 20.00th=[  330],
+     | 30.00th=[  330], 40.00th=[  330], 50.00th=[  334], 60.00th=[  334],
+     | 70.00th=[  334], 80.00th=[  338], 90.00th=[  338], 95.00th=[  343],
+     | 99.00th=[  355], 99.50th=[  359], 99.90th=[  396], 99.95th=[  416],
+     | 99.99th=[  791]
+   bw (  KiB/s): min=93168, max=96434, per=100.00%, avg=95871.18, stdev=345.03, samples=119
+   iops        : min=186336, max=192868, avg=191742.35, stdev=690.07, samples=119
+  lat (usec)   : 20=0.01%, 50=0.01%, 100=0.01%, 250=0.01%, 500=99.97%
+  lat (usec)   : 750=0.02%, 1000=0.02%
+  lat (msec)   : 2=0.01%
+  cpu          : usr=17.38%, sys=82.50%, ctx=7057, majf=0, minf=18
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+     issued rwts: total=11501659,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+   READ: bw=93.6MiB/s (98.1MB/s), 93.6MiB/s-93.6MiB/s (98.1MB/s-98.1MB/s), io=5616MiB (5889MB), run=60001-
+60001msec
+
+Disk stats (read/write):
+  nvme2n1: ios=11471897/0, sectors=11471897/0, merge=0/0, ticks=97573/0, in_queue=97573, util=99.76%
+
+
+@ipi: 11156072
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_call_function+102
+    asm_sysvec_call_function+27
+]: 2
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_call_function_single+102
+    asm_sysvec_call_function_single+27
+]: 3
+@stack[
+    exit_to_user_mode_prepare+1
+    ret_from_fork+31
+]: 17
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    common_interrupt+115
+    asm_common_interrupt+39
+]: 448
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_apic_timer_interrupt+102
+    asm_sysvec_apic_timer_interrupt+27
+]: 3767
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    exc_page_fault+135
+    asm_exc_page_fault+39
+]: 23581
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_reschedule_ipi+133
+    asm_sysvec_reschedule_ipi+27
+]: 483209
+@stack[
+    exit_to_user_mode_prepare+1
+    do_syscall_64+105
+    entry_SYSCALL_64_after_hwframe+114
+]: 11970371
+Attaching 2 probes...
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iode
+pth=64
+fio-3.36-41-g9eef-dirty
+Starting 1 process
+Jobs: 1 (f=1): [r(1)][100.0%][r=94.3MiB/s][r=193k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=1): err= 0: pid=1108611: Thu Jan 18 13:21:39 2024
+  read: IOPS=193k, BW=94.4MiB/s (99.0MB/s)(5663MiB/60001msec)
+    slat (nsec): min=37, max=414311, avg=57.54, stdev=220.49
+    clat (usec): min=18, max=1116, avg=330.52, stdev=10.66
+     lat (usec): min=18, max=1116, avg=330.58, stdev=10.66
+    clat percentiles (usec):
+     |  1.00th=[  318],  5.00th=[  322], 10.00th=[  326], 20.00th=[  326],
+     | 30.00th=[  330], 40.00th=[  330], 50.00th=[  330], 60.00th=[  330],
+     | 70.00th=[  334], 80.00th=[  334], 90.00th=[  338], 95.00th=[  338],
+     | 99.00th=[  351], 99.50th=[  355], 99.90th=[  392], 99.95th=[  412],
+     | 99.99th=[  791]
+   bw (  KiB/s): min=95011, max=97116, per=100.00%, avg=96675.49, stdev=251.29, samples=119
+   iops        : min=190022, max=194232, avg=193350.97, stdev=502.57, samples=119
+  lat (usec)   : 20=0.01%, 50=0.01%, 100=0.01%, 250=0.01%, 500=99.97%
+  lat (usec)   : 750=0.01%, 1000=0.02%
+  lat (msec)   : 2=0.01%
+  cpu          : usr=16.29%, sys=83.58%, ctx=7065, majf=0, minf=18
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+     issued rwts: total=11597871,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+   READ: bw=94.4MiB/s (99.0MB/s), 94.4MiB/s-94.4MiB/s (99.0MB/s-99.0MB/s), io=5663MiB (5938MB), run=60001-
+60001msec
+
+Disk stats (read/write):
+  nvme2n1: ios=11568001/0, sectors=11568001/0, merge=0/0, ticks=98583/0, in_queue=98583, util=99.76%
+
+
+@ipi: 11229415
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_call_function_single+102
+    asm_sysvec_call_function_single+27
+]: 1
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_call_function+102
+    asm_sysvec_call_function+27
+]: 5
+@stack[
+    exit_to_user_mode_prepare+1
+    ret_from_fork+31
+]: 15
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    common_interrupt+115
+    asm_common_interrupt+39
+]: 563
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_apic_timer_interrupt+102
+    asm_sysvec_apic_timer_interrupt+27
+]: 3632
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    exc_page_fault+135
+    asm_exc_page_fault+39
+]: 23734
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_reschedule_ipi+133
+    asm_sysvec_reschedule_ipi+27
+]: 463433
+@stack[
+    exit_to_user_mode_prepare+1
+    do_syscall_64+105
+    entry_SYSCALL_64_after_hwframe+114
+]: 12051065
+Attaching 2 probes...
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iode
+pth=64
+fio-3.36-41-g9eef-dirty
+Starting 1 process
+Jobs: 1 (f=1): [r(1)][100.0%][r=92.7MiB/s][r=190k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=1): err= 0: pid=1108632: Thu Jan 18 13:22:41 2024
+  read: IOPS=189k, BW=92.3MiB/s (96.8MB/s)(5541MiB/60001msec)
+    slat (nsec): min=38, max=436632, avg=67.71, stdev=295.21
+    clat (usec): min=20, max=1134, avg=337.76, stdev=11.00
+     lat (usec): min=20, max=1134, avg=337.83, stdev=11.00
+    clat percentiles (usec):
+     |  1.00th=[  322],  5.00th=[  330], 10.00th=[  330], 20.00th=[  334],
+     | 30.00th=[  334], 40.00th=[  338], 50.00th=[  338], 60.00th=[  338],
+     | 70.00th=[  338], 80.00th=[  343], 90.00th=[  347], 95.00th=[  351],
+     | 99.00th=[  359], 99.50th=[  363], 99.90th=[  404], 99.95th=[  420],
+     | 99.99th=[  816]
+   bw (  KiB/s): min=92377, max=95123, per=100.00%, avg=94583.84, stdev=333.63, samples=119
+   iops        : min=184754, max=190246, avg=189167.68, stdev=667.27, samples=119
+  lat (usec)   : 50=0.01%, 100=0.01%, 250=0.01%, 500=99.97%, 750=0.01%
+  lat (usec)   : 1000=0.03%
+  lat (msec)   : 2=0.01%
+  cpu          : usr=16.23%, sys=83.64%, ctx=7054, majf=0, minf=17
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+     issued rwts: total=11347359,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+   READ: bw=92.3MiB/s (96.8MB/s), 92.3MiB/s-92.3MiB/s (96.8MB/s-96.8MB/s), io=5541MiB (5810MB), run=60001-
+60001msec
+
+Disk stats (read/write):
+  nvme2n1: ios=11317999/0, sectors=11317999/0, merge=0/0, ticks=96111/0, in_queue=96111, util=99.75%
+
+
+@ipi: 11008314
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_call_function_single+102
+    asm_sysvec_call_function_single+27
+]: 1
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_call_function+102
+    asm_sysvec_call_function+27
+]: 1
+@stack[
+    exit_to_user_mode_prepare+1
+    ret_from_fork+31
+]: 16
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    common_interrupt+115
+    asm_common_interrupt+39
+]: 898
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_apic_timer_interrupt+102
+    asm_sysvec_apic_timer_interrupt+27
+]: 3634
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    exc_page_fault+135
+    asm_exc_page_fault+39
+]: 25213
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_reschedule_ipi+133
+    asm_sysvec_reschedule_ipi+27
+]: 782697
+@stack[
+    exit_to_user_mode_prepare+1
+    do_syscall_64+105
+    entry_SYSCALL_64_after_hwframe+114
+]: 11583075
+Attaching 2 probes...
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iode
+pth=64
+fio-3.36-41-g9eef-dirty
+Starting 1 process
+Jobs: 1 (f=1): [r(1)][100.0%][r=90.0MiB/s][r=184k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=1): err= 0: pid=1108654: Thu Jan 18 13:23:42 2024
+  read: IOPS=185k, BW=90.1MiB/s (94.5MB/s)(5407MiB/60001msec)
+    slat (nsec): min=36, max=466546, avg=90.98, stdev=349.81
+    clat (usec): min=19, max=1126, avg=345.97, stdev=11.13
+     lat (usec): min=19, max=1126, avg=346.06, stdev=11.14
+    clat percentiles (usec):
+     |  1.00th=[  330],  5.00th=[  338], 10.00th=[  338], 20.00th=[  343],
+     | 30.00th=[  343], 40.00th=[  343], 50.00th=[  347], 60.00th=[  347],
+     | 70.00th=[  351], 80.00th=[  351], 90.00th=[  355], 95.00th=[  359],
+     | 99.00th=[  363], 99.50th=[  367], 99.90th=[  412], 99.95th=[  433],
+     | 99.99th=[  816]
+   bw (  KiB/s): min=90105, max=93067, per=100.00%, avg=92296.67, stdev=392.07, samples=119
+   iops        : min=180210, max=186134, avg=184593.34, stdev=784.15, samples=119
+  lat (usec)   : 20=0.01%, 50=0.01%, 100=0.01%, 250=0.01%, 500=99.97%
+  lat (usec)   : 750=0.01%, 1000=0.03%
+  lat (msec)   : 2=0.01%
+  cpu          : usr=17.50%, sys=82.38%, ctx=7051, majf=0, minf=17
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+     issued rwts: total=11072526,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+   READ: bw=90.1MiB/s (94.5MB/s), 90.1MiB/s-90.1MiB/s (94.5MB/s-94.5MB/s), io=5407MiB (5669MB), run=60001-
+60001msec
+
+Disk stats (read/write):
+  nvme2n1: ios=11043968/0, sectors=11043968/0, merge=0/0, ticks=93850/0, in_queue=93850, util=99.75%
+
+
+@ipi: 10755065
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_call_function+102
+    asm_sysvec_call_function+27
+]: 2
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_call_function_single+102
+    asm_sysvec_call_function_single+27
+]: 2
+@stack[
+    exit_to_user_mode_prepare+1
+    ret_from_fork+31
+]: 15
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    common_interrupt+115
+    asm_common_interrupt+39
+]: 519
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_apic_timer_interrupt+102
+    asm_sysvec_apic_timer_interrupt+27
+]: 3902
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    exc_page_fault+135
+    asm_exc_page_fault+39
+]: 23663
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_reschedule_ipi+133
+    asm_sysvec_reschedule_ipi+27
+]: 1391938
+@stack[
+    exit_to_user_mode_prepare+1
+    do_syscall_64+105
+    entry_SYSCALL_64_after_hwframe+114
+]: 11116116
+Attaching 2 probes...
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iode
+pth=64
+fio-3.36-41-g9eef-dirty
+Starting 1 process
+Jobs: 1 (f=1): [r(1)][100.0%][r=87.9MiB/s][r=180k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=1): err= 0: pid=1108674: Thu Jan 18 13:24:43 2024
+  read: IOPS=181k, BW=88.2MiB/s (92.5MB/s)(5295MiB/60001msec)
+    slat (nsec): min=40, max=618435, avg=121.21, stdev=470.16
+    clat (usec): min=19, max=1145, avg=353.07, stdev=10.80
+     lat (usec): min=19, max=1145, avg=353.19, stdev=10.80
+    clat percentiles (usec):
+     |  1.00th=[  338],  5.00th=[  343], 10.00th=[  347], 20.00th=[  347],
+     | 30.00th=[  351], 40.00th=[  351], 50.00th=[  355], 60.00th=[  355],
+     | 70.00th=[  355], 80.00th=[  359], 90.00th=[  363], 95.00th=[  363],
+     | 99.00th=[  371], 99.50th=[  375], 99.90th=[  416], 99.95th=[  437],
+     | 99.99th=[  783]
+   bw (  KiB/s): min=89008, max=90981, per=100.00%, avg=90393.45, stdev=276.79, samples=119
+   iops        : min=178016, max=181962, avg=180786.89, stdev=553.58, samples=119
+  lat (usec)   : 20=0.01%, 50=0.01%, 100=0.01%, 250=0.01%, 500=99.96%
+  lat (usec)   : 750=0.01%, 1000=0.02%
+  lat (msec)   : 2=0.01%
+  cpu          : usr=20.19%, sys=79.69%, ctx=7072, majf=0, minf=17
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+     issued rwts: total=10844092,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+   READ: bw=88.2MiB/s (92.5MB/s), 88.2MiB/s-88.2MiB/s (92.5MB/s-92.5MB/s), io=5295MiB (5552MB), run=60001-
+60001msec
+
+Disk stats (read/write):
+  nvme2n1: ios=10816164/0, sectors=10816164/0, merge=0/0, ticks=91721/0, in_queue=91721, util=99.75%
+
+
+@ipi: 10532414
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_call_function_single+102
+    asm_sysvec_call_function_single+27
+]: 1
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_call_function+102
+    asm_sysvec_call_function+27
+]: 1
+@stack[
+    exit_to_user_mode_prepare+1
+    ret_from_fork+31
+]: 15
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    common_interrupt+115
+    asm_common_interrupt+39
+]: 564
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_apic_timer_interrupt+102
+    asm_sysvec_apic_timer_interrupt+27
+]: 4473
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    exc_page_fault+135
+    asm_exc_page_fault+39
+]: 23631
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_reschedule_ipi+133
+    asm_sysvec_reschedule_ipi+27
+]: 2099353
+@stack[
+    exit_to_user_mode_prepare+1
+    do_syscall_64+105
+    entry_SYSCALL_64_after_hwframe+114
+]: 10887691
+Attaching 2 probes...
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iode
+pth=64
+fio-3.36-41-g9eef-dirty
+Starting 1 process
+Jobs: 1 (f=1): [r(1)][100.0%][r=86.5MiB/s][r=177k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=1): err= 0: pid=1108694: Thu Jan 18 13:25:44 2024
+  read: IOPS=177k, BW=86.3MiB/s (90.5MB/s)(5180MiB/60001msec)
+    slat (nsec): min=39, max=416637, avg=121.64, stdev=428.83
+    clat (usec): min=19, max=1135, avg=360.73, stdev=10.41
+     lat (usec): min=19, max=1135, avg=360.85, stdev=10.41
+    clat percentiles (usec):
+     |  1.00th=[  347],  5.00th=[  351], 10.00th=[  355], 20.00th=[  359],
+     | 30.00th=[  359], 40.00th=[  359], 50.00th=[  363], 60.00th=[  363],
+     | 70.00th=[  363], 80.00th=[  367], 90.00th=[  367], 95.00th=[  371],
+     | 99.00th=[  375], 99.50th=[  379], 99.90th=[  429], 99.95th=[  445],
+     | 99.99th=[  783]
+   bw (  KiB/s): min=86503, max=88752, per=100.00%, avg=88421.18, stdev=232.40, samples=119
+   iops        : min=173006, max=177504, avg=176842.35, stdev=464.80, samples=119
+  lat (usec)   : 20=0.01%, 50=0.01%, 100=0.01%, 250=0.01%, 500=99.96%
+  lat (usec)   : 750=0.01%, 1000=0.02%
+  lat (msec)   : 2=0.01%
+  cpu          : usr=21.16%, sys=78.71%, ctx=7127, majf=0, minf=17
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+     issued rwts: total=10607901,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+   READ: bw=86.3MiB/s (90.5MB/s), 86.3MiB/s-86.3MiB/s (90.5MB/s-90.5MB/s), io=5180MiB (5431MB), run=60001-
+60001msec
+
+Disk stats (read/write):
+  nvme2n1: ios=10580461/0, sectors=10580461/0, merge=0/0, ticks=89305/0, in_queue=89305, util=99.76%
+
+
+@ipi: 10316882
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_call_function+102
+    asm_sysvec_call_function+27
+]: 1
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_call_function_single+102
+    asm_sysvec_call_function_single+27
+]: 4
+@stack[
+    exit_to_user_mode_prepare+1
+    ret_from_fork+31
+]: 19
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    common_interrupt+115
+    asm_common_interrupt+39
+]: 452
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_apic_timer_interrupt+102
+    asm_sysvec_apic_timer_interrupt+27
+]: 4693
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    exc_page_fault+135
+    asm_exc_page_fault+39
+]: 23773
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_reschedule_ipi+133
+    asm_sysvec_reschedule_ipi+27
+]: 2481418
+@stack[
+    exit_to_user_mode_prepare+1
+    do_syscall_64+105
+    entry_SYSCALL_64_after_hwframe+114
+]: 10651396
+Attaching 2 probes...
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iode
+pth=64
+fio-3.36-41-g9eef-dirty
+Starting 1 process
+Jobs: 1 (f=1): [r(1)][100.0%][r=78.3MiB/s][r=160k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=1): err= 0: pid=1108718: Thu Jan 18 13:26:46 2024
+  read: IOPS=160k, BW=78.2MiB/s (82.0MB/s)(4695MiB/60001msec)
+    slat (nsec): min=39, max=75108, avg=138.28, stdev=441.72
+    clat (usec): min=17, max=1198, avg=397.45, stdev=10.64
+     lat (usec): min=17, max=1198, avg=397.59, stdev=10.65
+    clat percentiles (usec):
+     |  1.00th=[  383],  5.00th=[  388], 10.00th=[  392], 20.00th=[  392],
+     | 30.00th=[  396], 40.00th=[  396], 50.00th=[  400], 60.00th=[  400],
+     | 70.00th=[  400], 80.00th=[  400], 90.00th=[  404], 95.00th=[  408],
+     | 99.00th=[  412], 99.50th=[  416], 99.90th=[  465], 99.95th=[  482],
+     | 99.99th=[  824]
+   bw (  KiB/s): min=78726, max=80633, per=100.00%, avg=80141.59, stdev=226.09, samples=119
+   iops        : min=157452, max=161266, avg=160283.18, stdev=452.19, samples=119
+  lat (usec)   : 20=0.01%, 50=0.01%, 100=0.01%, 250=0.01%, 500=99.96%
+  lat (usec)   : 750=0.01%, 1000=0.04%
+  lat (msec)   : 2=0.01%
+  cpu          : usr=27.52%, sys=72.36%, ctx=7104, majf=0, minf=18
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+     issued rwts: total=9614513,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+   READ: bw=78.2MiB/s (82.0MB/s), 78.2MiB/s-78.2MiB/s (82.0MB/s-82.0MB/s), io=4695MiB (4923MB), run=60001-
+60001msec
+
+Disk stats (read/write):
+  nvme2n1: ios=9589642/0, sectors=9589642/0, merge=0/0, ticks=80963/0, in_queue=80963, util=99.76%
+
+
+@ipi: 9401832
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_call_function_single+102
+    asm_sysvec_call_function_single+27
+]: 1
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_call_function+102
+    asm_sysvec_call_function+27
+]: 3
+@stack[
+    exit_to_user_mode_prepare+1
+    ret_from_fork+31
+]: 15
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    common_interrupt+115
+    asm_common_interrupt+39
+]: 712
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_apic_timer_interrupt+102
+    asm_sysvec_apic_timer_interrupt+27
+]: 6154
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    exc_page_fault+135
+    asm_exc_page_fault+39
+]: 23601
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_reschedule_ipi+133
+    asm_sysvec_reschedule_ipi+27
+]: 4168001
+@stack[
+    exit_to_user_mode_prepare+1
+    do_syscall_64+105
+    entry_SYSCALL_64_after_hwframe+114
+]: 9657814
+Attaching 2 probes...
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iode
+pth=64
+fio-3.36-41-g9eef-dirty
+Starting 1 process
+Jobs: 1 (f=1): [r(1)][100.0%][r=71.2MiB/s][r=146k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=1): err= 0: pid=1108740: Thu Jan 18 13:27:47 2024
+  read: IOPS=146k, BW=71.2MiB/s (74.6MB/s)(4271MiB/60001msec)
+    slat (nsec): min=36, max=63563, avg=46.54, stdev=101.93
+    clat (usec): min=13, max=1209, avg=436.23, stdev=10.05
+     lat (usec): min=13, max=1209, avg=436.28, stdev=10.05
+    clat percentiles (usec):
+     |  1.00th=[  424],  5.00th=[  429], 10.00th=[  433], 20.00th=[  433],
+     | 30.00th=[  433], 40.00th=[  437], 50.00th=[  437], 60.00th=[  437],
+     | 70.00th=[  437], 80.00th=[  441], 90.00th=[  441], 95.00th=[  445],
+     | 99.00th=[  453], 99.50th=[  453], 99.90th=[  506], 99.95th=[  519],
+     | 99.99th=[  824]
+   bw (  KiB/s): min=71312, max=73268, per=100.00%, avg=72918.10, stdev=187.04, samples=119
+   iops        : min=142624, max=146536, avg=145836.20, stdev=374.07, samples=119
+  lat (usec)   : 20=0.01%, 50=0.01%, 100=0.01%, 250=0.01%, 500=99.88%
+  lat (usec)   : 750=0.08%, 1000=0.04%
+  lat (msec)   : 2=0.01%
+  cpu          : usr=34.24%, sys=65.63%, ctx=7112, majf=0, minf=17
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+     issued rwts: total=8747964,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+   READ: bw=71.2MiB/s (74.6MB/s), 71.2MiB/s-71.2MiB/s (74.6MB/s-74.6MB/s), io=4271MiB (4479MB), run=60001-
+60001msec
+
+Disk stats (read/write):
+  nvme2n1: ios=8725315/0, sectors=8725315/0, merge=0/0, ticks=74142/0, in_queue=74142, util=99.76%
+
+
+@ipi: 8618611
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_call_function+102
+    asm_sysvec_call_function+27
+]: 7
+@stack[
+    exit_to_user_mode_prepare+1
+    ret_from_fork+31
+]: 15
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_call_function_single+102
+    asm_sysvec_call_function_single+27
+]: 16
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    common_interrupt+115
+    asm_common_interrupt+39
+]: 419
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_apic_timer_interrupt+102
+    asm_sysvec_apic_timer_interrupt+27
+]: 7513
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    exc_page_fault+135
+    asm_exc_page_fault+39
+]: 23649
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_reschedule_ipi+133
+    asm_sysvec_reschedule_ipi+27
+]: 4123061
+@stack[
+    exit_to_user_mode_prepare+1
+    do_syscall_64+105
+    entry_SYSCALL_64_after_hwframe+114
+]: 8791358
+Attaching 2 probes...
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iode
+pth=64
+fio-3.36-41-g9eef-dirty
+Starting 1 process
+Jobs: 1 (f=1): [r(1)][100.0%][r=63.4MiB/s][r=130k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=1): err= 0: pid=1108761: Thu Jan 18 13:28:48 2024
+  read: IOPS=130k, BW=63.4MiB/s (66.5MB/s)(3803MiB/60001msec)
+    slat (nsec): min=41, max=61409, avg=47.65, stdev=65.53
+    clat (usec): min=13, max=1267, avg=489.95, stdev=10.27
+     lat (usec): min=13, max=1267, avg=490.00, stdev=10.27
+    clat percentiles (usec):
+     |  1.00th=[  482],  5.00th=[  486], 10.00th=[  486], 20.00th=[  486],
+     | 30.00th=[  486], 40.00th=[  490], 50.00th=[  490], 60.00th=[  490],
+     | 70.00th=[  490], 80.00th=[  494], 90.00th=[  498], 95.00th=[  502],
+     | 99.00th=[  506], 99.50th=[  510], 99.90th=[  562], 99.95th=[  586],
+     | 99.99th=[  889]
+   bw (  KiB/s): min=63480, max=65070, per=100.00%, avg=64927.13, stdev=148.67, samples=119
+   iops        : min=126960, max=130140, avg=129854.25, stdev=297.35, samples=119
+  lat (usec)   : 20=0.01%, 50=0.01%, 100=0.01%, 250=0.01%, 500=95.28%
+  lat (usec)   : 750=4.67%, 1000=0.04%
+  lat (msec)   : 2=0.01%
+  cpu          : usr=42.39%, sys=57.49%, ctx=7121, majf=0, minf=18
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+     issued rwts: total=7789183,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+   READ: bw=63.4MiB/s (66.5MB/s), 63.4MiB/s-63.4MiB/s (66.5MB/s-66.5MB/s), io=3803MiB (3988MB), run=60001-
+60001msec
+
+Disk stats (read/write):
+  nvme2n1: ios=7769056/0, sectors=7769056/0, merge=0/0, ticks=66922/0, in_queue=66922, util=99.75%
+
+
+@ipi: 7673127
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_call_function_single+102
+    asm_sysvec_call_function_single+27
+]: 2
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_call_function+102
+    asm_sysvec_call_function+27
+]: 3
+@stack[
+    exit_to_user_mode_prepare+1
+    ret_from_fork+31
+]: 14
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    common_interrupt+115
+    asm_common_interrupt+39
+]: 625
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_apic_timer_interrupt+102
+    asm_sysvec_apic_timer_interrupt+27
+]: 9271
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    exc_page_fault+135
+    asm_exc_page_fault+39
+]: 23130
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_reschedule_ipi+133
+    asm_sysvec_reschedule_ipi+27
+]: 328067
+@stack[
+    exit_to_user_mode_prepare+1
+    do_syscall_64+105
+    entry_SYSCALL_64_after_hwframe+114
+]: 7831663
+Attaching 2 probes...
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iode
+pth=64
+fio-3.36-41-g9eef-dirty
+Starting 1 process
+Jobs: 1 (f=1): [r(1)][100.0%][r=49.3MiB/s][r=101k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=1): err= 0: pid=1108780: Thu Jan 18 13:29:49 2024
+  read: IOPS=101k, BW=49.3MiB/s (51.7MB/s)(2960MiB/60001msec)
+    slat (nsec): min=41, max=21007, avg=47.64, stdev=57.05
+    clat (usec): min=12, max=1390, avg=628.14, stdev=11.25
+     lat (usec): min=12, max=1390, avg=628.19, stdev=11.25
+    clat percentiles (usec):
+     |  1.00th=[  619],  5.00th=[  619], 10.00th=[  619], 20.00th=[  627],
+     | 30.00th=[  627], 40.00th=[  627], 50.00th=[  627], 60.00th=[  627],
+     | 70.00th=[  627], 80.00th=[  635], 90.00th=[  635], 95.00th=[  644],
+     | 99.00th=[  644], 99.50th=[  652], 99.90th=[  701], 99.95th=[  955],
+     | 99.99th=[  996]
+   bw (  KiB/s): min=49543, max=50680, per=100.00%, avg=50529.71, stdev=108.33, samples=119
+   iops        : min=99086, max=101360, avg=101059.41, stdev=216.66, samples=119
+  lat (usec)   : 20=0.01%, 50=0.01%, 100=0.01%, 250=0.01%, 500=0.01%
+  lat (usec)   : 750=99.94%, 1000=0.05%
+  lat (msec)   : 2=0.01%
+  cpu          : usr=55.05%, sys=44.83%, ctx=7108, majf=0, minf=17
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+     issued rwts: total=6061965,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+   READ: bw=49.3MiB/s (51.7MB/s), 49.3MiB/s-49.3MiB/s (51.7MB/s-51.7MB/s), io=2960MiB (3104MB), run=60001-
+60001msec
+
+Disk stats (read/write):
+  nvme2n1: ios=6046217/0, sectors=6046217/0, merge=0/0, ticks=51163/0, in_queue=51163, util=99.75%
+
+
+@ipi: 6009886
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_call_function+102
+    asm_sysvec_call_function+27
+]: 3
+@stack[
+    exit_to_user_mode_prepare+1
+    ret_from_fork+31
+]: 16
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    common_interrupt+115
+    asm_common_interrupt+39
+]: 237
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_apic_timer_interrupt+102
+    asm_sysvec_apic_timer_interrupt+27
+]: 12157
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    exc_page_fault+135
+    asm_exc_page_fault+39
+]: 23602
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_reschedule_ipi+133
+    asm_sysvec_reschedule_ipi+27
+]: 82214
+@stack[
+    exit_to_user_mode_prepare+1
+    do_syscall_64+105
+    entry_SYSCALL_64_after_hwframe+114
+]: 6106234
+
+brynjar@node2:~/exp_8-2024-01-18$ sudo sh run_ebpf_ext.sh
+Attaching 2 probes...
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=64
+fio-3.36-41-g9eef-dirty
+Starting 1 process
+Jobs: 1 (f=1): [r(1)][100.0%][r=31.2MiB/s][r=64.0k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=1): err= 0: pid=1109739: Thu Jan 18 14:06:01 2024
+  read: IOPS=64.0k, BW=31.2MiB/s (32.7MB/s)(1874MiB/60001msec)
+    slat (nsec): min=38, max=55933, avg=43.77, stdev=55.09
+    clat (usec): min=16, max=1796, avg=988.43, stdev=13.35
+     lat (usec): min=16, max=1796, avg=988.47, stdev=13.35
+    clat percentiles (usec):
+     |  1.00th=[  979],  5.00th=[  979], 10.00th=[  979], 20.00th=[  988],
+     | 30.00th=[  988], 40.00th=[  988], 50.00th=[  988], 60.00th=[  988],
+     | 70.00th=[  988], 80.00th=[  996], 90.00th=[  996], 95.00th=[  996],
+     | 99.00th=[ 1012], 99.50th=[ 1029], 99.90th=[ 1090], 99.95th=[ 1319],
+     | 99.99th=[ 1352]
+   bw (  KiB/s): min=31280, max=32047, per=100.00%, avg=31986.51, stdev=70.13, samples=119
+   iops        : min=62560, max=64094, avg=63973.03, stdev=140.26, samples=119
+  lat (usec)   : 20=0.01%, 50=0.01%, 100=0.01%, 250=0.01%, 500=0.01%
+  lat (usec)   : 750=0.01%, 1000=95.85%
+  lat (msec)   : 2=4.15%
+  cpu          : usr=69.52%, sys=30.36%, ctx=7072, majf=0, minf=17
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+     issued rwts: total=3837454,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+   READ: bw=31.2MiB/s (32.7MB/s), 31.2MiB/s-31.2MiB/s (32.7MB/s-32.7MB/s), io=1874MiB (1965MB), run=60001-60001msec
+
+Disk stats (read/write):
+  nvme2n1: ios=3827441/0, sectors=3827441/0, merge=0/0, ticks=32021/0, in_queue=32021, util=99.75%
+
+
+@ipi: 3826004
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_call_function+102
+    asm_sysvec_call_function+27
+]: 5
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_call_function_single+102
+    asm_sysvec_call_function_single+27
+]: 5
+@stack[
+    exit_to_user_mode_prepare+1
+    ret_from_fork+31
+]: 17
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    common_interrupt+115
+    asm_common_interrupt+39
+]: 351
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_apic_timer_interrupt+102
+    asm_sysvec_apic_timer_interrupt+27
+]: 15295
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    exc_page_fault+135
+    asm_exc_page_fault+39
+]: 23193
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_reschedule_ipi+133
+    asm_sysvec_reschedule_ipi+27
+]: 3809557
+@stack[
+    exit_to_user_mode_prepare+1
+    do_syscall_64+105
+    entry_SYSCALL_64_after_hwframe+114
+]: 4086117
+Attaching 2 probes...
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=64
+fio-3.36-41-g9eef-dirty
+Starting 1 process
+Jobs: 1 (f=1): [r(1)][100.0%][r=19.6MiB/s][r=40.2k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=1): err= 0: pid=1109763: Thu Jan 18 14:07:02 2024
+  read: IOPS=40.2k, BW=19.6MiB/s (20.6MB/s)(1177MiB/60001msec)
+    slat (nsec): min=41, max=53812, avg=46.74, stdev=52.88
+    clat (usec): min=25, max=2371, avg=1571.56, stdev=16.67
+     lat (usec): min=25, max=2371, avg=1571.60, stdev=16.67
+    clat percentiles (usec):
+     |  1.00th=[ 1565],  5.00th=[ 1565], 10.00th=[ 1565], 20.00th=[ 1565],
+     | 30.00th=[ 1565], 40.00th=[ 1565], 50.00th=[ 1565], 60.00th=[ 1565],
+     | 70.00th=[ 1565], 80.00th=[ 1582], 90.00th=[ 1582], 95.00th=[ 1582],
+     | 99.00th=[ 1598], 99.50th=[ 1631], 99.90th=[ 1893], 99.95th=[ 1893],
+     | 99.99th=[ 1975]
+   bw (  KiB/s): min=19607, max=20127, per=100.00%, avg=20089.08, stdev=47.98, samples=119
+   iops        : min=39214, max=40254, avg=40178.17, stdev=95.95, samples=119
+  lat (usec)   : 50=0.01%, 100=0.01%, 250=0.01%, 500=0.01%, 750=0.01%
+  lat (usec)   : 1000=0.01%
+  lat (msec)   : 2=99.99%, 4=0.01%
+  cpu          : usr=81.87%, sys=18.02%, ctx=7057, majf=0, minf=19
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+     issued rwts: total=2410166,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+   READ: bw=19.6MiB/s (20.6MB/s), 19.6MiB/s-19.6MiB/s (20.6MB/s-20.6MB/s), io=1177MiB (1234MB), run=60001-60001msec
+
+Disk stats (read/write):
+  nvme2n1: ios=2403902/0, sectors=2403902/0, merge=0/0, ticks=19916/0, in_queue=19916, util=99.75%
+
+
+@ipi: 2406098
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_call_function+102
+    asm_sysvec_call_function+27
+]: 10
+@stack[
+    exit_to_user_mode_prepare+1
+    ret_from_fork+31
+]: 17
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    common_interrupt+115
+    asm_common_interrupt+39
+]: 78
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_apic_timer_interrupt+102
+    asm_sysvec_apic_timer_interrupt+27
+]: 17910
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    exc_page_fault+135
+    asm_exc_page_fault+39
+]: 23024
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_reschedule_ipi+133
+    asm_sysvec_reschedule_ipi+27
+]: 2401682
+@stack[
+    exit_to_user_mode_prepare+1
+    do_syscall_64+105
+    entry_SYSCALL_64_after_hwframe+114
+]: 2659429
+Attaching 2 probes...
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=64
+fio-3.36-41-g9eef-dirty
+Starting 1 process
+Jobs: 1 (f=1): [r(1)][100.0%][r=11.1MiB/s][r=22.8k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=1): err= 0: pid=1109786: Thu Jan 18 14:08:03 2024
+  read: IOPS=22.8k, BW=11.1MiB/s (11.7MB/s)(668MiB/60001msec)
+    slat (nsec): min=42, max=13112, avg=53.18, stdev=36.72
+    clat (usec): min=45, max=3560, avg=2767.76, stdev=23.12
+     lat (usec): min=45, max=3560, avg=2767.81, stdev=23.12
+    clat percentiles (usec):
+     |  1.00th=[ 2769],  5.00th=[ 2769], 10.00th=[ 2769], 20.00th=[ 2769],
+     | 30.00th=[ 2769], 40.00th=[ 2769], 50.00th=[ 2769], 60.00th=[ 2769],
+     | 70.00th=[ 2769], 80.00th=[ 2769], 90.00th=[ 2769], 95.00th=[ 2769],
+     | 99.00th=[ 2835], 99.50th=[ 2835], 99.90th=[ 3097], 99.95th=[ 3097],
+     | 99.99th=[ 3228]
+   bw (  KiB/s): min=11110, max=11407, per=100.00%, avg=11395.50, stdev=26.91, samples=119
+   iops        : min=22220, max=22814, avg=22791.01, stdev=53.82, samples=119
+  lat (usec)   : 50=0.01%, 100=0.01%, 250=0.01%, 500=0.01%, 750=0.01%
+  lat (usec)   : 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=100.00%
+  cpu          : usr=89.51%, sys=10.38%, ctx=7037, majf=0, minf=19
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+     issued rwts: total=1367192,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+   READ: bw=11.1MiB/s (11.7MB/s), 11.1MiB/s-11.1MiB/s (11.7MB/s-11.7MB/s), io=668MiB (700MB), run=60001-60001msec
+
+Disk stats (read/write):
+  nvme2n1: ios=1363626/0, sectors=1363626/0, merge=0/0, ticks=11275/0, in_queue=11275, util=99.75%
+
+
+@ipi: 1366485
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_call_function_single+102
+    asm_sysvec_call_function_single+27
+]: 1
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_call_function+102
+    asm_sysvec_call_function+27
+]: 10
+@stack[
+    exit_to_user_mode_prepare+1
+    ret_from_fork+31
+]: 15
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    common_interrupt+115
+    asm_common_interrupt+39
+]: 90
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_apic_timer_interrupt+102
+    asm_sysvec_apic_timer_interrupt+27
+]: 19661
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    exc_page_fault+135
+    asm_exc_page_fault+39
+]: 22971
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_reschedule_ipi+133
+    asm_sysvec_reschedule_ipi+27
+]: 1364436
+@stack[
+    exit_to_user_mode_prepare+1
+    do_syscall_64+105
+    entry_SYSCALL_64_after_hwframe+114
+]: 1616165
+Attaching 2 probes...
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=64
+fio-3.36-41-g9eef-dirty
+Starting 1 process
+Jobs: 1 (f=1): [r(1)][100.0%][r=6145KiB/s][r=12.3k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=1): err= 0: pid=1109807: Thu Jan 18 14:09:05 2024
+  read: IOPS=12.3k, BW=6140KiB/s (6287kB/s)(360MiB/60001msec)
+    slat (nsec): min=41, max=14806, avg=51.95, stdev=40.80
+    clat (usec): min=82, max=5959, avg=5132.79, stdev=38.21
+     lat (usec): min=82, max=5959, avg=5132.84, stdev=38.21
+    clat percentiles (usec):
+     |  1.00th=[ 5145],  5.00th=[ 5145], 10.00th=[ 5145], 20.00th=[ 5145],
+     | 30.00th=[ 5145], 40.00th=[ 5145], 50.00th=[ 5145], 60.00th=[ 5145],
+     | 70.00th=[ 5145], 80.00th=[ 5145], 90.00th=[ 5145], 95.00th=[ 5145],
+     | 99.00th=[ 5211], 99.50th=[ 5407], 99.90th=[ 5473], 99.95th=[ 5473],
+     | 99.99th=[ 5866]
+   bw (  KiB/s): min= 5952, max= 6147, per=100.00%, avg=6140.72, stdev=17.65, samples=119
+   iops        : min=11904, max=12294, avg=12281.45, stdev=35.30, samples=119
+  lat (usec)   : 100=0.01%, 250=0.01%, 500=0.01%, 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=99.99%
+  cpu          : usr=93.92%, sys=5.97%, ctx=7062, majf=0, minf=19
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+     issued rwts: total=736784,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+   READ: bw=6140KiB/s (6287kB/s), 6140KiB/s-6140KiB/s (6287kB/s-6287kB/s), io=360MiB (377MB), run=60001-60001msec
+
+Disk stats (read/write):
+  nvme2n1: ios=734867/0, sectors=734867/0, merge=0/0, ticks=6042/0, in_queue=6042, util=99.75%
+
+
+@ipi: 736428
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    common_interrupt+115
+    asm_common_interrupt+39
+]: 6
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_call_function+102
+    asm_sysvec_call_function+27
+]: 10
+@stack[
+    exit_to_user_mode_prepare+1
+    ret_from_fork+31
+]: 14
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_apic_timer_interrupt+102
+    asm_sysvec_apic_timer_interrupt+27
+]: 20549
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    exc_page_fault+135
+    asm_exc_page_fault+39
+]: 22625
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_reschedule_ipi+133
+    asm_sysvec_reschedule_ipi+27
+]: 735188
+@stack[
+    exit_to_user_mode_prepare+1
+    do_syscall_64+105
+    entry_SYSCALL_64_after_hwframe+114
+]: 984212
+brynjar@node2:~/exp_8-2024-01-18$
+
+
+Attaching 2 probes...
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iode
+pth=64
+fio-3.36-41-g9eef-dirty
+Starting 1 process
+Jobs: 1 (f=1): [r(1)][100.0%][r=108MiB/s][r=221k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=1): err= 0: pid=1108801: Thu Jan 18 13:30:50 2024
+  read: IOPS=220k, BW=107MiB/s (113MB/s)(6448MiB/60001msec)
+    slat (nsec): min=36, max=536537, avg=42.90, stdev=159.26
+    clat (usec): min=12, max=1249, avg=290.29, stdev=10.27
+     lat (usec): min=12, max=1249, avg=290.33, stdev=10.27
+    clat percentiles (usec):
+     |  1.00th=[  281],  5.00th=[  285], 10.00th=[  285], 20.00th=[  289],
+     | 30.00th=[  289], 40.00th=[  289], 50.00th=[  289], 60.00th=[  289],
+     | 70.00th=[  293], 80.00th=[  293], 90.00th=[  293], 95.00th=[  297],
+     | 99.00th=[  310], 99.50th=[  314], 99.90th=[  351], 99.95th=[  367],
+     | 99.99th=[  783]
+   bw (  KiB/s): min=107126, max=110772, per=100.00%, avg=110073.10, stdev=397.51, samples=119
+   iops        : min=214252, max=221544, avg=220146.20, stdev=795.03, samples=119
+  lat (usec)   : 20=0.01%, 50=0.01%, 100=0.01%, 250=0.01%, 500=99.97%
+  lat (usec)   : 750=0.01%, 1000=0.02%
+  lat (msec)   : 2=0.01%
+  cpu          : usr=16.76%, sys=83.12%, ctx=7114, majf=0, minf=18
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+     issued rwts: total=13205522,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+   READ: bw=107MiB/s (113MB/s), 107MiB/s-107MiB/s (113MB/s-113MB/s), io=6448MiB (6761MB), run=60001-60001m
+sec
+
+Disk stats (read/write):
+  nvme2n1: ios=13171162/0, sectors=13171162/0, merge=0/0, ticks=121327/0, in_queue=121327, util=99.76%
+
+
+@ipi: 12
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_call_function_single+102
+    asm_sysvec_call_function_single+27
+]: 1
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_call_function+102
+    asm_sysvec_call_function+27
+]: 1
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_reschedule_ipi+133
+    asm_sysvec_reschedule_ipi+27
+]: 7
+@stack[
+    exit_to_user_mode_prepare+1
+    ret_from_fork+31
+]: 16
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    common_interrupt+115
+    asm_common_interrupt+39
+]: 316
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_apic_timer_interrupt+102
+    asm_sysvec_apic_timer_interrupt+27
+]: 3742
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    exc_page_fault+135
+    asm_exc_page_fault+39
+]: 23626
+@stack[
+    exit_to_user_mode_prepare+1
+    do_syscall_64+105
+    entry_SYSCALL_64_after_hwframe+114
+]: 13264851
+Attaching 2 probes...
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iode
+pth=64
+fio-3.36-41-g9eef-dirty
+Starting 1 process
+Jobs: 1 (f=1): [r(1)][100.0%][r=104MiB/s][r=213k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=1): err= 0: pid=1108822: Thu Jan 18 13:31:52 2024
+  read: IOPS=214k, BW=104MiB/s (110MB/s)(6270MiB/60001msec)
+    slat (nsec): min=40, max=58143, avg=49.82, stdev=54.51
+    clat (usec): min=24, max=1086, avg=298.46, stdev=10.44
+     lat (usec): min=24, max=1086, avg=298.51, stdev=10.44
+    clat percentiles (usec):
+     |  1.00th=[  289],  5.00th=[  293], 10.00th=[  293], 20.00th=[  297],
+     | 30.00th=[  297], 40.00th=[  297], 50.00th=[  297], 60.00th=[  297],
+     | 70.00th=[  302], 80.00th=[  302], 90.00th=[  302], 95.00th=[  306],
+     | 99.00th=[  314], 99.50th=[  318], 99.90th=[  359], 99.95th=[  375],
+     | 99.99th=[  832]
+   bw (  KiB/s): min=104678, max=107538, per=100.00%, avg=107037.11, stdev=296.23, samples=119
+   iops        : min=209356, max=215076, avg=214074.22, stdev=592.47, samples=119
+  lat (usec)   : 50=0.01%, 100=0.01%, 250=0.01%, 500=99.97%, 750=0.01%
+  lat (usec)   : 1000=0.03%
+  lat (msec)   : 2=0.01%
+  cpu          : usr=18.79%, sys=81.09%, ctx=7120, majf=0, minf=19
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+     issued rwts: total=12840839,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+   READ: bw=104MiB/s (110MB/s), 104MiB/s-104MiB/s (110MB/s-110MB/s), io=6270MiB (6575MB), run=60001-60001m
+sec
+
+Disk stats (read/write):
+  nvme2n1: ios=12807672/0, sectors=12807672/0, merge=0/0, ticks=114353/0, in_queue=114353, util=99.75%
+
+
+@ipi: 31
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_call_function+102
+    asm_sysvec_call_function+27
+]: 2
+@stack[
+    exit_to_user_mode_prepare+1
+    ret_from_fork+31
+]: 14
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_reschedule_ipi+133
+    asm_sysvec_reschedule_ipi+27
+]: 24
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    common_interrupt+115
+    asm_common_interrupt+39
+]: 826
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_apic_timer_interrupt+102
+    asm_sysvec_apic_timer_interrupt+27
+]: 4108
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    exc_page_fault+135
+    asm_exc_page_fault+39
+]: 23132
+@stack[
+    exit_to_user_mode_prepare+1
+    do_syscall_64+105
+    entry_SYSCALL_64_after_hwframe+114
+]: 12883582
+Attaching 2 probes...
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iode
+pth=64
+fio-3.36-41-g9eef-dirty
+Starting 1 process
+Jobs: 1 (f=1): [r(1)][100.0%][r=107MiB/s][r=219k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=1): err= 0: pid=1108842: Thu Jan 18 13:32:53 2024
+  read: IOPS=219k, BW=107MiB/s (112MB/s)(6406MiB/60001msec)
+    slat (nsec): min=38, max=487949, avg=43.66, stdev=143.27
+    clat (usec): min=20, max=1080, avg=292.19, stdev=10.42
+     lat (usec): min=20, max=1080, avg=292.23, stdev=10.42
+    clat percentiles (usec):
+     |  1.00th=[  281],  5.00th=[  289], 10.00th=[  289], 20.00th=[  289],
+     | 30.00th=[  289], 40.00th=[  293], 50.00th=[  293], 60.00th=[  293],
+     | 70.00th=[  293], 80.00th=[  293], 90.00th=[  297], 95.00th=[  302],
+     | 99.00th=[  310], 99.50th=[  314], 99.90th=[  351], 99.95th=[  367],
+     | 99.99th=[  824]
+   bw (  KiB/s): min=107065, max=109960, per=100.00%, avg=109351.12, stdev=349.59, samples=119
+   iops        : min=214130, max=219920, avg=218702.24, stdev=699.18, samples=119
+  lat (usec)   : 50=0.01%, 100=0.01%, 250=0.01%, 500=99.97%, 1000=0.03%
+  lat (msec)   : 2=0.01%
+  cpu          : usr=16.92%, sys=82.96%, ctx=7117, majf=0, minf=18
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+     issued rwts: total=13118544,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+   READ: bw=107MiB/s (112MB/s), 107MiB/s-107MiB/s (112MB/s-112MB/s), io=6406MiB (6717MB), run=60001-60001m
+sec
+
+Disk stats (read/write):
+  nvme2n1: ios=13084486/0, sectors=13084486/0, merge=0/0, ticks=119352/0, in_queue=119352, util=99.75%
+
+
+@ipi: 1
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_call_function+102
+    asm_sysvec_call_function+27
+]: 1
+@stack[
+    exit_to_user_mode_prepare+1
+    ret_from_fork+31
+]: 15
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    common_interrupt+115
+    asm_common_interrupt+39
+]: 548
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_apic_timer_interrupt+102
+    asm_sysvec_apic_timer_interrupt+27
+]: 3773
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    exc_page_fault+135
+    asm_exc_page_fault+39
+]: 23600
+@stack[
+    exit_to_user_mode_prepare+1
+    do_syscall_64+105
+    entry_SYSCALL_64_after_hwframe+114
+]: 13161792
+Attaching 2 probes...
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iode
+pth=64
+fio-3.36-41-g9eef-dirty
+Starting 1 process
+Jobs: 1 (f=1): [r(1)][100.0%][r=108MiB/s][r=222k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=1): err= 0: pid=1108864: Thu Jan 18 13:33:54 2024
+  read: IOPS=222k, BW=108MiB/s (114MB/s)(6504MiB/60001msec)
+    slat (nsec): min=40, max=493634, avg=42.99, stdev=195.57
+    clat (usec): min=19, max=1091, avg=287.75, stdev=10.63
+     lat (usec): min=20, max=1091, avg=287.80, stdev=10.63
+    clat percentiles (usec):
+     |  1.00th=[  277],  5.00th=[  285], 10.00th=[  285], 20.00th=[  285],
+     | 30.00th=[  285], 40.00th=[  285], 50.00th=[  289], 60.00th=[  289],
+     | 70.00th=[  289], 80.00th=[  289], 90.00th=[  293], 95.00th=[  297],
+     | 99.00th=[  310], 99.50th=[  318], 99.90th=[  347], 99.95th=[  363],
+     | 99.99th=[  824]
+   bw (  KiB/s): min=109331, max=111727, per=100.00%, avg=111024.23, stdev=246.98, samples=119
+   iops        : min=218662, max=223454, avg=222048.45, stdev=493.96, samples=119
+  lat (usec)   : 20=0.01%, 50=0.01%, 100=0.01%, 250=0.01%, 500=99.97%
+  lat (usec)   : 1000=0.03%
+  lat (msec)   : 2=0.01%
+  cpu          : usr=17.97%, sys=81.91%, ctx=7118, majf=0, minf=18
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+     issued rwts: total=13319286,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+   READ: bw=108MiB/s (114MB/s), 108MiB/s-108MiB/s (114MB/s-114MB/s), io=6504MiB (6819MB), run=60001-60001m
+sec
+
+Disk stats (read/write):
+  nvme2n1: ios=13284712/0, sectors=13284712/0, merge=0/0, ticks=121475/0, in_queue=121475, util=99.75%
+
+
+@ipi: 45
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_call_function_single+102
+    asm_sysvec_call_function_single+27
+]: 2
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_call_function+102
+    asm_sysvec_call_function+27
+]: 3
+@stack[
+    exit_to_user_mode_prepare+1
+    ret_from_fork+31
+]: 14
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_reschedule_ipi+133
+    asm_sysvec_reschedule_ipi+27
+]: 37
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    common_interrupt+115
+    asm_common_interrupt+39
+]: 1649
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_apic_timer_interrupt+102
+    asm_sysvec_apic_timer_interrupt+27
+]: 3970
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    exc_page_fault+135
+    asm_exc_page_fault+39
+]: 23244
+@stack[
+    exit_to_user_mode_prepare+1
+    do_syscall_64+105
+    entry_SYSCALL_64_after_hwframe+114
+]: 13362090
+Attaching 2 probes...
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iode
+pth=64
+fio-3.36-41-g9eef-dirty
+Starting 1 process
+Jobs: 1 (f=1): [r(1)][100.0%][r=104MiB/s][r=212k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=1): err= 0: pid=1108884: Thu Jan 18 13:34:55 2024
+  read: IOPS=213k, BW=104MiB/s (109MB/s)(6227MiB/60001msec)
+    slat (nsec): min=38, max=578765, avg=43.06, stdev=171.03
+    clat (usec): min=21, max=1096, avg=300.41, stdev=10.69
+     lat (usec): min=21, max=1096, avg=300.45, stdev=10.69
+    clat percentiles (usec):
+     |  1.00th=[  293],  5.00th=[  297], 10.00th=[  297], 20.00th=[  297],
+     | 30.00th=[  297], 40.00th=[  302], 50.00th=[  302], 60.00th=[  302],
+     | 70.00th=[  302], 80.00th=[  302], 90.00th=[  306], 95.00th=[  310],
+     | 99.00th=[  314], 99.50th=[  318], 99.90th=[  359], 99.95th=[  375],
+     | 99.99th=[  857]
+   bw (  KiB/s): min=104062, max=107041, per=100.00%, avg=106310.31, stdev=319.48, samples=119
+   iops        : min=208124, max=214082, avg=212620.62, stdev=638.97, samples=119
+  lat (usec)   : 50=0.01%, 100=0.01%, 250=0.01%, 500=99.97%, 1000=0.03%
+  lat (msec)   : 2=0.01%
+  cpu          : usr=20.02%, sys=79.86%, ctx=7109, majf=0, minf=17
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+     issued rwts: total=12753785,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+   READ: bw=104MiB/s (109MB/s), 104MiB/s-104MiB/s (109MB/s-109MB/s), io=6227MiB (6530MB), run=60001-60001m
+sec
+
+Disk stats (read/write):
+  nvme2n1: ios=12720643/0, sectors=12720643/0, merge=0/0, ticks=111809/0, in_queue=111809, util=99.75%
+
+
+@ipi: 0
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_call_function+102
+    asm_sysvec_call_function+27
+]: 2
+@stack[
+    exit_to_user_mode_prepare+1
+    ret_from_fork+31
+]: 14
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    common_interrupt+115
+    asm_common_interrupt+39
+]: 560
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_apic_timer_interrupt+102
+    asm_sysvec_apic_timer_interrupt+27
+]: 4396
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    exc_page_fault+135
+    asm_exc_page_fault+39
+]: 23131
+@stack[
+    exit_to_user_mode_prepare+1
+    do_syscall_64+105
+    entry_SYSCALL_64_after_hwframe+114
+]: 12796105
+Attaching 2 probes...
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iode
+pth=64
+fio-3.36-41-g9eef-dirty
+Starting 1 process
+Jobs: 1 (f=1): [r(1)][100.0%][r=102MiB/s][r=208k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=1): err= 0: pid=1108903: Thu Jan 18 13:35:57 2024
+  read: IOPS=209k, BW=102MiB/s (107MB/s)(6118MiB/60001msec)
+    slat (nsec): min=40, max=72376, avg=59.06, stdev=52.60
+    clat (usec): min=19, max=1100, avg=305.70, stdev=10.33
+     lat (usec): min=19, max=1100, avg=305.76, stdev=10.33
+    clat percentiles (usec):
+     |  1.00th=[  297],  5.00th=[  302], 10.00th=[  302], 20.00th=[  306],
+     | 30.00th=[  306], 40.00th=[  306], 50.00th=[  306], 60.00th=[  306],
+     | 70.00th=[  306], 80.00th=[  310], 90.00th=[  310], 95.00th=[  314],
+     | 99.00th=[  318], 99.50th=[  322], 99.90th=[  367], 99.95th=[  383],
+     | 99.99th=[  840]
+   bw (  KiB/s): min=102881, max=104846, per=100.00%, avg=104433.72, stdev=237.41, samples=119
+   iops        : min=205762, max=209692, avg=208867.45, stdev=474.82, samples=119
+  lat (usec)   : 20=0.01%, 50=0.01%, 100=0.01%, 250=0.01%, 500=99.97%
+  lat (usec)   : 1000=0.03%
+  lat (msec)   : 2=0.01%
+  cpu          : usr=21.86%, sys=78.02%, ctx=7119, majf=0, minf=17
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+     issued rwts: total=12528680,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+   READ: bw=102MiB/s (107MB/s), 102MiB/s-102MiB/s (107MB/s-107MB/s), io=6118MiB (6415MB), run=60001-60001m
+sec
+
+Disk stats (read/write):
+  nvme2n1: ios=12496278/0, sectors=12496278/0, merge=0/0, ticks=107354/0, in_queue=107354, util=99.76%
+
+
+@ipi: 68
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_call_function_single+102
+    asm_sysvec_call_function_single+27
+]: 1
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_call_function+102
+    asm_sysvec_call_function+27
+]: 2
+@stack[
+    exit_to_user_mode_prepare+1
+    ret_from_fork+31
+]: 19
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_reschedule_ipi+133
+    asm_sysvec_reschedule_ipi+27
+]: 58
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    common_interrupt+115
+    asm_common_interrupt+39
+]: 1511
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_apic_timer_interrupt+102
+    asm_sysvec_apic_timer_interrupt+27
+]: 4900
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    exc_page_fault+135
+    asm_exc_page_fault+39
+]: 24226
+@stack[
+    exit_to_user_mode_prepare+1
+    do_syscall_64+105
+    entry_SYSCALL_64_after_hwframe+114
+]: 12573219
+Attaching 2 probes...
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iode
+pth=64
+fio-3.36-41-g9eef-dirty
+Starting 1 process
+Jobs: 1 (f=1): [r(1)][100.0%][r=96.7MiB/s][r=198k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=1): err= 0: pid=1108927: Thu Jan 18 13:36:58 2024
+  read: IOPS=198k, BW=96.8MiB/s (101MB/s)(5806MiB/60001msec)
+    slat (nsec): min=37, max=476694, avg=43.40, stdev=147.40
+    clat (usec): min=20, max=1108, avg=321.86, stdev=10.16
+     lat (usec): min=20, max=1108, avg=321.90, stdev=10.16
+    clat percentiles (usec):
+     |  1.00th=[  314],  5.00th=[  318], 10.00th=[  318], 20.00th=[  318],
+     | 30.00th=[  322], 40.00th=[  322], 50.00th=[  322], 60.00th=[  322],
+     | 70.00th=[  322], 80.00th=[  322], 90.00th=[  326], 95.00th=[  330],
+     | 99.00th=[  338], 99.50th=[  338], 99.90th=[  383], 99.95th=[  400],
+     | 99.99th=[  824]
+   bw (  KiB/s): min=96859, max=99500, per=100.00%, avg=99111.41, stdev=237.50, samples=119
+   iops        : min=193718, max=199000, avg=198222.82, stdev=475.00, samples=119
+  lat (usec)   : 50=0.01%, 100=0.01%, 250=0.01%, 500=99.97%, 750=0.01%
+  lat (usec)   : 1000=0.03%
+  lat (msec)   : 2=0.01%
+  cpu          : usr=26.29%, sys=73.59%, ctx=7110, majf=0, minf=19
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+     issued rwts: total=11890248,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+   READ: bw=96.8MiB/s (101MB/s), 96.8MiB/s-96.8MiB/s (101MB/s-101MB/s), io=5806MiB (6088MB), run=60001-600
+01msec
+
+Disk stats (read/write):
+  nvme2n1: ios=11859560/0, sectors=11859560/0, merge=0/0, ticks=100199/0, in_queue=100199, util=99.75%
+
+
+@ipi: 0
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_call_function+102
+    asm_sysvec_call_function+27
+]: 3
+@stack[
+    exit_to_user_mode_prepare+1
+    ret_from_fork+31
+]: 14
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    common_interrupt+115
+    asm_common_interrupt+39
+]: 482
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_apic_timer_interrupt+102
+    asm_sysvec_apic_timer_interrupt+27
+]: 5832
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    exc_page_fault+135
+    asm_exc_page_fault+39
+]: 23143
+@stack[
+    exit_to_user_mode_prepare+1
+    do_syscall_64+105
+    entry_SYSCALL_64_after_hwframe+114
+]: 11932501
+Attaching 2 probes...
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iode
+pth=64
+fio-3.36-41-g9eef-dirty
+Starting 1 process
+Jobs: 1 (f=1): [r(1)][100.0%][r=86.6MiB/s][r=177k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=1): err= 0: pid=1108947: Thu Jan 18 13:37:59 2024
+  read: IOPS=177k, BW=86.6MiB/s (90.8MB/s)(5198MiB/60001msec)
+    slat (nsec): min=40, max=57772, avg=42.85, stdev=42.71
+    clat (usec): min=20, max=1151, avg=359.05, stdev=10.39
+     lat (usec): min=20, max=1151, avg=359.09, stdev=10.39
+    clat percentiles (usec):
+     |  1.00th=[  351],  5.00th=[  355], 10.00th=[  355], 20.00th=[  355],
+     | 30.00th=[  359], 40.00th=[  359], 50.00th=[  359], 60.00th=[  359],
+     | 70.00th=[  359], 80.00th=[  363], 90.00th=[  363], 95.00th=[  367],
+     | 99.00th=[  375], 99.50th=[  375], 99.90th=[  420], 99.95th=[  437],
+     | 99.99th=[  840]
+   bw (  KiB/s): min=87271, max=89272, per=100.00%, avg=88736.67, stdev=208.00, samples=119
+   iops        : min=174542, max=178544, avg=177473.34, stdev=416.00, samples=119
+  lat (usec)   : 50=0.01%, 100=0.01%, 250=0.01%, 500=99.96%, 750=0.01%
+  lat (usec)   : 1000=0.03%
+  lat (msec)   : 2=0.01%
+  cpu          : usr=33.49%, sys=66.39%, ctx=7106, majf=0, minf=18
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+     issued rwts: total=10645468,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+   READ: bw=86.6MiB/s (90.8MB/s), 86.6MiB/s-86.6MiB/s (90.8MB/s-90.8MB/s), io=5198MiB (5450MB), run=60001-
+60001msec
+
+Disk stats (read/write):
+  nvme2n1: ios=10617938/0, sectors=10617938/0, merge=0/0, ticks=88834/0, in_queue=88834, util=99.75%
+
+
+@ipi: 93
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_call_function_single+102
+    asm_sysvec_call_function_single+27
+]: 1
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_call_function+102
+    asm_sysvec_call_function+27
+]: 2
+@stack[
+    exit_to_user_mode_prepare+1
+    ret_from_fork+31
+]: 14
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_reschedule_ipi+133
+    asm_sysvec_reschedule_ipi+27
+]: 74
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    common_interrupt+115
+    asm_common_interrupt+39
+]: 1060
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_apic_timer_interrupt+102
+    asm_sysvec_apic_timer_interrupt+27
+]: 7517
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    exc_page_fault+135
+    asm_exc_page_fault+39
+]: 23061
+@stack[
+    exit_to_user_mode_prepare+1
+    do_syscall_64+105
+    entry_SYSCALL_64_after_hwframe+114
+]: 10688303
+Attaching 2 probes...
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iode
+pth=64
+fio-3.36-41-g9eef-dirty
+Starting 1 process
+Jobs: 1 (f=1): [r(1)][100.0%][r=69.8MiB/s][r=143k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=1): err= 0: pid=1108967: Thu Jan 18 13:39:00 2024
+  read: IOPS=143k, BW=69.8MiB/s (73.2MB/s)(4190MiB/60001msec)
+    slat (nsec): min=36, max=59070, avg=43.02, stdev=53.56
+    clat (usec): min=20, max=1223, avg=444.66, stdev=10.91
+     lat (usec): min=20, max=1223, avg=444.70, stdev=10.91
+    clat percentiles (usec):
+     |  1.00th=[  433],  5.00th=[  437], 10.00th=[  441], 20.00th=[  441],
+     | 30.00th=[  441], 40.00th=[  445], 50.00th=[  445], 60.00th=[  445],
+     | 70.00th=[  445], 80.00th=[  449], 90.00th=[  453], 95.00th=[  457],
+     | 99.00th=[  465], 99.50th=[  474], 99.90th=[  515], 99.95th=[  529],
+     | 99.99th=[  865]
+   bw (  KiB/s): min=70146, max=71823, per=100.00%, avg=71519.62, stdev=183.99, samples=119
+   iops        : min=140292, max=143646, avg=143039.24, stdev=367.98, samples=119
+  lat (usec)   : 50=0.01%, 100=0.01%, 250=0.01%, 500=99.80%, 750=0.16%
+  lat (usec)   : 1000=0.04%
+  lat (msec)   : 2=0.01%
+  cpu          : usr=45.83%, sys=54.05%, ctx=7112, majf=0, minf=18
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+     issued rwts: total=8580179,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+   READ: bw=69.8MiB/s (73.2MB/s), 69.8MiB/s-69.8MiB/s (73.2MB/s-73.2MB/s), io=4190MiB (4393MB), run=60001-
+60001msec
+
+Disk stats (read/write):
+  nvme2n1: ios=8558034/0, sectors=8558034/0, merge=0/0, ticks=73017/0, in_queue=73017, util=99.76%
+
+
+@ipi: 1
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_call_function+102
+    asm_sysvec_call_function+27
+]: 5
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    common_interrupt+115
+    asm_common_interrupt+39
+]: 6
+@stack[
+    exit_to_user_mode_prepare+1
+    ret_from_fork+31
+]: 15
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_apic_timer_interrupt+102
+    asm_sysvec_apic_timer_interrupt+27
+]: 10055
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    exc_page_fault+135
+    asm_exc_page_fault+39
+]: 23599
+@stack[
+    exit_to_user_mode_prepare+1
+    do_syscall_64+105
+    entry_SYSCALL_64_after_hwframe+114
+]: 8623329
+Attaching 2 probes...
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iode
+pth=64
+fio-3.36-41-g9eef-dirty
+Starting 1 process
+Jobs: 1 (f=1): [r(1)][100.0%][r=52.6MiB/s][r=108k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=1): err= 0: pid=1108987: Thu Jan 18 13:40:01 2024
+  read: IOPS=108k, BW=52.6MiB/s (55.2MB/s)(3157MiB/60001msec)
+    slat (nsec): min=40, max=19006, avg=42.93, stdev=44.18
+    clat (usec): min=12, max=1372, avg=588.64, stdev=11.36
+     lat (usec): min=12, max=1372, avg=588.68, stdev=11.36
+    clat percentiles (usec):
+     |  1.00th=[  578],  5.00th=[  586], 10.00th=[  586], 20.00th=[  586],
+     | 30.00th=[  586], 40.00th=[  586], 50.00th=[  586], 60.00th=[  586],
+     | 70.00th=[  586], 80.00th=[  594], 90.00th=[  594], 95.00th=[  603],
+     | 99.00th=[  611], 99.50th=[  619], 99.90th=[  660], 99.95th=[  922],
+     | 99.99th=[  996]
+   bw (  KiB/s): min=52931, max=54125, per=100.00%, avg=53891.18, stdev=122.07, samples=119
+   iops        : min=105862, max=108250, avg=107782.37, stdev=244.13, samples=119
+  lat (usec)   : 20=0.01%, 50=0.01%, 100=0.01%, 250=0.01%, 500=0.01%
+  lat (usec)   : 750=99.94%, 1000=0.05%
+  lat (msec)   : 2=0.01%
+  cpu          : usr=58.91%, sys=40.97%, ctx=7129, majf=0, minf=18
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+     issued rwts: total=6465187,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+   READ: bw=52.6MiB/s (55.2MB/s), 52.6MiB/s-52.6MiB/s (55.2MB/s-55.2MB/s), io=3157MiB (3310MB), run=60001-
+60001msec
+
+Disk stats (read/write):
+  nvme2n1: ios=6448572/0, sectors=6448572/0, merge=0/0, ticks=53992/0, in_queue=53992, util=99.75%
+
+
+@ipi: 31
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_call_function_single+102
+    asm_sysvec_call_function_single+27
+]: 1
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_call_function+102
+    asm_sysvec_call_function+27
+]: 5
+@stack[
+    exit_to_user_mode_prepare+1
+    ret_from_fork+31
+]: 16
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_reschedule_ipi+133
+    asm_sysvec_reschedule_ipi+27
+]: 26
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    common_interrupt+115
+    asm_common_interrupt+39
+]: 537
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    sysvec_apic_timer_interrupt+102
+    asm_sysvec_apic_timer_interrupt+27
+]: 12959
+@stack[
+    exit_to_user_mode_prepare+1
+    irqentry_exit+59
+    exc_page_fault+135
+    asm_exc_page_fault+39
+]: 23514
+@stack[
+    exit_to_user_mode_prepare+1
+    do_syscall_64+105
+    entry_SYSCALL_64_after_hwframe+114
+]: 6525936
+brynjar@node2:~/exp_8-2024-01-18$

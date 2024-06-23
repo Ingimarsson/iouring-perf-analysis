@@ -1,0 +1,75 @@
+brynjar@node2:~$ cd exp_15
+brynjar@node2:~/exp_15$ sudo sh run_ebpf.sh
+Attaching 1 probe...
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=64
+fio-3.35-uring2
+Starting 1 process
+Jobs: 1 (f=1): [r(1)][100.0%][r=157MiB/s][r=321k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=1): err= 0: pid=221897: Thu May  9 15:21:59 2024
+  read: IOPS=318k, BW=155MiB/s (163MB/s)(9314MiB/60001msec)
+    slat (nsec): min=42, max=38400, avg=77.61, stdev=215.63
+    clat (usec): min=16, max=509, avg=200.81, stdev=11.51
+     lat (usec): min=17, max=509, avg=200.89, stdev=11.52
+    clat percentiles (usec):
+     |  1.00th=[  186],  5.00th=[  190], 10.00th=[  192], 20.00th=[  194],
+     | 30.00th=[  196], 40.00th=[  198], 50.00th=[  200], 60.00th=[  202],
+     | 70.00th=[  204], 80.00th=[  206], 90.00th=[  208], 95.00th=[  215],
+     | 99.00th=[  255], 99.50th=[  273], 99.90th=[  289], 99.95th=[  297],
+     | 99.99th=[  314]
+   bw (  KiB/s): min=129656, max=163745, per=100.00%, avg=158977.13, stdev=4563.32, samples=119
+   iops        : min=259312, max=327490, avg=317954.27, stdev=9126.73, samples=119
+  lat (usec)   : 20=0.01%, 50=0.01%, 100=0.01%, 250=98.72%, 500=1.28%
+  lat (usec)   : 750=0.01%
+  cpu          : usr=20.02%, sys=79.97%, ctx=204, majf=0, minf=2288
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+     issued rwts: total=19075609,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+   READ: bw=155MiB/s (163MB/s), 155MiB/s-155MiB/s (163MB/s-163MB/s), io=9314MiB (9767MB), run=60001-60001msec
+
+Disk stats (read/write):
+  nvme2n1: ios=19040103/3, sectors=19040103/32, merge=0/1, ticks=180322/0, in_queue=180322, util=99.86%
+
+
+@[0]: 20
+@[2228224]: 19075609
+Attaching 1 probe...
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=64
+fio-3.35-uring2
+Starting 1 process
+Jobs: 1 (f=1): [r(1)][100.0%][r=88.4MiB/s][r=181k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=1): err= 0: pid=223118: Thu May  9 15:23:00 2024
+  read: IOPS=180k, BW=88.0MiB/s (92.3MB/s)(5283MiB/60001msec)
+    slat (nsec): min=52, max=31846, avg=74.23, stdev=208.51
+    clat (usec): min=16, max=619, avg=354.36, stdev= 6.23
+     lat (usec): min=16, max=619, avg=354.43, stdev= 6.23
+    clat percentiles (usec):
+     |  1.00th=[  343],  5.00th=[  347], 10.00th=[  351], 20.00th=[  351],
+     | 30.00th=[  351], 40.00th=[  351], 50.00th=[  355], 60.00th=[  355],
+     | 70.00th=[  355], 80.00th=[  359], 90.00th=[  363], 95.00th=[  367],
+     | 99.00th=[  371], 99.50th=[  375], 99.90th=[  388], 99.95th=[  396],
+     | 99.99th=[  408]
+   bw (  KiB/s): min=89456, max=90679, per=100.00%, avg=90168.59, stdev=265.15, samples=119
+   iops        : min=178912, max=181358, avg=180337.16, stdev=530.28, samples=119
+  lat (usec)   : 20=0.01%, 50=0.01%, 100=0.01%, 250=0.01%, 500=100.00%
+  lat (usec)   : 750=0.01%
+  cpu          : usr=13.59%, sys=86.41%, ctx=133, majf=0, minf=19
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+     issued rwts: total=10818768,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+   READ: bw=88.0MiB/s (92.3MB/s), 88.0MiB/s-88.0MiB/s (92.3MB/s-92.3MB/s), io=5283MiB (5539MB), run=60001-60001msec
+
+Disk stats (read/write):
+  nvme2n1: ios=10798785/0, sectors=10798785/0, merge=0/0, ticks=87117/0, in_queue=87118, util=99.85%
+
+
+@[0]: 155
+@[2228232]: 10818768
+brynjar@node2:~/exp_15$

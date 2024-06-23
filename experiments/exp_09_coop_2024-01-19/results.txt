@@ -1,0 +1,1940 @@
+sudo taskset -c 11,13 /mnt/sdb/brynjar/fio-uring2/fio --ioengine=liburing --rw=randread --name=liburing-test --filename=/dev/nvme2n1 --numjo
+bs=16 --direct=1 --bs=512 --iodepth=1 --size=512G --runtime=600 --group_reporting --coop_taskrun
+
+for name in `ls /sys/class/nvme/nvme2/device/msi_irqs/`; do cat /proc/irq/$name/effective_affinity_list; done | paste -sd " ";
+
+sudo taskset -c 10,12 /mnt/sdb/brynjar/fio-uring2/fio --ioengine=liburing --rw=randread --name=liburing-test --filename=/dev/nvme2n1 --numjo
+bs=16 --direct=1 --bs=512 --iodepth=2 --size=512G --runtime=600 --group_reporting
+sudo taskset -c 10,12 /mnt/sdb/brynjar/fio-uring2/fio --ioengine=liburing --rw=randread --name=liburing-test --filename=/dev/nvme2n1 --numjo
+bs=16 --direct=1 --bs=512 --iodepth=2 --size=512G --runtime=600 --group_reporting --coop_taskrun
+
+sudo taskset -c 11,13 /mnt/sdb/brynjar/fio-uring2/fio --ioengine=liburing --rw=randread --name=liburing-test --filename=/dev/nvme2n1 --numjo
+bs=16 --direct=1 --bs=512 --iodepth=2 --size=512G --runtime=600 --group_reporting
+sudo taskset -c 11,13 /mnt/sdb/brynjar/fio-uring2/fio --ioengine=liburing --rw=randread --name=liburing-test --filename=/dev/nvme2n1 --numjo
+bs=16 --direct=1 --bs=512 --iodepth=2 --size=512G --runtime=600 --group_reporting --coop_taskrun
+
+for name in `ls /sys/class/nvme/nvme2/device/msi_irqs/`; do cat /proc/irq/$name/effective_affinity_list; done | paste -sd " ";
+
+
+sudo taskset -c 10,12 /mnt/sdb/brynjar/fio-uring2/fio --ioengine=liburing --rw=randread --name=liburing-test --filename=/dev/nvme2n1 --numjo
+bs=16 --direct=1 --bs=512 --iodepth=4 --size=512G --runtime=600 --group_reporting
+sudo taskset -c 10,12 /mnt/sdb/brynjar/fio-uring2/fio --ioengine=liburing --rw=randread --name=liburing-test --filename=/dev/nvme2n1 --numjo
+bs=16 --direct=1 --bs=512 --iodepth=4 --size=512G --runtime=600 --group_rbrynjar@node2:~/exp_9_2024-01-19$ ls
+run.sh
+brynjar@node2:~/exp_9_2024-01-19$ vim run.sh
+brynjar@node2:~/exp_9_2024-01-19$ vim run.sh
+brynjar@node2:~/exp_9_2024-01-19$ sudo sh run.sh
+14 36
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=1
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=16): [r(16)][100.0%][r=58.6MiB/s][r=120k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=3088: Fri Jan 19 14:16:56 2024
+  read: IOPS=120k, BW=58.7MiB/s (61.6MB/s)(34.4GiB/600001msec)
+    slat (nsec): min=41, max=424293, avg=76.70, stdev=254.63
+    clat (usec): min=8, max=60983, avg=132.02, stdev=28.96
+     lat (usec): min=8, max=60986, avg=132.10, stdev=28.98
+    clat percentiles (usec):
+     |  1.00th=[   91],  5.00th=[  114], 10.00th=[  116], 20.00th=[  123],
+     | 30.00th=[  128], 40.00th=[  131], 50.00th=[  131], 60.00th=[  133],
+     | 70.00th=[  137], 80.00th=[  141], 90.00th=[  147], 95.00th=[  151],
+     | 99.00th=[  192], 99.50th=[  265], 99.90th=[  310], 99.95th=[  355],
+     | 99.99th=[  545]
+   bw (  KiB/s): min=38609, max=60683, per=100.00%, avg=60181.95, stdev=41.63, samples=19184
+   iops        : min=77218, max=121367, avg=120364.45, stdev=83.26, samples=19184
+  lat (usec)   : 10=0.01%, 20=0.04%, 50=0.11%, 100=1.55%, 250=97.73%
+  lat (usec)   : 500=0.55%, 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.01%, 20=0.01%, 50=0.01%
+  lat (msec)   : 100=0.01%
+  cpu          : usr=1.43%, sys=4.80%, ctx=72189429, majf=0, minf=164
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=72173470,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: bw=58.7MiB/s (61.6MB/s), 58.7MiB/s-58.7MiB/s (61.6MB/s-61.6MB/s), io=34.4GiB (37.0GB), run=600001-600001msec
+
+Disk stats (read/write):
+  nvme2n1: ios=72160328/0, sectors=72160328/0, merge=0/0, ticks=662421/0, in_queue=662421, util=99.92%
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=1
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=16): [r(16)][100.0%][r=58.2MiB/s][r=119k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=3248: Fri Jan 19 14:26:57 2024
+  read: IOPS=119k, BW=58.2MiB/s (61.0MB/s)(34.1GiB/600002msec)
+    slat (nsec): min=42, max=417603, avg=79.40, stdev=206.19
+    clat (usec): min=10, max=58538, avg=133.45, stdev=27.19
+     lat (usec): min=10, max=58540, avg=133.53, stdev=27.21
+    clat percentiles (usec):
+     |  1.00th=[  105],  5.00th=[  117], 10.00th=[  124], 20.00th=[  126],
+     | 30.00th=[  133], 40.00th=[  133], 50.00th=[  135], 60.00th=[  135],
+     | 70.00th=[  135], 80.00th=[  141], 90.00th=[  145], 95.00th=[  151],
+     | 99.00th=[  165], 99.50th=[  176], 99.90th=[  247], 99.95th=[  355],
+     | 99.99th=[  553]
+   bw (  KiB/s): min=35866, max=59935, per=100.00%, avg=59606.48, stdev=44.80, samples=19184
+   iops        : min=71732, max=119870, avg=119212.97, stdev=89.60, samples=19184
+  lat (usec)   : 20=0.01%, 50=0.05%, 100=0.74%, 250=99.10%, 500=0.08%
+  lat (usec)   : 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.01%, 20=0.01%, 50=0.01%
+  lat (msec)   : 100=0.01%
+  cpu          : usr=1.40%, sys=4.84%, ctx=71529727, majf=0, minf=164
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=71480538,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: bw=58.2MiB/s (61.0MB/s), 58.2MiB/s-58.2MiB/s (61.0MB/s-61.0MB/s), io=34.1GiB (36.6GB), run=600002-600002msec
+
+Disk stats (read/write):
+  nvme2n1: ios=71470063/0, sectors=71470063/0, merge=0/0, ticks=662918/0, in_queue=662918, util=99.92%
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=1
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=16): [r(16)][100.0%][r=59.4MiB/s][r=122k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=3405: Fri Jan 19 14:36:58 2024
+  read: IOPS=122k, BW=59.4MiB/s (62.3MB/s)(34.8GiB/600004msec)
+    slat (nsec): min=42, max=458914, avg=69.25, stdev=195.94
+    clat (usec): min=10, max=84041, avg=130.52, stdev=29.46
+     lat (usec): min=10, max=84043, avg=130.59, stdev=29.47
+    clat percentiles (usec):
+     |  1.00th=[  104],  5.00th=[  115], 10.00th=[  122], 20.00th=[  123],
+     | 30.00th=[  129], 40.00th=[  130], 50.00th=[  131], 60.00th=[  131],
+     | 70.00th=[  133], 80.00th=[  139], 90.00th=[  141], 95.00th=[  147],
+     | 99.00th=[  163], 99.50th=[  172], 99.90th=[  235], 99.95th=[  363],
+     | 99.99th=[  553]
+   bw (  KiB/s): min=40399, max=61177, per=100.00%, avg=60863.65, stdev=39.32, samples=19184
+   iops        : min=80798, max=122354, avg=121727.87, stdev=78.64, samples=19184
+  lat (usec)   : 20=0.01%, 50=0.03%, 100=0.77%, 250=99.11%, 500=0.06%
+  lat (usec)   : 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.01%, 20=0.01%, 50=0.01%
+  lat (msec)   : 100=0.01%
+  cpu          : usr=1.48%, sys=4.76%, ctx=73049316, majf=0, minf=167
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=72994271,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: bw=59.4MiB/s (62.3MB/s), 59.4MiB/s-59.4MiB/s (62.3MB/s-62.3MB/s), io=34.8GiB (37.4GB), run=600004-600004msec
+
+Disk stats (read/write):
+  nvme2n1: ios=72982647/0, sectors=72982647/0, merge=0/0, ticks=616695/0, in_queue=616695, util=99.91%
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=1
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=16): [r(16)][100.0%][r=49.2MiB/s][r=101k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=3557: Fri Jan 19 14:46:59 2024
+  read: IOPS=101k, BW=49.2MiB/s (51.6MB/s)(28.8GiB/600003msec)
+    slat (nsec): min=42, max=636857, avg=262.23, stdev=1245.43
+    clat (usec): min=11, max=88099, avg=156.85, stdev=67.44
+     lat (usec): min=11, max=88100, avg=157.12, stdev=67.61
+    clat percentiles (usec):
+     |  1.00th=[   73],  5.00th=[   81], 10.00th=[   87], 20.00th=[   96],
+     | 30.00th=[   98], 40.00th=[  108], 50.00th=[  163], 60.00th=[  204],
+     | 70.00th=[  212], 80.00th=[  219], 90.00th=[  225], 95.00th=[  233],
+     | 99.00th=[  253], 99.50th=[  338], 99.90th=[  396], 99.95th=[  420],
+     | 99.99th=[  545]
+   bw (  KiB/s): min=34231, max=51683, per=100.00%, avg=50393.25, stdev=38.78, samples=19180
+   iops        : min=68462, max=103366, avg=100786.51, stdev=77.56, samples=19180
+  lat (usec)   : 20=0.04%, 50=0.05%, 100=35.03%, 250=63.75%, 500=1.11%
+  lat (usec)   : 750=0.02%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.01%, 20=0.01%, 50=0.01%
+  lat (msec)   : 100=0.01%
+  cpu          : usr=1.16%, sys=5.07%, ctx=60504241, majf=0, minf=165
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=60428593,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: bw=49.2MiB/s (51.6MB/s), 49.2MiB/s-49.2MiB/s (51.6MB/s-51.6MB/s), io=28.8GiB (30.9GB), run=600003-600003msec
+
+Disk stats (read/write):
+  nvme2n1: ios=60417203/0, sectors=60417203/0, merge=0/0, ticks=739604/0, in_queue=739604, util=99.92%
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=1
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=16): [r(16)][100.0%][r=57.7MiB/s][r=118k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=3709: Fri Jan 19 14:57:00 2024
+  read: IOPS=118k, BW=57.6MiB/s (60.4MB/s)(33.8GiB/600003msec)
+    slat (nsec): min=50, max=428788, avg=92.48, stdev=242.60
+    clat (usec): min=8, max=82502, avg=134.52, stdev=31.43
+     lat (usec): min=9, max=82503, avg=134.61, stdev=31.45
+    clat percentiles (usec):
+     |  1.00th=[   98],  5.00th=[  117], 10.00th=[  118], 20.00th=[  126],
+     | 30.00th=[  133], 40.00th=[  133], 50.00th=[  135], 60.00th=[  135],
+     | 70.00th=[  139], 80.00th=[  143], 90.00th=[  149], 95.00th=[  153],
+     | 99.00th=[  196], 99.50th=[  269], 99.90th=[  306], 99.95th=[  343],
+     | 99.99th=[  553]
+   bw (  KiB/s): min=36405, max=59531, per=100.00%, avg=59034.03, stdev=43.35, samples=19184
+   iops        : min=72810, max=119062, avg=118068.07, stdev=86.71, samples=19184
+  lat (usec)   : 10=0.01%, 20=0.03%, 50=0.09%, 100=1.18%, 250=98.13%
+  lat (usec)   : 500=0.56%, 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.01%, 20=0.01%, 50=0.01%
+  lat (msec)   : 100=0.01%
+  cpu          : usr=1.46%, sys=4.78%, ctx=70825909, majf=0, minf=181
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=70800282,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: bw=57.6MiB/s (60.4MB/s), 57.6MiB/s-57.6MiB/s (60.4MB/s-60.4MB/s), io=33.8GiB (36.2GB), run=600003-600003msec
+
+Disk stats (read/write):
+  nvme2n1: ios=70787802/0, sectors=70787802/0, merge=0/0, ticks=617373/0, in_queue=617373, util=99.91%
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=1
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=16): [r(16)][100.0%][r=57.4MiB/s][r=118k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=3859: Fri Jan 19 15:07:01 2024
+  read: IOPS=118k, BW=57.5MiB/s (60.3MB/s)(33.7GiB/600004msec)
+    slat (nsec): min=42, max=455764, avg=84.81, stdev=193.99
+    clat (usec): min=10, max=83571, avg=135.01, stdev=28.80
+     lat (usec): min=10, max=83572, avg=135.09, stdev=28.81
+    clat percentiles (usec):
+     |  1.00th=[  106],  5.00th=[  119], 10.00th=[  126], 20.00th=[  127],
+     | 30.00th=[  133], 40.00th=[  135], 50.00th=[  135], 60.00th=[  137],
+     | 70.00th=[  137], 80.00th=[  143], 90.00th=[  145], 95.00th=[  153],
+     | 99.00th=[  167], 99.50th=[  176], 99.90th=[  249], 99.95th=[  347],
+     | 99.99th=[  562]
+   bw (  KiB/s): min=36954, max=59199, per=100.00%, avg=58906.67, stdev=42.14, samples=19184
+   iops        : min=73909, max=118398, avg=117813.34, stdev=84.28, samples=19184
+  lat (usec)   : 20=0.01%, 50=0.05%, 100=0.64%, 250=99.20%, 500=0.08%
+  lat (usec)   : 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.01%, 20=0.01%, 50=0.01%
+  lat (msec)   : 100=0.01%
+  cpu          : usr=1.43%, sys=4.80%, ctx=70690992, majf=0, minf=180
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=70642106,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: bw=57.5MiB/s (60.3MB/s), 57.5MiB/s-57.5MiB/s (60.3MB/s-60.3MB/s), io=33.7GiB (36.2GB), run=600004-600004msec
+
+Disk stats (read/write):
+  nvme2n1: ios=70629877/0, sectors=70629877/0, merge=0/0, ticks=655746/0, in_queue=655746, util=99.92%
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=1
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=16): [r(16)][100.0%][r=59.2MiB/s][r=121k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=4007: Fri Jan 19 15:17:03 2024
+  read: IOPS=121k, BW=59.2MiB/s (62.0MB/s)(34.7GiB/600003msec)
+    slat (nsec): min=41, max=423376, avg=77.18, stdev=164.34
+    clat (usec): min=10, max=68265, avg=131.00, stdev=27.46
+     lat (usec): min=10, max=68267, avg=131.07, stdev=27.47
+    clat percentiles (usec):
+     |  1.00th=[  103],  5.00th=[  115], 10.00th=[  122], 20.00th=[  123],
+     | 30.00th=[  129], 40.00th=[  131], 50.00th=[  131], 60.00th=[  131],
+     | 70.00th=[  133], 80.00th=[  139], 90.00th=[  141], 95.00th=[  149],
+     | 99.00th=[  165], 99.50th=[  174], 99.90th=[  237], 99.95th=[  359],
+     | 99.99th=[  553]
+   bw (  KiB/s): min=39995, max=61069, per=100.00%, avg=60616.60, stdev=39.71, samples=19184
+   iops        : min=79990, max=122138, avg=121233.79, stdev=79.41, samples=19184
+  lat (usec)   : 20=0.01%, 50=0.03%, 100=0.85%, 250=99.03%, 500=0.06%
+  lat (usec)   : 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.01%, 20=0.01%, 50=0.01%
+  lat (msec)   : 100=0.01%
+  cpu          : usr=1.49%, sys=4.75%, ctx=72752106, majf=0, minf=167
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=72695982,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: bw=59.2MiB/s (62.0MB/s), 59.2MiB/s-59.2MiB/s (62.0MB/s-62.0MB/s), io=34.7GiB (37.2GB), run=600003-600003msec
+
+Disk stats (read/write):
+  nvme2n1: ios=72682970/0, sectors=72682970/0, merge=0/0, ticks=615242/0, in_queue=615242, util=99.91%
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=1
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=16): [r(16)][100.0%][r=49.0MiB/s][r=100k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=4158: Fri Jan 19 15:27:04 2024
+  read: IOPS=100k, BW=49.0MiB/s (51.4MB/s)(28.7GiB/600004msec)
+    slat (nsec): min=51, max=581050, avg=255.10, stdev=1269.43
+    clat (usec): min=11, max=67177, avg=157.39, stdev=66.96
+     lat (usec): min=11, max=67178, avg=157.64, stdev=67.12
+    clat percentiles (usec):
+     |  1.00th=[   72],  5.00th=[   80], 10.00th=[   88], 20.00th=[   95],
+     | 30.00th=[   98], 40.00th=[  108], 50.00th=[  165], 60.00th=[  206],
+     | 70.00th=[  212], 80.00th=[  219], 90.00th=[  227], 95.00th=[  233],
+     | 99.00th=[  255], 99.50th=[  338], 99.90th=[  392], 99.95th=[  420],
+     | 99.99th=[  537]
+   bw (  KiB/s): min=30823, max=51454, per=100.00%, avg=50185.29, stdev=43.74, samples=19184
+   iops        : min=61646, max=102908, avg=100370.59, stdev=87.49, samples=19184
+  lat (usec)   : 20=0.04%, 50=0.04%, 100=35.86%, 250=62.87%, 500=1.16%
+  lat (usec)   : 750=0.02%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.01%, 20=0.01%, 50=0.01%
+  lat (msec)   : 100=0.01%
+  cpu          : usr=1.15%, sys=5.08%, ctx=60256543, majf=0, minf=196
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=60180212,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: bw=49.0MiB/s (51.4MB/s), 49.0MiB/s-49.0MiB/s (51.4MB/s-51.4MB/s), io=28.7GiB (30.8GB), run=600004-600004msec
+
+Disk stats (read/write):
+  nvme2n1: ios=60172595/0, sectors=60172595/0, merge=0/0, ticks=737491/0, in_queue=737491, util=99.92%
+14 36
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=2
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=16): [r(16)][100.0%][r=77.0MiB/s][r=158k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=4311: Fri Jan 19 15:37:05 2024
+  read: IOPS=158k, BW=77.0MiB/s (80.7MB/s)(45.1GiB/600003msec)
+    slat (nsec): min=40, max=665612, avg=65.76, stdev=240.36
+    clat (usec): min=8, max=80118, avg=202.18, stdev=42.56
+     lat (usec): min=8, max=80119, avg=202.24, stdev=42.57
+    clat percentiles (usec):
+     |  1.00th=[  149],  5.00th=[  178], 10.00th=[  184], 20.00th=[  190],
+     | 30.00th=[  196], 40.00th=[  198], 50.00th=[  202], 60.00th=[  204],
+     | 70.00th=[  206], 80.00th=[  212], 90.00th=[  221], 95.00th=[  229],
+     | 99.00th=[  322], 99.50th=[  363], 99.90th=[  437], 99.95th=[  498],
+     | 99.99th=[  644]
+   bw (  KiB/s): min=50826, max=79683, per=100.00%, avg=78854.91, stdev=55.35, samples=19184
+   iops        : min=101652, max=159367, avg=157710.47, stdev=110.69, samples=19184
+  lat (usec)   : 10=0.05%, 20=0.31%, 50=0.07%, 100=0.06%, 250=97.44%
+  lat (usec)   : 500=2.03%, 750=0.05%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.01%, 20=0.01%, 50=0.01%
+  lat (msec)   : 100=0.01%
+  cpu          : usr=2.70%, sys=3.54%, ctx=47174458, majf=0, minf=165
+  IO depths    : 1=0.1%, 2=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=94574208,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=2
+
+Run status group 0 (all jobs):
+   READ: bw=77.0MiB/s (80.7MB/s), 77.0MiB/s-77.0MiB/s (80.7MB/s-80.7MB/s), io=45.1GiB (48.4GB), run=600003-600003msec
+
+Disk stats (read/write):
+  nvme2n1: ios=94551486/0, sectors=94551486/0, merge=0/0, ticks=701228/0, in_queue=701228, util=99.92%
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=2
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=16): [r(16)][100.0%][r=78.6MiB/s][r=161k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=4460: Fri Jan 19 15:47:06 2024
+  read: IOPS=161k, BW=78.5MiB/s (82.3MB/s)(46.0GiB/600004msec)
+    slat (nsec): min=41, max=662560, avg=91.09, stdev=233.63
+    clat (usec): min=8, max=87138, avg=198.05, stdev=40.62
+     lat (usec): min=8, max=87140, avg=198.14, stdev=40.63
+    clat percentiles (usec):
+     |  1.00th=[  145],  5.00th=[  169], 10.00th=[  178], 20.00th=[  188],
+     | 30.00th=[  192], 40.00th=[  194], 50.00th=[  198], 60.00th=[  202],
+     | 70.00th=[  204], 80.00th=[  208], 90.00th=[  219], 95.00th=[  229],
+     | 99.00th=[  258], 99.50th=[  277], 99.90th=[  375], 99.95th=[  429],
+     | 99.99th=[  652]
+   bw (  KiB/s): min=50668, max=80903, per=100.00%, avg=80414.61, stdev=56.27, samples=19184
+   iops        : min=101336, max=161806, avg=160829.25, stdev=112.53, samples=19184
+  lat (usec)   : 10=0.01%, 20=0.06%, 50=0.07%, 100=0.08%, 250=98.38%
+  lat (usec)   : 500=1.38%, 750=0.02%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.01%, 20=0.01%, 50=0.01%
+  lat (msec)   : 100=0.01%
+  cpu          : usr=1.82%, sys=4.41%, ctx=48241770, majf=0, minf=182
+  IO depths    : 1=0.1%, 2=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=96437140,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=2
+
+Run status group 0 (all jobs):
+   READ: bw=78.5MiB/s (82.3MB/s), 78.5MiB/s-78.5MiB/s (82.3MB/s-82.3MB/s), io=46.0GiB (49.4GB), run=600004-600004msec
+
+Disk stats (read/write):
+  nvme2n1: ios=96417005/0, sectors=96417005/0, merge=0/0, ticks=877914/0, in_queue=877914, util=99.92%
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=2
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=16): [r(16)][100.0%][r=84.5MiB/s][r=173k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=4618: Fri Jan 19 15:57:07 2024
+  read: IOPS=173k, BW=84.7MiB/s (88.8MB/s)(49.6GiB/600003msec)
+    slat (nsec): min=36, max=624174, avg=59.24, stdev=186.74
+    clat (usec): min=9, max=85640, avg=183.66, stdev=36.43
+     lat (usec): min=9, max=85642, avg=183.72, stdev=36.44
+    clat percentiles (usec):
+     |  1.00th=[  153],  5.00th=[  165], 10.00th=[  169], 20.00th=[  176],
+     | 30.00th=[  178], 40.00th=[  180], 50.00th=[  182], 60.00th=[  186],
+     | 70.00th=[  188], 80.00th=[  190], 90.00th=[  198], 95.00th=[  204],
+     | 99.00th=[  223], 99.50th=[  239], 99.90th=[  363], 99.95th=[  498],
+     | 99.99th=[  660]
+   bw (  KiB/s): min=57743, max=89128, per=100.00%, avg=86799.79, stdev=70.34, samples=19184
+   iops        : min=115487, max=178256, avg=173600.16, stdev=140.68, samples=19184
+  lat (usec)   : 10=0.01%, 20=0.05%, 50=0.06%, 100=0.01%, 250=99.51%
+  lat (usec)   : 500=0.33%, 750=0.05%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.01%, 20=0.01%, 50=0.01%
+  lat (msec)   : 100=0.01%
+  cpu          : usr=1.49%, sys=4.74%, ctx=52078690, majf=0, minf=181
+  IO depths    : 1=0.1%, 2=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=104097555,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=2
+
+Run status group 0 (all jobs):
+   READ: bw=84.7MiB/s (88.8MB/s), 84.7MiB/s-84.7MiB/s (88.8MB/s-88.8MB/s), io=49.6GiB (53.3GB), run=600003-600003msec
+
+Disk stats (read/write):
+  nvme2n1: ios=104077536/0, sectors=104077536/0, merge=0/0, ticks=941803/0, in_queue=941803, util=99.92%
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=2
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=16): [r(16)][100.0%][r=62.0MiB/s][r=127k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=4772: Fri Jan 19 16:07:08 2024
+  read: IOPS=127k, BW=62.1MiB/s (65.1MB/s)(36.4GiB/600004msec)
+    slat (nsec): min=40, max=614661, avg=152.34, stdev=1300.13
+    clat (usec): min=10, max=88278, avg=250.62, stdev=52.59
+     lat (usec): min=10, max=88280, avg=250.77, stdev=52.64
+    clat percentiles (usec):
+     |  1.00th=[  125],  5.00th=[  208], 10.00th=[  223], 20.00th=[  233],
+     | 30.00th=[  239], 40.00th=[  243], 50.00th=[  251], 60.00th=[  258],
+     | 70.00th=[  262], 80.00th=[  269], 90.00th=[  281], 95.00th=[  293],
+     | 99.00th=[  383], 99.50th=[  441], 99.90th=[  537], 99.95th=[  594],
+     | 99.99th=[  676]
+   bw (  KiB/s): min=39174, max=64298, per=100.00%, avg=63601.13, stdev=47.38, samples=19182
+   iops        : min=78348, max=128596, avg=127202.97, stdev=94.75, samples=19182
+  lat (usec)   : 20=0.58%, 50=0.14%, 100=0.12%, 250=47.73%, 500=51.26%
+  lat (usec)   : 750=0.17%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.01%, 20=0.01%, 50=0.01%
+  lat (msec)   : 100=0.01%
+  cpu          : usr=0.99%, sys=5.24%, ctx=37971768, majf=0, minf=182
+  IO depths    : 1=0.1%, 2=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=76270546,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=2
+
+Run status group 0 (all jobs):
+   READ: bw=62.1MiB/s (65.1MB/s), 62.1MiB/s-62.1MiB/s (65.1MB/s-65.1MB/s), io=36.4GiB (39.1GB), run=600004-600004msec
+
+Disk stats (read/write):
+  nvme2n1: ios=76255334/0, sectors=76255334/0, merge=0/0, ticks=972013/0, in_queue=972013, util=99.93%
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=2
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=16): [r(16)][100.0%][r=76.6MiB/s][r=157k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=4924: Fri Jan 19 16:17:09 2024
+  read: IOPS=157k, BW=76.7MiB/s (80.4MB/s)(44.9GiB/600001msec)
+    slat (nsec): min=40, max=630253, avg=60.65, stdev=254.73
+    clat (usec): min=8, max=82209, avg=202.89, stdev=41.08
+     lat (usec): min=8, max=82209, avg=202.95, stdev=41.09
+    clat percentiles (usec):
+     |  1.00th=[  149],  5.00th=[  178], 10.00th=[  184], 20.00th=[  192],
+     | 30.00th=[  196], 40.00th=[  198], 50.00th=[  202], 60.00th=[  204],
+     | 70.00th=[  208], 80.00th=[  212], 90.00th=[  221], 95.00th=[  231],
+     | 99.00th=[  326], 99.50th=[  367], 99.90th=[  437], 99.95th=[  498],
+     | 99.99th=[  644]
+   bw (  KiB/s): min=48901, max=79573, per=100.00%, avg=78569.41, stdev=58.08, samples=19184
+   iops        : min=97802, max=159147, avg=157139.47, stdev=116.16, samples=19184
+  lat (usec)   : 10=0.05%, 20=0.30%, 50=0.07%, 100=0.06%, 250=97.40%
+  lat (usec)   : 500=2.06%, 750=0.05%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.01%, 20=0.01%, 50=0.01%
+  lat (msec)   : 100=0.01%
+  cpu          : usr=2.76%, sys=3.47%, ctx=47006811, majf=0, minf=181
+  IO depths    : 1=0.1%, 2=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=94234900,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=2
+
+Run status group 0 (all jobs):
+   READ: bw=76.7MiB/s (80.4MB/s), 76.7MiB/s-76.7MiB/s (80.4MB/s-80.4MB/s), io=44.9GiB (48.2GB), run=600001-600001msec
+
+Disk stats (read/write):
+  nvme2n1: ios=94209063/0, sectors=94209063/0, merge=0/0, ticks=699742/0, in_queue=699742, util=99.91%
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=2
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=16): [r(16)][100.0%][r=79.1MiB/s][r=162k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=5083: Fri Jan 19 16:27:11 2024
+  read: IOPS=162k, BW=79.0MiB/s (82.9MB/s)(46.3GiB/600002msec)
+    slat (nsec): min=40, max=503553, avg=101.35, stdev=225.89
+    clat (usec): min=9, max=80330, avg=196.65, stdev=37.70
+     lat (usec): min=9, max=80333, avg=196.75, stdev=37.72
+    clat percentiles (usec):
+     |  1.00th=[  143],  5.00th=[  167], 10.00th=[  178], 20.00th=[  186],
+     | 30.00th=[  190], 40.00th=[  192], 50.00th=[  198], 60.00th=[  200],
+     | 70.00th=[  202], 80.00th=[  208], 90.00th=[  217], 95.00th=[  227],
+     | 99.00th=[  255], 99.50th=[  273], 99.90th=[  379], 99.95th=[  445],
+     | 99.99th=[  644]
+   bw (  KiB/s): min=49843, max=81418, per=100.00%, avg=80963.38, stdev=58.71, samples=19184
+   iops        : min=99686, max=162836, avg=161926.78, stdev=117.41, samples=19184
+  lat (usec)   : 10=0.01%, 20=0.06%, 50=0.07%, 100=0.09%, 250=98.47%
+  lat (usec)   : 500=1.28%, 750=0.03%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.01%, 20=0.01%, 50=0.01%
+  lat (msec)   : 100=0.01%
+  cpu          : usr=1.86%, sys=4.38%, ctx=48570942, majf=0, minf=181
+  IO depths    : 1=0.1%, 2=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=97094346,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=2
+
+Run status group 0 (all jobs):
+   READ: bw=79.0MiB/s (82.9MB/s), 79.0MiB/s-79.0MiB/s (82.9MB/s-82.9MB/s), io=46.3GiB (49.7GB), run=600002-600002msec
+
+Disk stats (read/write):
+  nvme2n1: ios=97075808/0, sectors=97075808/0, merge=0/0, ticks=879430/0, in_queue=879430, util=99.92%
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=2
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=16): [r(16)][100.0%][r=85.3MiB/s][r=175k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=5236: Fri Jan 19 16:37:12 2024
+  read: IOPS=174k, BW=85.0MiB/s (89.2MB/s)(49.8GiB/600001msec)
+    slat (nsec): min=40, max=576083, avg=60.19, stdev=161.94
+    clat (usec): min=9, max=87176, avg=182.94, stdev=35.09
+     lat (usec): min=9, max=87178, avg=183.00, stdev=35.10
+    clat percentiles (usec):
+     |  1.00th=[  153],  5.00th=[  165], 10.00th=[  167], 20.00th=[  176],
+     | 30.00th=[  178], 40.00th=[  180], 50.00th=[  182], 60.00th=[  186],
+     | 70.00th=[  188], 80.00th=[  190], 90.00th=[  198], 95.00th=[  204],
+     | 99.00th=[  223], 99.50th=[  239], 99.90th=[  375], 99.95th=[  529],
+     | 99.99th=[  676]
+   bw (  KiB/s): min=55475, max=87967, per=100.00%, avg=87141.61, stdev=61.67, samples=19184
+   iops        : min=110950, max=175935, avg=174283.85, stdev=123.34, samples=19184
+  lat (usec)   : 10=0.01%, 20=0.04%, 50=0.06%, 100=0.01%, 250=99.51%
+  lat (usec)   : 500=0.32%, 750=0.06%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.01%, 20=0.01%, 50=0.01%
+  lat (msec)   : 100=0.01%
+  cpu          : usr=1.46%, sys=4.77%, ctx=52282270, majf=0, minf=181
+  IO depths    : 1=0.1%, 2=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=104504941,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=2
+
+Run status group 0 (all jobs):
+   READ: bw=85.0MiB/s (89.2MB/s), 85.0MiB/s-85.0MiB/s (89.2MB/s-89.2MB/s), io=49.8GiB (53.5GB), run=600001-600001msec
+
+Disk stats (read/write):
+  nvme2n1: ios=104485459/0, sectors=104485459/0, merge=0/0, ticks=946739/0, in_queue=946739, util=99.92%
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=2
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=16): [r(16)][100.0%][r=61.9MiB/s][r=127k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=5388: Fri Jan 19 16:47:13 2024
+  read: IOPS=127k, BW=62.0MiB/s (65.0MB/s)(36.3GiB/600004msec)
+    slat (nsec): min=41, max=607516, avg=167.93, stdev=1358.64
+    clat (usec): min=10, max=83125, avg=250.80, stdev=49.36
+     lat (usec): min=10, max=83126, avg=250.97, stdev=49.42
+    clat percentiles (usec):
+     |  1.00th=[  135],  5.00th=[  208], 10.00th=[  223], 20.00th=[  233],
+     | 30.00th=[  241], 40.00th=[  243], 50.00th=[  251], 60.00th=[  258],
+     | 70.00th=[  262], 80.00th=[  269], 90.00th=[  281], 95.00th=[  293],
+     | 99.00th=[  383], 99.50th=[  437], 99.90th=[  537], 99.95th=[  594],
+     | 99.99th=[  676]
+   bw (  KiB/s): min=40159, max=64248, per=100.00%, avg=63557.60, stdev=45.73, samples=19181
+   iops        : min=80318, max=128496, avg=127115.88, stdev=91.46, samples=19181
+  lat (usec)   : 20=0.50%, 50=0.14%, 100=0.11%, 250=47.85%, 500=51.24%
+  lat (usec)   : 750=0.16%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.01%, 20=0.01%, 50=0.01%
+  lat (msec)   : 100=0.01%
+  cpu          : usr=1.00%, sys=5.23%, ctx=37980098, majf=0, minf=166
+  IO depths    : 1=0.1%, 2=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=76222179,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=2
+
+Run status group 0 (all jobs):
+   READ: bw=62.0MiB/s (65.0MB/s), 62.0MiB/s-62.0MiB/s (65.0MB/s-65.0MB/s), io=36.3GiB (39.0GB), run=600004-600004msec
+
+Disk stats (read/write):
+  nvme2n1: ios=76203101/0, sectors=76203101/0, merge=0/0, ticks=970656/0, in_queue=970656, util=99.93%
+14 36
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=4
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=16): [r(16)][100.0%][r=108MiB/s][r=221k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=5542: Fri Jan 19 16:57:14 2024
+  read: IOPS=221k, BW=108MiB/s (113MB/s)(63.2GiB/600017msec)
+    slat (nsec): min=40, max=20293k, avg=203.31, stdev=6170.79
+    clat (usec): min=8, max=97789, avg=288.09, stdev=1885.33
+     lat (usec): min=8, max=97789, avg=288.29, stdev=1885.33
+    clat percentiles (usec):
+     |  1.00th=[   15],  5.00th=[   16], 10.00th=[   16], 20.00th=[   16],
+     | 30.00th=[   16], 40.00th=[   16], 50.00th=[   17], 60.00th=[   18],
+     | 70.00th=[   18], 80.00th=[   18], 90.00th=[   18], 95.00th=[   20],
+     | 99.00th=[13042], 99.50th=[14091], 99.90th=[16057], 99.95th=[20841],
+     | 99.99th=[27657]
+   bw (  KiB/s): min=68738, max=116289, per=100.00%, avg=110567.94, stdev=119.10, samples=19184
+   iops        : min=137476, max=232578, avg=221136.43, stdev=238.20, samples=19184
+  lat (usec)   : 10=0.04%, 20=95.33%, 50=2.12%, 100=0.03%, 250=0.04%
+  lat (usec)   : 500=0.07%, 750=0.06%, 1000=0.08%
+  lat (msec)   : 2=0.08%, 4=0.05%, 10=0.27%, 20=1.79%, 50=0.05%
+  lat (msec)   : 100=0.01%
+  cpu          : usr=1.40%, sys=4.83%, ctx=911639, majf=0, minf=182
+  IO depths    : 1=0.1%, 2=0.1%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=132606225,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=4
+
+Run status group 0 (all jobs):
+   READ: bw=108MiB/s (113MB/s), 108MiB/s-108MiB/s (113MB/s-113MB/s), io=63.2GiB (67.9GB), run=600017-600017msec
+
+Disk stats (read/write):
+  nvme2n1: ios=132573285/0, sectors=132573285/0, merge=0/0, ticks=992794/0, in_queue=992794, util=99.92%
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=4
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=16): [r(16)][100.0%][r=99.2MiB/s][r=203k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=5696: Fri Jan 19 17:07:15 2024
+  read: IOPS=203k, BW=99.3MiB/s (104MB/s)(58.2GiB/600011msec)
+    slat (nsec): min=41, max=12232k, avg=79.92, stdev=3005.14
+    clat (usec): min=8, max=88230, avg=313.66, stdev=1761.20
+     lat (usec): min=8, max=88232, avg=313.74, stdev=1761.20
+    clat percentiles (usec):
+     |  1.00th=[   17],  5.00th=[   18], 10.00th=[   19], 20.00th=[   19],
+     | 30.00th=[   19], 40.00th=[   19], 50.00th=[   19], 60.00th=[   19],
+     | 70.00th=[   20], 80.00th=[   20], 90.00th=[   20], 95.00th=[   23],
+     | 99.00th=[11731], 99.50th=[13829], 99.90th=[16188], 99.95th=[16712],
+     | 99.99th=[19530]
+   bw (  KiB/s): min=63822, max=105736, per=100.00%, avg=101782.46, stdev=102.83, samples=19184
+   iops        : min=127644, max=211472, avg=203565.56, stdev=205.65, samples=19184
+  lat (usec)   : 10=0.01%, 20=93.22%, 50=2.70%, 100=0.05%, 250=0.07%
+  lat (usec)   : 500=0.10%, 750=0.08%, 1000=0.22%
+  lat (msec)   : 2=0.36%, 4=0.54%, 10=1.29%, 20=1.34%, 50=0.01%
+  lat (msec)   : 100=0.01%
+  cpu          : usr=1.60%, sys=4.64%, ctx=1360941, majf=0, minf=182
+  IO depths    : 1=0.1%, 2=0.1%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=122072118,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=4
+
+Run status group 0 (all jobs):
+   READ: bw=99.3MiB/s (104MB/s), 99.3MiB/s-99.3MiB/s (104MB/s-104MB/s), io=58.2GiB (62.5GB), run=600011-600011msec
+
+Disk stats (read/write):
+  nvme2n1: ios=122036980/0, sectors=122036980/0, merge=0/0, ticks=1214007/0, in_queue=1214007, util=99.92%
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=4
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=16): [r(16)][100.0%][r=128MiB/s][r=262k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=5850: Fri Jan 19 17:17:16 2024
+  read: IOPS=262k, BW=128MiB/s (134MB/s)(75.0GiB/600006msec)
+    slat (nsec): min=36, max=6226.1k, avg=43.90, stdev=1249.94
+    clat (usec): min=9, max=91209, avg=243.53, stdev=1359.41
+     lat (usec): min=9, max=91210, avg=243.57, stdev=1359.41
+    clat percentiles (usec):
+     |  1.00th=[   11],  5.00th=[   11], 10.00th=[   11], 20.00th=[   12],
+     | 30.00th=[   12], 40.00th=[   15], 50.00th=[   15], 60.00th=[   16],
+     | 70.00th=[   18], 80.00th=[   19], 90.00th=[   19], 95.00th=[   20],
+     | 99.00th=[ 9110], 99.50th=[10814], 99.90th=[12256], 99.95th=[12780],
+     | 99.99th=[14877]
+   bw (  KiB/s): min=88606, max=135444, per=100.00%, avg=131197.90, stdev=112.59, samples=19184
+   iops        : min=177212, max=270888, avg=262396.00, stdev=225.20, samples=19184
+  lat (usec)   : 10=0.07%, 20=95.29%, 50=0.60%, 100=0.05%, 250=0.06%
+  lat (usec)   : 500=0.10%, 750=0.20%, 1000=0.25%
+  lat (msec)   : 2=0.33%, 4=0.64%, 10=1.65%, 20=0.76%, 50=0.01%
+  lat (msec)   : 100=0.01%
+  cpu          : usr=1.24%, sys=5.00%, ctx=1737860, majf=0, minf=166
+  IO depths    : 1=0.1%, 2=0.1%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=157350604,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=4
+
+Run status group 0 (all jobs):
+   READ: bw=128MiB/s (134MB/s), 128MiB/s-128MiB/s (134MB/s-134MB/s), io=75.0GiB (80.6GB), run=600006-600006msec
+
+Disk stats (read/write):
+  nvme2n1: ios=157308999/0, sectors=157308999/0, merge=0/0, ticks=1398263/0, in_queue=1398263, util=99.92%
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=4
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=16): [r(16)][100.0%][r=82.2MiB/s][r=168k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=6009: Fri Jan 19 17:27:18 2024
+  read: IOPS=169k, BW=82.7MiB/s (86.7MB/s)(48.4GiB/600039msec)
+    slat (nsec): min=40, max=53697k, avg=169.91, stdev=29709.41
+    clat (usec): min=10, max=112062, avg=376.91, stdev=2404.93
+     lat (usec): min=10, max=112062, avg=377.08, stdev=2405.10
+    clat percentiles (usec):
+     |  1.00th=[   13],  5.00th=[   20], 10.00th=[   21], 20.00th=[   23],
+     | 30.00th=[   23], 40.00th=[   23], 50.00th=[   23], 60.00th=[   24],
+     | 70.00th=[   24], 80.00th=[   24], 90.00th=[   26], 95.00th=[   31],
+     | 99.00th=[16450], 99.50th=[18220], 99.90th=[21103], 99.95th=[30016],
+     | 99.99th=[36963]
+   bw (  KiB/s): min=53077, max=91001, per=100.00%, avg=84716.37, stdev=109.24, samples=19184
+   iops        : min=106154, max=182002, avg=169433.27, stdev=218.49, samples=19184
+  lat (usec)   : 20=7.39%, 50=89.63%, 100=0.05%, 250=0.05%, 500=0.08%
+  lat (usec)   : 750=0.07%, 1000=0.08%
+  lat (msec)   : 2=0.18%, 4=0.19%, 10=0.37%, 20=1.74%, 50=0.16%
+  lat (msec)   : 100=0.01%, 250=0.01%
+  cpu          : usr=0.82%, sys=5.41%, ctx=829921, majf=0, minf=200
+  IO depths    : 1=0.1%, 2=0.1%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=101600861,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=4
+
+Run status group 0 (all jobs):
+   READ: bw=82.7MiB/s (86.7MB/s), 82.7MiB/s-82.7MiB/s (86.7MB/s-86.7MB/s), io=48.4GiB (52.0GB), run=600039-600039msec
+
+Disk stats (read/write):
+  nvme2n1: ios=101571218/0, sectors=101571218/0, merge=0/0, ticks=1200969/0, in_queue=1200969, util=99.92%
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=4
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=16): [r(16)][100.0%][r=109MiB/s][r=223k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=6163: Fri Jan 19 17:37:19 2024
+  read: IOPS=222k, BW=108MiB/s (114MB/s)(63.5GiB/600019msec)
+    slat (nsec): min=39, max=21750k, avg=162.11, stdev=6090.88
+    clat (usec): min=8, max=94498, avg=287.05, stdev=1876.90
+     lat (usec): min=8, max=94498, avg=287.21, stdev=1876.90
+    clat percentiles (usec):
+     |  1.00th=[   15],  5.00th=[   16], 10.00th=[   16], 20.00th=[   16],
+     | 30.00th=[   16], 40.00th=[   16], 50.00th=[   17], 60.00th=[   18],
+     | 70.00th=[   18], 80.00th=[   18], 90.00th=[   18], 95.00th=[   20],
+     | 99.00th=[13042], 99.50th=[14091], 99.90th=[15926], 99.95th=[20579],
+     | 99.99th=[27657]
+   bw (  KiB/s): min=69235, max=117358, per=100.00%, avg=110985.98, stdev=121.83, samples=19184
+   iops        : min=138470, max=234717, avg=221972.45, stdev=243.66, samples=19184
+  lat (usec)   : 10=0.04%, 20=95.31%, 50=2.14%, 100=0.03%, 250=0.04%
+  lat (usec)   : 500=0.07%, 750=0.07%, 1000=0.08%
+  lat (msec)   : 2=0.08%, 4=0.05%, 10=0.27%, 20=1.79%, 50=0.05%
+  lat (msec)   : 100=0.01%
+  cpu          : usr=1.36%, sys=4.88%, ctx=914735, majf=0, minf=183
+  IO depths    : 1=0.1%, 2=0.1%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=133106575,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=4
+
+Run status group 0 (all jobs):
+   READ: bw=108MiB/s (114MB/s), 108MiB/s-108MiB/s (114MB/s-114MB/s), io=63.5GiB (68.1GB), run=600019-600019msec
+
+Disk stats (read/write):
+  nvme2n1: ios=133074994/0, sectors=133074994/0, merge=0/0, ticks=995397/0, in_queue=995397, util=99.92%
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=4
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=16): [r(16)][100.0%][r=89.9MiB/s][r=184k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=6313: Fri Jan 19 17:47:20 2024
+  read: IOPS=184k, BW=89.8MiB/s (94.1MB/s)(52.6GiB/600013msec)
+    slat (nsec): min=40, max=12560k, avg=90.22, stdev=4601.87
+    clat (usec): min=9, max=89031, avg=347.20, stdev=1939.08
+     lat (usec): min=9, max=89031, avg=347.29, stdev=1939.08
+    clat percentiles (usec):
+     |  1.00th=[   19],  5.00th=[   20], 10.00th=[   21], 20.00th=[   21],
+     | 30.00th=[   21], 40.00th=[   21], 50.00th=[   21], 60.00th=[   22],
+     | 70.00th=[   22], 80.00th=[   22], 90.00th=[   22], 95.00th=[   24],
+     | 99.00th=[12911], 99.50th=[15270], 99.90th=[17695], 99.95th=[18482],
+     | 99.99th=[21627]
+   bw (  KiB/s): min=57824, max=95931, per=100.00%, avg=91983.16, stdev=97.99, samples=19183
+   iops        : min=115648, max=191862, avg=183966.65, stdev=196.00, samples=19183
+  lat (usec)   : 10=0.01%, 20=6.16%, 50=89.65%, 100=0.06%, 250=0.07%
+  lat (usec)   : 500=0.11%, 750=0.09%, 1000=0.12%
+  lat (msec)   : 2=0.43%, 4=0.50%, 10=1.28%, 20=1.49%, 50=0.03%
+  lat (msec)   : 100=0.01%
+  cpu          : usr=1.39%, sys=4.84%, ctx=1265745, majf=0, minf=166
+  IO depths    : 1=0.1%, 2=0.1%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=110298815,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=4
+
+Run status group 0 (all jobs):
+   READ: bw=89.8MiB/s (94.1MB/s), 89.8MiB/s-89.8MiB/s (94.1MB/s-94.1MB/s), io=52.6GiB (56.5GB), run=600013-600013msec
+
+Disk stats (read/write):
+  nvme2n1: ios=110283412/0, sectors=110283412/0, merge=0/0, ticks=1141743/0, in_queue=1141743, util=99.93%
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=4
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=16): [r(16)][100.0%][r=111MiB/s][r=228k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=6463: Fri Jan 19 17:57:21 2024
+  read: IOPS=228k, BW=111MiB/s (117MB/s)(65.3GiB/600010msec)
+    slat (nsec): min=41, max=12222k, avg=70.89, stdev=3037.41
+    clat (usec): min=9, max=93103, avg=279.78, stdev=1559.21
+     lat (usec): min=9, max=93105, avg=279.85, stdev=1559.21
+    clat percentiles (usec):
+     |  1.00th=[   12],  5.00th=[   16], 10.00th=[   16], 20.00th=[   17],
+     | 30.00th=[   17], 40.00th=[   17], 50.00th=[   18], 60.00th=[   18],
+     | 70.00th=[   18], 80.00th=[   18], 90.00th=[   18], 95.00th=[   21],
+     | 99.00th=[10421], 99.50th=[12387], 99.90th=[13960], 99.95th=[14877],
+     | 99.99th=[17171]
+   bw (  KiB/s): min=77640, max=117823, per=100.00%, avg=114145.52, stdev=101.82, samples=19184
+   iops        : min=155281, max=235647, avg=228291.11, stdev=203.65, samples=19184
+  lat (usec)   : 10=0.03%, 20=93.62%, 50=2.24%, 100=0.05%, 250=0.06%
+  lat (usec)   : 500=0.10%, 750=0.09%, 1000=0.28%
+  lat (msec)   : 2=0.34%, 4=0.58%, 10=1.49%, 20=1.10%, 50=0.01%
+  lat (msec)   : 100=0.01%
+  cpu          : usr=1.14%, sys=5.10%, ctx=1547561, majf=0, minf=167
+  IO depths    : 1=0.1%, 2=0.1%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=136889003,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=4
+
+Run status group 0 (all jobs):
+   READ: bw=111MiB/s (117MB/s), 111MiB/s-111MiB/s (117MB/s-117MB/s), io=65.3GiB (70.1GB), run=600010-600010msec
+
+Disk stats (read/write):
+  nvme2n1: ios=136859696/0, sectors=136859696/0, merge=0/0, ticks=1240264/0, in_queue=1240264, util=99.92%
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=4
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=16): [r(16)][100.0%][r=82.5MiB/s][r=169k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=6616: Fri Jan 19 18:07:22 2024
+  read: IOPS=170k, BW=82.9MiB/s (87.0MB/s)(48.6GiB/600045msec)
+    slat (nsec): min=40, max=54078k, avg=125.14, stdev=25732.81
+    clat (usec): min=10, max=102882, avg=375.70, stdev=2403.60
+     lat (usec): min=10, max=102882, avg=375.82, stdev=2403.73
+    clat percentiles (usec):
+     |  1.00th=[   13],  5.00th=[   20], 10.00th=[   21], 20.00th=[   22],
+     | 30.00th=[   23], 40.00th=[   23], 50.00th=[   23], 60.00th=[   23],
+     | 70.00th=[   24], 80.00th=[   24], 90.00th=[   26], 95.00th=[   31],
+     | 99.00th=[16450], 99.50th=[18220], 99.90th=[21103], 99.95th=[30802],
+     | 99.99th=[36963]
+   bw (  KiB/s): min=53539, max=91317, per=100.00%, avg=85004.69, stdev=109.65, samples=19180
+   iops        : min=107078, max=182634, avg=170009.92, stdev=219.31, samples=19180
+  lat (usec)   : 20=8.50%, 50=88.54%, 100=0.05%, 250=0.05%, 500=0.08%
+  lat (usec)   : 750=0.07%, 1000=0.08%
+  lat (msec)   : 2=0.18%, 4=0.19%, 10=0.37%, 20=1.72%, 50=0.16%
+  lat (msec)   : 100=0.01%, 250=0.01%
+  cpu          : usr=0.83%, sys=5.40%, ctx=828986, majf=0, minf=168
+  IO depths    : 1=0.1%, 2=0.1%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=101934043,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=4
+
+Run status group 0 (all jobs):
+   READ: bw=82.9MiB/s (87.0MB/s), 82.9MiB/s-82.9MiB/s (87.0MB/s-87.0MB/s), io=48.6GiB (52.2GB), run=600045-600045msec
+
+Disk stats (read/write):
+  nvme2n1: ios=101914615/0, sectors=101914615/0, merge=0/0, ticks=1208699/0, in_queue=1208699, util=99.93%
+14 36
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=8
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=16): [r(16)][100.0%][r=110MiB/s][r=226k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=6772: Fri Jan 19 18:17:23 2024
+  read: IOPS=226k, BW=110MiB/s (116MB/s)(64.6GiB/600087msec)
+    slat (nsec): min=41, max=180020k, avg=1572.75, stdev=343065.62
+    clat (usec): min=13, max=184053, avg=555.23, stdev=6346.74
+     lat (usec): min=13, max=184053, avg=556.80, stdev=6355.90
+    clat percentiles (usec):
+     |  1.00th=[    28],  5.00th=[    32], 10.00th=[    33], 20.00th=[    33],
+     | 30.00th=[    34], 40.00th=[    34], 50.00th=[    35], 60.00th=[    35],
+     | 70.00th=[    35], 80.00th=[    36], 90.00th=[    36], 95.00th=[    40],
+     | 99.00th=[    57], 99.50th=[ 51643], 99.90th=[103285], 99.95th=[114820],
+     | 99.99th=[125305]
+   bw (  KiB/s): min=70125, max=141719, per=100.00%, avg=112942.08, stdev=582.58, samples=19184
+   iops        : min=140250, max=283439, avg=225884.48, stdev=1165.15, samples=19184
+  lat (usec)   : 20=0.17%, 50=98.41%, 100=0.49%, 250=0.01%, 500=0.01%
+  lat (usec)   : 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.03%, 10=0.07%, 20=0.07%, 50=0.23%
+  lat (msec)   : 100=0.39%, 250=0.13%
+  cpu          : usr=1.36%, sys=4.88%, ctx=224797, majf=0, minf=170
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=100.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.1%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=135457981,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=8
+
+Run status group 0 (all jobs):
+   READ: bw=110MiB/s (116MB/s), 110MiB/s-110MiB/s (116MB/s-116MB/s), io=64.6GiB (69.4GB), run=600087-600087msec
+
+Disk stats (read/write):
+  nvme2n1: ios=135423924/0, sectors=135423924/0, merge=0/0, ticks=1018017/0, in_queue=1018017, util=99.92%
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=8
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=16): [r(16)][100.0%][r=101MiB/s][r=207k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=7614: Fri Jan 19 18:27:24 2024
+  read: IOPS=206k, BW=101MiB/s (106MB/s)(59.1GiB/600077msec)
+    slat (nsec): min=40, max=176023k, avg=760.64, stdev=237203.04
+    clat (usec): min=12, max=188063, avg=612.69, stdev=6609.24
+     lat (usec): min=12, max=188063, avg=613.45, stdev=6613.45
+    clat percentiles (usec):
+     |  1.00th=[    30],  5.00th=[    34], 10.00th=[    38], 20.00th=[    38],
+     | 30.00th=[    38], 40.00th=[    39], 50.00th=[    39], 60.00th=[    39],
+     | 70.00th=[    39], 80.00th=[    39], 90.00th=[    40], 95.00th=[    40],
+     | 99.00th=[  5276], 99.50th=[ 57410], 99.90th=[103285], 99.95th=[114820],
+     | 99.99th=[125305]
+   bw (  KiB/s): min=63656, max=129456, per=100.00%, avg=103312.14, stdev=525.04, samples=19184
+   iops        : min=127313, max=258912, avg=206624.64, stdev=1050.08, samples=19184
+  lat (usec)   : 20=0.12%, 50=98.24%, 100=0.56%, 250=0.01%, 500=0.01%
+  lat (usec)   : 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.04%, 10=0.10%, 20=0.08%, 50=0.27%
+  lat (msec)   : 100=0.43%, 250=0.13%
+  cpu          : usr=1.55%, sys=4.68%, ctx=232333, majf=0, minf=170
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=100.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.1%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=123907621,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=8
+
+Run status group 0 (all jobs):
+   READ: bw=101MiB/s (106MB/s), 101MiB/s-101MiB/s (106MB/s-106MB/s), io=59.1GiB (63.4GB), run=600077-600077msec
+
+Disk stats (read/write):
+  nvme2n1: ios=123875294/0, sectors=123875294/0, merge=0/0, ticks=1234872/0, in_queue=1234872, util=99.92%
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=8
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=16): [r(16)][100.0%][r=130MiB/s][r=267k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=7764: Fri Jan 19 18:37:26 2024
+  read: IOPS=267k, BW=130MiB/s (137MB/s)(76.3GiB/600067msec)
+    slat (nsec): min=35, max=169786k, avg=413.69, stdev=175136.05
+    clat (usec): min=9, max=191612, avg=475.78, stdev=5755.52
+     lat (usec): min=9, max=191612, avg=476.20, stdev=5758.17
+    clat percentiles (usec):
+     |  1.00th=[    24],  5.00th=[    25], 10.00th=[    26], 20.00th=[    26],
+     | 30.00th=[    27], 40.00th=[    29], 50.00th=[    30], 60.00th=[    31],
+     | 70.00th=[    32], 80.00th=[    34], 90.00th=[    34], 95.00th=[    35],
+     | 99.00th=[    51], 99.50th=[ 41157], 99.90th=[ 96994], 99.95th=[110625],
+     | 99.99th=[124257]
+   bw (  KiB/s): min=87371, max=165216, per=100.00%, avg=133456.59, stdev=675.44, samples=19185
+   iops        : min=174742, max=330432, avg=266913.49, stdev=1350.87, samples=19185
+  lat (usec)   : 10=0.01%, 20=0.25%, 50=98.74%, 100=0.13%, 250=0.01%
+  lat (usec)   : 500=0.01%, 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.04%, 10=0.09%, 20=0.07%, 50=0.22%
+  lat (msec)   : 100=0.34%, 250=0.09%
+  cpu          : usr=1.23%, sys=5.01%, ctx=241970, majf=0, minf=172
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=100.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.1%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=160071643,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=8
+
+Run status group 0 (all jobs):
+   READ: bw=130MiB/s (137MB/s), 130MiB/s-130MiB/s (137MB/s-137MB/s), io=76.3GiB (82.0GB), run=600067-600067msec
+
+Disk stats (read/write):
+  nvme2n1: ios=160032015/0, sectors=160032015/0, merge=0/0, ticks=1428803/0, in_queue=1428803, util=99.91%
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=8
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=16): [r(16)][100.0%][r=82.1MiB/s][r=168k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=7915: Fri Jan 19 18:47:27 2024
+  read: IOPS=169k, BW=82.5MiB/s (86.5MB/s)(48.3GiB/600060msec)
+    slat (nsec): min=41, max=160016k, avg=1061.70, stdev=263923.89
+    clat (usec): min=12, max=184083, avg=750.13, stdev=6991.13
+     lat (usec): min=12, max=184083, avg=751.20, stdev=6996.02
+    clat percentiles (usec):
+     |  1.00th=[    33],  5.00th=[    41], 10.00th=[    44], 20.00th=[    46],
+     | 30.00th=[    46], 40.00th=[    47], 50.00th=[    47], 60.00th=[    47],
+     | 70.00th=[    48], 80.00th=[    48], 90.00th=[    50], 95.00th=[    55],
+     | 99.00th=[ 26346], 99.50th=[ 62129], 99.90th=[103285], 99.95th=[111674],
+     | 99.99th=[124257]
+   bw (  KiB/s): min=53807, max=105253, per=100.00%, avg=84550.66, stdev=401.91, samples=19184
+   iops        : min=107614, max=210506, avg=169101.66, stdev=803.82, samples=19184
+  lat (usec)   : 20=0.03%, 50=89.95%, 100=8.60%, 250=0.02%, 500=0.01%
+  lat (usec)   : 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.05%, 10=0.11%, 20=0.15%, 50=0.39%
+  lat (msec)   : 100=0.59%, 250=0.11%
+  cpu          : usr=0.91%, sys=5.32%, ctx=249999, majf=0, minf=186
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=100.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.1%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=101394064,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=8
+
+Run status group 0 (all jobs):
+   READ: bw=82.5MiB/s (86.5MB/s), 82.5MiB/s-82.5MiB/s (86.5MB/s-86.5MB/s), io=48.3GiB (51.9GB), run=600060-600060msec
+
+Disk stats (read/write):
+  nvme2n1: ios=101375415/0, sectors=101375415/0, merge=0/0, ticks=1189510/0, in_queue=1189510, util=99.92%
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=8
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 1 (f=1): [_(15),r(1)][6.3%][r=101MiB/s][r=206k IOPS][eta 02h:30m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=8067: Fri Jan 19 18:57:28 2024
+  read: IOPS=224k, BW=109MiB/s (114MB/s)(64.0GiB/600090msec)
+    slat (nsec): min=41, max=176863k, avg=1721.49, stdev=358814.42
+    clat (usec): min=12, max=184966, avg=560.09, stdev=6374.70
+     lat (usec): min=12, max=184967, avg=561.81, stdev=6384.67
+    clat percentiles (usec):
+     |  1.00th=[    28],  5.00th=[    33], 10.00th=[    33], 20.00th=[    34],
+     | 30.00th=[    34], 40.00th=[    34], 50.00th=[    35], 60.00th=[    35],
+     | 70.00th=[    36], 80.00th=[    36], 90.00th=[    37], 95.00th=[    40],
+     | 99.00th=[    58], 99.50th=[ 51643], 99.90th=[103285], 99.95th=[114820],
+     | 99.99th=[125305]
+   bw (  KiB/s): min=71417, max=139641, per=100.00%, avg=111868.85, stdev=571.64, samples=19184
+   iops        : min=142834, max=279282, avg=223737.98, stdev=1143.29, samples=19184
+  lat (usec)   : 20=0.17%, 50=98.32%, 100=0.57%, 250=0.01%, 500=0.01%
+  lat (usec)   : 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.03%, 10=0.07%, 20=0.07%, 50=0.23%
+  lat (msec)   : 100=0.39%, 250=0.13%
+  cpu          : usr=1.33%, sys=4.91%, ctx=224977, majf=0, minf=170
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=100.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.1%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=134177589,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=8
+
+Run status group 0 (all jobs):
+   READ: bw=109MiB/s (114MB/s), 109MiB/s-109MiB/s (114MB/s-114MB/s), io=64.0GiB (68.7GB), run=600090-600090msec
+
+Disk stats (read/write):
+  nvme2n1: ios=134172137/0, sectors=134172137/0, merge=0/0, ticks=1011079/0, in_queue=1011079, util=99.91%
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=8
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=16): [r(16)][100.0%][r=90.9MiB/s][r=186k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=8220: Fri Jan 19 19:07:29 2024
+  read: IOPS=186k, BW=90.7MiB/s (95.1MB/s)(53.2GiB/600077msec)
+    slat (nsec): min=50, max=180009k, avg=852.69, stdev=252707.47
+    clat (usec): min=13, max=191467, avg=681.19, stdev=6997.76
+     lat (usec): min=13, max=191467, avg=682.04, stdev=7002.27
+    clat percentiles (usec):
+     |  1.00th=[    35],  5.00th=[    39], 10.00th=[    41], 20.00th=[    42],
+     | 30.00th=[    43], 40.00th=[    43], 50.00th=[    43], 60.00th=[    43],
+     | 70.00th=[    43], 80.00th=[    43], 90.00th=[    44], 95.00th=[    44],
+     | 99.00th=[ 10814], 99.50th=[ 62129], 99.90th=[108528], 99.95th=[115868],
+     | 99.99th=[125305]
+   bw (  KiB/s): min=60540, max=117000, per=100.00%, avg=92983.16, stdev=474.93, samples=19184
+   iops        : min=121080, max=234000, avg=185966.65, stdev=949.85, samples=19184
+  lat (usec)   : 20=0.01%, 50=98.07%, 100=0.74%, 250=0.01%, 500=0.01%
+  lat (usec)   : 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.04%, 10=0.11%, 20=0.09%, 50=0.29%
+  lat (msec)   : 100=0.48%, 250=0.15%
+  cpu          : usr=1.37%, sys=4.86%, ctx=230466, majf=0, minf=186
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=100.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.1%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=111514812,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=8
+
+Run status group 0 (all jobs):
+   READ: bw=90.7MiB/s (95.1MB/s), 90.7MiB/s-90.7MiB/s (95.1MB/s-95.1MB/s), io=53.2GiB (57.1GB), run=600077-600077msec
+
+Disk stats (read/write):
+  nvme2n1: ios=111514137/0, sectors=111514137/0, merge=0/0, ticks=1146283/0, in_queue=1146283, util=99.92%
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=8
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=16): [r(16)][100.0%][r=111MiB/s][r=227k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=8369: Fri Jan 19 19:17:30 2024
+  read: IOPS=228k, BW=111MiB/s (117MB/s)(65.2GiB/600073msec)
+    slat (nsec): min=43, max=176656k, avg=670.71, stdev=221842.79
+    clat (usec): min=11, max=184371, avg=555.68, stdev=6271.07
+     lat (usec): min=11, max=184371, avg=556.35, stdev=6274.96
+    clat percentiles (usec):
+     |  1.00th=[    29],  5.00th=[    31], 10.00th=[    34], 20.00th=[    34],
+     | 30.00th=[    35], 40.00th=[    35], 50.00th=[    35], 60.00th=[    36],
+     | 70.00th=[    36], 80.00th=[    36], 90.00th=[    36], 95.00th=[    37],
+     | 99.00th=[    63], 99.50th=[ 51643], 99.90th=[103285], 99.95th=[110625],
+     | 99.99th=[124257]
+   bw (  KiB/s): min=76491, max=144212, per=100.00%, avg=114005.24, stdev=574.27, samples=19184
+   iops        : min=152982, max=288425, avg=228010.77, stdev=1148.55, samples=19184
+  lat (usec)   : 20=0.06%, 50=98.73%, 100=0.22%, 250=0.01%, 500=0.01%
+  lat (usec)   : 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.04%, 10=0.10%, 20=0.08%, 50=0.24%
+  lat (msec)   : 100=0.40%, 250=0.12%
+  cpu          : usr=1.13%, sys=5.10%, ctx=235038, majf=0, minf=170
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=100.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.1%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=136737311,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=8
+
+Run status group 0 (all jobs):
+   READ: bw=111MiB/s (117MB/s), 111MiB/s-111MiB/s (117MB/s-117MB/s), io=65.2GiB (70.0GB), run=600073-600073msec
+
+Disk stats (read/write):
+  nvme2n1: ios=136702023/0, sectors=136702023/0, merge=0/0, ticks=1249816/0, in_queue=1249816, util=99.91%
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=8
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=16): [r(16)][100.0%][r=83.8MiB/s][r=172k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=8526: Fri Jan 19 19:27:31 2024
+  read: IOPS=172k, BW=84.1MiB/s (88.2MB/s)(49.3GiB/600085msec)
+    slat (nsec): min=37, max=175298k, avg=683.17, stdev=212825.23
+    clat (usec): min=14, max=188077, avg=737.68, stdev=6940.83
+     lat (usec): min=14, max=188077, avg=738.36, stdev=6944.03
+    clat percentiles (usec):
+     |  1.00th=[    32],  5.00th=[    40], 10.00th=[    43], 20.00th=[    45],
+     | 30.00th=[    46], 40.00th=[    46], 50.00th=[    46], 60.00th=[    47],
+     | 70.00th=[    47], 80.00th=[    47], 90.00th=[    49], 95.00th=[    54],
+     | 99.00th=[ 23987], 99.50th=[ 62129], 99.90th=[102237], 99.95th=[111674],
+     | 99.99th=[124257]
+   bw (  KiB/s): min=54689, max=106293, per=100.00%, avg=86149.85, stdev=411.99, samples=19185
+   iops        : min=109379, max=212586, avg=172300.07, stdev=823.99, samples=19185
+  lat (usec)   : 20=0.09%, 50=92.12%, 100=6.39%, 250=0.02%, 500=0.01%
+  lat (usec)   : 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.05%, 10=0.11%, 20=0.14%, 50=0.38%
+  lat (msec)   : 100=0.58%, 250=0.11%
+  cpu          : usr=0.83%, sys=5.40%, ctx=250276, majf=0, minf=170
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=100.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.1%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=103317124,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=8
+
+Run status group 0 (all jobs):
+   READ: bw=84.1MiB/s (88.2MB/s), 84.1MiB/s-84.1MiB/s (88.2MB/s-88.2MB/s), io=49.3GiB (52.9GB), run=600085-600085msec
+
+Disk stats (read/write):
+  nvme2n1: ios=103295759/0, sectors=103295759/0, merge=0/0, ticks=1240978/0, in_queue=1240978, util=99.92%
+14 36
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=16
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 1 (f=1): [_(15),r(1)][6.3%][r=102MiB/s][r=209k IOPS][eta 02h:30m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=8685: Fri Jan 19 19:37:32 2024
+  read: IOPS=227k, BW=111MiB/s (116MB/s)(64.9GiB/600089msec)
+    slat (nsec): min=36, max=208011k, avg=2438.99, stdev=467868.71
+    clat (usec): min=23, max=208086, avg=1108.63, stdev=9933.39
+     lat (usec): min=23, max=208086, avg=1111.07, stdev=9944.16
+    clat percentiles (usec):
+     |  1.00th=[    60],  5.00th=[    67], 10.00th=[    68], 20.00th=[    68],
+     | 30.00th=[    69], 40.00th=[    69], 50.00th=[    69], 60.00th=[    70],
+     | 70.00th=[    70], 80.00th=[    71], 90.00th=[    73], 95.00th=[    79],
+     | 99.00th=[ 55837], 99.50th=[ 93848], 99.90th=[128451], 99.95th=[133694],
+     | 99.99th=[143655]
+   bw (  KiB/s): min=68080, max=144684, per=100.00%, avg=113464.63, stdev=649.00, samples=19184
+   iops        : min=136160, max=289369, avg=226929.59, stdev=1297.99, samples=19184
+  lat (usec)   : 50=0.13%, 100=98.60%, 250=0.04%, 500=0.01%, 750=0.01%
+  lat (usec)   : 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.01%, 20=0.01%, 50=0.10%
+  lat (msec)   : 100=0.63%, 250=0.48%
+  cpu          : usr=1.34%, sys=4.90%, ctx=174021, majf=0, minf=202
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=100.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.1%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=136090576,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=16
+
+Run status group 0 (all jobs):
+   READ: bw=111MiB/s (116MB/s), 111MiB/s-111MiB/s (116MB/s-116MB/s), io=64.9GiB (69.7GB), run=600089-600089msec
+
+Disk stats (read/write):
+  nvme2n1: ios=136088321/0, sectors=136088321/0, merge=0/0, ticks=1027928/0, in_queue=1027928, util=99.91%
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=16
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=16): [r(16)][100.0%][r=99.3MiB/s][r=203k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=8839: Fri Jan 19 19:47:34 2024
+  read: IOPS=203k, BW=99.1MiB/s (104MB/s)(58.1GiB/600069msec)
+    slat (nsec): min=43, max=180010k, avg=1378.97, stdev=350812.17
+    clat (usec): min=17, max=196101, avg=1248.05, stdev=10540.07
+     lat (usec): min=17, max=196101, avg=1249.43, stdev=10545.76
+    clat percentiles (usec):
+     |  1.00th=[    63],  5.00th=[    73], 10.00th=[    76], 20.00th=[    78],
+     | 30.00th=[    78], 40.00th=[    79], 50.00th=[    79], 60.00th=[    79],
+     | 70.00th=[    80], 80.00th=[    80], 90.00th=[    80], 95.00th=[    81],
+     | 99.00th=[ 60031], 99.50th=[104334], 99.90th=[131597], 99.95th=[135267],
+     | 99.99th=[143655]
+   bw (  KiB/s): min=60460, max=128914, per=100.00%, avg=101556.10, stdev=582.15, samples=19184
+   iops        : min=120920, max=257828, avg=203112.49, stdev=1164.31, samples=19184
+  lat (usec)   : 20=0.01%, 50=0.05%, 100=98.49%, 250=0.07%, 500=0.01%
+  lat (usec)   : 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.01%, 20=0.01%, 50=0.11%
+  lat (msec)   : 100=0.71%, 250=0.55%
+  cpu          : usr=1.58%, sys=4.66%, ctx=174129, majf=0, minf=186
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=100.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.1%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=121791746,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=16
+
+Run status group 0 (all jobs):
+   READ: bw=99.1MiB/s (104MB/s), 99.1MiB/s-99.1MiB/s (104MB/s-104MB/s), io=58.1GiB (62.4GB), run=600069-600069msec
+
+Disk stats (read/write):
+  nvme2n1: ios=121772817/0, sectors=121772817/0, merge=0/0, ticks=1217355/0, in_queue=1217355, util=99.92%
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=16
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=16): [r(16)][100.0%][r=131MiB/s][r=268k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=8995: Fri Jan 19 19:57:35 2024
+  read: IOPS=267k, BW=131MiB/s (137MB/s)(76.5GiB/600080msec)
+    slat (nsec): min=35, max=145566k, avg=728.38, stdev=257271.08
+    clat (usec): min=14, max=200078, avg=949.80, stdev=9173.36
+     lat (usec): min=14, max=200078, avg=950.53, stdev=9176.90
+    clat percentiles (usec):
+     |  1.00th=[    52],  5.00th=[    55], 10.00th=[    55], 20.00th=[    56],
+     | 30.00th=[    57], 40.00th=[    59], 50.00th=[    60], 60.00th=[    61],
+     | 70.00th=[    62], 80.00th=[    63], 90.00th=[    64], 95.00th=[    65],
+     | 99.00th=[ 47973], 99.50th=[ 76022], 99.90th=[127402], 99.95th=[131597],
+     | 99.99th=[143655]
+   bw (  KiB/s): min=82331, max=168338, per=100.00%, avg=133804.02, stdev=766.44, samples=19185
+   iops        : min=164664, max=336676, avg=267608.25, stdev=1532.87, samples=19185
+  lat (usec)   : 20=0.01%, 50=0.45%, 100=98.47%, 250=0.02%, 500=0.01%
+  lat (usec)   : 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.01%, 20=0.01%, 50=0.09%
+  lat (msec)   : 100=0.55%, 250=0.41%
+  cpu          : usr=1.20%, sys=5.04%, ctx=171705, majf=0, minf=186
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=100.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.1%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=160499194,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=16
+
+Run status group 0 (all jobs):
+   READ: bw=131MiB/s (137MB/s), 131MiB/s-131MiB/s (137MB/s-137MB/s), io=76.5GiB (82.2GB), run=600080-600080msec
+
+Disk stats (read/write):
+  nvme2n1: ios=160467078/0, sectors=160467078/0, merge=0/0, ticks=1441061/0, in_queue=1441061, util=99.90%
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=16
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=16): [r(16)][100.0%][r=84.7MiB/s][r=173k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=9146: Fri Jan 19 20:07:36 2024
+  read: IOPS=174k, BW=85.1MiB/s (89.2MB/s)(49.9GiB/600051msec)
+    slat (nsec): min=35, max=185309k, avg=1066.64, stdev=294477.80
+    clat (usec): min=25, max=188109, avg=1459.53, stdev=10766.73
+     lat (usec): min=25, max=188109, avg=1460.60, stdev=10770.63
+    clat percentiles (usec):
+     |  1.00th=[    71],  5.00th=[    83], 10.00th=[    86], 20.00th=[    89],
+     | 30.00th=[    90], 40.00th=[    91], 50.00th=[    92], 60.00th=[    92],
+     | 70.00th=[    93], 80.00th=[    94], 90.00th=[    96], 95.00th=[   101],
+     | 99.00th=[ 64226], 99.50th=[ 88605], 99.90th=[128451], 99.95th=[131597],
+     | 99.99th=[139461]
+   bw (  KiB/s): min=52182, max=109680, per=100.00%, avg=87216.46, stdev=476.10, samples=19182
+   iops        : min=104364, max=219360, avg=174433.28, stdev=952.20, samples=19182
+  lat (usec)   : 50=0.07%, 100=94.21%, 250=3.89%, 500=0.01%, 750=0.01%
+  lat (usec)   : 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.01%, 20=0.01%, 50=0.21%
+  lat (msec)   : 100=1.13%, 250=0.46%
+  cpu          : usr=0.80%, sys=5.42%, ctx=191184, majf=0, minf=202
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=100.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.1%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=104585045,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=16
+
+Run status group 0 (all jobs):
+   READ: bw=85.1MiB/s (89.2MB/s), 85.1MiB/s-85.1MiB/s (89.2MB/s-89.2MB/s), io=49.9GiB (53.5GB), run=600051-600051msec
+
+Disk stats (read/write):
+  nvme2n1: ios=104565096/0, sectors=104565096/0, merge=0/0, ticks=1271915/0, in_queue=1271915, util=99.93%
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=16
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 1 (f=0): [_(15),f(1)][100.0%][r=102MiB/s][r=208k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=9296: Fri Jan 19 20:17:37 2024
+  read: IOPS=226k, BW=110MiB/s (116MB/s)(64.6GiB/600094msec)
+    slat (nsec): min=40, max=172015k, avg=2583.76, stdev=480046.54
+    clat (usec): min=13, max=194578, avg=1113.63, stdev=9943.05
+     lat (usec): min=14, max=194578, avg=1116.21, stdev=9954.38
+    clat percentiles (usec):
+     |  1.00th=[    61],  5.00th=[    67], 10.00th=[    68], 20.00th=[    68],
+     | 30.00th=[    69], 40.00th=[    69], 50.00th=[    70], 60.00th=[    70],
+     | 70.00th=[    71], 80.00th=[    71], 90.00th=[    74], 95.00th=[    79],
+     | 99.00th=[ 55837], 99.50th=[ 94897], 99.90th=[128451], 99.95th=[131597],
+     | 99.99th=[143655]
+   bw (  KiB/s): min=70406, max=141426, per=100.00%, avg=113003.44, stdev=646.94, samples=19184
+   iops        : min=140812, max=282853, avg=226007.22, stdev=1293.88, samples=19184
+  lat (usec)   : 20=0.01%, 50=0.12%, 100=98.60%, 250=0.05%, 500=0.01%
+  lat (usec)   : 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.01%, 20=0.01%, 50=0.09%
+  lat (msec)   : 100=0.64%, 250=0.49%
+  cpu          : usr=1.34%, sys=4.90%, ctx=174222, majf=0, minf=202
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=100.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.1%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=135531323,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=16
+
+Run status group 0 (all jobs):
+   READ: bw=110MiB/s (116MB/s), 110MiB/s-110MiB/s (116MB/s-116MB/s), io=64.6GiB (69.4GB), run=600094-600094msec
+
+Disk stats (read/write):
+  nvme2n1: ios=135491880/0, sectors=135491880/0, merge=0/0, ticks=1024430/0, in_queue=1024430, util=99.92%
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=16
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 1 (f=0): [_(15),f(1)][100.0%][r=83.6MiB/s][r=171k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=9451: Fri Jan 19 20:27:38 2024
+  read: IOPS=186k, BW=90.9MiB/s (95.3MB/s)(53.2GiB/600078msec)
+    slat (nsec): min=38, max=172011k, avg=1403.53, stdev=355126.06
+    clat (usec): min=23, max=188109, avg=1362.53, stdev=10993.25
+     lat (usec): min=23, max=188109, avg=1363.93, stdev=10998.83
+    clat percentiles (usec):
+     |  1.00th=[    68],  5.00th=[    79], 10.00th=[    82], 20.00th=[    85],
+     | 30.00th=[    86], 40.00th=[    86], 50.00th=[    86], 60.00th=[    87],
+     | 70.00th=[    87], 80.00th=[    87], 90.00th=[    87], 95.00th=[    88],
+     | 99.00th=[ 64226], 99.50th=[105382], 99.90th=[131597], 99.95th=[139461],
+     | 99.99th=[143655]
+   bw (  KiB/s): min=55159, max=117299, per=100.00%, avg=93092.57, stdev=534.96, samples=19184
+   iops        : min=110318, max=234599, avg=186185.55, stdev=1069.93, samples=19184
+  lat (usec)   : 50=0.02%, 100=98.04%, 250=0.43%, 500=0.01%, 750=0.01%
+  lat (usec)   : 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.01%, 20=0.01%, 50=0.12%
+  lat (msec)   : 100=0.77%, 250=0.60%
+  cpu          : usr=1.37%, sys=4.87%, ctx=174655, majf=0, minf=202
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=100.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.1%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=111654083,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=16
+
+Run status group 0 (all jobs):
+   READ: bw=90.9MiB/s (95.3MB/s), 90.9MiB/s-90.9MiB/s (95.3MB/s-95.3MB/s), io=53.2GiB (57.2GB), run=600078-600078msec
+
+Disk stats (read/write):
+  nvme2n1: ios=111621818/0, sectors=111621818/0, merge=0/0, ticks=1167654/0, in_queue=1167654, util=99.92%
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=16
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=16): [r(16)][100.0%][r=115MiB/s][r=235k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=9836: Fri Jan 19 20:37:39 2024
+  read: IOPS=232k, BW=113MiB/s (119MB/s)(66.4GiB/600089msec)
+    slat (nsec): min=36, max=160022k, avg=935.35, stdev=292256.02
+    clat (usec): min=15, max=184080, avg=1093.36, stdev=9853.29
+     lat (usec): min=15, max=184080, avg=1094.29, stdev=9857.53
+    clat percentiles (usec):
+     |  1.00th=[    59],  5.00th=[    64], 10.00th=[    65], 20.00th=[    67],
+     | 30.00th=[    68], 40.00th=[    69], 50.00th=[    69], 60.00th=[    70],
+     | 70.00th=[    70], 80.00th=[    71], 90.00th=[    72], 95.00th=[    72],
+     | 99.00th=[ 55837], 99.50th=[ 91751], 99.90th=[128451], 99.95th=[131597],
+     | 99.99th=[143655]
+   bw (  KiB/s): min=70596, max=146842, per=100.00%, avg=116067.62, stdev=662.12, samples=19185
+   iops        : min=141192, max=293684, avg=232135.57, stdev=1324.24, samples=19185
+  lat (usec)   : 20=0.01%, 50=0.05%, 100=98.71%, 250=0.03%, 500=0.01%
+  lat (usec)   : 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.01%, 20=0.01%, 50=0.09%
+  lat (msec)   : 100=0.63%, 250=0.48%
+  cpu          : usr=1.08%, sys=5.16%, ctx=174206, majf=0, minf=218
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=100.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.1%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=139196929,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=16
+
+Run status group 0 (all jobs):
+   READ: bw=113MiB/s (119MB/s), 113MiB/s-113MiB/s (119MB/s-119MB/s), io=66.4GiB (71.3GB), run=600089-600089msec
+
+Disk stats (read/write):
+  nvme2n1: ios=139174623/0, sectors=139174623/0, merge=0/0, ticks=1266460/0, in_queue=1266460, util=99.91%
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=16
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=16): [r(16)][100.0%][r=84.3MiB/s][r=173k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=9994: Fri Jan 19 20:47:41 2024
+  read: IOPS=173k, BW=84.7MiB/s (88.8MB/s)(49.6GiB/600104msec)
+    slat (nsec): min=36, max=160028k, avg=1135.73, stdev=304549.78
+    clat (usec): min=20, max=188118, avg=1466.32, stdev=10787.85
+     lat (usec): min=20, max=188118, avg=1467.46, stdev=10792.01
+    clat percentiles (usec):
+     |  1.00th=[    72],  5.00th=[    83], 10.00th=[    87], 20.00th=[    90],
+     | 30.00th=[    91], 40.00th=[    91], 50.00th=[    92], 60.00th=[    93],
+     | 70.00th=[    93], 80.00th=[    94], 90.00th=[    97], 95.00th=[   102],
+     | 99.00th=[ 64226], 99.50th=[ 88605], 99.90th=[128451], 99.95th=[131597],
+     | 99.99th=[139461]
+   bw (  KiB/s): min=52038, max=109711, per=100.00%, avg=86796.81, stdev=474.70, samples=19184
+   iops        : min=104076, max=219422, avg=173593.99, stdev=949.39, samples=19184
+  lat (usec)   : 50=0.07%, 100=93.78%, 250=4.31%, 500=0.01%, 750=0.01%
+  lat (usec)   : 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.01%, 20=0.01%, 50=0.22%
+  lat (msec)   : 100=1.13%, 250=0.46%
+  cpu          : usr=0.84%, sys=5.39%, ctx=191518, majf=0, minf=202
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=100.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.1%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=104089974,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=16
+
+Run status group 0 (all jobs):
+   READ: bw=84.7MiB/s (88.8MB/s), 84.7MiB/s-84.7MiB/s (88.8MB/s-88.8MB/s), io=49.6GiB (53.3GB), run=600104-600104msec
+
+Disk stats (read/write):
+  nvme2n1: ios=104061969/0, sectors=104061969/0, merge=0/0, ticks=1260145/0, in_queue=1260145, util=99.93%
+14 36
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=32
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 1 (f=1): [_(15),r(1)][6.3%][r=102MiB/s][r=209k IOPS][eta 02h:30m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=10151: Fri Jan 19 20:57:42 2024
+  read: IOPS=226k, BW=110MiB/s (116MB/s)(64.6GiB/600095msec)
+    slat (nsec): min=41, max=186401k, avg=2830.09, stdev=507072.81
+    clat (usec): min=21, max=196160, avg=2245.32, stdev=14083.92
+     lat (usec): min=21, max=196160, avg=2248.15, stdev=14092.65
+    clat percentiles (usec):
+     |  1.00th=[   131],  5.00th=[   135], 10.00th=[   137], 20.00th=[   137],
+     | 30.00th=[   139], 40.00th=[   139], 50.00th=[   139], 60.00th=[   141],
+     | 70.00th=[   141], 80.00th=[   143], 90.00th=[   149], 95.00th=[   153],
+     | 99.00th=[ 98042], 99.50th=[120062], 99.90th=[132645], 99.95th=[139461],
+     | 99.99th=[143655]
+   bw (  KiB/s): min=66280, max=142347, per=100.00%, avg=113040.28, stdev=655.32, samples=19184
+   iops        : min=132561, max=284694, avg=226080.84, stdev=1310.63, samples=19184
+  lat (usec)   : 50=0.01%, 100=0.01%, 250=97.53%, 500=0.01%, 750=0.01%
+  lat (usec)   : 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.01%, 20=0.01%, 50=0.18%
+  lat (msec)   : 100=1.26%, 250=0.99%
+  cpu          : usr=1.35%, sys=4.88%, ctx=173733, majf=0, minf=230
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=100.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.1%, 64=0.0%, >=64=0.0%
+     issued rwts: total=135579617,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=32
+
+Run status group 0 (all jobs):
+   READ: bw=110MiB/s (116MB/s), 110MiB/s-110MiB/s (116MB/s-116MB/s), io=64.6GiB (69.4GB), run=600095-600095msec
+
+Disk stats (read/write):
+  nvme2n1: ios=135577632/0, sectors=135577632/0, merge=0/0, ticks=1024158/0, in_queue=1024158, util=99.91%
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=32
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=16): [r(16)][100.0%][r=100MiB/s][r=206k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=10304: Fri Jan 19 21:07:43 2024
+  read: IOPS=205k, BW=100MiB/s (105MB/s)(58.8GiB/600096msec)
+    slat (nsec): min=40, max=156448k, avg=1417.95, stdev=359379.59
+    clat (usec): min=21, max=196167, avg=2479.16, stdev=14786.73
+     lat (usec): min=21, max=196167, avg=2480.58, stdev=14790.89
+    clat percentiles (usec):
+     |  1.00th=[   135],  5.00th=[   147], 10.00th=[   151], 20.00th=[   153],
+     | 30.00th=[   155], 40.00th=[   155], 50.00th=[   155], 60.00th=[   157],
+     | 70.00th=[   157], 80.00th=[   157], 90.00th=[   159], 95.00th=[   163],
+     | 99.00th=[104334], 99.50th=[120062], 99.90th=[137364], 99.95th=[139461],
+     | 99.99th=[143655]
+   bw (  KiB/s): min=62149, max=129428, per=100.00%, avg=102764.30, stdev=590.09, samples=19185
+   iops        : min=124298, max=258856, avg=205528.93, stdev=1180.17, samples=19185
+  lat (usec)   : 50=0.01%, 100=0.01%, 250=97.27%, 500=0.01%, 750=0.01%
+  lat (usec)   : 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.01%, 20=0.01%, 50=0.21%
+  lat (msec)   : 100=1.39%, 250=1.10%
+  cpu          : usr=1.58%, sys=4.66%, ctx=173426, majf=0, minf=214
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=100.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.1%, 64=0.0%, >=64=0.0%
+     issued rwts: total=123250499,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=32
+
+Run status group 0 (all jobs):
+   READ: bw=100MiB/s (105MB/s), 100MiB/s-100MiB/s (105MB/s-105MB/s), io=58.8GiB (63.1GB), run=600096-600096msec
+
+Disk stats (read/write):
+  nvme2n1: ios=123219448/0, sectors=123219448/0, merge=0/0, ticks=1233216/0, in_queue=1233216, util=99.92%
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=32
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=16): [r(16)][100.0%][r=131MiB/s][r=268k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=10458: Fri Jan 19 21:17:44 2024
+  read: IOPS=269k, BW=131MiB/s (138MB/s)(76.9GiB/600053msec)
+    slat (nsec): min=39, max=172014k, avg=719.27, stdev=253039.93
+    clat (usec): min=13, max=188139, avg=1897.83, stdev=12928.41
+     lat (usec): min=13, max=188139, avg=1898.55, stdev=12930.80
+    clat percentiles (usec):
+     |  1.00th=[   111],  5.00th=[   112], 10.00th=[   114], 20.00th=[   115],
+     | 30.00th=[   117], 40.00th=[   118], 50.00th=[   119], 60.00th=[   120],
+     | 70.00th=[   121], 80.00th=[   123], 90.00th=[   125], 95.00th=[   127],
+     | 99.00th=[ 78119], 99.50th=[111674], 99.90th=[132645], 99.95th=[139461],
+     | 99.99th=[143655]
+   bw (  KiB/s): min=84029, max=169684, per=100.00%, avg=134422.83, stdev=774.90, samples=19184
+   iops        : min=168058, max=339368, avg=268845.90, stdev=1549.81, samples=19184
+  lat (usec)   : 20=0.01%, 50=0.01%, 100=0.01%, 250=97.89%, 500=0.01%
+  lat (usec)   : 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.01%, 20=0.01%, 50=0.16%
+  lat (msec)   : 100=1.10%, 250=0.82%
+  cpu          : usr=1.23%, sys=5.01%, ctx=173143, majf=0, minf=231
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=100.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.1%, 64=0.0%, >=64=0.0%
+     issued rwts: total=161225861,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=32
+
+Run status group 0 (all jobs):
+   READ: bw=131MiB/s (138MB/s), 131MiB/s-131MiB/s (138MB/s-138MB/s), io=76.9GiB (82.5GB), run=600053-600053msec
+
+Disk stats (read/write):
+  nvme2n1: ios=161188462/0, sectors=161188462/0, merge=0/0, ticks=1435648/0, in_queue=1435648, util=99.92%
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=32
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=16): [r(16)][100.0%][r=83.9MiB/s][r=172k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=10611: Fri Jan 19 21:27:45 2024
+  read: IOPS=173k, BW=84.4MiB/s (88.5MB/s)(49.5GiB/600069msec)
+    slat (nsec): min=39, max=148423k, avg=1062.19, stdev=292287.33
+    clat (usec): min=25, max=188204, avg=2951.91, stdev=15209.41
+     lat (usec): min=25, max=188204, avg=2952.97, stdev=15212.04
+    clat percentiles (usec):
+     |  1.00th=[   161],  5.00th=[   172], 10.00th=[   178], 20.00th=[   182],
+     | 30.00th=[   184], 40.00th=[   184], 50.00th=[   186], 60.00th=[   186],
+     | 70.00th=[   188], 80.00th=[   188], 90.00th=[   194], 95.00th=[   202],
+     | 99.00th=[ 88605], 99.50th=[120062], 99.90th=[132645], 99.95th=[135267],
+     | 99.99th=[143655]
+   bw (  KiB/s): min=53223, max=108142, per=100.00%, avg=86498.72, stdev=474.81, samples=19183
+   iops        : min=106446, max=216284, avg=172997.78, stdev=949.61, samples=19183
+  lat (usec)   : 50=0.01%, 100=0.01%, 250=96.30%, 500=0.03%, 750=0.01%
+  lat (usec)   : 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.02%, 20=0.01%, 50=0.42%
+  lat (msec)   : 100=2.27%, 250=0.94%
+  cpu          : usr=0.82%, sys=5.41%, ctx=190992, majf=0, minf=231
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=100.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.1%, 64=0.0%, >=64=0.0%
+     issued rwts: total=103727235,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=32
+
+Run status group 0 (all jobs):
+   READ: bw=84.4MiB/s (88.5MB/s), 84.4MiB/s-84.4MiB/s (88.5MB/s-88.5MB/s), io=49.5GiB (53.1GB), run=600069-600069msec
+
+Disk stats (read/write):
+  nvme2n1: ios=103704017/0, sectors=103704017/0, merge=0/0, ticks=1259955/0, in_queue=1259955, util=99.93%
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=32
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 1 (f=1): [_(15),r(1)][6.3%][r=103MiB/s][r=212k IOPS][eta 02h:30m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=10759: Fri Jan 19 21:37:46 2024
+  read: IOPS=229k, BW=112MiB/s (117MB/s)(65.6GiB/600102msec)
+    slat (nsec): min=36, max=173552k, avg=2500.22, stdev=477450.38
+    clat (usec): min=22, max=200177, avg=2214.05, stdev=13983.67
+     lat (usec): min=22, max=200177, avg=2216.55, stdev=13991.47
+    clat percentiles (usec):
+     |  1.00th=[   129],  5.00th=[   135], 10.00th=[   135], 20.00th=[   135],
+     | 30.00th=[   137], 40.00th=[   137], 50.00th=[   137], 60.00th=[   139],
+     | 70.00th=[   139], 80.00th=[   141], 90.00th=[   147], 95.00th=[   151],
+     | 99.00th=[ 95945], 99.50th=[119014], 99.90th=[132645], 99.95th=[139461],
+     | 99.99th=[143655]
+   bw (  KiB/s): min=67726, max=144759, per=100.00%, avg=114676.45, stdev=659.65, samples=19184
+   iops        : min=135452, max=289519, avg=229353.27, stdev=1319.29, samples=19184
+  lat (usec)   : 50=0.01%, 100=0.01%, 250=97.56%, 500=0.01%, 750=0.01%
+  lat (usec)   : 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.01%, 20=0.01%, 50=0.19%
+  lat (msec)   : 100=1.24%, 250=0.98%
+  cpu          : usr=1.32%, sys=4.91%, ctx=173815, majf=0, minf=230
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=100.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.1%, 64=0.0%, >=64=0.0%
+     issued rwts: total=137545528,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=32
+
+Run status group 0 (all jobs):
+   READ: bw=112MiB/s (117MB/s), 112MiB/s-112MiB/s (117MB/s-117MB/s), io=65.6GiB (70.4GB), run=600102-600102msec
+
+Disk stats (read/write):
+  nvme2n1: ios=137539374/0, sectors=137539374/0, merge=0/0, ticks=1035153/0, in_queue=1035153, util=99.91%
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=32
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=16): [r(16)][100.0%][r=90.8MiB/s][r=186k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=10912: Fri Jan 19 21:47:47 2024
+  read: IOPS=185k, BW=90.5MiB/s (94.8MB/s)(53.0GiB/600080msec)
+    slat (nsec): min=43, max=152013k, avg=1418.95, stdev=358578.36
+    clat (usec): min=20, max=196197, avg=2749.42, stdev=15513.88
+     lat (usec): min=20, max=196197, avg=2750.84, stdev=15517.80
+    clat percentiles (usec):
+     |  1.00th=[   147],  5.00th=[   163], 10.00th=[   167], 20.00th=[   169],
+     | 30.00th=[   172], 40.00th=[   174], 50.00th=[   174], 60.00th=[   174],
+     | 70.00th=[   174], 80.00th=[   176], 90.00th=[   176], 95.00th=[   182],
+     | 99.00th=[108528], 99.50th=[120062], 99.90th=[139461], 99.95th=[139461],
+     | 99.99th=[143655]
+   bw (  KiB/s): min=58316, max=115916, per=100.00%, avg=92692.72, stdev=526.77, samples=19184
+   iops        : min=116632, max=231832, avg=185385.79, stdev=1053.55, samples=19184
+  lat (usec)   : 50=0.01%, 100=0.01%, 250=96.96%, 500=0.01%, 750=0.01%
+  lat (usec)   : 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.01%, 20=0.01%, 50=0.22%
+  lat (msec)   : 100=1.57%, 250=1.21%
+  cpu          : usr=1.39%, sys=4.85%, ctx=173621, majf=0, minf=214
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=100.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.1%, 64=0.0%, >=64=0.0%
+     issued rwts: total=111164103,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=32
+
+Run status group 0 (all jobs):
+   READ: bw=90.5MiB/s (94.8MB/s), 90.5MiB/s-90.5MiB/s (94.8MB/s-94.8MB/s), io=53.0GiB (56.9GB), run=600080-600080msec
+
+Disk stats (read/write):
+  nvme2n1: ios=111140210/0, sectors=111140210/0, merge=0/0, ticks=1159254/0, in_queue=1159254, util=99.92%
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=32
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=16): [r(16)][100.0%][r=114MiB/s][r=234k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=11060: Fri Jan 19 21:57:49 2024
+  read: IOPS=234k, BW=114MiB/s (120MB/s)(66.9GiB/600109msec)
+    slat (nsec): min=38, max=168022k, avg=1101.73, stdev=317865.56
+    clat (usec): min=19, max=196156, avg=2178.08, stdev=13866.36
+     lat (usec): min=19, max=196156, avg=2179.18, stdev=13869.85
+    clat percentiles (usec):
+     |  1.00th=[   125],  5.00th=[   129], 10.00th=[   131], 20.00th=[   133],
+     | 30.00th=[   135], 40.00th=[   135], 50.00th=[   137], 60.00th=[   137],
+     | 70.00th=[   139], 80.00th=[   139], 90.00th=[   141], 95.00th=[   143],
+     | 99.00th=[ 92799], 99.50th=[116917], 99.90th=[132645], 99.95th=[139461],
+     | 99.99th=[145753]
+   bw (  KiB/s): min=70642, max=148385, per=100.00%, avg=116990.19, stdev=670.89, samples=19184
+   iops        : min=141285, max=296770, avg=233980.67, stdev=1341.79, samples=19184
+  lat (usec)   : 20=0.01%, 50=0.01%, 100=0.01%, 250=97.59%, 500=0.01%
+  lat (usec)   : 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.01%, 20=0.01%, 50=0.17%
+  lat (msec)   : 100=1.24%, 250=0.96%
+  cpu          : usr=1.13%, sys=5.11%, ctx=172370, majf=0, minf=230
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=100.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.1%, 64=0.0%, >=64=0.0%
+     issued rwts: total=140318203,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=32
+
+Run status group 0 (all jobs):
+   READ: bw=114MiB/s (120MB/s), 114MiB/s-114MiB/s (120MB/s-120MB/s), io=66.9GiB (71.8GB), run=600109-600109msec
+
+Disk stats (read/write):
+  nvme2n1: ios=140284269/0, sectors=140284269/0, merge=0/0, ticks=1278921/0, in_queue=1278921, util=99.91%
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=32
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=16): [r(16)][100.0%][r=83.4MiB/s][r=171k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=11212: Fri Jan 19 22:07:50 2024
+  read: IOPS=172k, BW=83.8MiB/s (87.9MB/s)(49.1GiB/600066msec)
+    slat (nsec): min=35, max=160016k, avg=1153.85, stdev=305730.27
+    clat (usec): min=28, max=188208, avg=2972.67, stdev=15291.93
+     lat (usec): min=28, max=188208, avg=2973.82, stdev=15294.79
+    clat percentiles (usec):
+     |  1.00th=[   161],  5.00th=[   174], 10.00th=[   178], 20.00th=[   182],
+     | 30.00th=[   184], 40.00th=[   186], 50.00th=[   186], 60.00th=[   188],
+     | 70.00th=[   188], 80.00th=[   190], 90.00th=[   194], 95.00th=[   202],
+     | 99.00th=[ 91751], 99.50th=[120062], 99.90th=[132645], 99.95th=[137364],
+     | 99.99th=[143655]
+   bw (  KiB/s): min=52412, max=107936, per=100.00%, avg=85876.79, stdev=469.96, samples=19183
+   iops        : min=104824, max=215873, avg=171753.98, stdev=939.91, samples=19183
+  lat (usec)   : 50=0.01%, 100=0.01%, 250=96.28%, 500=0.03%, 750=0.01%
+  lat (usec)   : 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.02%, 20=0.01%, 50=0.42%
+  lat (msec)   : 100=2.26%, 250=0.95%
+  cpu          : usr=0.81%, sys=5.41%, ctx=190095, majf=0, minf=214
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=100.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.1%, 64=0.0%, >=64=0.0%
+     issued rwts: total=102987877,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=32
+
+Run status group 0 (all jobs):
+   READ: bw=83.8MiB/s (87.9MB/s), 83.8MiB/s-83.8MiB/s (87.9MB/s-87.9MB/s), io=49.1GiB (52.7GB), run=600066-600066msec
+
+Disk stats (read/write):
+  nvme2n1: ios=102959623/0, sectors=102959623/0, merge=0/0, ticks=1240497/0, in_queue=1240497, util=99.93%
+37 36
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=64
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 1 (f=0): [_(15),f(1)][100.0%][r=101MiB/s][r=207k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=11367: Fri Jan 19 22:17:51 2024
+  read: IOPS=224k, BW=109MiB/s (115MB/s)(64.1GiB/600120msec)
+    slat (nsec): min=38, max=196010k, avg=2895.95, stdev=509572.80
+    clat (usec): min=21, max=196310, avg=4547.50, stdev=19780.98
+     lat (usec): min=21, max=196312, avg=4550.40, stdev=19786.96
+    clat percentiles (usec):
+     |  1.00th=[   273],  5.00th=[   277], 10.00th=[   277], 20.00th=[   277],
+     | 30.00th=[   281], 40.00th=[   281], 50.00th=[   281], 60.00th=[   285],
+     | 70.00th=[   285], 80.00th=[   289], 90.00th=[   297], 95.00th=[  3949],
+     | 99.00th=[119014], 99.50th=[125305], 99.90th=[139461], 99.95th=[143655],
+     | 99.99th=[152044]
+   bw (  KiB/s): min=67873, max=142309, per=100.00%, avg=112114.55, stdev=635.98, samples=19184
+   iops        : min=135746, max=284618, avg=224229.42, stdev=1271.95, samples=19184
+  lat (usec)   : 50=0.01%, 100=0.01%, 250=0.01%, 500=94.97%, 750=0.01%
+  lat (usec)   : 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.02%, 10=0.04%, 20=0.01%, 50=0.37%
+  lat (msec)   : 100=2.59%, 250=2.00%
+  cpu          : usr=1.35%, sys=4.89%, ctx=173562, majf=0, minf=277
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+     issued rwts: total=134467292,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+   READ: bw=109MiB/s (115MB/s), 109MiB/s-109MiB/s (115MB/s-115MB/s), io=64.1GiB (68.8GB), run=600120-600120msec
+
+Disk stats (read/write):
+  nvme2n1: ios=134429590/0, sectors=134429590/0, merge=0/0, ticks=1023208/0, in_queue=1023208, util=99.92%
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=64
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=16): [r(16)][100.0%][r=99.7MiB/s][r=204k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=11521: Fri Jan 19 22:27:52 2024
+  read: IOPS=204k, BW=99.6MiB/s (104MB/s)(58.4GiB/600077msec)
+    slat (nsec): min=42, max=160044k, avg=1373.80, stdev=350220.84
+    clat (usec): min=24, max=188340, avg=5005.08, stdev=20712.96
+     lat (usec): min=24, max=188340, avg=5006.46, stdev=20715.63
+    clat percentiles (usec):
+     |  1.00th=[   285],  5.00th=[   297], 10.00th=[   306], 20.00th=[   310],
+     | 30.00th=[   310], 40.00th=[   314], 50.00th=[   314], 60.00th=[   314],
+     | 70.00th=[   318], 80.00th=[   318], 90.00th=[   322], 95.00th=[ 52167],
+     | 99.00th=[120062], 99.50th=[128451], 99.90th=[139461], 99.95th=[143655],
+     | 99.99th=[152044]
+   bw (  KiB/s): min=60840, max=129062, per=100.00%, avg=102069.71, stdev=587.99, samples=19185
+   iops        : min=121680, max=258124, avg=204139.70, stdev=1175.99, samples=19185
+  lat (usec)   : 50=0.01%, 100=0.01%, 250=0.01%, 500=94.48%, 750=0.01%
+  lat (usec)   : 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.02%, 10=0.03%, 20=0.01%, 50=0.41%
+  lat (msec)   : 100=2.85%, 250=2.20%
+  cpu          : usr=1.58%, sys=4.66%, ctx=174108, majf=0, minf=308
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+     issued rwts: total=122401110,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+   READ: bw=99.6MiB/s (104MB/s), 99.6MiB/s-99.6MiB/s (104MB/s-104MB/s), io=58.4GiB (62.7GB), run=600077-600077msec
+
+Disk stats (read/write):
+  nvme2n1: ios=122386109/0, sectors=122386109/0, merge=0/0, ticks=1230254/0, in_queue=1230254, util=99.92%
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=64
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=16): [r(16)][100.0%][r=128MiB/s][r=262k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=11669: Fri Jan 19 22:37:53 2024
+  read: IOPS=260k, BW=127MiB/s (133MB/s)(74.5GiB/600057msec)
+    slat (nsec): min=42, max=160306k, avg=858.31, stdev=276858.44
+    clat (usec): min=14, max=196271, avg=3921.94, stdev=18375.07
+     lat (usec): min=14, max=196271, avg=3922.80, stdev=18377.00
+    clat percentiles (usec):
+     |  1.00th=[   233],  5.00th=[   235], 10.00th=[   237], 20.00th=[   239],
+     | 30.00th=[   241], 40.00th=[   243], 50.00th=[   245], 60.00th=[   247],
+     | 70.00th=[   247], 80.00th=[   249], 90.00th=[   253], 95.00th=[   265],
+     | 99.00th=[112722], 99.50th=[124257], 99.90th=[139461], 99.95th=[139461],
+     | 99.99th=[147850]
+   bw (  KiB/s): min=81050, max=163496, per=100.00%, avg=130317.56, stdev=746.34, samples=19184
+   iops        : min=162100, max=326992, avg=260635.52, stdev=1492.69, samples=19184
+  lat (usec)   : 20=0.01%, 50=0.01%, 100=0.01%, 250=80.62%, 500=15.02%
+  lat (usec)   : 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.02%, 10=0.03%, 20=0.01%, 50=0.32%
+  lat (msec)   : 100=2.28%, 250=1.70%
+  cpu          : usr=1.30%, sys=4.94%, ctx=173141, majf=0, minf=294
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+     issued rwts: total=156303280,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+   READ: bw=127MiB/s (133MB/s), 127MiB/s-127MiB/s (133MB/s-133MB/s), io=74.5GiB (80.0GB), run=600057-600057msec
+
+Disk stats (read/write):
+  nvme2n1: ios=156262292/0, sectors=156262292/0, merge=0/0, ticks=1411229/0, in_queue=1411229, util=99.92%
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=64
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=16): [r(16)][100.0%][r=83.5MiB/s][r=171k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=11819: Fri Jan 19 22:47:54 2024
+  read: IOPS=172k, BW=84.1MiB/s (88.2MB/s)(49.3GiB/600072msec)
+    slat (nsec): min=38, max=144016k, avg=1110.35, stdev=299610.31
+    clat (usec): min=27, max=192430, avg=5931.47, stdev=21241.78
+     lat (usec): min=27, max=192430, avg=5932.58, stdev=21243.62
+    clat percentiles (usec):
+     |  1.00th=[   343],  5.00th=[   355], 10.00th=[   359], 20.00th=[   363],
+     | 30.00th=[   367], 40.00th=[   371], 50.00th=[   371], 60.00th=[   375],
+     | 70.00th=[   375], 80.00th=[   379], 90.00th=[   388], 95.00th=[ 60556],
+     | 99.00th=[120062], 99.50th=[124257], 99.90th=[139461], 99.95th=[139461],
+     | 99.99th=[147850]
+   bw (  KiB/s): min=51672, max=107425, per=100.00%, avg=86220.60, stdev=465.24, samples=19183
+   iops        : min=103344, max=214850, avg=172441.54, stdev=930.48, samples=19183
+  lat (usec)   : 50=0.01%, 100=0.01%, 250=0.01%, 500=92.65%, 750=0.01%
+  lat (usec)   : 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.02%, 10=0.05%, 20=0.03%, 50=0.82%
+  lat (msec)   : 100=4.53%, 250=1.91%
+  cpu          : usr=0.83%, sys=5.39%, ctx=190145, majf=0, minf=292
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+     issued rwts: total=103391071,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+   READ: bw=84.1MiB/s (88.2MB/s), 84.1MiB/s-84.1MiB/s (88.2MB/s-88.2MB/s), io=49.3GiB (52.9GB), run=600072-600072msec
+
+Disk stats (read/write):
+  nvme2n1: ios=103371831/0, sectors=103371831/0, merge=0/0, ticks=1251281/0, in_queue=1251281, util=99.93%
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=64
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=16): [r(16)][100.0%][r=110MiB/s][r=225k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=11970: Fri Jan 19 22:57:55 2024
+  read: IOPS=224k, BW=110MiB/s (115MB/s)(64.2GiB/600090msec)
+    slat (nsec): min=37, max=172020k, avg=2354.57, stdev=460285.08
+    clat (usec): min=19, max=200323, avg=4539.38, stdev=19794.35
+     lat (usec): min=19, max=200323, avg=4541.73, stdev=19799.23
+    clat percentiles (usec):
+     |  1.00th=[   273],  5.00th=[   277], 10.00th=[   277], 20.00th=[   277],
+     | 30.00th=[   281], 40.00th=[   281], 50.00th=[   281], 60.00th=[   285],
+     | 70.00th=[   285], 80.00th=[   289], 90.00th=[   293], 95.00th=[   701],
+     | 99.00th=[120062], 99.50th=[126354], 99.90th=[139461], 99.95th=[139461],
+     | 99.99th=[147850]
+   bw (  KiB/s): min=70787, max=142043, per=100.00%, avg=112325.91, stdev=653.63, samples=19184
+   iops        : min=141574, max=284088, avg=224652.14, stdev=1307.26, samples=19184
+  lat (usec)   : 20=0.01%, 50=0.01%, 100=0.01%, 250=0.01%, 500=94.99%
+  lat (usec)   : 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.02%, 10=0.03%, 20=0.01%, 50=0.37%
+  lat (msec)   : 100=2.56%, 250=2.01%
+  cpu          : usr=1.33%, sys=4.90%, ctx=173786, majf=0, minf=292
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+     issued rwts: total=134709520,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+   READ: bw=110MiB/s (115MB/s), 110MiB/s-110MiB/s (115MB/s-115MB/s), io=64.2GiB (69.0GB), run=600090-600090msec
+
+Disk stats (read/write):
+  nvme2n1: ios=134678632/0, sectors=134678632/0, merge=0/0, ticks=1026762/0, in_queue=1026762, util=99.93%
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=64
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 1 (f=1): [_(15),r(1)][6.3%][r=84.0MiB/s][r=172k IOPS][eta 02h:30m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=12127: Fri Jan 19 23:07:57 2024
+  read: IOPS=185k, BW=90.5MiB/s (94.9MB/s)(53.0GiB/600096msec)
+    slat (nsec): min=40, max=152023k, avg=1498.18, stdev=367252.50
+    clat (usec): min=18, max=192367, avg=5511.14, stdev=21693.36
+     lat (usec): min=19, max=192367, avg=5512.64, stdev=21696.14
+    clat percentiles (usec):
+     |  1.00th=[   314],  5.00th=[   326], 10.00th=[   338], 20.00th=[   343],
+     | 30.00th=[   343], 40.00th=[   347], 50.00th=[   347], 60.00th=[   347],
+     | 70.00th=[   347], 80.00th=[   351], 90.00th=[   355], 95.00th=[ 56361],
+     | 99.00th=[120062], 99.50th=[128451], 99.90th=[139461], 99.95th=[143655],
+     | 99.99th=[152044]
+   bw (  KiB/s): min=55862, max=116483, per=100.00%, avg=92707.04, stdev=533.51, samples=19184
+   iops        : min=111724, max=232967, avg=185414.39, stdev=1067.03, samples=19184
+  lat (usec)   : 20=0.01%, 50=0.01%, 100=0.01%, 250=0.01%, 500=93.92%
+  lat (usec)   : 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.02%, 10=0.05%, 20=0.01%, 50=0.46%
+  lat (msec)   : 100=3.10%, 250=2.44%
+  cpu          : usr=1.40%, sys=4.83%, ctx=173479, majf=0, minf=276
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+     issued rwts: total=111186542,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+   READ: bw=90.5MiB/s (94.9MB/s), 90.5MiB/s-90.5MiB/s (94.9MB/s-94.9MB/s), io=53.0GiB (56.9GB), run=600096-600096msec
+
+Disk stats (read/write):
+  nvme2n1: ios=111185935/0, sectors=111185935/0, merge=0/0, ticks=1162220/0, in_queue=1162220, util=99.92%
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=64
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 1 (f=1): [_(15),r(1)][6.3%][r=105MiB/s][r=216k IOPS][eta 02h:30m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=12280: Fri Jan 19 23:17:58 2024
+  read: IOPS=233k, BW=114MiB/s (119MB/s)(66.6GiB/600056msec)
+    slat (nsec): min=38, max=168022k, avg=1220.76, stdev=335454.97
+    clat (usec): min=23, max=180527, avg=4387.45, stdev=19447.00
+     lat (usec): min=23, max=180527, avg=4388.67, stdev=19449.65
+    clat percentiles (usec):
+     |  1.00th=[   260],  5.00th=[   265], 10.00th=[   265], 20.00th=[   269],
+     | 30.00th=[   273], 40.00th=[   273], 50.00th=[   273], 60.00th=[   277],
+     | 70.00th=[   277], 80.00th=[   281], 90.00th=[   285], 95.00th=[   302],
+     | 99.00th=[119014], 99.50th=[125305], 99.90th=[139461], 99.95th=[143655],
+     | 99.99th=[152044]
+   bw (  KiB/s): min=68606, max=147146, per=100.00%, avg=116426.06, stdev=673.03, samples=19184
+   iops        : min=137212, max=294292, avg=232852.40, stdev=1346.06, samples=19184
+  lat (usec)   : 50=0.01%, 100=0.01%, 250=0.05%, 500=95.09%, 750=0.01%
+  lat (usec)   : 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.02%, 10=0.03%, 20=0.01%, 50=0.37%
+  lat (msec)   : 100=2.50%, 250=1.92%
+  cpu          : usr=1.16%, sys=5.08%, ctx=172778, majf=0, minf=294
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+     issued rwts: total=139650329,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+   READ: bw=114MiB/s (119MB/s), 114MiB/s-114MiB/s (119MB/s-119MB/s), io=66.6GiB (71.5GB), run=600056-600056msec
+
+Disk stats (read/write):
+  nvme2n1: ios=139643909/0, sectors=139643909/0, merge=0/0, ticks=1272686/0, in_queue=1272686, util=99.91%
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=64
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 1 (f=1): [_(15),r(1)][6.3%][r=78.8MiB/s][r=161k IOPS][eta 02h:30m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=12431: Fri Jan 19 23:27:59 2024
+  read: IOPS=173k, BW=84.5MiB/s (88.6MB/s)(49.5GiB/600086msec)
+    slat (nsec): min=37, max=165045k, avg=1060.08, stdev=294087.01
+    clat (usec): min=20, max=188392, avg=5903.40, stdev=21203.71
+     lat (usec): min=20, max=188392, avg=5904.46, stdev=21205.50
+    clat percentiles (usec):
+     |  1.00th=[   338],  5.00th=[   351], 10.00th=[   359], 20.00th=[   363],
+     | 30.00th=[   367], 40.00th=[   367], 50.00th=[   371], 60.00th=[   371],
+     | 70.00th=[   375], 80.00th=[   375], 90.00th=[   388], 95.00th=[ 60556],
+     | 99.00th=[120062], 99.50th=[124257], 99.90th=[137364], 99.95th=[139461],
+     | 99.99th=[147850]
+   bw (  KiB/s): min=52293, max=108864, per=100.00%, avg=86626.59, stdev=471.21, samples=19184
+   iops        : min=104586, max=217729, avg=173253.56, stdev=942.42, samples=19184
+  lat (usec)   : 50=0.01%, 100=0.01%, 250=0.01%, 500=92.69%, 750=0.01%
+  lat (usec)   : 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.02%, 10=0.05%, 20=0.03%, 50=0.81%
+  lat (msec)   : 100=4.50%, 250=1.90%
+  cpu          : usr=0.84%, sys=5.39%, ctx=189975, majf=0, minf=292
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+     issued rwts: total=103891941,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+   READ: bw=84.5MiB/s (88.6MB/s), 84.5MiB/s-84.5MiB/s (88.6MB/s-88.6MB/s), io=49.5GiB (53.2GB), run=600086-600086msec
+
+Disk stats (read/write):
+  nvme2n1: ios=103891718/0, sectors=103891718/0, merge=0/0, ticks=1263772/0, in_queue=1263772, util=99.93%
+37 36
+brynjar@node2:~/exp_9_2024-01-19$ dmesg ^C
+brynjar@node2:~/exp_9_2024-01-19$

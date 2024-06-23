@@ -1,0 +1,1992 @@
+kfunc:vmlinux:pid_smaps_open
+kfunc:vmlinux:pinconf_groups_open
+kfunc:vmlinux:pinconf_pins_open
+kfunc:vmlinux:pinctrl_devices_open
+kfunc:vmlinux:pinctrl_gpioranges_open
+kfunc:vmlinux:pinctrl_groups_open
+kfunc:vmlinux:pinctrl_maps_open
+kfunc:vmlinux:pinctrl_open
+kfunc:vmlinux:pinctrl_pins_open
+kfunc:vmlinux:pinmux_functions_open
+kfunc:vmlinux:pinmux_pins_open
+kfunc:vmlinux:pinmux_select_open
+kfunc:vmlinux:pmc_core_dev_state_open
+kfunc:vmlinux:pmc_core_lpm_latch_mode_open
+kfunc:vmlinux:pmc_core_ltr_ignore_open
+kfunc:vmlinux:pmc_core_ltr_open
+kfunc:vmlinux:pmc_core_mphy_pg_open
+kfunc:vmlinux:pmc_core_pkgc_open
+kfunc:vmlinux:pmc_core_pll_open
+kfunc:vmlinux:pmc_core_ppfear_open
+kfunc:vmlinux:pmc_core_slps0_dbg_open
+kfunc:vmlinux:pmc_core_substate_l_sts_regs_open
+kfunc:vmlinux:pmc_core_substate_req_regs_open
+kfunc:vmlinux:pmc_core_substate_res_open
+kfunc:vmlinux:pmc_core_substate_sts_regs_open
+kfunc:vmlinux:pmc_dev_state_open
+kfunc:vmlinux:pmc_pss_state_open
+kfunc:vmlinux:pmc_sleep_tmr_open
+kfunc:vmlinux:port_debugfs_open
+kfunc:vmlinux:port_fops_open
+kfunc:vmlinux:posix_clock_open
+kfunc:vmlinux:possible_parents_open
+kfunc:vmlinux:ppp_open
+kfunc:vmlinux:pps_cdev_open
+kfunc:vmlinux:prb_open_block
+kfunc:vmlinux:proc_bus_pci_open
+kfunc:vmlinux:proc_gid_map_open
+kfunc:vmlinux:proc_id_map_open
+kfunc:vmlinux:proc_mem_open
+kfunc:vmlinux:proc_open_fdinfo
+kfunc:vmlinux:proc_pid_attr_open
+kfunc:vmlinux:proc_projid_map_open
+kfunc:vmlinux:proc_reg_open
+kfunc:vmlinux:proc_scsi_devinfo_open
+kfunc:vmlinux:proc_scsi_host_open
+kfunc:vmlinux:proc_scsi_open
+kfunc:vmlinux:proc_seq_open
+kfunc:vmlinux:proc_setgroups_open
+kfunc:vmlinux:proc_single_open
+kfunc:vmlinux:proc_sys_open
+kfunc:vmlinux:proc_tcp_fastopen_key
+kfunc:vmlinux:proc_timers_open
+kfunc:vmlinux:proc_uid_map_open
+kfunc:vmlinux:prof_cpu_mask_proc_open
+kfunc:vmlinux:profiles_open
+kfunc:vmlinux:pseudo_lock_dev_open
+kfunc:vmlinux:psi_cpu_open
+kfunc:vmlinux:psi_io_open
+kfunc:vmlinux:psi_memory_open
+kfunc:vmlinux:pstore_file_open
+kfunc:vmlinux:ptm_open_peer
+kfunc:vmlinux:ptmx_open
+kfunc:vmlinux:ptp_open
+kfunc:vmlinux:pty_open
+kfunc:vmlinux:pwm_debugfs_open
+kfunc:vmlinux:queue_max_open_zones_show
+kfunc:vmlinux:rawdata_open
+kfunc:vmlinux:rbtree_open
+kfunc:vmlinux:regmap_access_open
+kfunc:vmlinux:regulator_summary_open
+kfunc:vmlinux:relay_file_open
+kfunc:vmlinux:relay_open
+kfunc:vmlinux:reqsk_fastopen_remove
+kfunc:vmlinux:rfkill_fop_open
+kfunc:vmlinux:rng_dev_open
+kfunc:vmlinux:rproc_carveouts_open
+kfunc:vmlinux:rproc_rsc_table_open
+kfunc:vmlinux:rtc_class_open
+kfunc:vmlinux:rtc_dev_open
+kfunc:vmlinux:sched_autogroup_open
+kfunc:vmlinux:sched_debug_open
+kfunc:vmlinux:sched_dynamic_open
+kfunc:vmlinux:sched_feat_open
+kfunc:vmlinux:sched_open
+kfunc:vmlinux:sched_scaling_open
+kfunc:vmlinux:sd_flags_open
+kfunc:vmlinux:sd_open
+kfunc:vmlinux:security_file_open
+kfunc:vmlinux:security_perf_event_open
+kfunc:vmlinux:security_tun_dev_open
+kfunc:vmlinux:sel_open_avc_cache_stats
+kfunc:vmlinux:sel_open_handle_status
+kfunc:vmlinux:sel_open_policy
+kfunc:vmlinux:selinux_file_open
+kfunc:vmlinux:selinux_perf_event_open
+kfunc:vmlinux:selinux_tun_dev_open
+kfunc:vmlinux:seq_fdinfo_open
+kfunc:vmlinux:seq_ns_compress_max_open
+kfunc:vmlinux:seq_ns_compress_min_open
+kfunc:vmlinux:seq_ns_level_open
+kfunc:vmlinux:seq_ns_name_open
+kfunc:vmlinux:seq_ns_nsstacked_open
+kfunc:vmlinux:seq_ns_stacked_open
+kfunc:vmlinux:seq_open
+kfunc:vmlinux:seq_open_net
+kfunc:vmlinux:seq_open_private
+kfunc:vmlinux:seq_profile_attach_open
+kfunc:vmlinux:seq_profile_hash_open
+kfunc:vmlinux:seq_profile_mode_open
+kfunc:vmlinux:seq_profile_name_open
+kfunc:vmlinux:seq_rawdata_abi_open
+kfunc:vmlinux:seq_rawdata_compressed_size_open
+kfunc:vmlinux:seq_rawdata_hash_open
+kfunc:vmlinux:seq_rawdata_revision_open
+kfunc:vmlinux:serdev_device_open
+kfunc:vmlinux:serio_open
+kfunc:vmlinux:severities_coverage_open
+kfunc:vmlinux:sg_open
+kfunc:vmlinux:sg_proc_single_open_adio
+kfunc:vmlinux:sg_proc_single_open_dressz
+kfunc:vmlinux:sgx_open
+kfunc:vmlinux:sgx_vepc_open
+kfunc:vmlinux:sgx_vma_open
+kfunc:vmlinux:shm_open
+kfunc:vmlinux:simple_attr_open
+kfunc:vmlinux:simple_open
+kfunc:vmlinux:single_open
+kfunc:vmlinux:single_open_net
+kfunc:vmlinux:single_open_size
+kfunc:vmlinux:slab_debug_trace_open
+kfunc:vmlinux:slabinfo_open
+kfunc:vmlinux:smack_file_open
+kfunc:vmlinux:smaps_rollup_open
+kfunc:vmlinux:smk_open_cipso
+kfunc:vmlinux:smk_open_cipso2
+kfunc:vmlinux:smk_open_load
+kfunc:vmlinux:smk_open_load2
+kfunc:vmlinux:smk_open_load_self
+kfunc:vmlinux:smk_open_load_self2
+kfunc:vmlinux:smk_open_net4addr
+kfunc:vmlinux:smk_open_net6addr
+kfunc:vmlinux:smk_open_onlycap
+kfunc:vmlinux:smk_open_relabel_self
+kfunc:vmlinux:snapshot_open
+kfunc:vmlinux:sr_block_open
+kfunc:vmlinux:sr_open
+kfunc:vmlinux:stat_open
+kfunc:vmlinux:stats_open
+kfunc:vmlinux:status_open
+kfunc:vmlinux:stream_open
+kfunc:vmlinux:sub_domains_open
+kfunc:vmlinux:summary_open
+kfunc:vmlinux:supply_map_open
+kfunc:vmlinux:suspend_stats_open
+kfunc:vmlinux:sw_sync_debugfs_open
+kfunc:vmlinux:swaps_open
+kfunc:vmlinux:sync_info_debugfs_open
+kfunc:vmlinux:sysfs_kf_bin_open
+kfunc:vmlinux:sysvipc_proc_open
+kfunc:vmlinux:tcp_ca_openreq_child
+kfunc:vmlinux:tcp_create_openreq_child
+kfunc:vmlinux:tcp_fastopen_active_detect_blackhole
+kfunc:vmlinux:tcp_fastopen_active_disable
+kfunc:vmlinux:tcp_fastopen_active_disable_ofo_check
+kfunc:vmlinux:tcp_fastopen_active_should_disable
+kfunc:vmlinux:tcp_fastopen_add_skb
+kfunc:vmlinux:tcp_fastopen_cache_get
+kfunc:vmlinux:tcp_fastopen_cache_set
+kfunc:vmlinux:tcp_fastopen_cookie_check
+kfunc:vmlinux:tcp_fastopen_ctx_destroy
+kfunc:vmlinux:tcp_fastopen_ctx_free
+kfunc:vmlinux:tcp_fastopen_defer_connect
+kfunc:vmlinux:tcp_fastopen_destroy_cipher
+kfunc:vmlinux:tcp_fastopen_get_cipher
+kfunc:vmlinux:tcp_fastopen_init_key_once
+kfunc:vmlinux:tcp_fastopen_reset_cipher
+kfunc:vmlinux:tcp_free_fastopen_req
+kfunc:vmlinux:tcp_openreq_init_rwin
+kfunc:vmlinux:tcp_sendmsg_fastopen
+kfunc:vmlinux:tcp_try_fastopen
+kfunc:vmlinux:tcp_try_keep_open
+kfunc:vmlinux:timens_offsets_open
+kfunc:vmlinux:timerslack_ns_open
+kfunc:vmlinux:tk_debug_sleep_time_open
+kfunc:vmlinux:tomoyo_check_open_permission
+kfunc:vmlinux:tomoyo_file_open
+kfunc:vmlinux:tomoyo_open
+kfunc:vmlinux:tomoyo_open_control
+kfunc:vmlinux:total_idle_time_open
+kfunc:vmlinux:tpk_open
+kfunc:vmlinux:tpm_bios_measurements_open
+kfunc:vmlinux:tpm_common_open
+kfunc:vmlinux:tpm_open
+kfunc:vmlinux:tpmrm_open
+kfunc:vmlinux:trace_open
+kfunc:vmlinux:tty_kopen
+kfunc:vmlinux:tty_kopen_exclusive
+kfunc:vmlinux:tty_kopen_shared
+kfunc:vmlinux:tty_ldisc_open
+kfunc:vmlinux:tty_open
+kfunc:vmlinux:tty_open_proc_set_tty
+kfunc:vmlinux:tty_port_open
+kfunc:vmlinux:tty_reopen
+kfunc:vmlinux:ttyport_open
+kfunc:vmlinux:tun_chr_open
+kfunc:vmlinux:tun_net_open
+kfunc:vmlinux:u32_array_open
+kfunc:vmlinux:uart_open
+kfunc:vmlinux:uhci_debug_open
+kfunc:vmlinux:uinput_open
+kfunc:vmlinux:unusable_open
+kfunc:vmlinux:usb_open
+kfunc:vmlinux:usbdev_open
+kfunc:vmlinux:usbdev_vm_open
+kfunc:vmlinux:vcs_open
+kfunc:vmlinux:vfio_device_open
+kfunc:vmlinux:vfio_device_set_open_count
+kfunc:vmlinux:vfio_fops_open
+kfunc:vmlinux:vfio_group_fops_open
+kfunc:vmlinux:vfio_iommu_type1_open
+kfunc:vmlinux:vfio_noiommu_open
+kfunc:vmlinux:vfio_pci_mmap_open
+kfunc:vmlinux:vfio_pci_open_device
+kfunc:vmlinux:vfs_open
+kfunc:vmlinux:vfs_tmpfile_open
+kfunc:vmlinux:vga_arb_open
+kfunc:vmlinux:vga_switcheroo_debugfs_open
+kfunc:vmlinux:wakeup_sources_stats_open
+kfunc:vmlinux:watchdog_open
+kfunc:vmlinux:wwan_port_fops_open
+kfunc:vmlinux:xen_mce_chrdev_open
+kfunc:vmlinux:xenbus_backend_open
+kfunc:vmlinux:xenbus_file_open
+kfunc:vmlinux:xennet_open
+kfunc:vmlinux:xhci_context_open
+kfunc:vmlinux:xhci_port_open
+kfunc:vmlinux:xhci_ring_open
+kfunc:vmlinux:xhci_stream_context_array_open
+kfunc:vmlinux:xhci_stream_id_open
+kprobe:__audit_mq_open
+kprobe:__audit_openat2_how
+kprobe:__br_multicast_open
+kprobe:__configfs_open_file
+kprobe:__dev_open
+kprobe:__fsverity_file_open
+kprobe:__ia32_compat_sys_mq_open
+kprobe:__ia32_compat_sys_open
+kprobe:__ia32_compat_sys_open_by_handle_at
+kprobe:__ia32_compat_sys_openat
+kprobe:__ia32_sys_fsopen
+kprobe:__ia32_sys_mq_open
+kprobe:__ia32_sys_open
+kprobe:__ia32_sys_open_by_handle_at
+kprobe:__ia32_sys_open_tree
+kprobe:__ia32_sys_openat
+kprobe:__ia32_sys_openat2
+kprobe:__ia32_sys_perf_event_open
+kprobe:__ia32_sys_pidfd_open
+kprobe:__igb_open
+kprobe:__io_openat_prep
+kprobe:__nfsd_open.constprop.0
+kprobe:__seq_open_private
+kprobe:__shm_open
+kprobe:__traceiter_nfsd_file_open
+kprobe:__traceiter_nfsd_file_opened
+kprobe:__traceiter_nfsd_open
+kprobe:__traceiter_nfsd_open_confirm
+kprobe:__traceiter_nfsd_write_opened
+kprobe:__x64_sys_fsopen
+kprobe:__x64_sys_mq_open
+kprobe:__x64_sys_open
+kprobe:__x64_sys_open_by_handle_at
+kprobe:__x64_sys_open_tree
+kprobe:__x64_sys_openat
+kprobe:__x64_sys_openat2
+kprobe:__x64_sys_perf_event_open
+kprobe:__x64_sys_pidfd_open
+kprobe:aa_sfs_seq_open
+kprobe:acpi_aml_open
+kprobe:acpi_lid_input_open
+kprobe:acpi_lid_open
+kprobe:acpi_ns_opens_scope
+kprobe:acpi_system_wakeup_device_open_fs
+kprobe:action_threshold_ops_open
+kprobe:active_time_open
+kprobe:apparmor_file_open
+kprobe:autofs_dev_ioctl_openmount
+kprobe:autofs_dir_open
+kprobe:auxv_open
+kprobe:bad_file_open
+kprobe:bad_inode_atomic_open
+kprobe:bdi_debug_stats_open
+kprobe:blk_mq_debugfs_open
+kprobe:blkcg_conf_open_bdev
+kprobe:blkdev_get_no_open
+kprobe:blkdev_open
+kprobe:blkdev_put_no_open
+kprobe:bpf_lsm_file_open
+kprobe:bpf_lsm_perf_event_open
+kprobe:bpf_lsm_tun_dev_open
+kprobe:bpf_map_mmap_open
+kprobe:bpffs_map_open
+kprobe:bpffs_obj_open
+kprobe:br_dev_open
+kprobe:br_mrp_in_port_open
+kprobe:br_mrp_ring_port_open
+kprobe:br_multicast_open
+kprobe:bsg_open
+kprobe:btrfs_control_open
+kprobe:btrfs_file_open
+kprobe:btrfs_open_devices
+kprobe:btrfs_opendir
+kprobe:cache_open
+kprobe:cache_open_pipefs
+kprobe:cache_open_procfs
+kprobe:cdrom_open
+kprobe:cdrom_ram_open_write
+kprobe:cgroup_file_open
+kprobe:check_conflicting_open
+kprobe:children_seq_open
+kprobe:chrdev_open
+kprobe:clear_warn_once_fops_open
+kprobe:client_info_open
+kprobe:client_opens_release
+kprobe:client_states_open
+kprobe:clk_dump_open
+kprobe:clk_duty_cycle_open
+kprobe:clk_fd_denominator_fops_open
+kprobe:clk_fd_numerator_fops_open
+kprobe:clk_flags_open
+kprobe:clk_max_rate_open
+kprobe:clk_min_rate_open
+kprobe:clk_rate_fops_open
+kprobe:clk_summary_open
+kprobe:comm_open
+kprobe:component_devices_open
+kprobe:con_open
+kprobe:configfs_dir_open
+kprobe:configfs_open_bin_file
+kprobe:configfs_open_file
+kprobe:connector_open
+kprobe:content_open_pipefs
+kprobe:content_open_procfs
+kprobe:cpu_latency_qos_open
+kprobe:cpuinfo_open
+kprobe:crc_control_open
+kprobe:crtc_crc_open
+kprobe:current_parent_open
+kprobe:dbc_tty_open
+kprobe:dcache_dir_open
+kprobe:debug_async_open
+kprobe:debug_bandwidth_open
+kprobe:debug_periodic_open
+kprobe:debug_registers_open
+kprobe:debugfs_devm_entry_open
+kprobe:debugfs_regset32_open
+kprobe:decay_interval_ops_open
+kprobe:default_affinity_open
+kprobe:deferred_devs_open
+kprobe:dentry_open
+kprobe:dev_open
+kprobe:devfreq_summary_open
+kprobe:devices_open
+kprobe:devkmsg_open
+kprobe:devm_serdev_device_open
+kprobe:devres_open_group
+kprobe:dm_blk_open
+kprobe:dm_open
+kprobe:dm_open_count
+kprobe:dma_buf_debug_open
+kprobe:dma_heap_open
+kprobe:dmaengine_summary_open
+kprobe:do_dentry_open
+kprobe:do_file_open_root
+kprobe:do_filp_open
+kprobe:do_handle_open
+kprobe:do_mq_open
+kprobe:do_open_execat
+kprobe:do_open_permission
+kprobe:do_sys_open
+kprobe:do_sys_openat2
+kprobe:dquot_file_open
+kprobe:dr_mode_open
+kprobe:drm_debugfs_entry_open
+kprobe:drm_debugfs_open
+kprobe:drm_fbdev_fb_open
+kprobe:drm_gem_open
+kprobe:drm_gem_open_ioctl
+kprobe:drm_gem_shmem_vm_open
+kprobe:drm_gem_vm_open
+kprobe:drm_master_open
+kprobe:drm_open
+kprobe:drm_open_helper
+kprobe:drm_stub_open
+kprobe:drm_syncobj_open
+kprobe:ecryptfs_dir_open
+kprobe:ecryptfs_miscdev_open
+kprobe:ecryptfs_open
+kprobe:ecryptfs_privileged_open
+kprobe:edid_open
+kprobe:efi_pstore_open
+kprobe:em_debug_cpus_open
+kprobe:em_debug_flags_open
+kprobe:environ_open
+kprobe:erst_open_pstore
+kprobe:evdev_open
+kprobe:export_features_open
+kprobe:exports_nfsd_open
+kprobe:exports_proc_open
+kprobe:ext4_file_open
+kprobe:extfrag_open
+kprobe:fake_panic_fops_open
+kprobe:fault_around_bytes_fops_open
+kprobe:fb_deferred_io_open
+kprobe:fb_open
+kprobe:fbcon_open
+kprobe:fifo_open
+kprobe:file_open_name
+kprobe:file_open_root
+kprobe:filp_open
+kprobe:find_openstateowner_str_locked
+kprobe:finish_no_open
+kprobe:finish_open
+kprobe:fops_atomic_t_open
+kprobe:fops_atomic_t_ro_open
+kprobe:fops_atomic_t_wo_open
+kprobe:fops_io_tlb_used_open
+kprobe:fops_size_t_open
+kprobe:fops_size_t_ro_open
+kprobe:fops_size_t_wo_open
+kprobe:fops_u16_open
+kprobe:fops_u16_ro_open
+kprobe:fops_u16_wo_open
+kprobe:fops_u32_open
+kprobe:fops_u32_ro_open
+kprobe:fops_u32_wo_open
+kprobe:fops_u64_open
+kprobe:fops_u64_ro_open
+kprobe:fops_u64_wo_open
+kprobe:fops_u8_open
+kprobe:fops_u8_ro_open
+kprobe:fops_u8_wo_open
+kprobe:fops_ulong_open
+kprobe:fops_ulong_ro_open
+kprobe:fops_ulong_wo_open
+kprobe:fops_x16_open
+kprobe:fops_x16_ro_open
+kprobe:fops_x16_wo_open
+kprobe:fops_x32_open
+kprobe:fops_x32_ro_open
+kprobe:fops_x32_wo_open
+kprobe:fops_x64_open
+kprobe:fops_x64_ro_open
+kprobe:fops_x64_wo_open
+kprobe:fops_x8_open
+kprobe:fops_x8_ro_open
+kprobe:fops_x8_wo_open
+kprobe:fscrypt_file_open
+kprobe:full_proxy_open
+kprobe:fuse_atomic_open
+kprobe:fuse_create_open
+kprobe:fuse_dev_open
+kprobe:fuse_dir_open
+kprobe:fuse_do_open
+kprobe:fuse_file_open
+kprobe:fuse_finish_open
+kprobe:fuse_open
+kprobe:fuse_open_common
+kprobe:fuse_send_open
+kprobe:generic_file_open
+kprobe:gpio_chrdev_open
+kprobe:gpio_set_open_drain_value_commit
+kprobe:gpio_set_open_source_value_commit
+kprobe:gpiochip_line_is_open_drain
+kprobe:gpiochip_line_is_open_source
+kprobe:gpiolib_open
+kprobe:group_open_release
+kprobe:gss_pipe_open.isra.0
+kprobe:gss_pipe_open_v0
+kprobe:gss_pipe_open_v1
+kprobe:hid_debug_events_open
+kprobe:hid_debug_rdesc_open
+kprobe:hid_hw_open
+kprobe:hid_open_report
+kprobe:hiddev_open
+kprobe:hidinput_open
+kprobe:hidraw_open
+kprobe:hook_file_open
+kprobe:hpet_open
+kprobe:hugetlb_vm_op_open
+kprobe:hvc_open
+kprobe:hw_params_open
+kprobe:i2cdev_open
+kprobe:icc_graph_open
+kprobe:icc_summary_open
+kprobe:idle_states_open
+kprobe:igb_open
+kprobe:ima_ascii_measurements_open
+kprobe:ima_measurements_open
+kprobe:ima_open_policy
+kprobe:input_open_device
+kprobe:input_proc_devices_open
+kprobe:input_proc_handlers_open
+kprobe:io_open_cleanup
+kprobe:io_openat
+kprobe:io_openat2
+kprobe:io_openat2_prep
+kprobe:io_openat_prep
+kprobe:iosf_mcr_fops_open
+kprobe:ipmi_open
+kprobe:irq_affinity_list_proc_open
+kprobe:irq_affinity_proc_open
+kprobe:isst_if_open
+kprobe:iter_open
+kprobe:jbd2_seq_info_open
+kprobe:joydev_open
+kprobe:kallsyms_open
+kprobe:kernfs_drain_open_files
+kprobe:kernfs_fop_open
+kprobe:kernfs_should_drain_open_files
+kprobe:kernfs_unlink_open_file
+kprobe:kernfs_vma_open
+kprobe:kgdb_nmi_tty_open
+kprobe:kmsg_open
+kprobe:kprobe_blacklist_open
+kprobe:kprobes_open
+kprobe:kvm_mmu_rmaps_stat_open
+kprobe:kvm_stat_data_open
+kprobe:llc_sap_open
+kprobe:lock_to_openmode
+kprobe:may_open
+kprobe:may_open_dev
+kprobe:mce_chrdev_open
+kprobe:md_open
+kprobe:md_seq_open
+kprobe:mei_dbgfs_active_open
+kprobe:mei_dbgfs_devstate_open
+kprobe:mei_dbgfs_meclients_open
+kprobe:mei_open
+kprobe:mem_open
+kprobe:memory_open
+kprobe:memtype_seq_open
+kprobe:misc_open
+kprobe:mixdev_open_devices
+kprobe:mmc_clock_fops_open
+kprobe:mmc_err_state_open
+kprobe:mmc_err_stats_open
+kprobe:mmc_ios_open
+kprobe:mo_open_write
+kprobe:modules_open
+kprobe:mountinfo_open
+kprobe:mounts_open
+kprobe:mounts_open_common
+kprobe:mountstats_open
+kprobe:mousedev_open
+kprobe:mousedev_open_device
+kprobe:mptcp_fastopen_gen_msk_ackseq
+kprobe:mptcp_fastopen_subflow_synack_set_params
+kprobe:msr_open
+kprobe:mtrr_open
+kprobe:n_null_open
+kprobe:n_tty_open
+kprobe:nd_open
+kprobe:nf_log_buf_open
+kprobe:nfs4_check_open_reclaim
+kprobe:nfs4_check_openmode
+kprobe:nfs4_free_openowner
+kprobe:nfs4_unhash_openowner
+kprobe:nfsd4_cleanup_open_state
+kprobe:nfsd4_decode_open
+kprobe:nfsd4_decode_open_confirm
+kprobe:nfsd4_decode_open_downgrade
+kprobe:nfsd4_encode_open
+kprobe:nfsd4_encode_open_confirm
+kprobe:nfsd4_encode_open_downgrade
+kprobe:nfsd4_find_existing_open.isra.0
+kprobe:nfsd4_get_opendowngradestateid
+kprobe:nfsd4_open
+kprobe:nfsd4_open_confirm
+kprobe:nfsd4_open_downgrade
+kprobe:nfsd4_open_rsize
+kprobe:nfsd4_process_open1
+kprobe:nfsd4_process_open2
+kprobe:nfsd4_set_opendowngradestateid
+kprobe:nfsd4_set_openstateid
+kprobe:nfsd_file_acquire_opened
+kprobe:nfsd_file_cache_stats_open
+kprobe:nfsd_open
+kprobe:nfsd_open_break_lease
+kprobe:nfsd_open_verified
+kprobe:nfsd_pool_stats_open
+kprobe:nfsd_reply_cache_stats_open
+kprobe:nlm_do_fopen
+kprobe:nlm_fopen
+kprobe:no_open
+kprobe:nonseekable_open
+kprobe:ns_revision_open
+kprobe:nvme_dev_open
+kprobe:nvme_ns_chr_open
+kprobe:nvme_ns_head_chr_open
+kprobe:nvme_ns_head_open
+kprobe:nvme_ns_open
+kprobe:nvme_open
+kprobe:nvmf_dev_open
+kprobe:objects_open
+kprobe:open_ctree
+kprobe:open_detached_copy
+kprobe:open_exec
+kprobe:open_flush_pipefs
+kprobe:open_flush_procfs
+kprobe:open_fs_devices
+kprobe:open_kcore
+kprobe:open_port
+kprobe:open_proxy_open
+kprobe:open_related_ns
+kprobe:open_softirq
+kprobe:open_vmcore
+kprobe:open_with_fake_path
+kprobe:opens_in_grace
+kprobe:output_bpc_open
+kprobe:ovl_dir_open
+kprobe:ovl_open
+kprobe:ovl_open_realfile
+kprobe:ovl_path_open
+kprobe:packet_mm_open
+kprobe:pagemap_open
+kprobe:params_open
+kprobe:parse_openbsd
+kprobe:path_openat
+kprobe:perf_mmap_open
+kprobe:perf_state_open
+kprobe:pid_maps_open
+kprobe:pid_numa_maps_open
+kprobe:pid_smaps_open
+kprobe:pinconf_groups_open
+kprobe:pinconf_pins_open
+kprobe:pinctrl_devices_open
+kprobe:pinctrl_gpioranges_open
+kprobe:pinctrl_groups_open
+kprobe:pinctrl_maps_open
+kprobe:pinctrl_open
+kprobe:pinctrl_pins_open
+kprobe:pinmux_functions_open
+kprobe:pinmux_pins_open
+kprobe:pinmux_select_open
+kprobe:pmc_core_dev_state_open
+kprobe:pmc_core_lpm_latch_mode_open
+kprobe:pmc_core_ltr_ignore_open
+kprobe:pmc_core_ltr_open
+kprobe:pmc_core_mphy_pg_open
+kprobe:pmc_core_pkgc_open
+kprobe:pmc_core_pll_open
+kprobe:pmc_core_ppfear_open
+kprobe:pmc_core_slps0_dbg_open
+kprobe:pmc_core_substate_l_sts_regs_open
+kprobe:pmc_core_substate_req_regs_open
+kprobe:pmc_core_substate_res_open
+kprobe:pmc_core_substate_sts_regs_open
+kprobe:pmc_dev_state_open
+kprobe:pmc_pss_state_open
+kprobe:pmc_sleep_tmr_open
+kprobe:port_debugfs_open
+kprobe:port_fops_open
+kprobe:posix_clock_open
+kprobe:possible_parents_open
+kprobe:powerclamp_debug_open
+kprobe:ppp_open
+kprobe:pps_cdev_open
+kprobe:prb_open_block
+kprobe:proc_bus_pci_open
+kprobe:proc_gid_map_open
+kprobe:proc_id_map_open
+kprobe:proc_mem_open
+kprobe:proc_open_fdinfo
+kprobe:proc_pid_attr_open
+kprobe:proc_projid_map_open
+kprobe:proc_reg_open
+kprobe:proc_scsi_devinfo_open
+kprobe:proc_scsi_host_open
+kprobe:proc_scsi_open
+kprobe:proc_seq_open
+kprobe:proc_setgroups_open
+kprobe:proc_single_open
+kprobe:proc_sys_open
+kprobe:proc_tcp_fastopen_key
+kprobe:proc_timers_open
+kprobe:proc_uid_map_open
+kprobe:prof_cpu_mask_proc_open
+kprobe:profiles_open
+kprobe:pseudo_lock_dev_open
+kprobe:psi_cpu_open
+kprobe:psi_io_open
+kprobe:psi_memory_open
+kprobe:pstore_file_open
+kprobe:psz_pstore_open
+kprobe:ptm_open_peer
+kprobe:ptmx_open
+kprobe:ptp_open
+kprobe:pty_open
+kprobe:pwm_debugfs_open
+kprobe:queue_max_open_zones_show
+kprobe:ramoops_pstore_open
+kprobe:rawdata_open
+kprobe:rbtree_open
+kprobe:regmap_access_open
+kprobe:regulator_summary_open
+kprobe:relay_file_open
+kprobe:relay_open
+kprobe:release_openowner
+kprobe:reqsk_fastopen_remove
+kprobe:rfkill_fop_open
+kprobe:rng_dev_open
+kprobe:rpc_dummy_info_open
+kprobe:rpc_info_open
+kprobe:rpc_pipe_open
+kprobe:rpc_proc_open
+kprobe:rproc_carveouts_open
+kprobe:rproc_rsc_table_open
+kprobe:rtc_class_open
+kprobe:rtc_dev_open
+kprobe:sched_autogroup_open
+kprobe:sched_debug_open
+kprobe:sched_dynamic_open
+kprobe:sched_feat_open
+kprobe:sched_open
+kprobe:sched_scaling_open
+kprobe:sd_flags_open
+kprobe:sd_open
+kprobe:security_file_open
+kprobe:security_perf_event_open
+kprobe:security_tun_dev_open
+kprobe:sel_open_avc_cache_stats
+kprobe:sel_open_handle_status
+kprobe:sel_open_policy
+kprobe:selinux_file_open
+kprobe:selinux_perf_event_open
+kprobe:selinux_tun_dev_open
+kprobe:seq_fdinfo_open
+kprobe:seq_ns_compress_max_open
+kprobe:seq_ns_compress_min_open
+kprobe:seq_ns_level_open
+kprobe:seq_ns_name_open
+kprobe:seq_ns_nsstacked_open
+kprobe:seq_ns_stacked_open
+kprobe:seq_open
+kprobe:seq_open_net
+kprobe:seq_open_private
+kprobe:seq_profile_attach_open
+kprobe:seq_profile_hash_open
+kprobe:seq_profile_mode_open
+kprobe:seq_profile_name_open
+kprobe:seq_rawdata_abi_open
+kprobe:seq_rawdata_compressed_size_open
+kprobe:seq_rawdata_hash_open
+kprobe:seq_rawdata_open.isra.0
+kprobe:seq_rawdata_revision_open
+kprobe:serdev_device_open
+kprobe:serio_open
+kprobe:severities_coverage_open
+kprobe:sg_open
+kprobe:sg_proc_single_open_adio
+kprobe:sg_proc_single_open_dressz
+kprobe:sgx_open
+kprobe:sgx_vepc_open
+kprobe:sgx_vma_open
+kprobe:shm_open
+kprobe:simple_attr_open
+kprobe:simple_open
+kprobe:single_open
+kprobe:single_open_net
+kprobe:single_open_size
+kprobe:slab_debug_trace_open
+kprobe:slabinfo_open
+kprobe:smack_file_open
+kprobe:smaps_rollup_open
+kprobe:smk_open_cipso
+kprobe:smk_open_cipso2
+kprobe:smk_open_load
+kprobe:smk_open_load2
+kprobe:smk_open_load_self
+kprobe:smk_open_load_self2
+kprobe:smk_open_net4addr
+kprobe:smk_open_net6addr
+kprobe:smk_open_onlycap
+kprobe:smk_open_relabel_self
+kprobe:snapshot_open
+kprobe:sr_block_open
+kprobe:sr_open
+kprobe:stat_open
+kprobe:stats_open
+kprobe:status_open
+kprobe:stream_open
+kprobe:sub_domains_open
+kprobe:summary_open
+kprobe:supply_map_open
+kprobe:suspend_stats_open
+kprobe:svc_pool_stats_open
+kprobe:sw_sync_debugfs_open
+kprobe:swaps_open
+kprobe:sync_info_debugfs_open
+kprobe:sysfs_kf_bin_open
+kprobe:sysvipc_proc_open
+kprobe:tasks_open
+kprobe:tcp_ca_openreq_child
+kprobe:tcp_create_openreq_child
+kprobe:tcp_fastopen_active_detect_blackhole
+kprobe:tcp_fastopen_active_disable
+kprobe:tcp_fastopen_active_disable_ofo_check
+kprobe:tcp_fastopen_active_should_disable
+kprobe:tcp_fastopen_add_skb
+kprobe:tcp_fastopen_cache_get
+kprobe:tcp_fastopen_cache_set
+kprobe:tcp_fastopen_cookie_check
+kprobe:tcp_fastopen_ctx_destroy
+kprobe:tcp_fastopen_ctx_free
+kprobe:tcp_fastopen_defer_connect
+kprobe:tcp_fastopen_destroy_cipher
+kprobe:tcp_fastopen_get_cipher
+kprobe:tcp_fastopen_init_key_once
+kprobe:tcp_fastopen_reset_cipher
+kprobe:tcp_free_fastopen_req
+kprobe:tcp_openreq_init_rwin
+kprobe:tcp_sendmsg_fastopen
+kprobe:tcp_try_fastopen
+kprobe:tcp_try_keep_open
+kprobe:timens_offsets_open
+kprobe:timerslack_ns_open
+kprobe:tk_debug_sleep_time_open
+kprobe:tls_merge_open_record
+kprobe:tomoyo_check_open_permission
+kprobe:tomoyo_file_open
+kprobe:tomoyo_open
+kprobe:tomoyo_open_control
+kprobe:total_idle_time_open
+kprobe:tpk_open
+kprobe:tpm_bios_measurements_open
+kprobe:tpm_common_open
+kprobe:tpm_open
+kprobe:tpmrm_open
+kprobe:trace_open
+kprobe:tty_kopen
+kprobe:tty_kopen_exclusive
+kprobe:tty_kopen_shared
+kprobe:tty_ldisc_open
+kprobe:tty_open
+kprobe:tty_open_proc_set_tty
+kprobe:tty_port_open
+kprobe:tty_reopen
+kprobe:ttyport_open
+kprobe:tun_chr_open
+kprobe:tun_net_open
+kprobe:u32_array_open
+kprobe:uart_open
+kprobe:uhci_debug_open
+kprobe:uinput_open
+kprobe:unhash_open_stateid
+kprobe:unusable_open
+kprobe:usb_open
+kprobe:usbdev_open
+kprobe:usbdev_vm_open
+kprobe:usbhid_open
+kprobe:vcpu_get_pid_fops_open
+kprobe:vcpu_guest_mode_fops_open
+kprobe:vcpu_stat_fops_open
+kprobe:vcpu_stat_readonly_fops_open
+kprobe:vcpu_timer_advance_ns_fops_open
+kprobe:vcpu_tsc_offset_fops_open
+kprobe:vcpu_tsc_scaling_fops_open
+kprobe:vcpu_tsc_scaling_frac_fops_open
+kprobe:vcs_open
+kprobe:vfio_device_open
+kprobe:vfio_device_set_open_count
+kprobe:vfio_fops_open
+kprobe:vfio_group_fops_open
+kprobe:vfio_iommu_type1_open
+kprobe:vfio_noiommu_open
+kprobe:vfio_pci_mmap_open
+kprobe:vfio_pci_open_device
+kprobe:vfs_open
+kprobe:vfs_tmpfile_open
+kprobe:vga_arb_open
+kprobe:vga_switcheroo_debugfs_open
+kprobe:vm_stat_fops_open
+kprobe:vm_stat_readonly_fops_open
+kprobe:vrr_range_open
+kprobe:wakeup_sources_stats_open
+kprobe:watchdog_open
+kprobe:wmi_char_open
+kprobe:wwan_port_fops_open
+kprobe:xen_mce_chrdev_open
+kprobe:xenbus_backend_open
+kprobe:xenbus_file_open
+kprobe:xennet_open
+kprobe:xhci_context_open
+kprobe:xhci_port_open
+kprobe:xhci_ring_open
+kprobe:xhci_stream_context_array_open
+kprobe:xhci_stream_id_open
+kprobe:xprt_info_open
+tracepoint:nfsd:nfsd_file_open
+tracepoint:nfsd:nfsd_file_opened
+tracepoint:nfsd:nfsd_open
+tracepoint:nfsd:nfsd_open_confirm
+tracepoint:nfsd:nfsd_write_opened
+tracepoint:syscalls:sys_enter_fsopen
+tracepoint:syscalls:sys_enter_mq_open
+tracepoint:syscalls:sys_enter_open
+tracepoint:syscalls:sys_enter_open_by_handle_at
+tracepoint:syscalls:sys_enter_open_tree
+tracepoint:syscalls:sys_enter_openat
+tracepoint:syscalls:sys_enter_openat2
+tracepoint:syscalls:sys_enter_perf_event_open
+tracepoint:syscalls:sys_enter_pidfd_open
+tracepoint:syscalls:sys_exit_fsopen
+tracepoint:syscalls:sys_exit_mq_open
+tracepoint:syscalls:sys_exit_open
+tracepoint:syscalls:sys_exit_open_by_handle_at
+tracepoint:syscalls:sys_exit_open_tree
+tracepoint:syscalls:sys_exit_openat
+tracepoint:syscalls:sys_exit_openat2
+tracepoint:syscalls:sys_exit_perf_event_open
+tracepoint:syscalls:sys_exit_pidfd_open
+brynjar@node2:~/exp_2_2024-01-08$ sudo bpftrace -e 'tracepoint:syscalls:sys_enter_open { printf("%s %s\n", comm, str(args->filename)); }'
+
+Attaching 1 probe...
+^C
+
+brynjar@node2:~/exp_2_2024-01-08$ sudo bpftrace -e 'tracepoint:raw_syscalls:sys_enter { @[comm] = count(); }'
+
+
+Attaching 1 probe...
+^C
+
+@[dockerd]: 11
+@[tmux: server]: 14
+@[systemd-resolve]: 15
+@[systemd-udevd]: 15
+@[sshd]: 18
+@[sudo]: 20
+@[atopacctd]: 20
+@[multipathd]: 43
+@[rs:main Q:Reg]: 48
+@[in:imuxsock]: 48
+@[bpftrace]: 83
+@[dbus-daemon]: 139
+@[systemd-logind]: 144
+@[systemd-machine]: 156
+@[(udflared)]: 196
+@[irqbalance]: 206
+@[containerd]: 284
+@[systemd-journal]: 378
+@[systemd]: 849
+brynjar@node2:~/exp_2_2024-01-08$ sudo bpftrace -e 'tracepoint:raw_syscalls:sys_enter { @[comm] = count(); }' -- ping -n 5 vu.nl
+Attaching 1 probe...
+^C
+
+@[packagekitd]: 1
+@[sshd]: 9
+@[dockerd]: 11
+@[tmux: server]: 14
+@[atopacctd]: 20
+@[sudo]: 20
+@[systemd-network]: 40
+@[in:imuxsock]: 48
+@[rs:main Q:Reg]: 48
+@[multipathd]: 78
+@[bpftrace]: 123
+@[dbus-daemon]: 138
+@[systemd-machine]: 144
+@[systemd-logind]: 144
+@[(udflared)]: 196
+@[irqbalance]: 206
+@[systemd-journal]: 429
+@[containerd]: 441
+@[systemd]: 831
+brynjar@node2:~/exp_2_2024-01-08$ man bpftrace
+brynjar@node2:~/exp_2_2024-01-08$ sudo bpftrace -l | grep resched
+kfunc:vmlinux:__cond_resched
+kfunc:vmlinux:__cond_resched_lock
+kfunc:vmlinux:__cond_resched_rwlock_read
+kfunc:vmlinux:__cond_resched_rwlock_write
+kfunc:vmlinux:__netif_reschedule
+kfunc:vmlinux:__traceiter_reschedule_entry
+kfunc:vmlinux:__traceiter_reschedule_exit
+kfunc:vmlinux:ctx_resched
+kfunc:vmlinux:native_smp_send_reschedule
+kfunc:vmlinux:perf_pmu_resched
+kfunc:vmlinux:raw_irqentry_exit_cond_resched
+kfunc:vmlinux:resched_cpu
+kfunc:vmlinux:resched_curr
+kfunc:vmlinux:resched_latency_warn
+kfunc:vmlinux:srcu_reschedule
+kfunc:vmlinux:xen_reschedule_interrupt
+kfunc:vmlinux:xen_smp_send_reschedule
+kprobe:__cond_resched
+kprobe:__cond_resched_lock
+kprobe:__cond_resched_rwlock_read
+kprobe:__cond_resched_rwlock_write
+kprobe:__netif_reschedule
+kprobe:__traceiter_reschedule_entry
+kprobe:__traceiter_reschedule_exit
+kprobe:ctx_resched
+kprobe:native_smp_send_reschedule
+kprobe:perf_pmu_resched
+kprobe:raw_irqentry_exit_cond_resched
+kprobe:resched_cpu
+kprobe:resched_curr
+kprobe:resched_latency_warn
+kprobe:reschedule_retry
+kprobe:srcu_reschedule
+kprobe:xen_reschedule_interrupt
+kprobe:xen_smp_send_reschedule
+tracepoint:irq_vectors:reschedule_entry
+tracepoint:irq_vectors:reschedule_exit
+brynjar@node2:~/exp_2_2024-01-08$ cd ..
+brynjar@node2:~$ ls
+exp_1_2023-12-03  exp_2_2024-01-08  fio-uring2  io_uring_simple  liburing
+brynjar@node2:~$ cp -r exp_2_2024-01-08/ exp3_2024-01-10
+
+
+brynjar@node2:~$ cd exp3_2024-01-10/
+brynjar@node2:~/exp3_2024-01-10$ ls
+results.txt  run.sh
+brynjar@node2:~/exp3_2024-01-10$ vim run.sh
+brynjar@node2:~/exp3_2024-01-10$ bpftrace -e 'kprobe:native_smp_send_reschedule { @ = count(); }' -c taskset -c 0-3 /mnt/sdb/brynjar/fio-uri
+ng2/fio --ioengine=liburing --rw=randread --name=liburing-test --filename=/dev/nvme0n1:/dev/nvme1n1:/dev/nvme2n1:/dev/nvme3n1 --numjobs=16 -
+-direct=1 --bs=512 --iodepth=1 --size=512G --runtime=60 --group_reporting
+
+
+bpftrace: unrecognized option '--ioengine=liburing'
+USAGE:
+    bpftrace [options] filename
+    bpftrace [options] - <stdin input>
+    bpftrace [options] -e 'program'
+
+OPTIONS:
+    -B MODE        output buffering mode ('full', 'none')
+    -f FORMAT      output format ('text', 'json')
+    -o file        redirect bpftrace output to file
+    -e 'program'   execute this program
+    -h, --help     show this help message
+    -I DIR         add the directory to the include search path
+    --include FILE add an #include file before preprocessing
+    -l [search]    list probes
+    -p PID         enable USDT probes on PID
+    -c 'CMD'       run CMD and enable USDT probes on resulting process
+    --usdt-file-activation
+                   activate usdt semaphores based on file path
+    --unsafe       allow unsafe builtin functions
+    -q             keep messages quiet
+    --info         Print information about kernel BPF support
+    -k             emit a warning when a bpf helper returns an error (except read functions)
+    -kk            check all bpf helper functions
+    -V, --version  bpftrace version
+    --no-warnings  disable all warning messages
+
+TROUBLESHOOTING OPTIONS:
+    -v                      verbose messages
+    -d                      (dry run) debug info
+    -dd                     (dry run) verbose debug info
+    --emit-elf FILE         (dry run) generate ELF file with bpf programs and write to FILE
+    --emit-llvm FILE        write LLVM IR to FILE.original.ll and FILE.optimized.ll
+
+ENVIRONMENT:
+    BPFTRACE_STRLEN             [default: 64] bytes on BPF stack per str()
+    BPFTRACE_NO_CPP_DEMANGLE    [default: 0] disable C++ symbol demangling
+    BPFTRACE_MAP_KEYS_MAX       [default: 4096] max keys in a map
+    BPFTRACE_CAT_BYTES_MAX      [default: 10k] maximum bytes read by cat builtin
+    BPFTRACE_MAX_PROBES         [default: 512] max number of probes
+    BPFTRACE_MAX_BPF_PROGS      [default: 512] max number of generated BPF programs
+    BPFTRACE_LOG_SIZE           [default: 1000000] log size in bytes
+    BPFTRACE_PERF_RB_PAGES      [default: 64] pages per CPU to allocate for ring buffer
+    BPFTRACE_NO_USER_SYMBOLS    [default: 0] disable user symbol resolution
+    BPFTRACE_CACHE_USER_SYMBOLS [default: auto] enable user symbol cache
+    BPFTRACE_VMLINUX            [default: none] vmlinux path used for kernel symbol resolution
+    BPFTRACE_BTF                [default: none] BTF file
+
+EXAMPLES:
+bpftrace -l '*sleep*'
+    list probes containing "sleep"
+bpftrace -e 'kprobe:do_nanosleep { printf("PID %d sleeping...\n", pid); }'
+    trace processes calling sleep
+bpftrace -e 'tracepoint:raw_syscalls:sys_enter { @[comm] = count(); }'
+    count syscalls by process name
+brynjar@node2:~/exp3_2024-01-10$ bpftrace -e 'kprobe:native_smp_send_reschedule { @ = count(); }' -c "taskset -c 0-3 /mnt/sdb/brynjar/fio-ur
+ing2/fio --ioengine=liburing --rw=randread --name=liburing-test --filename=/dev/nvme0n1:/dev/nvme1n1:/dev/nvme2n1:/dev/nvme3n1 --numjobs=16
+--direct=1 --bs=512 --iodepth=1 --size=512G --runtime=60 --group_reporting"
+
+
+ERROR: Failed to fork child: path 'taskset' must refer to a unique binary but matched 2 binaries
+brynjar@node2:~/exp3_2024-01-10$ taskset -c bpftrace -e 'kprobe:native_smp_send_reschedule { @ = count(); }' -c "/mnt/sdb/brynjar/fio-uring2
+/fio --ioengine=liburing --rw=randread --name=liburing-test --filename=/dev/nvme0n1:/dev/nvme1n1:/dev/nvme2n1:/dev/nvme3n1 --numjobs=16 --di
+rect=1 --bs=512 --iodepth=1 --size=512G --runtime=60 --group_reporting"
+
+
+taskset: failed to parse CPU list: bpftrace
+brynjar@node2:~/exp3_2024-01-10$ taskset -c 0-3 bpftrace -e 'kprobe:native_smp_send_reschedule { @ = count(); }' -c "/mnt/sdb/brynjar/fio-ur
+ing2/fio --ioengine=liburing --rw=randread --name=liburing-test --filename=/dev/nvme0n1:/dev/nvme1n1:/dev/nvme2n1:/dev/nvme3n1 --numjobs=16
+--direct=1 --bs=512 --iodepth=1 --size=512G --runtime=60 --group_reporting"
+
+
+ERROR: bpftrace currently only supports running as the root user.
+brynjar@node2:~/exp3_2024-01-10$ sudo taskset -c 0-3 bpftrace -e 'kprobe:native_smp_send_reschedule { @ = count(); }' -c "/mnt/sdb/brynjar/f
+io-uring2/fio --ioengine=liburing --rw=randread --name=liburing-test --filename=/dev/nvme0n1:/dev/nvme1n1:/dev/nvme2n1:/dev/nvme3n1 --numjob
+s=16 --direct=1 --bs=512 --iodepth=1 --size=512G --runtime=60 --group_reporting"
+
+
+Attaching 1 probe...
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=1
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=64): [r(16)][100.0%][r=233MiB/s][r=478k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=935177: Wed Jan 10 21:54:11 2024
+  read: IOPS=477k, BW=233MiB/s (244MB/s)(13.6GiB/60005msec)
+    slat (nsec): min=36, max=877843, avg=144.00, stdev=555.46
+    clat (usec): min=9, max=24260, avg=32.17, stdev=20.72
+     lat (usec): min=9, max=24261, avg=32.32, stdev=20.74
+    clat percentiles (usec):
+     |  1.00th=[   16],  5.00th=[   16], 10.00th=[   18], 20.00th=[   24],
+     | 30.00th=[   25], 40.00th=[   30], 50.00th=[   32], 60.00th=[   33],
+     | 70.00th=[   38], 80.00th=[   41], 90.00th=[   45], 95.00th=[   51],
+     | 99.00th=[   62], 99.50th=[   71], 99.90th=[  102], 99.95th=[  131],
+     | 99.99th=[  253]
+   bw (  KiB/s): min=195516, max=251749, per=100.00%, avg=238666.07, stdev=411.51, samples=1904
+   iops        : min=391033, max=503498, avg=477332.21, stdev=823.02, samples=1904
+  lat (usec)   : 10=0.01%, 20=10.22%, 50=84.64%, 100=5.02%, 250=0.09%
+  lat (usec)   : 500=0.01%, 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.01%, 20=0.01%, 50=0.01%
+  cpu          : usr=7.06%, sys=17.90%, ctx=28601756, majf=0, minf=453225
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=28616553,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: bw=233MiB/s (244MB/s), 233MiB/s-233MiB/s (244MB/s-244MB/s), io=13.6GiB (14.7GB), run=60005-60005msec
+
+Disk stats (read/write):
+  nvme0n1: ios=7147196/0, sectors=7147196/0, merge=0/0, ticks=63473/0, in_queue=63473, util=99.57%
+  nvme1n1: ios=7147196/0, sectors=7147196/0, merge=0/0, ticks=63556/0, in_queue=63556, util=99.59%
+  nvme2n1: ios=7147193/0, sectors=7147193/0, merge=0/0, ticks=63435/0, in_queue=63435, util=99.59%
+  nvme3n1: ios=7147191/0, sectors=7147191/0, merge=0/0, ticks=63683/0, in_queue=63683, util=99.58%
+
+
+@: 282
+brynjar@node2:~/exp3_2024-01-10$ sudo taskset -c 0-3 bpftrace -e 'kprobe:native_smp_send_reschedule { @ = count(); }' -c "/mnt/sdb/brynjar/f
+io-uring2/fio --ioengine=liburing --rw=randread --name=liburing-test --filename=/dev/nvme0n1:/dev/nvme1n1:/dev/nvme2n1:/dev/nvme3n1 --numjob
+s=16 --direct=1 --bs=512 --iodepth=1 --size=512G --runtime=60 --group_reporting" --^C
+brynjar@node2:~/exp3_2024-01-10$ vim run.sh
+brynjar@node2:~/exp3_2024-01-10$ sudo taskset -c 0-3 bpftrace -e 'kprobe:native_smp_send_reschedule { @ = count(); }' -c "/mnt/sdb/brynjar/f
+io-uring2/fio --ioengine=liburing --rw=randread --name=liburing-test --filename=/dev/nvme0n1:/dev/nvme1n1:/dev/nvme2n1:/dev/nvme3n1 --numjob
+s=16 --direct=1 --bs=512 --iodepth=1 --size=512G --runtime=60 --group_reporting" --coop_taskrun
+bpftrace: unrecognized option '--coop_taskrun'
+USAGE:
+    bpftrace [options] filename
+    bpftrace [options] - <stdin input>
+    bpftrace [options] -e 'program'
+
+OPTIONS:
+    -B MODE        output buffering mode ('full', 'none')
+    -f FORMAT      output format ('text', 'json')
+    -o file        redirect bpftrace output to file
+    -e 'program'   execute this program
+    -h, --help     show this help message
+    -I DIR         add the directory to the include search path
+    --include FILE add an #include file before preprocessing
+    -l [search]    list probes
+    -p PID         enable USDT probes on PID
+    -c 'CMD'       run CMD and enable USDT probes on resulting process
+    --usdt-file-activation
+                   activate usdt semaphores based on file path
+    --unsafe       allow unsafe builtin functions
+    -q             keep messages quiet
+    --info         Print information about kernel BPF support
+    -k             emit a warning when a bpf helper returns an error (except read functions)
+    -kk            check all bpf helper functions
+    -V, --version  bpftrace version
+    --no-warnings  disable all warning messages
+
+TROUBLESHOOTING OPTIONS:
+    -v                      verbose messages
+    -d                      (dry run) debug info
+    -dd                     (dry run) verbose debug info
+    --emit-elf FILE         (dry run) generate ELF file with bpf programs and write to FILE
+    --emit-llvm FILE        write LLVM IR to FILE.original.ll and FILE.optimized.ll
+
+ENVIRONMENT:
+    BPFTRACE_STRLEN             [default: 64] bytes on BPF stack per str()
+    BPFTRACE_NO_CPP_DEMANGLE    [default: 0] disable C++ symbol demangling
+    BPFTRACE_MAP_KEYS_MAX       [default: 4096] max keys in a map
+    BPFTRACE_CAT_BYTES_MAX      [default: 10k] maximum bytes read by cat builtin
+    BPFTRACE_MAX_PROBES         [default: 512] max number of probes
+    BPFTRACE_MAX_BPF_PROGS      [default: 512] max number of generated BPF programs
+    BPFTRACE_LOG_SIZE           [default: 1000000] log size in bytes
+    BPFTRACE_PERF_RB_PAGES      [default: 64] pages per CPU to allocate for ring buffer
+    BPFTRACE_NO_USER_SYMBOLS    [default: 0] disable user symbol resolution
+    BPFTRACE_CACHE_USER_SYMBOLS [default: auto] enable user symbol cache
+    BPFTRACE_VMLINUX            [default: none] vmlinux path used for kernel symbol resolution
+    BPFTRACE_BTF                [default: none] BTF file
+
+EXAMPLES:
+bpftrace -l '*sleep*'
+    list probes containing "sleep"
+bpftrace -e 'kprobe:do_nanosleep { printf("PID %d sleeping...\n", pid); }'
+    trace processes calling sleep
+bpftrace -e 'tracepoint:raw_syscalls:sys_enter { @[comm] = count(); }'
+    count syscalls by process name
+brynjar@node2:~/exp3_2024-01-10$ sudo taskset -c 0-3 bpftrace -e 'kprobe:native_smp_send_reschedule { @ = count(); }' -c "/mnt/sdb/brynjar/f
+io-uring2/fio --ioengine=liburing --rw=randread --name=liburing-test --filename=/dev/nvme0n1:/dev/nvme1n1:/dev/nvme2n1:/dev/nvme3n1 --numjob
+s=16 --direct=1 --bs=512 --iodepth=1 --size=512G --runtime=60 --group_reporting --coop_taskrun"
+
+
+Attaching 1 probe...
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=1
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=64): [r(16)][100.0%][r=236MiB/s][r=483k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=935230: Wed Jan 10 21:55:42 2024
+  read: IOPS=482k, BW=235MiB/s (247MB/s)(13.8GiB/60002msec)
+    slat (nsec): min=36, max=897372, avg=134.64, stdev=546.60
+    clat (usec): min=9, max=21351, avg=31.86, stdev=22.01
+     lat (usec): min=9, max=21351, avg=32.00, stdev=22.03
+    clat percentiles (usec):
+     |  1.00th=[   16],  5.00th=[   16], 10.00th=[   16], 20.00th=[   24],
+     | 30.00th=[   24], 40.00th=[   30], 50.00th=[   32], 60.00th=[   33],
+     | 70.00th=[   38], 80.00th=[   41], 90.00th=[   46], 95.00th=[   51],
+     | 99.00th=[   63], 99.50th=[   71], 99.90th=[  101], 99.95th=[  129],
+     | 99.99th=[  245]
+   bw (  KiB/s): min=194849, max=264177, per=100.00%, avg=241222.79, stdev=486.64, samples=1904
+   iops        : min=389698, max=528355, avg=482445.98, stdev=973.27, samples=1904
+  lat (usec)   : 10=0.01%, 20=11.96%, 50=82.63%, 100=5.29%, 250=0.09%
+  lat (usec)   : 500=0.01%, 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.01%, 20=0.01%, 50=0.01%
+  cpu          : usr=6.71%, sys=18.25%, ctx=28909736, majf=0, minf=442460
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=28921254,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: bw=235MiB/s (247MB/s), 235MiB/s-235MiB/s (247MB/s-247MB/s), io=13.8GiB (14.8GB), run=60002-60002msec
+
+Disk stats (read/write):
+  nvme0n1: ios=7223469/0, sectors=7223469/0, merge=0/0, ticks=63530/0, in_queue=63530, util=99.70%
+  nvme1n1: ios=7223468/0, sectors=7223468/0, merge=0/0, ticks=63815/0, in_queue=63815, util=99.72%
+  nvme2n1: ios=7223465/0, sectors=7223465/0, merge=0/0, ticks=63673/0, in_queue=63673, util=99.73%
+  nvme3n1: ios=7223461/0, sectors=7223461/0, merge=0/0, ticks=63861/0, in_queue=63861, util=99.72%
+
+
+@: 258
+brynjar@node2:~/exp3_2024-01-10$ sudo taskset -c 0-3 bpftrace -e 'kprobe:native_smp_send_reschedule { @ = count(); }' -c "/mnt/sdb/brynjar/f
+io-uring2/fio --ioengine=liburing --rw=randread --name=liburing-test --filename=/dev/nvme0n1:/dev/nvme1n1:/dev/nvme2n1:/dev/nvme3n1 --numjob
+s=16 --direct=1 --bs=512 --iodepth=1 --size=512G --runtime=60 --group_reporting --coop_taskrun"
+Attaching 1 probe...
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=1
+...
+fio-3.35-uring2
+Starting 16 processes
+^Cbs: 16 (f=64): [r(16)][18.3%][r=235MiB/s][r=482k IOPS][eta 00m:49s]
+fio: terminating on signal 2
+
+liburing-test: (groupid=0, jobs=16): err= 0: pid=935279: Wed Jan 10 21:56:13 2024
+  read: IOPS=463k, BW=226MiB/s (237MB/s)(2601MiB/11508msec)
+    slat (nsec): min=41, max=208788, avg=144.19, stdev=516.28
+    clat (usec): min=9, max=25021, avg=32.05, stdev=44.32
+     lat (usec): min=9, max=25021, avg=32.20, stdev=44.33
+    clat percentiles (usec):
+     |  1.00th=[   15],  5.00th=[   16], 10.00th=[   17], 20.00th=[   24],
+     | 30.00th=[   25], 40.00th=[   30], 50.00th=[   32], 60.00th=[   33],
+     | 70.00th=[   38], 80.00th=[   41], 90.00th=[   46], 95.00th=[   51],
+     | 99.00th=[   64], 99.50th=[   72], 99.90th=[  102], 99.95th=[  135],
+     | 99.99th=[  281]
+   bw (  KiB/s): min=194113, max=258848, per=100.00%, avg=238300.50, stdev=889.20, samples=352
+   iops        : min=388226, max=517696, avg=476600.91, stdev=1778.41, samples=352
+  lat (usec)   : 10=0.02%, 20=11.22%, 50=83.53%, 100=5.13%, 250=0.09%
+  lat (usec)   : 500=0.01%, 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.01%, 20=0.01%, 50=0.01%
+  cpu          : usr=7.39%, sys=17.58%, ctx=5332869, majf=0, minf=134864
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=5327793,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: bw=226MiB/s (237MB/s), 226MiB/s-226MiB/s (237MB/s-237MB/s), io=2601MiB (2728MB), run=11508-11508msec
+
+Disk stats (read/write):
+  nvme0n1: ios=1306255/0, sectors=1306255/0, merge=0/0, ticks=11431/0, in_queue=11431, util=97.90%
+  nvme1n1: ios=1306254/0, sectors=1306254/0, merge=0/0, ticks=11483/0, in_queue=11483, util=98.00%
+  nvme2n1: ios=1331946/0, sectors=1331946/0, merge=0/0, ticks=11686/0, in_queue=11686, util=97.84%
+  nvme3n1: ios=1331941/0, sectors=1331941/0, merge=0/0, ticks=11741/0, in_queue=11741, util=97.82%
+
+
+@: 66
+brynjar@node2:~/exp3_2024-01-10$ sudo bpftrace -l | grep kick_proc
+
+
+kfunc:vmlinux:kick_process
+kprobe:kick_process
+brynjar@node2:~/exp3_2024-01-10$ sudo taskset -c 0-3 bpftrace -e 'kprobe:native_smp_send_reschedule { @["reschedule"] = count(); } kprobe:ki
+ck_process { @["kick"] = count(); }' -c "/mnt/sdb/brynjar/fio-uring2/fio --ioengine=liburing --rw=randread --name=liburing-test --filename=/
+dev/nvme0n1:/dev/nvme1n1:/dev/nvme2n1:/dev/nvme3n1 --numjobs=16 --direct=1 --bs=512 --iodepth=1 --size=512G --runtime=60 --group_reporting -
+-coop_taskrun"
+
+Attaching 2 probes...
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=1
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=64): [r(16)][100.0%][r=231MiB/s][r=473k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=935366: Wed Jan 10 22:01:04 2024
+  read: IOPS=470k, BW=229MiB/s (241MB/s)(13.4GiB/60005msec)
+    slat (nsec): min=41, max=697752, avg=128.95, stdev=502.00
+    clat (usec): min=9, max=17746, avg=32.51, stdev=21.01
+     lat (usec): min=9, max=17747, avg=32.64, stdev=21.03
+    clat percentiles (usec):
+     |  1.00th=[   16],  5.00th=[   16], 10.00th=[   22], 20.00th=[   24],
+     | 30.00th=[   25], 40.00th=[   31], 50.00th=[   33], 60.00th=[   34],
+     | 70.00th=[   37], 80.00th=[   41], 90.00th=[   45], 95.00th=[   51],
+     | 99.00th=[   63], 99.50th=[   71], 99.90th=[  100], 99.95th=[  128],
+     | 99.99th=[  239]
+   bw (  KiB/s): min=192697, max=249324, per=100.00%, avg=235150.18, stdev=408.54, samples=1904
+   iops        : min=385395, max=498648, avg=470300.83, stdev=817.08, samples=1904
+  lat (usec)   : 10=0.02%, 20=8.98%, 50=85.60%, 100=5.30%, 250=0.09%
+  lat (usec)   : 500=0.01%, 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.01%, 20=0.01%
+  cpu          : usr=7.87%, sys=17.10%, ctx=28173851, majf=0, minf=434776
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=28194845,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: bw=229MiB/s (241MB/s), 229MiB/s-229MiB/s (241MB/s-241MB/s), io=13.4GiB (14.4GB), run=60005-60005msec
+
+Disk stats (read/write):
+  nvme0n1: ios=7041997/0, sectors=7041997/0, merge=0/0, ticks=61988/0, in_queue=61988, util=99.57%
+  nvme1n1: ios=7041994/0, sectors=7041994/0, merge=0/0, ticks=62198/0, in_queue=62198, util=99.60%
+  nvme2n1: ios=7041993/0, sectors=7041993/0, merge=0/0, ticks=62092/0, in_queue=62092, util=99.58%
+  nvme3n1: ios=7041988/0, sectors=7041988/0, merge=0/0, ticks=62374/0, in_queue=62374, util=99.59%
+
+
+@[reschedule]: 260
+@[kick]: 3483
+brynjar@node2:~/exp3_2024-01-10$ sudo taskset -c 0-3 bpftrace -e 'kprobe:native_smp_send_reschedule { @["reschedule"] = count(); } kprobe:ki
+ck_process { @["kick"] = count(); }' -c "/mnt/sdb/brynjar/fio-uring2/fio --ioengine=liburing --rw=randread --name=liburing-test --filename=/
+dev/nvme0n1:/dev/nvme1n1:/dev/nvme2n1:/dev/nvme3n1 --numjobs=16 --direct=1 --bs=512 --iodepth=1 --size=512G --runtime=60 --group_reporting"
+
+
+Attaching 2 probes...
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=1
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=64): [r(16)][100.0%][r=236MiB/s][r=482k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=935408: Wed Jan 10 22:02:15 2024
+  read: IOPS=479k, BW=234MiB/s (245MB/s)(13.7GiB/60007msec)
+    slat (nsec): min=41, max=1390.9k, avg=136.81, stdev=641.17
+    clat (usec): min=9, max=32939, avg=31.96, stdev=21.14
+     lat (usec): min=9, max=32940, avg=32.10, stdev=21.17
+    clat percentiles (usec):
+     |  1.00th=[   16],  5.00th=[   16], 10.00th=[   16], 20.00th=[   24],
+     | 30.00th=[   24], 40.00th=[   30], 50.00th=[   32], 60.00th=[   33],
+     | 70.00th=[   38], 80.00th=[   41], 90.00th=[   46], 95.00th=[   51],
+     | 99.00th=[   63], 99.50th=[   71], 99.90th=[  102], 99.95th=[  131],
+     | 99.99th=[  253]
+   bw (  KiB/s): min=194646, max=253488, per=100.00%, avg=239908.26, stdev=431.90, samples=1904
+   iops        : min=389292, max=506977, avg=479817.02, stdev=863.80, samples=1904
+  lat (usec)   : 10=0.01%, 20=11.64%, 50=83.08%, 100=5.17%, 250=0.10%
+  lat (usec)   : 500=0.01%, 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.01%, 20=0.01%, 50=0.01%
+  cpu          : usr=6.98%, sys=17.98%, ctx=28758572, majf=0, minf=430168
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=28769309,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: bw=234MiB/s (245MB/s), 234MiB/s-234MiB/s (245MB/s-245MB/s), io=13.7GiB (14.7GB), run=60007-60007msec
+
+Disk stats (read/write):
+  nvme0n1: ios=7184689/0, sectors=7184690/0, merge=0/0, ticks=63209/0, in_queue=63209, util=99.57%
+  nvme1n1: ios=7184692/0, sectors=7184692/0, merge=0/0, ticks=63461/0, in_queue=63461, util=99.57%
+  nvme2n1: ios=7184691/0, sectors=7184691/0, merge=0/0, ticks=63327/0, in_queue=63327, util=99.58%
+  nvme3n1: ios=7184687/0, sectors=7184687/0, merge=0/0, ticks=63643/0, in_queue=63643, util=99.59%
+
+
+@[reschedule]: 260
+@[kick]: 30918
+brynjar@node2:~/exp3_2024-01-10$ ls
+results.txt  run.sh
+brynjar@node2:~/exp3_2024-01-10$ vim run.sh
+brynjar@node2:~/exp3_2024-01-10$ vim run.sh
+brynjar@node2:~/exp3_2024-01-10$ sh run.sh
+Attaching 2 probes...
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=1
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=64): [r(16)][100.0%][r=234MiB/s][r=478k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=935780: Wed Jan 10 22:22:04 2024
+  read: IOPS=478k, BW=234MiB/s (245MB/s)(137GiB/600004msec)
+    slat (nsec): min=36, max=1090.7k, avg=146.79, stdev=547.35
+    clat (usec): min=9, max=20277, avg=32.08, stdev=12.87
+     lat (usec): min=9, max=20278, avg=32.22, stdev=12.90
+    clat percentiles (usec):
+     |  1.00th=[   16],  5.00th=[   16], 10.00th=[   18], 20.00th=[   24],
+     | 30.00th=[   25], 40.00th=[   30], 50.00th=[   32], 60.00th=[   33],
+     | 70.00th=[   38], 80.00th=[   41], 90.00th=[   45], 95.00th=[   51],
+     | 99.00th=[   62], 99.50th=[   70], 99.90th=[  100], 99.95th=[  127],
+     | 99.99th=[  235]
+   bw (  KiB/s): min=194119, max=255096, per=100.00%, avg=239431.64, stdev=312.53, samples=19171
+   iops        : min=388240, max=510192, avg=478863.86, stdev=625.07, samples=19171
+  lat (usec)   : 10=0.01%, 20=10.25%, 50=84.62%, 100=5.03%, 250=0.09%
+  lat (usec)   : 500=0.01%, 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.01%, 20=0.01%, 50=0.01%
+  cpu          : usr=7.26%, sys=17.68%, ctx=286811590, majf=0, minf=933487
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=287032278,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: bw=234MiB/s (245MB/s), 234MiB/s-234MiB/s (245MB/s-245MB/s), io=137GiB (147GB), run=600004-600004msec
+
+Disk stats (read/write):
+  nvme0n1: ios=71750128/0, sectors=71750129/0, merge=0/0, ticks=633033/0, in_queue=633033, util=100.00%
+  nvme1n1: ios=71750130/0, sectors=71750130/0, merge=0/0, ticks=635038/0, in_queue=635038, util=100.00%
+  nvme2n1: ios=71750130/0, sectors=71750130/0, merge=0/0, ticks=633831/0, in_queue=633831, util=100.00%
+  nvme3n1: ios=71750129/0, sectors=71750129/0, merge=0/0, ticks=636232/0, in_queue=636232, util=100.00%
+
+
+@[reschedule]: 2357
+@[kick]: 320106
+Attaching 2 probes...
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=1
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=64): [r(16)][100.0%][r=234MiB/s][r=479k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=935944: Wed Jan 10 22:32:05 2024
+  read: IOPS=477k, BW=233MiB/s (244MB/s)(136GiB/600001msec)
+    slat (nsec): min=36, max=1511.5k, avg=150.14, stdev=552.45
+    clat (usec): min=9, max=25852, avg=32.17, stdev=13.21
+     lat (usec): min=9, max=25852, avg=32.32, stdev=13.24
+    clat percentiles (usec):
+     |  1.00th=[   16],  5.00th=[   16], 10.00th=[   21], 20.00th=[   24],
+     | 30.00th=[   25], 40.00th=[   30], 50.00th=[   32], 60.00th=[   33],
+     | 70.00th=[   38], 80.00th=[   41], 90.00th=[   45], 95.00th=[   50],
+     | 99.00th=[   62], 99.50th=[   70], 99.90th=[  100], 99.95th=[  126],
+     | 99.99th=[  229]
+   bw (  KiB/s): min=190836, max=265047, per=100.00%, avg=238635.72, stdev=323.48, samples=19170
+   iops        : min=381673, max=530094, avg=477271.97, stdev=646.96, samples=19170
+  lat (usec)   : 10=0.02%, 20=9.84%, 50=85.14%, 100=4.91%, 250=0.09%
+  lat (usec)   : 500=0.01%, 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.01%, 20=0.01%, 50=0.01%
+  cpu          : usr=7.28%, sys=17.66%, ctx=285827176, majf=0, minf=934974
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=286049208,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: bw=233MiB/s (244MB/s), 233MiB/s-233MiB/s (244MB/s-244MB/s), io=136GiB (146GB), run=600001-600001msec
+
+Disk stats (read/write):
+  nvme0n1: ios=71503907/0, sectors=71503908/0, merge=0/0, ticks=633599/0, in_queue=633599, util=100.00%
+  nvme1n1: ios=71503906/0, sectors=71503906/0, merge=0/0, ticks=635575/0, in_queue=635575, util=100.00%
+  nvme2n1: ios=71503906/0, sectors=71503906/0, merge=0/0, ticks=634950/0, in_queue=634950, util=100.00%
+  nvme3n1: ios=71503905/0, sectors=71503905/0, merge=0/0, ticks=637153/0, in_queue=637153, util=100.00%
+
+
+@[reschedule]: 2337
+@[kick]: 26899
+Attaching 2 probes...
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=2
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 14 (f=56): [r(3),_(1),r(11),_(1)][33.4%][r=300MiB/s][r=614k IOPS][eta 20m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=936100: Wed Jan 10 22:42:07 2024
+  read: IOPS=615k, BW=300MiB/s (315MB/s)(176GiB/600001msec)
+    slat (nsec): min=35, max=1017.1k, avg=156.21, stdev=575.95
+    clat (usec): min=9, max=65505, avg=50.29, stdev=16.69
+     lat (usec): min=9, max=65505, avg=50.45, stdev=16.73
+    clat percentiles (usec):
+     |  1.00th=[   18],  5.00th=[   31], 10.00th=[   38], 20.00th=[   43],
+     | 30.00th=[   44], 40.00th=[   46], 50.00th=[   50], 60.00th=[   55],
+     | 70.00th=[   56], 80.00th=[   58], 90.00th=[   65], 95.00th=[   71],
+     | 99.00th=[   86], 99.50th=[   95], 99.90th=[  121], 99.95th=[  137],
+     | 99.99th=[  210]
+   bw (  KiB/s): min=196181, max=432897, per=100.00%, avg=308054.31, stdev=2503.68, samples=19170
+   iops        : min=392362, max=865794, avg=616109.34, stdev=5007.36, samples=19170
+  lat (usec)   : 10=0.01%, 20=1.31%, 50=48.81%, 100=49.59%, 250=0.29%
+  lat (usec)   : 500=0.01%, 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.01%, 20=0.01%, 50=0.01%
+  lat (msec)   : 100=0.01%
+  cpu          : usr=10.17%, sys=14.81%, ctx=182993502, majf=0, minf=906992
+  IO depths    : 1=0.1%, 2=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=369241895,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=2
+
+Run status group 0 (all jobs):
+   READ: bw=300MiB/s (315MB/s), 300MiB/s-300MiB/s (315MB/s-315MB/s), io=176GiB (189GB), run=600001-600001msec
+
+Disk stats (read/write):
+  nvme0n1: ios=92296830/0, sectors=92296830/0, merge=0/0, ticks=795199/0, in_queue=795199, util=100.00%
+  nvme1n1: ios=92296832/0, sectors=92296833/0, merge=0/0, ticks=798933/0, in_queue=798933, util=100.00%
+  nvme2n1: ios=92296829/0, sectors=92296829/0, merge=0/0, ticks=798428/0, in_queue=798428, util=100.00%
+  nvme3n1: ios=92296829/0, sectors=92296829/0, merge=0/0, ticks=798170/0, in_queue=798170, util=100.00%
+
+
+@[reschedule]: 2359
+@[kick]: 3493397
+Attaching 2 probes...
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=2
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=64): [r(16)][100.0%][r=302MiB/s][r=619k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=936254: Wed Jan 10 22:52:08 2024
+  read: IOPS=621k, BW=303MiB/s (318MB/s)(178GiB/600004msec)
+    slat (nsec): min=35, max=1309.8k, avg=165.62, stdev=635.81
+    clat (usec): min=9, max=88654, avg=49.84, stdev=16.70
+     lat (usec): min=9, max=88655, avg=50.00, stdev=16.75
+    clat percentiles (usec):
+     |  1.00th=[   18],  5.00th=[   31], 10.00th=[   42], 20.00th=[   43],
+     | 30.00th=[   44], 40.00th=[   46], 50.00th=[   51], 60.00th=[   54],
+     | 70.00th=[   55], 80.00th=[   57], 90.00th=[   60], 95.00th=[   69],
+     | 99.00th=[   82], 99.50th=[   90], 99.90th=[  114], 99.95th=[  133],
+     | 99.99th=[  219]
+   bw (  KiB/s): min=199874, max=422865, per=100.00%, avg=310970.41, stdev=1778.41, samples=19168
+   iops        : min=399748, max=845730, avg=621941.66, stdev=3556.82, samples=19168
+  lat (usec)   : 10=0.03%, 20=1.09%, 50=48.56%, 100=50.11%, 250=0.20%
+  lat (usec)   : 500=0.01%, 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.01%, 20=0.01%, 50=0.01%
+  lat (msec)   : 100=0.01%
+  cpu          : usr=9.87%, sys=15.11%, ctx=184847411, majf=0, minf=907176
+  IO depths    : 1=0.1%, 2=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=372765210,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=2
+
+Run status group 0 (all jobs):
+   READ: bw=303MiB/s (318MB/s), 303MiB/s-303MiB/s (318MB/s-318MB/s), io=178GiB (191GB), run=600004-600004msec
+
+Disk stats (read/write):
+  nvme0n1: ios=93178697/0, sectors=93178697/0, merge=0/0, ticks=803112/0, in_queue=803113, util=100.00%
+  nvme1n1: ios=93178698/0, sectors=93178698/0, merge=0/0, ticks=806330/0, in_queue=806330, util=100.00%
+  nvme2n1: ios=93178697/0, sectors=93178698/0, merge=0/0, ticks=806632/0, in_queue=806632, util=100.00%
+  nvme3n1: ios=93178698/0, sectors=93178698/0, merge=0/0, ticks=806089/0, in_queue=806089, util=100.00%
+
+
+@[reschedule]: 2264
+@[kick]: 27333
+Attaching 2 probes...
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=4
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=64): [r(16)][100.0%][r=369MiB/s][r=756k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=936411: Wed Jan 10 23:02:10 2024
+  read: IOPS=755k, BW=369MiB/s (387MB/s)(216GiB/600010msec)
+    slat (nsec): min=34, max=26020k, avg=130.10, stdev=8508.92
+    clat (usec): min=8, max=99114, avg=83.25, stdev=670.63
+     lat (usec): min=9, max=99115, avg=83.38, stdev=670.68
+    clat percentiles (usec):
+     |  1.00th=[   11],  5.00th=[   16], 10.00th=[   18], 20.00th=[   19],
+     | 30.00th=[   19], 40.00th=[   19], 50.00th=[   21], 60.00th=[   21],
+     | 70.00th=[   21], 80.00th=[   22], 90.00th=[   23], 95.00th=[   25],
+     | 99.00th=[ 2057], 99.50th=[ 4359], 99.90th=[10683], 99.95th=[12911],
+     | 99.99th=[18220]
+   bw (  KiB/s): min=296278, max=392495, per=100.00%, avg=377971.88, stdev=293.94, samples=19170
+   iops        : min=592556, max=784989, avg=755944.54, stdev=587.87, samples=19170
+  lat (usec)   : 10=0.01%, 20=49.18%, 50=48.83%, 100=0.13%, 250=0.11%
+  lat (usec)   : 500=0.15%, 750=0.13%, 1000=0.11%
+  lat (msec)   : 2=0.34%, 4=0.45%, 10=0.45%, 20=0.11%, 50=0.01%
+  lat (msec)   : 100=0.01%
+  cpu          : usr=4.54%, sys=20.44%, ctx=2183025, majf=0, minf=775816
+  IO depths    : 1=0.1%, 2=0.1%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=453085103,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=4
+
+Run status group 0 (all jobs):
+   READ: bw=369MiB/s (387MB/s), 369MiB/s-369MiB/s (387MB/s-387MB/s), io=216GiB (232GB), run=600010-600010msec
+
+Disk stats (read/write):
+  nvme0n1: ios=113251449/0, sectors=113251449/0, merge=0/0, ticks=990133/0, in_queue=990133, util=100.00%
+  nvme1n1: ios=113251453/0, sectors=113251453/0, merge=0/0, ticks=995687/0, in_queue=995687, util=100.00%
+  nvme2n1: ios=113251456/0, sectors=113251456/0, merge=0/0, ticks=993184/0, in_queue=993184, util=100.00%
+  nvme3n1: ios=113251454/0, sectors=113251454/0, merge=0/0, ticks=996012/0, in_queue=996012, util=100.00%
+
+
+@[reschedule]: 2363
+@[kick]: 409767490
+Attaching 2 probes...
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=4
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=64): [r(16)][100.0%][r=404MiB/s][r=827k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=936568: Wed Jan 10 23:12:11 2024
+  read: IOPS=827k, BW=404MiB/s (423MB/s)(237GiB/600014msec)
+    slat (nsec): min=38, max=25987k, avg=138.00, stdev=10085.07
+    clat (usec): min=9, max=84292, avg=76.32, stdev=601.26
+     lat (usec): min=9, max=84293, avg=76.46, stdev=601.34
+    clat percentiles (usec):
+     |  1.00th=[   12],  5.00th=[   15], 10.00th=[   17], 20.00th=[   17],
+     | 30.00th=[   18], 40.00th=[   19], 50.00th=[   19], 60.00th=[   19],
+     | 70.00th=[   19], 80.00th=[   20], 90.00th=[   21], 95.00th=[   23],
+     | 99.00th=[ 1991], 99.50th=[ 4113], 99.90th=[ 9372], 99.95th=[11338],
+     | 99.99th=[15139]
+   bw (  KiB/s): min=328243, max=429410, per=100.00%, avg=413840.13, stdev=304.03, samples=19169
+   iops        : min=656486, max=858821, avg=827681.01, stdev=608.06, samples=19169
+  lat (usec)   : 10=0.16%, 20=88.68%, 50=9.40%, 100=0.04%, 250=0.08%
+  lat (usec)   : 500=0.12%, 750=0.12%, 1000=0.11%
+  lat (msec)   : 2=0.30%, 4=0.47%, 10=0.45%, 20=0.08%, 50=0.01%
+  lat (msec)   : 100=0.01%
+  cpu          : usr=4.80%, sys=20.18%, ctx=2202507, majf=0, minf=846102
+  IO depths    : 1=0.1%, 2=0.1%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=496025528,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=4
+
+Run status group 0 (all jobs):
+   READ: bw=404MiB/s (423MB/s), 404MiB/s-404MiB/s (423MB/s-423MB/s), io=237GiB (254GB), run=600014-600014msec
+
+Disk stats (read/write):
+  nvme0n1: ios=123987587/0, sectors=123987587/0, merge=0/0, ticks=1094800/0, in_queue=1094800, util=100.00%
+  nvme1n1: ios=123987592/0, sectors=123987592/0, merge=0/0, ticks=1099364/0, in_queue=1099364, util=100.00%
+  nvme2n1: ios=123987593/0, sectors=123987593/0, merge=0/0, ticks=1099418/0, in_queue=1099418, util=100.00%
+  nvme3n1: ios=123987594/0, sectors=123987594/0, merge=0/0, ticks=1098977/0, in_queue=1098977, util=100.00%
+
+
+@[reschedule]: 2383
+@[kick]: 27671
+Attaching 2 probes...
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=8
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=64): [r(16)][100.0%][r=375MiB/s][r=767k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=936723: Wed Jan 10 23:22:13 2024
+  read: IOPS=767k, BW=374MiB/s (393MB/s)(219GiB/600023msec)
+    slat (nsec): min=34, max=48015k, avg=514.67, stdev=108610.34
+    clat (usec): min=10, max=142106, avg=161.41, stdev=1920.47
+     lat (usec): min=10, max=142114, avg=161.92, stdev=1923.51
+    clat percentiles (usec):
+     |  1.00th=[   30],  5.00th=[   35], 10.00th=[   37], 20.00th=[   39],
+     | 30.00th=[   39], 40.00th=[   40], 50.00th=[   41], 60.00th=[   42],
+     | 70.00th=[   42], 80.00th=[   43], 90.00th=[   44], 95.00th=[   46],
+     | 99.00th=[   60], 99.50th=[   82], 99.90th=[40109], 99.95th=[40109],
+     | 99.99th=[40109]
+   bw (  KiB/s): min=299459, max=429627, per=100.00%, avg=383845.96, stdev=650.43, samples=19171
+   iops        : min=598919, max=859254, avg=767692.46, stdev=1300.86, samples=19171
+  lat (usec)   : 20=0.02%, 50=97.45%, 100=2.05%, 250=0.01%, 500=0.01%
+  lat (usec)   : 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.03%, 20=0.12%, 50=0.32%
+  lat (msec)   : 100=0.01%, 250=0.01%
+  cpu          : usr=4.53%, sys=20.46%, ctx=300700, majf=0, minf=820527
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=100.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.1%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=460100031,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=8
+
+Run status group 0 (all jobs):
+   READ: bw=374MiB/s (393MB/s), 374MiB/s-374MiB/s (393MB/s-393MB/s), io=219GiB (236GB), run=600023-600023msec
+
+Disk stats (read/write):
+  nvme0n1: ios=115010373/0, sectors=115010373/0, merge=0/0, ticks=1000713/0, in_queue=1000713, util=100.00%
+  nvme1n1: ios=115010373/0, sectors=115010373/0, merge=0/0, ticks=1007261/0, in_queue=1007261, util=100.00%
+  nvme2n1: ios=115010374/0, sectors=115010374/0, merge=0/0, ticks=1005118/0, in_queue=1005118, util=100.00%
+  nvme3n1: ios=115010376/0, sectors=115010376/0, merge=0/0, ticks=1006703/0, in_queue=1006703, util=100.00%
+
+
+@[reschedule]: 2244
+@[kick]: 418482440
+Attaching 2 probes...
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=8
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=64): [r(16)][100.0%][r=411MiB/s][r=843k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=936886: Wed Jan 10 23:32:14 2024
+  read: IOPS=842k, BW=411MiB/s (431MB/s)(241GiB/600040msec)
+    slat (nsec): min=35, max=64033k, avg=391.09, stdev=87303.21
+    clat (usec): min=9, max=79447, avg=148.66, stdev=1698.13
+     lat (usec): min=9, max=79449, avg=149.05, stdev=1700.35
+    clat percentiles (usec):
+     |  1.00th=[   28],  5.00th=[   33], 10.00th=[   35], 20.00th=[   36],
+     | 30.00th=[   37], 40.00th=[   37], 50.00th=[   38], 60.00th=[   38],
+     | 70.00th=[   38], 80.00th=[   39], 90.00th=[   40], 95.00th=[   43],
+     | 99.00th=[   57], 99.50th=[   72], 99.90th=[32113], 99.95th=[32113],
+     | 99.99th=[32113]
+   bw (  KiB/s): min=335815, max=504605, per=100.00%, avg=421358.54, stdev=747.01, samples=19170
+   iops        : min=671631, max=1009211, avg=842717.53, stdev=1494.02, samples=19170
+  lat (usec)   : 10=0.01%, 20=0.02%, 50=98.26%, 100=1.26%, 250=0.01%
+  lat (usec)   : 500=0.01%, 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.01%, 20=0.04%, 50=0.40%
+  lat (msec)   : 100=0.01%
+  cpu          : usr=4.70%, sys=20.28%, ctx=329984, majf=0, minf=892650
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=100.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.1%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=505040719,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=8
+
+Run status group 0 (all jobs):
+   READ: bw=411MiB/s (431MB/s), 411MiB/s-411MiB/s (431MB/s-431MB/s), io=241GiB (259GB), run=600040-600040msec
+
+Disk stats (read/write):
+  nvme0n1: ios=126244142/0, sectors=126244142/0, merge=0/0, ticks=1114489/0, in_queue=1114489, util=100.00%
+  nvme1n1: ios=126244145/0, sectors=126244145/0, merge=0/0, ticks=1121980/0, in_queue=1121980, util=100.00%
+  nvme2n1: ios=126244147/0, sectors=126244147/0, merge=0/0, ticks=1122622/0, in_queue=1122622, util=100.00%
+  nvme3n1: ios=126244147/0, sectors=126244147/0, merge=0/0, ticks=1120468/0, in_queue=1120468, util=100.00%
+
+
+@[reschedule]: 2313
+@[kick]: 26805
+Attaching 2 probes...
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=16
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=64): [r(16)][100.0%][r=369MiB/s][r=756k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=937047: Wed Jan 10 23:42:16 2024
+  read: IOPS=754k, BW=368MiB/s (386MB/s)(216GiB/600016msec)
+    slat (nsec): min=35, max=48398k, avg=567.15, stdev=110819.65
+    clat (usec): min=15, max=108209, avg=333.80, stdev=2644.75
+     lat (usec): min=15, max=108210, avg=334.37, stdev=2647.03
+    clat percentiles (usec):
+     |  1.00th=[   72],  5.00th=[   77], 10.00th=[   79], 20.00th=[   81],
+     | 30.00th=[   82], 40.00th=[   83], 50.00th=[   84], 60.00th=[   84],
+     | 70.00th=[   85], 80.00th=[   86], 90.00th=[   88], 95.00th=[   91],
+     | 99.00th=[  157], 99.50th=[24249], 99.90th=[32113], 99.95th=[35914],
+     | 99.99th=[40109]
+   bw (  KiB/s): min=297116, max=403246, per=100.00%, avg=377557.16, stdev=587.15, samples=19168
+   iops        : min=594233, max=806493, avg=755114.92, stdev=1174.30, samples=19168
+  lat (usec)   : 20=0.01%, 50=0.01%, 100=97.76%, 250=1.28%, 500=0.01%
+  lat (usec)   : 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.02%, 20=0.05%, 50=0.88%
+  lat (msec)   : 100=0.01%, 250=0.01%
+  cpu          : usr=4.52%, sys=20.46%, ctx=308038, majf=0, minf=792173
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=100.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.1%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=452569328,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=16
+
+Run status group 0 (all jobs):
+   READ: bw=368MiB/s (386MB/s), 368MiB/s-368MiB/s (386MB/s-386MB/s), io=216GiB (232GB), run=600016-600016msec
+
+Disk stats (read/write):
+  nvme0n1: ios=113120419/0, sectors=113120419/0, merge=0/0, ticks=989259/0, in_queue=989259, util=100.00%
+  nvme1n1: ios=113120422/0, sectors=113120422/0, merge=0/0, ticks=995277/0, in_queue=995277, util=100.00%
+  nvme2n1: ios=113120422/0, sectors=113120423/0, merge=0/0, ticks=993528/0, in_queue=993528, util=100.00%
+  nvme3n1: ios=113120424/0, sectors=113120424/0, merge=0/0, ticks=994666/0, in_queue=994666, util=100.00%
+
+
+@[reschedule]: 2252
+@[kick]: 413736762
+Attaching 2 probes...
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=16
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=64): [r(16)][100.0%][r=411MiB/s][r=842k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=937207: Wed Jan 10 23:52:17 2024
+  read: IOPS=840k, BW=410MiB/s (430MB/s)(240GiB/600020msec)
+    slat (nsec): min=35, max=56011k, avg=393.58, stdev=88714.86
+    clat (usec): min=15, max=116477, avg=301.12, stdev=2452.62
+     lat (usec): min=15, max=116479, avg=301.51, stdev=2454.20
+    clat percentiles (usec):
+     |  1.00th=[   66],  5.00th=[   71], 10.00th=[   73], 20.00th=[   74],
+     | 30.00th=[   75], 40.00th=[   75], 50.00th=[   75], 60.00th=[   76],
+     | 70.00th=[   76], 80.00th=[   77], 90.00th=[   79], 95.00th=[   84],
+     | 99.00th=[  109], 99.50th=[23987], 99.90th=[32113], 99.95th=[32113],
+     | 99.99th=[40109]
+   bw (  KiB/s): min=304116, max=494904, per=100.00%, avg=420388.75, stdev=3870.28, samples=19171
+   iops        : min=608233, max=989809, avg=840778.08, stdev=7740.58, samples=19171
+  lat (usec)   : 20=0.01%, 50=0.01%, 100=98.74%, 250=0.33%, 500=0.01%
+  lat (usec)   : 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.02%, 20=0.14%, 50=0.76%
+  lat (msec)   : 100=0.01%, 250=0.01%
+  cpu          : usr=4.69%, sys=20.29%, ctx=314900, majf=0, minf=861904
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=100.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.1%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=503871210,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=16
+
+Run status group 0 (all jobs):
+   READ: bw=410MiB/s (430MB/s), 410MiB/s-410MiB/s (430MB/s-430MB/s), io=240GiB (258GB), run=600020-600020msec
+
+Disk stats (read/write):
+  nvme0n1: ios=125948830/0, sectors=125948830/0, merge=0/0, ticks=1112475/0, in_queue=1112475, util=100.00%
+  nvme1n1: ios=125948832/0, sectors=125948832/0, merge=0/0, ticks=1120047/0, in_queue=1120047, util=100.00%
+  nvme2n1: ios=125948832/0, sectors=125948832/0, merge=0/0, ticks=1119467/0, in_queue=1119467, util=100.00%
+  nvme3n1: ios=125948833/0, sectors=125948833/0, merge=0/0, ticks=1118068/0, in_queue=1118068, util=100.00%
+
+
+@[reschedule]: 2210
+@[kick]: 27050
+Attaching 2 probes...
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=32
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=64): [r(16)][100.0%][r=369MiB/s][r=755k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=937370: Thu Jan 11 00:02:18 2024
+  read: IOPS=756k, BW=369MiB/s (387MB/s)(216GiB/600025msec)
+    slat (nsec): min=35, max=64014k, avg=543.56, stdev=108628.63
+    clat (usec): min=11, max=91997, avg=671.73, stdev=3752.54
+     lat (usec): min=11, max=91998, avg=672.28, stdev=3754.06
+    clat percentiles (usec):
+     |  1.00th=[  155],  5.00th=[  159], 10.00th=[  161], 20.00th=[  163],
+     | 30.00th=[  165], 40.00th=[  167], 50.00th=[  167], 60.00th=[  169],
+     | 70.00th=[  169], 80.00th=[  172], 90.00th=[  174], 95.00th=[  182],
+     | 99.00th=[28181], 99.50th=[32113], 99.90th=[32375], 99.95th=[36439],
+     | 99.99th=[40109]
+   bw (  KiB/s): min=296006, max=409033, per=100.00%, avg=378337.44, stdev=661.72, samples=19171
+   iops        : min=592016, max=818066, avg=756675.54, stdev=1323.44, samples=19171
+  lat (usec)   : 20=0.01%, 50=0.01%, 100=0.01%, 250=98.04%, 500=0.07%
+  lat (usec)   : 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.04%, 20=0.12%, 50=1.73%
+  lat (msec)   : 100=0.01%
+  cpu          : usr=4.49%, sys=20.50%, ctx=306785, majf=0, minf=803179
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=100.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.1%, 64=0.0%, >=64=0.0%
+     issued rwts: total=453547686,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=32
+
+Run status group 0 (all jobs):
+   READ: bw=369MiB/s (387MB/s), 369MiB/s-369MiB/s (387MB/s-387MB/s), io=216GiB (232GB), run=600025-600025msec
+
+Disk stats (read/write):
+  nvme0n1: ios=113366208/0, sectors=113366208/0, merge=0/0, ticks=990726/0, in_queue=990727, util=100.00%
+  nvme1n1: ios=113366210/0, sectors=113366210/0, merge=0/0, ticks=996727/0, in_queue=996727, util=100.00%
+  nvme2n1: ios=113366214/0, sectors=113366214/0, merge=0/0, ticks=994868/0, in_queue=994868, util=100.00%
+  nvme3n1: ios=113366214/0, sectors=113366214/0, merge=0/0, ticks=996150/0, in_queue=996150, util=100.00%
+
+
+@[reschedule]: 2272
+@[kick]: 413808329
+Attaching 2 probes...
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=32
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=64): [r(16)][100.0%][r=401MiB/s][r=822k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=937553: Thu Jan 11 00:12:20 2024
+  read: IOPS=823k, BW=402MiB/s (421MB/s)(235GiB/600025msec)
+    slat (nsec): min=35, max=64018k, avg=443.01, stdev=96503.52
+    clat (usec): min=16, max=78589, avg=618.06, stdev=3570.94
+     lat (usec): min=17, max=78590, avg=618.50, stdev=3572.20
+    clat percentiles (usec):
+     |  1.00th=[  145],  5.00th=[  149], 10.00th=[  151], 20.00th=[  151],
+     | 30.00th=[  153], 40.00th=[  153], 50.00th=[  153], 60.00th=[  155],
+     | 70.00th=[  155], 80.00th=[  157], 90.00th=[  161], 95.00th=[  169],
+     | 99.00th=[24249], 99.50th=[32113], 99.90th=[32113], 99.95th=[35914],
+     | 99.99th=[40109]
+   bw (  KiB/s): min=328815, max=446966, per=100.00%, avg=411819.89, stdev=639.13, samples=19171
+   iops        : min=657631, max=893932, avg=823640.37, stdev=1278.25, samples=19171
+  lat (usec)   : 20=0.01%, 50=0.01%, 100=0.01%, 250=98.10%, 500=0.01%
+  lat (usec)   : 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.04%, 20=0.46%, 50=1.39%
+  lat (msec)   : 100=0.01%
+  cpu          : usr=5.05%, sys=19.93%, ctx=298732, majf=0, minf=826453
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=100.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.1%, 64=0.0%, >=64=0.0%
+     issued rwts: total=493622047,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=32
+
+Run status group 0 (all jobs):
+   READ: bw=402MiB/s (421MB/s), 402MiB/s-402MiB/s (421MB/s-421MB/s), io=235GiB (253GB), run=600025-600025msec
+
+Disk stats (read/write):
+  nvme0n1: ios=123386683/0, sectors=123386683/0, merge=0/0, ticks=1095545/0, in_queue=1095545, util=100.00%
+  nvme1n1: ios=123386683/0, sectors=123386683/0, merge=0/0, ticks=1101405/0, in_queue=1101405, util=100.00%
+  nvme2n1: ios=123386687/0, sectors=123386687/0, merge=0/0, ticks=1101851/0, in_queue=1101851, util=100.00%
+  nvme3n1: ios=123386687/0, sectors=123386687/0, merge=0/0, ticks=1100340/0, in_queue=1100340, util=100.00%
+
+
+@[reschedule]: 2226
+@[kick]: 27372
+Attaching 2 probes...
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=64
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 14 (f=51): [r(1),f(1),r(1),_(1),f(1),r(2),_(1),r(8)][33.4%][r=369MiB/s][r=755k IOPS][eta 20m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=937715: Thu Jan 11 00:22:21 2024
+  read: IOPS=762k, BW=372MiB/s (390MB/s)(218GiB/600031msec)
+    slat (nsec): min=35, max=64020k, avg=495.35, stdev=101354.70
+    clat (usec): min=16, max=90973, avg=1337.52, stdev=5198.68
+     lat (usec): min=16, max=90975, avg=1338.02, stdev=5199.60
+    clat percentiles (usec):
+     |  1.00th=[  318],  5.00th=[  322], 10.00th=[  326], 20.00th=[  326],
+     | 30.00th=[  330], 40.00th=[  330], 50.00th=[  334], 60.00th=[  334],
+     | 70.00th=[  338], 80.00th=[  338], 90.00th=[  347], 95.00th=[  367],
+     | 99.00th=[32375], 99.50th=[32375], 99.90th=[36439], 99.95th=[40109],
+     | 99.99th=[44303]
+   bw (  KiB/s): min=299423, max=409065, per=100.00%, avg=381598.73, stdev=589.28, samples=19168
+   iops        : min=598846, max=818131, avg=763198.12, stdev=1178.56, samples=19168
+  lat (usec)   : 20=0.01%, 50=0.01%, 100=0.01%, 250=0.01%, 500=95.88%
+  lat (usec)   : 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.07%, 20=0.99%, 50=3.04%
+  lat (msec)   : 100=0.01%
+  cpu          : usr=4.30%, sys=20.68%, ctx=300573, majf=0, minf=795628
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+     issued rwts: total=457413507,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+   READ: bw=372MiB/s (390MB/s), 372MiB/s-372MiB/s (390MB/s-390MB/s), io=218GiB (234GB), run=600031-600031msec
+
+Disk stats (read/write):
+  nvme0n1: ios=114335188/0, sectors=114335188/0, merge=0/0, ticks=997197/0, in_queue=997197, util=100.00%
+  nvme1n1: ios=114335189/0, sectors=114335189/0, merge=0/0, ticks=1002740/0, in_queue=1002740, util=100.00%
+  nvme2n1: ios=114335186/0, sectors=114335186/0, merge=0/0, ticks=1001535/0, in_queue=1001535, util=100.00%
+  nvme3n1: ios=114335186/0, sectors=114335186/0, merge=0/0, ticks=1002263/0, in_queue=1002263, util=100.00%
+
+
+@[reschedule]: 2218
+@[kick]: 415005942
+Attaching 2 probes...
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=64
+...
+fio-3.35-uring2
+Starting 16 processes
+Jobs: 16 (f=64): [r(16)][100.0%][r=409MiB/s][r=838k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=16): err= 0: pid=937875: Thu Jan 11 00:32:23 2024
+  read: IOPS=839k, BW=409MiB/s (429MB/s)(240GiB/600021msec)
+    slat (nsec): min=38, max=64031k, avg=489.10, stdev=102180.21
+    clat (usec): min=17, max=107574, avg=1217.35, stdev=5007.13
+     lat (usec): min=17, max=107575, avg=1217.84, stdev=5008.11
+    clat percentiles (usec):
+     |  1.00th=[  293],  5.00th=[  297], 10.00th=[  297], 20.00th=[  297],
+     | 30.00th=[  302], 40.00th=[  302], 50.00th=[  302], 60.00th=[  306],
+     | 70.00th=[  306], 80.00th=[  310], 90.00th=[  318], 95.00th=[  326],
+     | 99.00th=[32375], 99.50th=[32375], 99.90th=[36439], 99.95th=[40109],
+     | 99.99th=[44303]
+   bw (  KiB/s): min=326742, max=450501, per=100.00%, avg=419755.46, stdev=722.40, samples=19168
+   iops        : min=653485, max=901004, avg=839511.64, stdev=1444.80, samples=19168
+  lat (usec)   : 20=0.01%, 50=0.01%, 100=0.01%, 250=0.01%, 500=96.55%
+  lat (usec)   : 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.07%, 20=0.22%, 50=3.14%
+  lat (msec)   : 100=0.01%, 250=0.01%
+  cpu          : usr=4.66%, sys=20.33%, ctx=307435, majf=0, minf=789171
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+     issued rwts: total=503142588,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+   READ: bw=409MiB/s (429MB/s), 409MiB/s-409MiB/s (429MB/s-429MB/s), io=240GiB (258GB), run=600021-600021msec
+
+Disk stats (read/write):
+  nvme0n1: ios=125760121/0, sectors=125760121/0, merge=0/0, ticks=1109482/0, in_queue=1109482, util=100.00%
+  nvme1n1: ios=125760123/0, sectors=125760123/0, merge=0/0, ticks=1116256/0, in_queue=1116256, util=100.00%
+  nvme2n1: ios=125760123/0, sectors=125760123/0, merge=0/0, ticks=1115814/0, in_queue=1115814, util=100.00%
+  nvme3n1: ios=125760125/0, sectors=125760125/0, merge=0/0, ticks=1115635/0, in_queue=1115635, util=100.00%
+
+
+@[reschedule]: 2269
+@[kick]: 27429
+brynjar@node2:~/exp3_2024-01-10$ vim results.txt
+brynjar@node2:~/exp3_2024-01-10$ rm results.txt
+brynjar@node2:~/exp3_2024-01-10$ ls
+run.sh
+brynjar@node2:~/exp3_2024-01-10$

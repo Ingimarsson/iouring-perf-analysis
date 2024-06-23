@@ -1,0 +1,1990 @@
+    9  who
+   10  uname -a
+   11  perf
+   12  uname -a
+   13  who
+   14  cd /mnt/sdb/linux_build/linux-6.3.8-local
+   15  ls
+   16  cd linux-6.3.8/
+   17  ls
+   18  cd tools/
+   19  cd perf/
+   20  ls
+   21  ./perf
+   22  ./perf stat -a -- sleep 5
+   23  sudo ./perf stat -a -- sleep 5
+   24  df -h
+   25  fdisk .
+   26  sudo fdisk .
+   27  sudo fdisk
+   28  sudo fdisk -l
+   29  df -h
+   30  fio
+   31  cd
+   32  ls
+   33  cd fio-uring2/
+   34  ./configure
+   35  make
+   36  sudo apt install liburing-dev
+   37  ./configure
+   38  make
+   39  cat /etc/lsb-release
+   40  pkg-config
+   41  ./configure
+   42  make
+   43  which liburing
+   44  dpkg-query -L liburing-dev
+   45  vim /usr/include/liburing.h
+   46  man liburing
+   47  man io_uring
+   48  man io_uring_enter
+   49  ls -lh /usr/lib/x86_64-linux-gnu/liburing.so
+   50  sudo apt remove liburing-dev
+   51  cd ..
+   52  git clone git@github.com:axboe/liburing.git
+   53  cd liburing/
+   54  ls
+   55  ./configure
+   56  make -j4
+   57  sudo make install
+   58  ls -lh /usr/lib/x86_64-linux-gnu/liburing.so
+   59  ls -lh /usr/lib/liburing.so
+   60  cd ../
+   61  cd fio-uring2/
+   62  ./configure
+   63  make
+   64  ./fio
+   65  ls -lh /dev/nvme*
+   66  df -h
+   67  fdisk -l
+   68  sudo fdisk -l
+   69  ls -lh /dev/nvme*
+   70  who
+   71  sudo taskset -c 0 ./fio --ioengine=liburing      --rw=randread   --filename=/dev/nvme0n1:/dev/nvme1n1:/dev/nvme2n1:/dev/nvme3n1:/dev/nvme4n1:/dev/nvme5n1:/dev/nvme6n1:/dev/nvme7n1      --numjobs=8     --direct=1      --bs=512        --iodepth=8     --runtime=60
+   72  sudo taskset -c 0 ./fio --ioengine=liburing      --rw=randread   --name=liburing-test    --filename=/dev/nvme0n1:/dev/nvme1n1:/dev/nvme2n1:/dev/nvme3n1:/dev/nvme4n1:/dev/nvme5n1:/dev/nvme6n1:/dev/nvme7n1      --numjobs=8     --direct=1      --bs=512        --iodepth=8     --runtime=60
+   73  sudo taskset -c 0 ./fio --ioengine=liburing      --rw=randread   --name=liburing-test    --filename=/dev/nvme0n1:/dev/nvme1n1:/dev/nvme2n1:/dev/nvme3n1:/dev/nvme4n1:/dev/nvme5n1:/dev/nvme6n1:/dev/nvme7n1      --numjobs=8     --direct=1      --bs=512        --iodepth=8     --size=512G       --runtime=60
+   74  sudo dmesg
+   75  sudo taskset -c 0 ./fio --ioengine=liburing      --rw=randread   --name=liburing-test    --filename=/dev/nvme0n1:/dev/nvme1n1:/dev/nvme2n1:/dev/nvme3n1:/dev/nvme4n1:/dev/nvme5n1:/dev/nvme6n1:/dev/nvme7n1      --numjobs=8     --direct=1      --bs=512        --iodepth=8     --size=512G       --runtime=60
+   76  sudo taskset -c 0 ./fio --ioengine=liburing      --rw=randread   --name=liburing-test    --filename=/dev/nvme0n1:/dev/nvme1n1:/dev/nvme2n1:/dev/nvme3n1:/dev/nvme4n1:/dev/nvme5n1:/dev/nvme6n1:/dev/nvme7n1      --numjobs=8     --direct=1      --bs=512        --iodepth=8     --size=512G       --runtime=60    --group_reporting
+   77  sudo taskset -c 0 ./fio --ioengine=io_uring      --rw=randread   --name=liburing-test    --filename=/dev/nvme0n1:/dev/nvme1n1:/dev/nvme2n1:/dev/nvme3n1:/dev/nvme4n1:/dev/nvme5n1:/dev/nvme6n1:/dev/nvme7n1      --numjobs=8     --direct=1      --bs=512        --iodepth=8     --size=512G       --runtime=60    --group_reporting
+   78  sudo taskset -c 0 ./fio --ioengine=liburing      --rw=randread   --name=liburing-test    --filename=/dev/nvme0n1:/dev/nvme1n1:/dev/nvme2n1:/dev/nvme3n1:/dev/nvme4n1:/dev/nvme5n1:/dev/nvme6n1:/dev/nvme7n1      --numjobs=8     --direct=1      --bs=512        --iodepth=8     --size=512G       --runtime=60    --group_reporting
+   79  sudo taskset -c 0 ./fio --ioengine=liburing      --rw=randread   --name=liburing-test    --filename=/dev/nvme0n1         --numjobs=1     --direct=1      --bs=512        --iodepth=8     --size=512G     --runtime=60    --group_reporting
+   80  sudo taskset -c 0 ./fio --ioengine=liburing      --rw=randread   --name=liburing-test    --filename=/dev/nvme0n1         --numjobs=1     --direct=1      --bs=512        --iodepth=8     --size=1G       --runtime=60    --group_reporting
+   81  ./fio --ioengine=liburing --name=fiotest --filename=fio-test1 --size=1M --rw=read --bs=4k --direct=1 --numjobs=1 --iodepth=8 --group_reporting --runtime=10
+   82  ./fio --ioengine=io_uring --name=fiotest --filename=fio-test1 --size=1G --rw=read --bs=4k --direct=1 --numjobs=1 --iodepth=8 --group_reporting --runtime=10
+   83  ./fio --ioengine=liburing --name=fiotest --filename=fio-test1 --size=1G --rw=read --bs=4k --direct=1 --numjobs=1 --iodepth=8 --group_reporting --runtime=10
+   84  sudo dmesg
+   85  ./fio --ioengine=liburing --name=fiotest --filename=fio-test1 --size=1G --rw=read --bs=4k --direct=1 --numjobs=1 --iodepth=8 --group_reporting --runtime=10
+   86  gdb ./fio --ioengine=liburing --name=fiotest --filename=fio-test1 --size=1G --rw=read --bs=4k --direct=1 --numjobs=1 --iodepth=8 --group_reporting --runtime=10
+   87  ./fio --ioengine=liburing --name=fiotest --filename=fio-testmux a
+   88  cd ..
+   89  cd fio-uring2/
+   90  make debug
+   91  vim Makefile
+   92  history
+   93  ./fio --ioengine=liburing      --rw=randread   --name=liburing-test    --filename=/dev/nvme1n1         --numjobs=1     --direct=1      --bs=512        --iodepth=8     --size=128M     --runtime=10    --group_reporting
+   94  ./fio --ioengine=liburing      --rw=randread   --name=liburing-test    --filename=/dev/nvme1n1         --numjobs=1     --direct=1      --bs=512        --iodepth=8     --size=128M     --runtime=10    --group_reporting --debug=io
+   95  sudo ./fio --ioengine=liburing      --rw=randread   --name=liburing-test    --filename=/dev/nvme1n1         --numjobs=1     --direct=1      --bs=512        --iodepth=8     --size=128M     --runtime=10    --group_reporting --debug=io
+   96  sudo ./fio --ioengine=io_uring      --rw=randread   --name=liburing-test    --filename=/dev/nvme1n1         --numjobs=1     --direct=1      --bs=512        --iodepth=8     --size=128M     --runtime=10    --group_reporting --debug=io
+   97  sudo ./fio --ioengine=io_uring      --rw=randread   --name=liburing-test    --filename=/dev/nvme1n1         --numjobs=1     --direct=1      --bs=512        --iodepth=8     --size=128M     --runtime=10    --group_reporting --debug=io | less
+   98  sudo ./fio --ioengine=liburing      --rw=randread   --name=liburing-test    --filename=/dev/nvme1n1         --numjobs=1     --direct=1      --bs=512        --iodepth=8     --size=128M     --runtime=10    --group_reporting --debug=io | less
+   99  sudo ./fio --ioengine=liburing      --rw=read   --name=liburing-test    --filename=/dev/nvme1n1         --numjobs=1     --direct=1      --bs=512        --iodepth=8     --size=128M     --runtime=10    --group_reporting --debug=io
+  100  ls
+  101  git status
+  102  vim log.txt
+  103  vim output.txt
+  104  vim 2
+  105  sudo ./fio --ioengine=liburing      --rw=randread   --name=liburing-test    --filename=/dev/nvme1n1         --numjobs=1     --direct=1      --bs=512        --iodepth=8     --size=128M     --runtime=10    --group_reporting --debug=io | less
+  106  vim io_u.c
+  107  make
+  108  sudo ./fio --ioengine=liburing      --rw=randread   --name=liburing-test    --filename=/dev/nvme1n1         --numjobs=1     --direct=1      --bs=512        --iodepth=8     --size=128M     --runtime=10    --group_reporting --debug=io | less
+  109  sudo ./fio --ioengine=io_uring      --rw=randread   --name=liburing-test    --filename=/dev/nvme1n1         --numjobs=1     --direct=1      --bs=512        --iodepth=8     --size=128M     --runtime=10    --group_reporting --debug=io | less
+  110  df -h
+  111  sudo ./fio --ioengine=io_uring      --rw=randread   --name=liburing-test    --filename=/dev/nvme1n1         --numjobs=1     --direct=1      --bs=512        --iodepth=8     --size=128M     --runtime=10    --group_reporting --debug=io | less
+  112  vim engines/uring2.c
+  113  make
+  114  sudo ./fio --ioengine=liburing      --rw=randread   --name=liburing-test    --filename=/dev/nvme1n1         --numjobs=1     --direct=1      --bs=512        --iodepth=8     --size=128M     --runtime=10    --group_reporting --debug=io
+  115  sudo ./fio --ioengine=liburing      --rw=randread   --name=liburing-test    --filename=/dev/nvme1n1         --numjobs=1     --direct=1      --bs=512        --iodepth=8     --size=128M     --runtime=10    --group_reporting
+  116  vim engines/uring2.c
+  117  vim io_u.c
+  118  make
+  119  sudo ./fio --ioengine=liburing      --rw=randread   --name=liburing-test    --filename=/dev/nvme1n1         --numjobs=1     --direct=1      --bs=512        --iodepth=8     --size=128M     --runtime=10    --group_reporting
+  120  sudo ./fio --ioengine=liburing      --rw=randread   --name=liburing-test    --filename=/dev/nvme1n1         --numjobs=1     --direct=1      --bs=512        --iodepth=8     --size=128G     --runtime=10    --group_reporting
+  121  sudo ./fio --ioengine=io_uring      --rw=randread   --name=liburing-test    --filename=/dev/nvme1n1         --numjobs=1     --direct=1      --bs=512        --iodepth=8     --size=128G     --runtime=10    --group_reporting
+  122  ls
+  123  who
+  124  exit
+  125  cd ../fio-uring2/
+  126  vim strace.txt
+  127  exit
+  128  cd
+  129  cd fio-uring2/
+  130  make
+  131  ./configure
+  132  make -j4
+  133  ./fio --ioengine=liburing --name=fiotest --filename=fio-test1 --size=16M --rw=read --bs=4k --direct=1 --numjobs=1 --iodepth=8 --group_reporting --runtime=10
+  134  ./fio --ioengine=liburing --name=fiotest --filename=fio-test1 --size=1G --rw=read --bs=4k --direct=1 --numjobs=1 --iodepth=8 --group_reporting --runtime=10
+  135  vim engines/uring2.c
+  136  make
+  137  ./fio --ioengine=liburing --name=fiotest --filename=fio-test1 --size=1G --rw=read --bs=4k --direct=1 --numjobs=1 --iodepth=8 --group_reporting --runtime=10
+  138  sudo taskset -c 0 ./fio --ioengine=liburing      --rw=randread   --name=liburing-test    --filename=/dev/nvme0n1:/dev/nvme1n1:/dev/nvme2n1:/dev/nvme3n1:/dev/nvme4n1:/dev/nvme5n1:/dev/nvme6n1:/dev/nvme7n1      --numjobs=8     --direct=1      --bs=512        --iodepth=8     --size=512G       --runtime=60    --group_reporting
+  139  sudo taskset -c 0 ./fio --ioengine=io_uring      --rw=randread   --name=liburing-test    --filename=/dev/nvme0n1:/dev/nvme1n1:/dev/nvme2n1:/dev/nvme3n1:/dev/nvme4n1:/dev/nvme5n1:/dev/nvme6n1:/dev/nvme7n1      --numjobs=8     --direct=1      --bs=512        --iodepth=8     --size=512G       --runtime=10    --group_reporting
+  140  sudo taskset -c 0 ./fio --ioengine=liburing      --rw=randread   --name=liburing-test    --filename=/dev/nvme0n1         --numjobs=1     --direct=1      --bs=512        --iodepth=8     --size=512G     --runtime=10    --group_reporting
+  141  sudo taskset -c 0 ./fio --ioengine=liburing      --rw=randread   --name=liburing-test    --filename=fio-test     --numjobs=1     --direct=1      --bs=512        --iodepth=8     --size=512G     --runtime=10    --group_reporting
+  142  sudo taskset -c 0 ./fio --ioengine=liburing      --rw=randread   --name=liburing-test    --filename=fio-test     --numjobs=1     --direct=1      --bs=512        --iodepth=8     --size=128M     --runtime=10    --group_reporting
+  143  sudo taskset -c 0 ./fio --ioengine=liburing      --rw=randread   --name=liburing-test    --filename=/dev/nvme0n1         --numjobs=1     --direct=1      --bs=512        --iodepth=8     --size=128M     --runtime=10    --group_reporting
+  144  sudo taskset -c 0 ./fio --ioengine=io_uring      --rw=randread   --name=liburing-test    --filename=/dev/nvme0n1         --numjobs=1     --direct=1      --bs=512        --iodepth=8     --size=128M     --runtime=10    --group_reporting
+  145  df -h
+  146  ./fio --ioengine=io_uring        --rw=randread   --name=liburing-test    --filename=/dev/nvme0n1         --numjobs=1     --direct=1      --bs=512        --iodepth=8     --size=128M     --runtime=10    --group_reporting
+  147  ./fio --ioengine=io_uring        --rw=randread   --name=liburing-test    --filename=/dev/nvme1n1         --numjobs=1     --direct=1      --bs=512        --iodepth=8     --size=128M     --runtime=10    --group_reporting
+  148  ./fio --ioengine=io_uring        --rw=randread   --name=liburing-test    --filename=/dev/nvme2n1         --numjobs=1     --direct=1      --bs=512        --iodepth=8     --size=128M     --runtime=10    --group_reporting
+  149  ./fio --ioengine=io_uring        --rw=randread   --name=liburing-test    --filename=/dev/nvme1n1         --numjobs=1     --direct=1      --bs=512        --iodepth=8     --size=128M     --runtime=10    --group_reporting
+  150  sudo ./fio --ioengine=io_uring   --rw=randread   --name=liburing-test    --filename=/dev/nvme1n1         --numjobs=1     --direct=1      --bs=512        --iodepth=8     --size=128M     --runtime=10    --group_reporting
+  151  sudo ./fio --ioengine=liburing   --rw=randread   --name=liburing-test    --filename=/dev/nvme1n1         --numjobs=1     --direct=1      --bs=512        --iodepth=8     --size=128M     --runtime=10    --group_reporting
+  152  ./fio --ioengine=liburing        --rw=randread   --name=liburing-test    --filename=/dev/nvme1n1         --numjobs=1     --direct=1      --bs=512        --iodepth=8     --size=128M     --runtime=10    --group_reporting
+  153  strace -f ./fio --ioengine=liburing      --rw=randread   --name=liburing-test    --filename=/dev/nvme1n1         --numjobs=1     --direct=1      --bs=512        --iodepth=8     --size=128M     --runtime=10    --group_reporting
+  154  ./fio --ioengine=liburing        --rw=randread   --name=liburing-test    --filename=/dev/nvme1n1         --numjobs=1     --direct=1      --bs=512        --iodepth=8     --size=128M     --runtime=10    --group_reporting
+  155  sudo ./fio --ioengine=liburing   --rw=randread   --name=liburing-test    --filename=/dev/nvme1n1         --numjobs=1     --direct=1      --bs=512        --iodepth=8     --size=128M     --runtime=10    --group_reporting
+  156  sudo ./fio -v --ioengine=liburing        --rw=randread   --name=liburing-test    --filename=/dev/nvme1n1         --numjobs=1     --direct=1      --bs=512        --iodepth=8     --size=128M     --runtime=10    --group_reporting
+  157  sudo ./fio --verbose --ioengine=liburing         --rw=randread   --name=liburing-test    --filename=/dev/nvme1n1         --numjobs=1     --direct=1      --bs=512        --iodepth=8     --size=128M     --runtime=10    --group_reporting
+  158  sudo ./fio --ioengine=liburing   --rw=randread   --name=liburing-test    --filename=/dev/nvme1n1         --numjobs=1     --direct=1      --bs=512        --iodepth=8     --size=128M     --runtime=10    --group_reporting
+  159  sudo strrace -f ./fio --ioengine=liburing        --rw=randread   --name=liburing-test    --filename=/dev/nvme1n1         --numjobs=1     --direct=1      --bs=512        --iodepth=8     --size=128M     --runtime=10    --group_reporting &> stracelib.txt
+  160  vim stracelib.txt
+  161  sudo strace -f ./fio --ioengine=liburing         --rw=randread   --name=liburing-test    --filename=/dev/nvme1n1         --numjobs=1     --direct=1      --bs=512        --iodepth=8     --size=128M     --runtime=10    --group_reporting &> stracelib.txt
+  162  vim stracelib.txt
+  163  sudo strace -f ./fio --ioengine=io_uring         --rw=randread   --name=liburing-test    --filename=/dev/nvme1n1         --numjobs=1     --direct=1      --bs=512        --iodepth=8     --size=128M     --runtime=10    --group_reporting &> strace.txt
+  164  vim strace.txt
+  165  grep _setup stracelib.txt
+  166  grep io_uring stracelib.txt
+  167  sudo dmesg
+  168  vim stracelib.txt
+  169  sudo ./fio --ioengine=io_uring   --rw=randread   --name=liburing-test    --filename=/dev/nvme1n1         --numjobs=1     --direct=1      --bs=512        --iodepth=8     --size=128M     --runtime=10    --group_reporting
+  170  sudo ./fio --ioengine=liburing   --rw=randread   --name=liburing-test    --filename=/dev/nvme1n1         --numjobs=1     --direct=1      --bs=512        --iodepth=8     --size=128M     --runtime=10    --group_reporting
+  171  vim engines/uring2.c
+  172  make
+  173  sudo ./fio --ioengine=liburing   --rw=randread   --name=liburing-test    --filename=/dev/nvme1n1         --numjobs=1     --direct=1      --bs=512        --iodepth=8     --size=128M     --runtime=10    --group_reporting
+  174  vim engines/uring2.c
+  175  make
+  176  sudo ./fio --ioengine=liburing   --rw=randread   --name=liburing-test    --filename=/dev/nvme1n1         --numjobs=1     --direct=1      --bs=512        --iodepth=8     --size=128M     --runtime=10    --group_reporting
+  177  vim engines/uring2.c
+  178  make
+  179  sudo ./fio --ioengine=liburing   --rw=randread   --name=liburing-test    --filename=/dev/nvme1n1         --numjobs=1     --direct=1      --bs=512        --iodepth=8     --size=128M     --runtime=10    --group_reporting
+  180  vim engines/uring2.c
+  181  make
+  182  sudo ./fio --ioengine=liburing   --rw=randread   --name=liburing-test    --filename=/dev/nvme1n1         --numjobs=1     --direct=1      --bs=512        --iodepth=8     --size=128M     --runtime=10    --group_reporting
+  183  vim engines/uring2.c
+  184  make
+  185  sudo ./fio --ioengine=liburing   --rw=randread   --name=liburing-test    --filename=/dev/nvme1n1         --numjobs=1     --direct=1      --bs=512        --iodepth=8     --size=128M     --runtime=10    --group_reporting
+  186  vim engines/uring2.c
+  187  vim stracelib.txt
+  188  gdb ./fio
+  189  sudo gdb ./fio
+  190  exit
+  191  ./main test.txt
+  192  history | grep make
+  193  gcc -Wall -O2 -D_GNU_SOURCE -o main main.c -luring
+  194  ./main test.txt
+  195  df -h
+  196  cd ../fio-uring2/
+  197  ls -lh
+  198  rm -r fio-test
+  199  rm -r fio-test1
+  200  df -h
+  201  cd /mnt/sdb/
+  202  ls
+  203  cd ..
+  204  cd
+  205  cd fio-uring2/
+  206  vim stracelib.txt
+  207  exit
+  208  cd
+  209  cd liburing/examples/
+  210  ./io_uring-test Makefile
+  211  vim io_uring-test.c
+  212  make
+  213  ./io_uring-test Makefile
+  214  vim io_uring-test.c
+  215  ./io_uring-test Makefile
+  216  vim io_uring-test.c
+  217  make
+  218  ./io_uring-test Makefile
+  219  vim io_uring-test.c
+  220  git checkout HEAD -- io_uring-test.c
+  221  make
+  222  ./io_uring-test Makefile
+  223  vim io_uring-test.c
+  224  make
+  225  ./io_uring-test Makefile
+  226  vim io_uring-test.c
+  227  gcc -Wall -O2 -D_GNU_SOURCE -o io_uring-test io_uring-test.c -luring
+  228  ./io_uring-test Makefile
+  229  ldconfig -p | grep liburing
+  230  ls -lh /lib/x86_64-linux-gnu/
+  231  ldconfig -p | grep liburing
+  232  ls -lh /lib/x86_64-linux-gnu/liburing.so.2
+  233  sudo apt remove liburing-dev
+  234  sudo apt --purge remove liburing-dev
+  235  ls -lh /lib/x86_64-linux-gnu/liburing.so.2
+  236  sudo apt install liburing-dev
+  237  sudo apt --purge remove liburing-dev
+  238  ls -lh /lib/x86_64-linux-gnu/liburing.so.2
+  239  ls -lh /usr/include/liburing
+  240  vim /usr/include/liburing/io_uring_version.h
+  241  apt-file list liburing-dev
+  242  dpkg -L liburing-dev
+  243  sudo apt install liburing-dev
+  244  vim /usr/include/liburing/io_uring_version.h
+  245  dpkg -L liburing-dev
+  246  ls -lh /lib/x86_64-linux-gnu/liburing.so.2.1
+  247  ls -lh /lib/x86_64-linux-gnu/liburing.so.2.1.0
+  248  ls -lh /lib/x86_64-linux-gnu/liburing.so
+  249  dpkg -S /lib/x86_64-linux-gnu/liburing.so
+  250  dpkg -S /lib/x86_64-linux-gnu/liburing.so.2.1.0
+  251  sudo apt remove liburing-dev
+  252  cd /lib/x86_64-linux-gnu/
+  253  ls
+  254  ls -lh liburing*
+  255  sudo rm -rf liburing.so.2*
+  256  cd ../
+  257  ls
+  258  cd linux
+  259  ls
+  260  pkg-config -luring
+  261  pkg-config -l uring
+  262  pkg-config -L uring
+  263  pkg-config -I uring
+  264  pkg-config liburing
+  265  pkg-config luring
+  266  pkg-config uring
+  267  cd
+  268  cd liburing/
+  269  sudo make install
+  270  pkg-config liburing
+  271  pkg-config luring
+  272  pkg-config uring
+  273  cd ../io_uring_simple/
+  274  ./main test.txt
+  275  ./main /dev/nvme1n1
+  276  strace -f ./main /dev/nvme1n1
+  277  vim main.c
+  278  gcc -Wall -O2 -D_GNU_SOURCE -o main main.c -luring
+  279  ./main /dev/nvme1n1
+  280  ./main test.txt
+  281  sudo ./main /dev/nvme1n1
+  282  exit
+  283  cd /mnt/sdb/linux_build/linux-6.3.8-local/linux-6.3.8/
+  284  ls tools
+  285  cd tools/perf
+  286  ls
+  287  ./perf
+  288  which perf
+  289  pwd perf
+  290  cd
+  291  /mnt/sdb/linux_build/linux-6.3.8-local/linux-6.3.8/tools/perf/perf
+  292  /mnt/sdb/linux_build/linux-6.3.8-local/linux-6.3.8/tools/perf/perf -a -e cs -- sleep 5
+  293  /mnt/sdb/linux_build/linux-6.3.8-local/linux-6.3.8/tools/perf/perf stat -a -e cs -- sleep 5
+  294  sudo /mnt/sdb/linux_build/linux-6.3.8-local/linux-6.3.8/tools/perf/perf stat -a -e cs -- sleep 5
+  295  perf list
+  296  sudo /mnt/sdb/linux_build/linux-6.3.8-local/linux-6.3.8/tools/perf/perf list
+  297  history
+  298  history 0
+  299  history
+brynjar@node2:~$ cd
+brynjar@node2:~$ ls
+fio-uring2  io_uring_simple  liburing
+brynjar@node2:~$ mkdir exp_1_2023-12-03
+brynjar@node2:~$ cd exp_1_2023-12-03/
+brynjar@node2:~/exp_1_2023-12-03$ vim run.sh
+brynjar@node2:~/exp_1_2023-12-03$ sh run.sh
+brynjar@node2:~/exp_1_2023-12-03$ Error:
+Access to performance monitoring and observability operations is limited.
+Consider adjusting /proc/sys/kernel/perf_event_paranoid setting to open
+access to performance monitoring and observability operations for processes
+without CAP_PERFMON, CAP_SYS_PTRACE or CAP_SYS_ADMIN Linux capability.
+More information can be found at 'Perf events and tool security' document:
+https://www.kernel.org/doc/html/latest/admin-guide/perf-security.html
+perf_event_paranoid setting is 2:
+  -1: Allow use of (almost) all events by all users
+      Ignore mlock limit after perf_event_mlock_kb without CAP_IPC_LOCK
+>= 0: Disallow raw and ftrace function tracepoint access
+>= 1: Disallow CPU event access
+>= 2: Disallow kernel profiling
+To make the adjusted perf_event_paranoid setting permanent preserve it
+in /etc/sysctl.conf (e.g. kernel.perf_event_paranoid = <setting>)
+Error:
+Access to performance monitoring and observability operations is limited.
+Consider adjusting /proc/sys/kernel/perf_event_paranoid setting to open
+access to performance monitoring and observability operations for processes
+without CAP_PERFMON, CAP_SYS_PTRACE or CAP_SYS_ADMIN Linux capability.
+More information can be found at 'Perf events and tool security' document:
+https://www.kernel.org/doc/html/latest/admin-guide/perf-security.html
+perf_event_paranoid setting is 2:
+  -1: Allow use of (almost) all events by all users
+      Ignore mlock limit after perf_event_mlock_kb without CAP_IPC_LOCK
+>= 0: Disallow raw and ftrace function tracepoint access
+>= 1: Disallow CPU event access
+>= 2: Disallow kernel profiling
+To make the adjusted perf_event_paranoid setting permanent preserve it
+in /etc/sysctl.conf (e.g. kernel.perf_event_paranoid = <setting>)
+^C
+brynjar@node2:~/exp_1_2023-12-03$ history -^C
+brynjar@node2:~/exp_1_2023-12-03$ htop -u brynjar
+brynjar@node2:~/exp_1_2023-12-03$ sudo sh run.sh
+brynjar@node2:~/exp_1_2023-12-03$ htop -u brynjar
+brynjar@node2:~/exp_1_2023-12-03$ vim run.sh
+brynjar@node2:~/exp_1_2023-12-03$ ls
+coop-d64.txt  default-d64.txt  run.sh
+brynjar@node2:~/exp_1_2023-12-03$ vim default-d64.txt
+brynjar@node2:~/exp_1_2023-12-03$ rm default-d64.txt
+brynjar@node2:~/exp_1_2023-12-03$ rm coop-d64.txt
+brynjar@node2:~/exp_1_2023-12-03$ sudo sh run.sh ^C
+brynjar@node2:~/exp_1_2023-12-03$ sudo sh run.sh
+brynjar@node2:~/exp_1_2023-12-03$ ls
+coop-d64.txt  default-d64.txt  run.sh
+brynjar@node2:~/exp_1_2023-12-03$ vim coop-d64.txt
+brynjar@node2:~/exp_1_2023-12-03$ vim coop-d64.txt
+brynjar@node2:~/exp_1_2023-12-03$ rm *.txt
+rm: remove write-protected regular empty file 'coop-d64.txt'? y
+rm: remove write-protected regular empty file 'default-d64.txt'? y
+brynjar@node2:~/exp_1_2023-12-03$ cat run.sh
+#/bin/bash
+/mnt/sdb/linux_build/linux-6.3.8-local/linux-6.3.8/tools/perf/perf stat -a -e cs -- taskset -c 0 ../fio-uring2/fio --ioengine=liburing --rw=randread --name=liburing-test --filename=/dev/nvme0n1:/dev/nvme1n1:/dev/nvme2n1:/dev/nvme3n1 --numjobs=1 --direct=1 --bs=512 --iodepth=64 --size=512G --runtime=60 --group_reporting &> default-d64.txt
+/mnt/sdb/linux_build/linux-6.3.8-local/linux-6.3.8/tools/perf/perf stat -a -e cs -- taskset -c 0 ../fio-uring2/fio --ioengine=liburing --rw=randread --name=liburing-test --filename=/dev/nvme0n1:/dev/nvme1n1:/dev/nvme2n1:/dev/nvme3n1 --numjobs=1 --direct=1 --bs=512 --iodepth=64 --size=512G --runtime=60 --group_reporting --coop_taskrun &> coop-d64.txt
+brynjar@node2:~/exp_1_2023-12-03$ /mnt/sdb/linux_build/linux-6.3.8-local/linux-6.3.8/tools/perf/perf stat -a -e cs -- taskset -c 0 ../fio-uring2/fio --ioengine=liburing --rw=randread --name=liburing-test --filename=/dev/nvme0n1:/dev/nvme1n1:/dev/nvme2n1:/dev/nvme3n1 --numjobs=1 --direct=1 --bs=512 --iodepth=64 --size=512G --runtime=60 --group_reporting
+Error:
+Access to performance monitoring and observability operations is limited.
+Consider adjusting /proc/sys/kernel/perf_event_paranoid setting to open
+access to performance monitoring and observability operations for processes
+without CAP_PERFMON, CAP_SYS_PTRACE or CAP_SYS_ADMIN Linux capability.
+More information can be found at 'Perf events and tool security' document:
+https://www.kernel.org/doc/html/latest/admin-guide/perf-security.html
+perf_event_paranoid setting is 2:
+  -1: Allow use of (almost) all events by all users
+      Ignore mlock limit after perf_event_mlock_kb without CAP_IPC_LOCK
+>= 0: Disallow raw and ftrace function tracepoint access
+>= 1: Disallow CPU event access
+>= 2: Disallow kernel profiling
+To make the adjusted perf_event_paranoid setting permanent preserve it
+in /etc/sysctl.conf (e.g. kernel.perf_event_paranoid = <setting>)
+brynjar@node2:~/exp_1_2023-12-03$ sudo /mnt/sdb/linux_build/linux-6.3.8-local/linux-6.3.8/tools/perf/perf stat -a -e cs -- taskset -c 0 ../fio-uring2/fio --ioengine=liburing --rw=randread --name=liburing-test --filename=/dev/nvme0n1:/dev/nvme1n1:/dev/nvme2n1:/dev/nvme3n1 --numjobs=1 --direct=1 --bs=512 --iodepth=64 --size=512G --runtime=60 --group_reporting
+
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=64
+fio-3.35-uring2
+Starting 1 process
+Jobs: 1 (f=4): [r(1)][100.0%][r=108MiB/s][r=222k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=1): err= 0: pid=141373: Sun Dec  3 17:06:03 2023
+  read: IOPS=139k, BW=68.0MiB/s (71.3MB/s)(4079MiB/60001msec)
+    clat (msec): min=711, max=60587, avg=38552.40, stdev=15847.87
+     lat (usec): min=22, max=77603, avg=457.74, stdev=1776.06
+    clat percentiles (msec):
+     |  1.00th=[ 1938],  5.00th=[ 6544], 10.00th=[12281], 20.00th=[17113],
+     | 30.00th=[17113], 40.00th=[17113], 50.00th=[17113], 60.00th=[17113],
+     | 70.00th=[17113], 80.00th=[17113], 90.00th=[17113], 95.00th=[17113],
+     | 99.00th=[17113], 99.50th=[17113], 99.90th=[17113], 99.95th=[17113],
+     | 99.99th=[17113]
+   bw (  KiB/s): min=22906, max=111171, per=99.58%, avg=69320.20, stdev=37112.00, samples=119
+   iops        : min=45812, max=222342, avg=138640.40, stdev=74224.00, samples=119
+  lat (msec)   : 750=0.02%, 1000=0.17%, 2000=0.88%, >=2000=98.92%
+  cpu          : usr=10.36%, sys=52.81%, ctx=5104, majf=0, minf=20
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+     issued rwts: total=8353368,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+   READ: bw=68.0MiB/s (71.3MB/s), 68.0MiB/s-68.0MiB/s (71.3MB/s-71.3MB/s), io=4079MiB (4277MB), run=60001-60001msec
+
+Disk stats (read/write):
+  nvme0n1: ios=3286989/0, sectors=3286989/0, merge=0/0, ticks=26483/0, in_queue=26483, util=99.92%
+  nvme1n1: ios=3286813/0, sectors=3286813/0, merge=0/0, ticks=26681/0, in_queue=26681, util=99.94%
+  nvme2n1: ios=3285464/0, sectors=3285464/0, merge=0/0, ticks=26768/0, in_queue=26768, util=99.95%
+  nvme3n1: ios=3285463/0, sectors=3285463/0, merge=0/0, ticks=26785/0, in_queue=26785, util=99.95%
+
+ Performance counter stats for 'system wide':
+
+           130,490      cs
+
+      61.201524578 seconds time elapsed
+
+brynjar@node2:~/exp_1_2023-12-03$ htop
+brynjar@node2:~/exp_1_2023-12-03$ htop -u brynjar
+brynjar@node2:~/exp_1_2023-12-03$ htop
+brynjar@node2:~/exp_1_2023-12-03$ ls
+run.sh
+brynjar@node2:~/exp_1_2023-12-03$ ls
+run.sh
+brynjar@node2:~/exp_1_2023-12-03$ htop
+brynjar@node2:~/exp_1_2023-12-03$ who
+brynjar  pts/0        2023-12-03 16:31 (tmux(138947).%0)
+zebin    pts/2        2023-12-03 16:59 (192.168.1.100)
+brynjar  pts/6        2023-11-28 19:14 (192.168.1.100)
+brynjar@node2:~/exp_1_2023-12-03$ who
+brynjar  pts/0        2023-12-03 16:31 (tmux(138947).%0)
+zebin    pts/2        2023-12-03 16:59 (192.168.1.100)
+brynjar  pts/6        2023-11-28 19:14 (192.168.1.100)
+brynjar@node2:~/exp_1_2023-12-03$ htop
+brynjar@node2:~/exp_1_2023-12-03$ htop -u zebin
+brynjar@node2:~/exp_1_2023-12-03$ sudo /mnt/sdb/linux_build/linux-6.3.8-local/linux-6.3.8/tools/perf/perf stat -a -e cs -- taskset -c 0 ../fio-uring2/fio --ioengine=liburing --rw=randread --name=liburing-test --filename=/dev/nvme0n1:/dev/nvme1n1:/dev/nvme2n1:/dev/nvme3n1 --numjobs=1 --direct=1 --bs=512 --iodepth=64 --size=512G --runtime=60 --group_reporting &>
+out.txt
+^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^Cbrynjar@node2:~/exp_1_2023-12-03$ clear
+brynjar@node2:~/exp_1_2023-12-03$ sudo /mnt/sdb/linux_build/linux-6.3.8-local/linux-6.3.8/tools/perf/perf stat -a -e cs -- taskset -c 0 ../fio-uring2/fio --ioengine=liburing --rw=randread --name=liburing-test --filename=/dev/nvme0n1:/dev/nvme1n1:/dev/nvme2n1:/dev/nvme3n1 --numjobs=1 --direct=1 --bs=512 --iodepth=64 --size=512G^C-runtime=60 --group_reporting &>
+out.txt
+brynjar@node2:~/exp_1_2023-12-03$ pwd ~
+/mnt/sdb/brynjar/exp_1_2023-12-03
+brynjar@node2:~/exp_1_2023-12-03$ sudo /mnt/sdb/linux_build/linux-6.3.8-local/linux-6.3.8/tools/perf/perf stat -a -e cs -- taskset -c 0 /mnt/sdb/brynjar/fio-uring2/fio --ioengine=liburing --rw=randread --name=liburing-test --filename=/dev/nvme0n1:/dev/nvme1n1:/dev/nvme2n1:/dev/nvme3n1 --numjobs=1 --direct=1 --bs=512 --iodepth=64 --size=512G --runtime=60 --group
+_reporting &> out.txt
+^Cbrynjar@node2:~/exp_1_2023-12-03$ vim run.sh
+brynjar@node2:~/exp_1_2023-12-03$ sudo sh run.sh
+brynjar@node2:~/exp_1_2023-12-03$ htop -u brynjar
+brynjar@node2:~/exp_1_2023-12-03$ ls
+coop-d64.txt  default-d64.txt  out.txt  run.sh
+brynjar@node2:~/exp_1_2023-12-03$ vim coop-d64.txt
+brynjar@node2:~/exp_1_2023-12-03$ cat coop-d64.txt
+brynjar@node2:~/exp_1_2023-12-03$ sudo cat coop-d64.txt
+brynjar@node2:~/exp_1_2023-12-03$ vim coop-d64.txt
+brynjar@node2:~/exp_1_2023-12-03$ vim run.sh
+brynjar@node2:~/exp_1_2023-12-03$ sudo sh run.sh
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=64
+fio-3.35-uring2
+Starting 1 process
+^Cbs: 1 (f=4): [r(1)][16.4%][r=34.6MiB/s][r=70.9k IOPS][eta 00m:51s]
+fio: terminating on signal 2
+
+liburing-test: (groupid=0, jobs=1): err= 0: pid=142505: Sun Dec  3 17:11:59 2023
+  read: IOPS=70.7k, BW=34.5MiB/s (36.2MB/s)(331MiB/9584msec)
+    clat (msec): min=481, max=9996, avg=5234.87, stdev=2743.90
+     lat (usec): min=270, max=35753, avg=896.50, stdev=3390.52
+    clat percentiles (msec):
+     |  1.00th=[  584],  5.00th=[  961], 10.00th=[ 1435], 20.00th=[ 2366],
+     | 30.00th=[ 3339], 40.00th=[ 4279], 50.00th=[ 5269], 60.00th=[ 6141],
+     | 70.00th=[ 7148], 80.00th=[ 8087], 90.00th=[ 9060], 95.00th=[ 9463],
+     | 99.00th=[ 9866], 99.50th=[10000], 99.90th=[10000], 99.95th=[10000],
+     | 99.99th=[10000]
+   bw (  KiB/s): min=29680, max=36782, per=100.00%, avg=35414.58, stdev=1572.20, samples=19
+   iops        : min=59360, max=73564, avg=70829.16, stdev=3144.40, samples=19
+  lat (msec)   : 500=0.09%, 750=2.65%, 1000=2.59%, 2000=10.60%, >=2000=84.06%
+  cpu          : usr=6.17%, sys=26.97%, ctx=575, majf=0, minf=20
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+     issued rwts: total=677319,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+   READ: bw=34.5MiB/s (36.2MB/s), 34.5MiB/s-34.5MiB/s (36.2MB/s-36.2MB/s), io=331MiB (347MB), run=9584-9584msec
+
+Disk stats (read/write):
+  nvme0n1: ios=518378/0, sectors=518378/0, merge=0/0, ticks=4165/0, in_queue=4166, util=99.22%
+  nvme1n1: ios=518379/0, sectors=518379/0, merge=0/0, ticks=4190/0, in_queue=4190, util=99.37%
+  nvme2n1: ios=518379/0, sectors=518379/0, merge=0/0, ticks=4199/0, in_queue=4199, util=99.35%
+  nvme3n1: ios=518377/0, sectors=518377/0, merge=0/0, ticks=4212/0, in_queue=4212, util=99.41%
+
+ Performance counter stats for 'system wide':
+
+            26,015      cs
+
+      10.400804964 seconds time elapsed
+
+
+brynjar@node2:~/exp_1_2023-12-03$ vim run.sh
+brynjar@node2:~/exp_1_2023-12-03$ vim run.sh
+brynjar@node2:~/exp_1_2023-12-03$ who
+brynjar  pts/0        2023-12-03 16:31 (tmux(138947).%0)
+zebin    pts/2        2023-12-03 16:59 (192.168.1.100)
+brynjar  pts/6        2023-11-28 19:14 (192.168.1.100)
+brynjar@node2:~/exp_1_2023-12-03$ who
+brynjar  pts/0        2023-12-03 16:31 (tmux(138947).%0)
+zebin    pts/2        2023-12-03 16:59 (192.168.1.100)
+brynjar  pts/6        2023-11-28 19:14 (192.168.1.100)
+brynjar@node2:~/exp_1_2023-12-03$ who
+brynjar  pts/0        2023-12-03 16:31 (tmux(138947).%0)
+brynjar  pts/6        2023-11-28 19:14 (192.168.1.100)
+brynjar@node2:~/exp_1_2023-12-03$ htop -u zebin
+brynjar@node2:~/exp_1_2023-12-03$ sudo htop -u zebin
+brynjar@node2:~/exp_1_2023-12-03$ who
+brynjar  pts/0        2023-12-03 16:31 (tmux(138947).%0)
+brynjar  pts/6        2023-11-28 19:14 (192.168.1.100)
+brynjar@node2:~/exp_1_2023-12-03$ sudo htop -u zebin
+brynjar@node2:~/exp_1_2023-12-03$ who
+brynjar  pts/0        2023-12-03 16:31 (tmux(138947).%0)
+brynjar  pts/6        2023-11-28 19:14 (192.168.1.100)
+brynjar@node2:~/exp_1_2023-12-03$ who
+brynjar  pts/0        2023-12-03 16:31 (tmux(138947).%0)
+brynjar  pts/6        2023-11-28 19:14 (192.168.1.100)
+brynjar@node2:~/exp_1_2023-12-03$ sudo htop -u zebin
+brynjar@node2:~/exp_1_2023-12-03$ sudo htop -u atr
+brynjar@node2:~/exp_1_2023-12-03$ sudo htop -u krijn
+brynjar@node2:~/exp_1_2023-12-03$ sudo htop -u krijn^C
+brynjar@node2:~/exp_1_2023-12-03$ htop
+brynjar@node2:~/exp_1_2023-12-03$ who
+brynjar  pts/0        2023-12-03 16:31 (tmux(138947).%0)
+brynjar  pts/6        2023-11-28 19:14 (192.168.1.100)
+brynjar@node2:~/exp_1_2023-12-03$ ls
+coop-d64.txt  default-d64.txt  out.txt  run.sh
+brynjar@node2:~/exp_1_2023-12-03$ rm *.txt
+rm: remove write-protected regular empty file 'coop-d64.txt'? y
+rm: remove write-protected regular empty file 'default-d64.txt'? y
+brynjar@node2:~/exp_1_2023-12-03$ sh run.sh
+Error:
+Access to performance monitoring and observability operations is limited.
+Consider adjusting /proc/sys/kernel/perf_event_paranoid setting to open
+access to performance monitoring and observability operations for processes
+without CAP_PERFMON, CAP_SYS_PTRACE or CAP_SYS_ADMIN Linux capability.
+More information can be found at 'Perf events and tool security' document:
+https://www.kernel.org/doc/html/latest/admin-guide/perf-security.html
+perf_event_paranoid setting is 2:
+  -1: Allow use of (almost) all events by all users
+      Ignore mlock limit after perf_event_mlock_kb without CAP_IPC_LOCK
+>= 0: Disallow raw and ftrace function tracepoint access
+>= 1: Disallow CPU event access
+>= 2: Disallow kernel profiling
+To make the adjusted perf_event_paranoid setting permanent preserve it
+in /etc/sysctl.conf (e.g. kernel.perf_event_paranoid = <setting>)
+Error:
+Access to performance monitoring and observability operations is limited.
+Consider adjusting /proc/sys/kernel/perf_event_paranoid setting to open
+access to performance monitoring and observability operations for processes
+without CAP_PERFMON, CAP_SYS_PTRACE or CAP_SYS_ADMIN Linux capability.
+More information can be found at 'Perf events and tool security' document:
+https://www.kernel.org/doc/html/latest/admin-guide/perf-security.html
+perf_event_paranoid setting is 2:
+  -1: Allow use of (almost) all events by all users
+      Ignore mlock limit after perf_event_mlock_kb without CAP_IPC_LOCK
+>= 0: Disallow raw and ftrace function tracepoint access
+>= 1: Disallow CPU event access
+>= 2: Disallow kernel profiling
+To make the adjusted perf_event_paranoid setting permanent preserve it
+in /etc/sysctl.conf (e.g. kernel.perf_event_paranoid = <setting>)
+Error:
+Access to performance monitoring and observability operations is limited.
+Consider adjusting /proc/sys/kernel/perf_event_paranoid setting to open
+access to performance monitoring and observability operations for processes
+without CAP_PERFMON, CAP_SYS_PTRACE or CAP_SYS_ADMIN Linux capability.
+More information can be found at 'Perf events and tool security' document:
+https://www.kernel.org/doc/html/latest/admin-guide/perf-security.html
+perf_event_paranoid setting is 2:
+  -1: Allow use of (almost) all events by all users
+      Ignore mlock limit after perf_event_mlock_kb without CAP_IPC_LOCK
+>= 0: Disallow raw and ftrace function tracepoint access
+>= 1: Disallow CPU event access
+>= 2: Disallow kernel profiling
+To make the adjusted perf_event_paranoid setting permanent preserve it
+in /etc/sysctl.conf (e.g. kernel.perf_event_paranoid = <setting>)
+Error:
+Access to performance monitoring and observability operations is limited.
+Consider adjusting /proc/sys/kernel/perf_event_paranoid setting to open
+access to performance monitoring and observability operations for processes
+without CAP_PERFMON, CAP_SYS_PTRACE or CAP_SYS_ADMIN Linux capability.
+More information can be found at 'Perf events and tool security' document:
+https://www.kernel.org/doc/html/latest/admin-guide/perf-security.html
+perf_event_paranoid setting is 2:
+  -1: Allow use of (almost) all events by all users
+      Ignore mlock limit after perf_event_mlock_kb without CAP_IPC_LOCK
+>= 0: Disallow raw and ftrace function tracepoint access
+>= 1: Disallow CPU event access
+>= 2: Disallow kernel profiling
+To make the adjusted perf_event_paranoid setting permanent preserve it
+in /etc/sysctl.conf (e.g. kernel.perf_event_paranoid = <setting>)
+Error:
+Access to performance monitoring and observability operations is limited.
+Consider adjusting /proc/sys/kernel/perf_event_paranoid setting to open
+access to performance monitoring and observability operations for processes
+without CAP_PERFMON, CAP_SYS_PTRACE or CAP_SYS_ADMIN Linux capability.
+More information can be found at 'Perf events and tool security' document:
+https://www.kernel.org/doc/html/latest/admin-guide/perf-security.html
+perf_event_paranoid setting is 2:
+  -1: Allow use of (almost) all events by all users
+      Ignore mlock limit after perf_event_mlock_kb without CAP_IPC_LOCK
+>= 0: Disallow raw and ftrace function tracepoint access
+>= 1: Disallow CPU event access
+>= 2: Disallow kernel profiling
+To make the adjusted perf_event_paranoid setting permanent preserve it
+in /etc/sysctl.conf (e.g. kernel.perf_event_paranoid = <setting>)
+Error:
+Access to performance monitoring and observability operations is limited.
+Consider adjusting /proc/sys/kernel/perf_event_paranoid setting to open
+access to performance monitoring and observability operations for processes
+without CAP_PERFMON, CAP_SYS_PTRACE or CAP_SYS_ADMIN Linux capability.
+More information can be found at 'Perf events and tool security' document:
+https://www.kernel.org/doc/html/latest/admin-guide/perf-security.html
+perf_event_paranoid setting is 2:
+  -1: Allow use of (almost) all events by all users
+      Ignore mlock limit after perf_event_mlock_kb without CAP_IPC_LOCK
+>= 0: Disallow raw and ftrace function tracepoint access
+>= 1: Disallow CPU event access
+>= 2: Disallow kernel profiling
+To make the adjusted perf_event_paranoid setting permanent preserve it
+in /etc/sysctl.conf (e.g. kernel.perf_event_paranoid = <setting>)
+Error:
+Access to performance monitoring and observability operations is limited.
+Consider adjusting /proc/sys/kernel/perf_event_paranoid setting to open
+access to performance monitoring and observability operations for processes
+without CAP_PERFMON, CAP_SYS_PTRACE or CAP_SYS_ADMIN Linux capability.
+More information can be found at 'Perf events and tool security' document:
+https://www.kernel.org/doc/html/latest/admin-guide/perf-security.html
+perf_event_paranoid setting is 2:
+  -1: Allow use of (almost) all events by all users
+      Ignore mlock limit after perf_event_mlock_kb without CAP_IPC_LOCK
+>= 0: Disallow raw and ftrace function tracepoint access
+>= 1: Disallow CPU event access
+>= 2: Disallow kernel profiling
+To make the adjusted perf_event_paranoid setting permanent preserve it
+in /etc/sysctl.conf (e.g. kernel.perf_event_paranoid = <setting>)
+Error:
+Access to performance monitoring and observability operations is limited.
+Consider adjusting /proc/sys/kernel/perf_event_paranoid setting to open
+access to performance monitoring and observability operations for processes
+without CAP_PERFMON, CAP_SYS_PTRACE or CAP_SYS_ADMIN Linux capability.
+More information can be found at 'Perf events and tool security' document:
+https://www.kernel.org/doc/html/latest/admin-guide/perf-security.html
+perf_event_paranoid setting is 2:
+  -1: Allow use of (almost) all events by all users
+      Ignore mlock limit after perf_event_mlock_kb without CAP_IPC_LOCK
+>= 0: Disallow raw and ftrace function tracepoint access
+>= 1: Disallow CPU event access
+>= 2: Disallow kernel profiling
+To make the adjusted perf_event_paranoid setting permanent preserve it
+in /etc/sysctl.conf (e.g. kernel.perf_event_paranoid = <setting>)
+Error:
+Access to performance monitoring and observability operations is limited.
+Consider adjusting /proc/sys/kernel/perf_event_paranoid setting to open
+access to performance monitoring and observability operations for processes
+without CAP_PERFMON, CAP_SYS_PTRACE or CAP_SYS_ADMIN Linux capability.
+More information can be found at 'Perf events and tool security' document:
+https://www.kernel.org/doc/html/latest/admin-guide/perf-security.html
+perf_event_paranoid setting is 2:
+  -1: Allow use of (almost) all events by all users
+      Ignore mlock limit after perf_event_mlock_kb without CAP_IPC_LOCK
+>= 0: Disallow raw and ftrace function tracepoint access
+>= 1: Disallow CPU event access
+>= 2: Disallow kernel profiling
+To make the adjusted perf_event_paranoid setting permanent preserve it
+in /etc/sysctl.conf (e.g. kernel.perf_event_paranoid = <setting>)
+Error:
+Access to performance monitoring and observability operations is limited.
+Consider adjusting /proc/sys/kernel/perf_event_paranoid setting to open
+access to performance monitoring and observability operations for processes
+without CAP_PERFMON, CAP_SYS_PTRACE or CAP_SYS_ADMIN Linux capability.
+More information can be found at 'Perf events and tool security' document:
+https://www.kernel.org/doc/html/latest/admin-guide/perf-security.html
+perf_event_paranoid setting is 2:
+  -1: Allow use of (almost) all events by all users
+      Ignore mlock limit after perf_event_mlock_kb without CAP_IPC_LOCK
+>= 0: Disallow raw and ftrace function tracepoint access
+>= 1: Disallow CPU event access
+>= 2: Disallow kernel profiling
+To make the adjusted perf_event_paranoid setting permanent preserve it
+in /etc/sysctl.conf (e.g. kernel.perf_event_paranoid = <setting>)
+Error:
+Access to performance monitoring and observability operations is limited.
+Consider adjusting /proc/sys/kernel/perf_event_paranoid setting to open
+access to performance monitoring and observability operations for processes
+without CAP_PERFMON, CAP_SYS_PTRACE or CAP_SYS_ADMIN Linux capability.
+More information can be found at 'Perf events and tool security' document:
+https://www.kernel.org/doc/html/latest/admin-guide/perf-security.html
+perf_event_paranoid setting is 2:
+  -1: Allow use of (almost) all events by all users
+      Ignore mlock limit after perf_event_mlock_kb without CAP_IPC_LOCK
+>= 0: Disallow raw and ftrace function tracepoint access
+>= 1: Disallow CPU event access
+>= 2: Disallow kernel profiling
+To make the adjusted perf_event_paranoid setting permanent preserve it
+in /etc/sysctl.conf (e.g. kernel.perf_event_paranoid = <setting>)
+Error:
+Access to performance monitoring and observability operations is limited.
+Consider adjusting /proc/sys/kernel/perf_event_paranoid setting to open
+access to performance monitoring and observability operations for processes
+without CAP_PERFMON, CAP_SYS_PTRACE or CAP_SYS_ADMIN Linux capability.
+More information can be found at 'Perf events and tool security' document:
+https://www.kernel.org/doc/html/latest/admin-guide/perf-security.html
+perf_event_paranoid setting is 2:
+  -1: Allow use of (almost) all events by all users
+      Ignore mlock limit after perf_event_mlock_kb without CAP_IPC_LOCK
+>= 0: Disallow raw and ftrace function tracepoint access
+>= 1: Disallow CPU event access
+>= 2: Disallow kernel profiling
+To make the adjusted perf_event_paranoid setting permanent preserve it
+in /etc/sysctl.conf (e.g. kernel.perf_event_paranoid = <setting>)
+Error:
+Access to performance monitoring and observability operations is limited.
+Consider adjusting /proc/sys/kernel/perf_event_paranoid setting to open
+access to performance monitoring and observability operations for processes
+without CAP_PERFMON, CAP_SYS_PTRACE or CAP_SYS_ADMIN Linux capability.
+More information can be found at 'Perf events and tool security' document:
+https://www.kernel.org/doc/html/latest/admin-guide/perf-security.html
+perf_event_paranoid setting is 2:
+  -1: Allow use of (almost) all events by all users
+      Ignore mlock limit after perf_event_mlock_kb without CAP_IPC_LOCK
+>= 0: Disallow raw and ftrace function tracepoint access
+>= 1: Disallow CPU event access
+>= 2: Disallow kernel profiling
+To make the adjusted perf_event_paranoid setting permanent preserve it
+in /etc/sysctl.conf (e.g. kernel.perf_event_paranoid = <setting>)
+^C
+brynjar@node2:~/exp_1_2023-12-03$ ls
+run.sh
+brynjar@node2:~/exp_1_2023-12-03$ sudo sh run.sh
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=1
+fio-3.35-uring2
+Starting 1 process
+Jobs: 1 (f=4): [r(1)][100.0%][r=35.9MiB/s][r=73.5k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=1): err= 0: pid=142889: Sun Dec  3 17:20:53 2023
+  read: IOPS=73.2k, BW=35.7MiB/s (37.5MB/s)(2144MiB/60000msec)
+    clat (msec): min=214, max=60209, avg=30197.44, stdev=17334.05
+     lat (usec): min=10, max=1433, avg=13.00, stdev= 2.94
+    clat percentiles (msec):
+     |  1.00th=[  827],  5.00th=[ 3205], 10.00th=[ 6208], 20.00th=[12147],
+     | 30.00th=[17113], 40.00th=[17113], 50.00th=[17113], 60.00th=[17113],
+     | 70.00th=[17113], 80.00th=[17113], 90.00th=[17113], 95.00th=[17113],
+     | 99.00th=[17113], 99.50th=[17113], 99.90th=[17113], 99.95th=[17113],
+     | 99.99th=[17113]
+   bw (  KiB/s): min=35130, max=37048, per=100.00%, avg=36605.84, stdev=212.37, samples=119
+   iops        : min=70261, max=74096, avg=73211.69, stdev=424.68, samples=119
+  lat (msec)   : 250=0.03%, 500=0.42%, 750=0.42%, 1000=0.42%, 2000=1.68%
+  lat (msec)   : >=2000=97.04%
+  cpu          : usr=12.26%, sys=33.85%, ctx=4392080, majf=0, minf=13
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=4390872,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: bw=35.7MiB/s (37.5MB/s), 35.7MiB/s-35.7MiB/s (37.5MB/s-37.5MB/s), io=2144MiB (2248MB), run=60000-60000msec
+
+Disk stats (read/write):
+  nvme0n1: ios=1094146/0, sectors=1094146/0, merge=0/0, ticks=9536/0, in_queue=9536, util=99.68%
+  nvme1n1: ios=1094146/0, sectors=1094146/0, merge=0/0, ticks=9622/0, in_queue=9622, util=99.70%
+  nvme2n1: ios=1094145/0, sectors=1094145/0, merge=0/0, ticks=9614/0, in_queue=9614, util=99.70%
+  nvme3n1: ios=1094145/0, sectors=1094145/0, merge=0/0, ticks=9627/0, in_queue=9627, util=99.70%
+
+ Performance counter stats for 'system wide':
+
+         8,799,763      cs
+
+      60.375424554 seconds time elapsed
+
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=1
+fio-3.35-uring2
+Starting 1 process
+Jobs: 1 (f=4): [r(1)][100.0%][r=35.5MiB/s][r=72.7k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=1): err= 0: pid=142905: Sun Dec  3 17:21:54 2023
+  read: IOPS=72.8k, BW=35.5MiB/s (37.3MB/s)(2132MiB/60001msec)
+    clat (msec): min=212, max=60207, avg=30180.46, stdev=17320.41
+     lat (usec): min=10, max=1438, avg=13.01, stdev= 2.71
+    clat percentiles (msec):
+     |  1.00th=[  827],  5.00th=[ 3205], 10.00th=[ 6208], 20.00th=[12147],
+     | 30.00th=[17113], 40.00th=[17113], 50.00th=[17113], 60.00th=[17113],
+     | 70.00th=[17113], 80.00th=[17113], 90.00th=[17113], 95.00th=[17113],
+     | 99.00th=[17113], 99.50th=[17113], 99.90th=[17113], 99.95th=[17113],
+     | 99.99th=[17113]
+   bw (  KiB/s): min=35290, max=36921, per=100.00%, avg=36404.51, stdev=179.43, samples=119
+   iops        : min=70580, max=73842, avg=72809.03, stdev=358.86, samples=119
+  lat (msec)   : 250=0.04%, 500=0.42%, 750=0.42%, 1000=0.42%, 2000=1.69%
+  lat (msec)   : >=2000=97.01%
+  cpu          : usr=12.89%, sys=33.90%, ctx=4367873, majf=0, minf=13
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=4366577,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: bw=35.5MiB/s (37.3MB/s), 35.5MiB/s-35.5MiB/s (37.3MB/s-37.3MB/s), io=2132MiB (2236MB), run=60001-60001msec
+
+Disk stats (read/write):
+  nvme0n1: ios=1088175/0, sectors=1088175/0, merge=0/0, ticks=9471/0, in_queue=9471, util=99.68%
+  nvme1n1: ios=1088174/0, sectors=1088174/0, merge=0/0, ticks=9564/0, in_queue=9564, util=99.70%
+  nvme2n1: ios=1088174/0, sectors=1088174/0, merge=0/0, ticks=9537/0, in_queue=9537, util=99.71%
+  nvme3n1: ios=1088174/0, sectors=1088174/0, merge=0/0, ticks=9562/0, in_queue=9562, util=99.70%
+
+ Performance counter stats for 'system wide':
+
+         8,751,504      cs
+
+      60.374151306 seconds time elapsed
+
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=2
+fio-3.35-uring2
+Starting 1 process
+Jobs: 1 (f=4): [r(1)][100.0%][r=62.7MiB/s][r=128k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=1): err= 0: pid=142922: Sun Dec  3 17:22:54 2023
+  read: IOPS=128k, BW=62.5MiB/s (65.6MB/s)(3753MiB/60001msec)
+    clat (msec): min=218, max=60207, avg=30214.01, stdev=17315.35
+     lat (usec): min=9, max=5126, avg=15.06, stdev= 5.95
+    clat percentiles (msec):
+     |  1.00th=[  827],  5.00th=[ 3239], 10.00th=[ 6208], 20.00th=[12147],
+     | 30.00th=[17113], 40.00th=[17113], 50.00th=[17113], 60.00th=[17113],
+     | 70.00th=[17113], 80.00th=[17113], 90.00th=[17113], 95.00th=[17113],
+     | 99.00th=[17113], 99.50th=[17113], 99.90th=[17113], 99.95th=[17113],
+     | 99.99th=[17113]
+   bw (  KiB/s): min=61426, max=64463, per=100.00%, avg=64078.20, stdev=293.02, samples=119
+   iops        : min=122852, max=128926, avg=128156.40, stdev=586.03, samples=119
+  lat (msec)   : 250=0.04%, 500=0.41%, 750=0.42%, 1000=0.42%, 2000=1.67%
+  lat (msec)   : >=2000=97.05%
+  cpu          : usr=18.57%, sys=50.94%, ctx=3859134, majf=0, minf=13
+  IO depths    : 1=0.1%, 2=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=7686162,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=2
+
+Run status group 0 (all jobs):
+   READ: bw=62.5MiB/s (65.6MB/s), 62.5MiB/s-62.5MiB/s (65.6MB/s-65.6MB/s), io=3753MiB (3935MB), run=60001-60001msec
+
+Disk stats (read/write):
+  nvme0n1: ios=1915316/0, sectors=1915316/0, merge=0/0, ticks=16539/0, in_queue=16539, util=99.68%
+  nvme1n1: ios=1915316/0, sectors=1915316/0, merge=0/0, ticks=16630/0, in_queue=16630, util=99.70%
+  nvme2n1: ios=1915316/0, sectors=1915316/0, merge=0/0, ticks=16652/0, in_queue=16652, util=99.71%
+  nvme3n1: ios=1915316/0, sectors=1915316/0, merge=0/0, ticks=16671/0, in_queue=16671, util=99.70%
+
+ Performance counter stats for 'system wide':
+
+         7,733,133      cs
+
+      60.374863893 seconds time elapsed
+
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=2
+fio-3.35-uring2
+Starting 1 process
+Jobs: 1 (f=4): [r(1)][100.0%][r=63.5MiB/s][r=130k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=1): err= 0: pid=142940: Sun Dec  3 17:23:55 2023
+  read: IOPS=130k, BW=63.4MiB/s (66.5MB/s)(3804MiB/60001msec)
+    clat (msec): min=217, max=60207, avg=30203.95, stdev=17320.87
+     lat (usec): min=9, max=5109, avg=14.88, stdev= 5.75
+    clat percentiles (msec):
+     |  1.00th=[  827],  5.00th=[ 3239], 10.00th=[ 6208], 20.00th=[12147],
+     | 30.00th=[17113], 40.00th=[17113], 50.00th=[17113], 60.00th=[17113],
+     | 70.00th=[17113], 80.00th=[17113], 90.00th=[17113], 95.00th=[17113],
+     | 99.00th=[17113], 99.50th=[17113], 99.90th=[17113], 99.95th=[17113],
+     | 99.99th=[17113]
+   bw (  KiB/s): min=62194, max=65476, per=100.00%, avg=64946.77, stdev=310.85, samples=119
+   iops        : min=124388, max=130952, avg=129893.55, stdev=621.70, samples=119
+  lat (msec)   : 250=0.04%, 500=0.42%, 750=0.42%, 1000=0.42%, 2000=1.67%
+  lat (msec)   : >=2000=97.04%
+  cpu          : usr=18.57%, sys=50.64%, ctx=3911357, majf=0, minf=13
+  IO depths    : 1=0.1%, 2=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=7790250,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=2
+
+Run status group 0 (all jobs):
+   READ: bw=63.4MiB/s (66.5MB/s), 63.4MiB/s-63.4MiB/s (66.5MB/s-66.5MB/s), io=3804MiB (3989MB), run=60001-60001msec
+
+Disk stats (read/write):
+  nvme0n1: ios=1941255/0, sectors=1941255/0, merge=0/0, ticks=16700/0, in_queue=16700, util=99.68%
+  nvme1n1: ios=1941255/0, sectors=1941255/0, merge=0/0, ticks=16793/0, in_queue=16793, util=99.70%
+  nvme2n1: ios=1941255/0, sectors=1941255/0, merge=0/0, ticks=16808/0, in_queue=16808, util=99.71%
+  nvme3n1: ios=1941254/0, sectors=1941254/0, merge=0/0, ticks=16858/0, in_queue=16858, util=99.70%
+
+ Performance counter stats for 'system wide':
+
+         7,837,441      cs
+
+      60.374215727 seconds time elapsed
+
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=4
+fio-3.35-uring2
+Starting 1 process
+^Cbs: 1 (f=4): [r(1)][1.0%][r=102MiB/s][r=210k IOPS][eta 09m:55s]
+fio: terminating on signal 2
+
+liburing-test: (groupid=0, jobs=1): err= 0: pid=142957: Sun Dec  3 17:24:02 2023
+  read: IOPS=209k, BW=102MiB/s (107MB/s)(590MiB/5782msec)
+    clat (msec): min=228, max=5989, avg=3108.79, stdev=1663.78
+     lat (usec): min=9, max=15208, avg=17.89, stdev=18.24
+    clat percentiles (msec):
+     |  1.00th=[  288],  5.00th=[  518], 10.00th=[  802], 20.00th=[ 1385],
+     | 30.00th=[ 1955], 40.00th=[ 2534], 50.00th=[ 3104], 60.00th=[ 3675],
+     | 70.00th=[ 4279], 80.00th=[ 4866], 90.00th=[ 5403], 95.00th=[ 5671],
+     | 99.00th=[ 5940], 99.50th=[ 5940], 99.90th=[ 6007], 99.95th=[ 6007],
+     | 99.99th=[ 6007]
+   bw (  KiB/s): min=100933, max=105328, per=100.00%, avg=104463.18, stdev=1228.94, samples=11
+   iops        : min=201866, max=210656, avg=208926.36, stdev=2457.88, samples=11
+  lat (msec)   : 250=0.36%, 500=4.35%, 750=4.38%, 1000=4.37%, 2000=17.31%
+  lat (msec)   : >=2000=69.23%
+  cpu          : usr=21.74%, sys=77.94%, ctx=2906, majf=0, minf=14
+  IO depths    : 1=0.1%, 2=0.1%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=1207640,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=4
+
+Run status group 0 (all jobs):
+   READ: bw=102MiB/s (107MB/s), 102MiB/s-102MiB/s (107MB/s-107MB/s), io=590MiB (618MB), run=5782-5782msec
+
+Disk stats (read/write):
+  nvme0n1: ios=290174/0, sectors=290174/0, merge=0/0, ticks=2284/0, in_queue=2284, util=96.23%
+  nvme1n1: ios=290173/0, sectors=290173/0, merge=0/0, ticks=2297/0, in_queue=2297, util=96.42%
+  nvme2n1: ios=290173/0, sectors=290173/0, merge=0/0, ticks=2301/0, in_queue=2301, util=96.52%
+  nvme3n1: ios=290173/0, sectors=290173/0, merge=0/0, ticks=2309/0, in_queue=2309, util=96.48%
+
+ Performance counter stats for 'system wide':
+
+             7,216      cs
+
+       6.157770915 seconds time elapsed
+
+
+brynjar@node2:~/exp_1_2023-12-03$ vim run.sh
+brynjar@node2:~/exp_1_2023-12-03$ taskset -c 0 /mnt/sdb/brynjar/fio-uring2/fio --ioengine=liburing --rw=randread --name=liburing-test --filename=/dev/nvme0n1:/dev/nvme1n1:/dev/nvme2n1:/dev/nvme3n1 --numjobs=1 --direct=1 --bs=512 --iodepth=1 --size=512G --runtime=60 --group_reporting
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=1
+fio-3.35-uring2
+Starting 1 process
+fio: failed opening blockdev /dev/nvme0n1 for size check
+file:filesetup.c:794, func=open(/dev/nvme0n1), error=Permission denied
+fio: pid=0, err=13/file:filesetup.c:794, func=open(/dev/nvme0n1), error=Permission denied
+
+
+Run status group 0 (all jobs):
+brynjar@node2:~/exp_1_2023-12-03$ sudo taskset -c 0 /mnt/sdb/brynjar/fio-uring2/fio --ioengine=liburing --rw=randread --name=liburing-test --filename=/dev/nvme0n1:/dev/nvme1n1:/dev/nvme2n1:/dev/nvme3n1 --numjobs=1 --direct=1 --bs=512 --iodepth=1 --size=512G --runtime=60 --group_reporting
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=1
+fio-3.35-uring2
+Starting 1 process
+^Cbs: 1 (f=4): [r(1)][18.0%][r=35.4MiB/s][r=72.6k IOPS][eta 00m:50s]
+fio: terminating on signal 2
+
+liburing-test: (groupid=0, jobs=1): err= 0: pid=143098: Sun Dec  3 17:28:01 2023
+  read: IOPS=72.9k, BW=35.6MiB/s (37.3MB/s)(369MiB/10364msec)
+    clat (msec): min=213, max=10571, avg=5380.98, stdev=2987.55
+     lat (usec): min=10, max=1416, avg=13.05, stdev= 4.04
+    clat percentiles (msec):
+     |  1.00th=[  334],  5.00th=[  743], 10.00th=[ 1250], 20.00th=[ 2265],
+     | 30.00th=[ 3306], 40.00th=[ 4329], 50.00th=[ 5403], 60.00th=[ 6409],
+     | 70.00th=[ 7416], 80.00th=[ 8490], 90.00th=[ 9597], 95.00th=[10000],
+     | 99.00th=[10402], 99.50th=[10537], 99.90th=[10537], 99.95th=[10537],
+     | 99.99th=[10537]
+   bw (  KiB/s): min=35458, max=36995, per=100.00%, avg=36483.90, stdev=346.92, samples=20
+   iops        : min=70916, max=73990, avg=72967.80, stdev=693.85, samples=20
+  lat (msec)   : 250=0.21%, 500=2.43%, 750=2.46%, 1000=2.45%, 2000=9.75%
+  lat (msec)   : >=2000=82.70%
+  cpu          : usr=12.16%, sys=33.90%, ctx=755765, majf=0, minf=14
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=755583,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: bw=35.6MiB/s (37.3MB/s), 35.6MiB/s-35.6MiB/s (37.3MB/s-37.3MB/s), io=369MiB (387MB), run=10364-10364msec
+
+Disk stats (read/write):
+  nvme0n1: ios=187889/0, sectors=187889/0, merge=0/0, ticks=1645/0, in_queue=1646, util=97.94%
+  nvme1n1: ios=187888/0, sectors=187888/0, merge=0/0, ticks=1664/0, in_queue=1664, util=98.04%
+  nvme2n1: ios=187888/0, sectors=187888/0, merge=0/0, ticks=1660/0, in_queue=1660, util=98.09%
+  nvme3n1: ios=187888/0, sectors=187888/0, merge=0/0, ticks=1663/0, in_queue=1663, util=98.07%
+brynjar@node2:~/exp_1_2023-12-03$ sudo taskset -c 0 /mnt/sdb/brynjar/fio-uring2/fio --ioengine=io_uring --rw=randread --name=liburing-test --filename=/dev/nvme0n1:/dev/nvme1n1:/dev/nvme2n1:/dev/nvme3n1 --numjobs=1 --direct=1 --bs=512 --iodepth=1 --size=512G --runtime=60 --group_reporting
+
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=io_uring, iodepth=1
+fio-3.35-uring2
+Starting 1 process
+^Cbs: 1 (f=4): [r(1)][18.0%][r=37.9MiB/s][r=77.6k IOPS][eta 00m:50s]
+fio: terminating on signal 2
+
+liburing-test: (groupid=0, jobs=1): err= 0: pid=143118: Sun Dec  3 17:29:13 2023
+  read: IOPS=77.6k, BW=37.9MiB/s (39.7MB/s)(390MiB/10300msec)
+    slat (usec): min=2, max=1364, avg= 2.40, stdev= 2.59
+    clat (nsec): min=166, max=282959, avg=9937.97, stdev=1734.11
+     lat (usec): min=11, max=1364, avg=12.33, stdev= 3.09
+    clat percentiles (nsec):
+     |  1.00th=[ 9408],  5.00th=[ 9408], 10.00th=[ 9536], 20.00th=[ 9536],
+     | 30.00th=[ 9664], 40.00th=[ 9664], 50.00th=[ 9792], 60.00th=[ 9792],
+     | 70.00th=[ 9920], 80.00th=[10048], 90.00th=[10176], 95.00th=[10432],
+     | 99.00th=[13376], 99.50th=[19840], 99.90th=[34048], 99.95th=[37120],
+     | 99.99th=[39680]
+   bw (  KiB/s): min=37270, max=39127, per=100.00%, avg=38826.65, stdev=380.01, samples=20
+   iops        : min=74540, max=78254, avg=77653.30, stdev=760.02, samples=20
+  lat (nsec)   : 250=0.01%, 500=0.01%, 750=0.02%, 1000=0.01%
+  lat (usec)   : 2=0.01%, 4=0.01%, 10=77.89%, 20=21.66%, 50=0.42%
+  lat (usec)   : 100=0.01%, 250=0.01%, 500=0.01%
+  cpu          : usr=11.14%, sys=32.66%, ctx=799614, majf=0, minf=12
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=799482,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: bw=37.9MiB/s (39.7MB/s), 37.9MiB/s-37.9MiB/s (39.7MB/s-39.7MB/s), io=390MiB (409MB), run=10300-10300msec
+
+Disk stats (read/write):
+  nvme0n1: ios=195183/0, sectors=195183/0, merge=0/0, ticks=1679/0, in_queue=1679, util=97.93%
+  nvme1n1: ios=195183/0, sectors=195183/0, merge=0/0, ticks=1696/0, in_queue=1696, util=98.04%
+  nvme2n1: ios=195182/0, sectors=195182/0, merge=0/0, ticks=1695/0, in_queue=1695, util=98.10%
+  nvme3n1: ios=199870/0, sectors=199870/0, merge=0/0, ticks=1738/0, in_queue=1738, util=98.03%
+brynjar@node2:~/exp_1_2023-12-03$ sudo taskset -c 0 /mnt/sdb/brynjar/fio-uring2/fio --ioengine=liburing --rw=randread --name=liburing-test --filename=/dev/nvme0n1:/dev/nvme1n1:/dev/nvme2n1:/dev/nvme3n1 --numjobs=1 --direct=1 --bs=512 --iodepth=1 --size=512G --runtime=60 --group_reporting
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=1
+fio-3.35-uring2
+Starting 1 process
+^Cbs: 1 (f=4): [r(1)][14.8%][r=36.2MiB/s][r=74.1k IOPS][eta 00m:52s]
+fio: terminating on signal 2
+
+liburing-test: (groupid=0, jobs=1): err= 0: pid=143206: Sun Dec  3 17:32:51 2023
+  read: IOPS=73.7k, BW=36.0MiB/s (37.7MB/s)(293MiB/8150msec)
+    clat (msec): min=213, max=8357, avg=4293.32, stdev=2348.18
+     lat (usec): min=11, max=1366, avg=12.89, stdev= 2.98
+    clat percentiles (msec):
+     |  1.00th=[  313],  5.00th=[  634], 10.00th=[ 1045], 20.00th=[ 1854],
+     | 30.00th=[ 2668], 40.00th=[ 3473], 50.00th=[ 4279], 60.00th=[ 5134],
+     | 70.00th=[ 5940], 80.00th=[ 6745], 90.00th=[ 7550], 95.00th=[ 7953],
+     | 99.00th=[ 8288], 99.50th=[ 8288], 99.90th=[ 8356], 99.95th=[ 8356],
+     | 99.99th=[ 8356]
+   bw (  KiB/s): min=35397, max=37085, per=100.00%, avg=36844.69, stdev=399.43, samples=16
+   iops        : min=70794, max=74170, avg=73689.38, stdev=798.86, samples=16
+  lat (msec)   : 250=0.26%, 500=3.06%, 750=3.09%, 1000=3.08%, 2000=12.35%
+  lat (msec)   : >=2000=78.15%
+  cpu          : usr=10.65%, sys=35.49%, ctx=600435, majf=0, minf=12
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=600266,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: bw=36.0MiB/s (37.7MB/s), 36.0MiB/s-36.0MiB/s (37.7MB/s-37.7MB/s), io=293MiB (307MB), run=8150-8150msec
+
+Disk stats (read/write):
+  nvme0n1: ios=148360/0, sectors=148360/0, merge=0/0, ticks=1285/0, in_queue=1285, util=97.40%
+  nvme1n1: ios=148360/0, sectors=148360/0, merge=0/0, ticks=1297/0, in_queue=1297, util=97.53%
+  nvme2n1: ios=148359/0, sectors=148359/0, merge=0/0, ticks=1300/0, in_queue=1300, util=97.60%
+  nvme3n1: ios=148359/0, sectors=148359/0, merge=0/0, ticks=1299/0, in_queue=1299, util=97.57%
+brynjar@node2:~/exp_1_2023-12-03$ sudo taskset -c 0 /mnt/sdb/brynjar/fio-uring2/fio --ioengine=liburing --rw=randread --name=liburing-test --filename=/dev/nvme0n1:/dev/nvme1n1:/dev/nvme2n1:/dev/nvme3n1 --numjobs=1 --direct=1 --bs=512 --iodepth=1 --size=512G --runtime=60 --group_reporting
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=1
+fio-3.35-uring2
+Starting 1 process
+^Cbs: 1 (f=4): [r(1)][14.8%][r=36.3MiB/s][r=74.4k IOPS][eta 00m:52s]
+fio: terminating on signal 2
+
+liburing-test: (groupid=0, jobs=1): err= 0: pid=143268: Sun Dec  3 17:35:08 2023
+  read: IOPS=74.2k, BW=36.2MiB/s (38.0MB/s)(306MiB/8450msec)
+    clat (msec): min=212, max=8657, avg=4441.26, stdev=2432.99
+     lat (usec): min=11, max=1423, avg=12.89, stdev= 3.68
+    clat percentiles (msec):
+     |  1.00th=[  313],  5.00th=[  651], 10.00th=[ 1070], 20.00th=[ 1921],
+     | 30.00th=[ 2769], 40.00th=[ 3608], 50.00th=[ 4463], 60.00th=[ 5269],
+     | 70.00th=[ 6141], 80.00th=[ 6946], 90.00th=[ 7819], 95.00th=[ 8221],
+     | 99.00th=[ 8557], 99.50th=[ 8658], 99.90th=[ 8658], 99.95th=[ 8658],
+     | 99.99th=[ 8658]
+   bw (  KiB/s): min=35741, max=37360, per=100.00%, avg=37113.62, stdev=382.69, samples=16
+   iops        : min=71482, max=74720, avg=74227.25, stdev=765.38, samples=16
+  lat (msec)   : 250=0.25%, 500=2.97%, 750=2.98%, 1000=2.98%, 2000=11.83%
+  lat (msec)   : >=2000=78.99%
+  cpu          : usr=11.81%, sys=34.32%, ctx=627035, majf=0, minf=12
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=626907,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: bw=36.2MiB/s (38.0MB/s), 36.2MiB/s-36.2MiB/s (38.0MB/s-38.0MB/s), io=306MiB (321MB), run=8450-8450msec
+
+Disk stats (read/write):
+  nvme0n1: ios=154124/0, sectors=154124/0, merge=0/0, ticks=1328/0, in_queue=1327, util=97.47%
+  nvme1n1: ios=154123/0, sectors=154123/0, merge=0/0, ticks=1344/0, in_queue=1344, util=97.60%
+  nvme2n1: ios=154123/0, sectors=154123/0, merge=0/0, ticks=1340/0, in_queue=1340, util=97.67%
+  nvme3n1: ios=154123/0, sectors=154123/0, merge=0/0, ticks=1342/0, in_queue=1342, util=97.64%
+brynjar@node2:~/exp_1_2023-12-03$ sudo taskset -c 0 /mnt/sdb/brynjar/fio-uring2/fio --ioengine=liburing --rw=randread --name=liburing-test --filename=/dev/nvme0n1:/dev/nvme1n1:/dev/nvme2n1:/dev/nvme3n1 --numjobs=1 --direct=1 --bs=512 --iodepth=1 --size=512G --runtime=60 --group_reporting
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=1
+fio-3.35-uring2
+Starting 1 process
+^Cbs: 1 (f=4): [r(1)][14.8%][r=35.6MiB/s][r=73.0k IOPS][eta 00m:52s]
+fio: terminating on signal 2
+
+liburing-test: (groupid=0, jobs=1): err= 0: pid=143331: Sun Dec  3 17:37:28 2023
+  read: IOPS=72.5k, BW=35.4MiB/s (37.1MB/s)(292MiB/8250msec)
+    slat (nsec): min=0, max=0, avg= 0.00, stdev= 0.00
+    clat (msec): min=213, max=8457, avg=4338.02, stdev=2380.71
+     lat (usec): min=11, max=1875, avg=13.04, stdev= 4.36
+    clat percentiles (msec):
+     |  1.00th=[  313],  5.00th=[  634], 10.00th=[ 1036], 20.00th=[ 1854],
+     | 30.00th=[ 2702], 40.00th=[ 3507], 50.00th=[ 4329], 60.00th=[ 5134],
+     | 70.00th=[ 6007], 80.00th=[ 6812], 90.00th=[ 7617], 95.00th=[ 8020],
+     | 99.00th=[ 8356], 99.50th=[ 8423], 99.90th=[ 8423], 99.95th=[ 8423],
+     | 99.99th=[ 8490]
+   bw (  KiB/s): min=35324, max=37008, per=100.00%, avg=36262.94, stdev=344.39, samples=16
+   iops        : min=70648, max=74016, avg=72525.88, stdev=688.78, samples=16
+  lat (msec)   : 250=0.26%, 500=3.07%, 750=3.09%, 1000=3.10%, 2000=12.23%
+  lat (msec)   : >=2000=78.25%
+  cpu          : usr=13.33%, sys=33.90%, ctx=598271, majf=0, minf=12
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=598105,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: bw=35.4MiB/s (37.1MB/s), 35.4MiB/s-35.4MiB/s (37.1MB/s-37.1MB/s), io=292MiB (306MB), run=8250-8250msec
+
+Disk stats (read/write):
+  nvme0n1: ios=145978/0, sectors=145978/0, merge=0/0, ticks=1263/0, in_queue=1263, util=97.42%
+  nvme1n1: ios=145978/0, sectors=145978/0, merge=0/0, ticks=1279/0, in_queue=1279, util=97.55%
+  nvme2n1: ios=145977/0, sectors=145977/0, merge=0/0, ticks=1274/0, in_queue=1274, util=97.62%
+  nvme3n1: ios=145977/0, sectors=145977/0, merge=0/0, ticks=1277/0, in_queue=1277, util=97.60%
+brynjar@node2:~/exp_1_2023-12-03$ sudo taskset -c 0 /mnt/sdb/brynjar/fio-uring2/fio --ioengine=liburing --rw=randread --name=liburing-test --filename=/dev/nvme0n1:/dev/nvme1n1:/dev/nvme2n1:/dev/nvme3n1 --numjobs=1 --direct=1 --bs=512 --iodepth=1 --size=512G --runtime=60 --group_reporting
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=1
+fio-3.35-uring2
+Starting 1 process
+^Cbs: 1 (f=4): [r(1)][13.1%][r=35.9MiB/s][r=73.5k IOPS][eta 00m:53s]
+fio: terminating on signal 2
+
+liburing-test: (groupid=0, jobs=1): err= 0: pid=143413: Sun Dec  3 17:41:28 2023
+  read: IOPS=73.4k, BW=35.8MiB/s (37.6MB/s)(259MiB/7223msec)
+    slat (nsec): min=52, max=8560, avg=70.55, stdev=39.87
+    clat (usec): min=11, max=1431, avg=12.88, stdev= 3.69
+     lat (usec): min=11, max=1431, avg=12.95, stdev= 3.69
+    clat percentiles (nsec):
+     |  1.00th=[12224],  5.00th=[12224], 10.00th=[12352], 20.00th=[12480],
+     | 30.00th=[12608], 40.00th=[12608], 50.00th=[12736], 60.00th=[12864],
+     | 70.00th=[12864], 80.00th=[12992], 90.00th=[13120], 95.00th=[13376],
+     | 99.00th=[15808], 99.50th=[22656], 99.90th=[34048], 99.95th=[39168],
+     | 99.99th=[44800]
+   bw (  KiB/s): min=35487, max=37045, per=100.00%, avg=36698.00, stdev=367.87, samples=14
+   iops        : min=70974, max=74090, avg=73396.00, stdev=735.74, samples=14
+  lat (usec)   : 20=99.25%, 50=0.75%, 100=0.01%, 250=0.01%, 500=0.01%
+  lat (msec)   : 2=0.01%
+  cpu          : usr=12.72%, sys=33.97%, ctx=530043, majf=0, minf=14
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=529886,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: bw=35.8MiB/s (37.6MB/s), 35.8MiB/s-35.8MiB/s (37.6MB/s-37.6MB/s), io=259MiB (271MB), run=7223-7223msec
+
+Disk stats (read/write):
+  nvme0n1: ios=129401/0, sectors=129401/0, merge=0/0, ticks=1121/0, in_queue=1121, util=97.04%
+  nvme1n1: ios=129401/0, sectors=129401/0, merge=0/0, ticks=1124/0, in_queue=1124, util=97.19%
+  nvme2n1: ios=129401/0, sectors=129401/0, merge=0/0, ticks=1135/0, in_queue=1135, util=97.27%
+  nvme3n1: ios=129401/0, sectors=129401/0, merge=0/0, ticks=1135/0, in_queue=1135, util=97.24%
+brynjar@node2:~/exp_1_2023-12-03$ sudo taskset -c 0 /mnt/sdb/brynjar/fio-uring2/fio --ioengine=io_uring --rw=randread --name=liburing-test --filename=/dev/nvme0n1:/dev/nvme1n1:/dev/nvme2n1:/dev/nvme3n1 --numjobs=1 --direct=1 --bs=512 --iodepth=1 --size=512G --runtime=60 --group_reporting
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=io_uring, iodepth=1
+fio-3.35-uring2
+Starting 1 process
+^Cbs: 1 (f=4): [r(1)][13.1%][r=37.0MiB/s][r=75.8k IOPS][eta 00m:53s]
+fio: terminating on signal 2
+
+liburing-test: (groupid=0, jobs=1): err= 0: pid=143425: Sun Dec  3 17:41:59 2023
+  read: IOPS=75.6k, BW=36.9MiB/s (38.7MB/s)(267MiB/7238msec)
+    slat (usec): min=2, max=1414, avg= 2.49, stdev= 2.01
+    clat (nsec): min=195, max=1372.9k, avg=10099.80, stdev=3096.41
+     lat (usec): min=10, max=1429, avg=12.59, stdev= 3.69
+    clat percentiles (nsec):
+     |  1.00th=[ 9408],  5.00th=[ 9536], 10.00th=[ 9536], 20.00th=[ 9664],
+     | 30.00th=[ 9792], 40.00th=[ 9792], 50.00th=[ 9920], 60.00th=[10048],
+     | 70.00th=[10048], 80.00th=[10176], 90.00th=[10432], 95.00th=[10560],
+     | 99.00th=[13376], 99.50th=[20096], 99.90th=[32640], 99.95th=[36096],
+     | 99.99th=[39680]
+   bw (  KiB/s): min=36448, max=38094, per=100.00%, avg=37842.07, stdev=409.29, samples=14
+   iops        : min=72896, max=76188, avg=75684.14, stdev=818.58, samples=14
+  lat (nsec)   : 250=0.01%, 500=0.01%, 750=0.02%, 1000=0.01%
+  lat (usec)   : 2=0.01%, 4=0.01%, 10=57.65%, 20=41.82%, 50=0.50%
+  lat (usec)   : 100=0.01%, 250=0.01%, 500=0.01%
+  lat (msec)   : 2=0.01%
+  cpu          : usr=11.22%, sys=33.47%, ctx=547624, majf=0, minf=14
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=547518,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: bw=36.9MiB/s (38.7MB/s), 36.9MiB/s-36.9MiB/s (38.7MB/s-38.7MB/s), io=267MiB (280MB), run=7238-7238msec
+
+Disk stats (read/write):
+  nvme0n1: ios=133454/0, sectors=133454/0, merge=0/0, ticks=1162/0, in_queue=1162, util=97.04%
+  nvme1n1: ios=133453/0, sectors=133453/0, merge=0/0, ticks=1175/0, in_queue=1175, util=97.19%
+  nvme2n1: ios=133453/0, sectors=133453/0, merge=0/0, ticks=1173/0, in_queue=1173, util=97.27%
+  nvme3n1: ios=133453/0, sectors=133453/0, merge=0/0, ticks=1173/0, in_queue=1173, util=97.24%
+brynjar@node2:~/exp_1_2023-12-03$ ls
+run.sh
+brynjar@node2:~/exp_1_2023-12-03$ vim run.sh
+brynjar@node2:~/exp_1_2023-12-03$ sudo sh run.sh
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=1
+...
+fio-3.35-uring2
+Starting 4 processes
+Jobs: 4 (f=16): [r(4)][100.0%][r=63.1MiB/s][r=129k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=4): err= 0: pid=143503: Sun Dec  3 17:46:56 2023
+  read: IOPS=128k, BW=62.7MiB/s (65.7MB/s)(3760MiB/60002msec)
+    slat (nsec): min=40, max=2598.5k, avg=157.60, stdev=1069.29
+    clat (usec): min=9, max=15268, avg=30.04, stdev=21.47
+     lat (usec): min=9, max=15268, avg=30.20, stdev=21.54
+    clat percentiles (usec):
+     |  1.00th=[   15],  5.00th=[   20], 10.00th=[   23], 20.00th=[   23],
+     | 30.00th=[   29], 40.00th=[   30], 50.00th=[   31], 60.00th=[   31],
+     | 70.00th=[   31], 80.00th=[   36], 90.00th=[   38], 95.00th=[   43],
+     | 99.00th=[   53], 99.50th=[   59], 99.90th=[   89], 99.95th=[  104],
+     | 99.99th=[  178]
+   bw (  KiB/s): min=53453, max=65212, per=100.00%, avg=64207.54, stdev=265.66, samples=476
+   iops        : min=106906, max=130424, avg=128415.21, stdev=531.31, samples=476
+  lat (usec)   : 10=0.01%, 20=5.10%, 50=93.12%, 100=1.71%, 250=0.05%
+  lat (usec)   : 500=0.01%, 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.01%, 20=0.01%
+  cpu          : usr=6.96%, sys=17.97%, ctx=7694754, majf=0, minf=53
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=7701045,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: bw=62.7MiB/s (65.7MB/s), 62.7MiB/s-62.7MiB/s (65.7MB/s-65.7MB/s), io=3760MiB (3943MB), run=60002-60002msec
+
+Disk stats (read/write):
+  nvme0n1: ios=1918561/0, sectors=1918561/0, merge=0/0, ticks=15574/0, in_queue=15574, util=99.18%
+  nvme1n1: ios=1925261/0, sectors=1925261/0, merge=0/0, ticks=15802/0, in_queue=15802, util=99.17%
+  nvme2n1: ios=1925261/0, sectors=1925261/0, merge=0/0, ticks=15791/0, in_queue=15791, util=99.18%
+  nvme3n1: ios=1925260/0, sectors=1925260/0, merge=0/0, ticks=15792/0, in_queue=15792, util=99.19%
+
+ Performance counter stats for 'system wide':
+
+         7,720,305      cs
+
+      60.674892840 seconds time elapsed
+
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=1
+...
+fio-3.35-uring2
+Starting 4 processes
+Jobs: 4 (f=16): [r(4)][100.0%][r=61.0MiB/s][r=125k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=4): err= 0: pid=143522: Sun Dec  3 17:47:57 2023
+  read: IOPS=124k, BW=60.7MiB/s (63.6MB/s)(3642MiB/60004msec)
+    slat (nsec): min=62, max=1264.6k, avg=227.75, stdev=999.91
+    clat (usec): min=9, max=21232, avg=30.64, stdev=22.01
+     lat (usec): min=9, max=21232, avg=30.86, stdev=22.11
+    clat percentiles (usec):
+     |  1.00th=[   15],  5.00th=[   23], 10.00th=[   23], 20.00th=[   29],
+     | 30.00th=[   29], 40.00th=[   31], 50.00th=[   31], 60.00th=[   32],
+     | 70.00th=[   32], 80.00th=[   32], 90.00th=[   39], 95.00th=[   40],
+     | 99.00th=[   55], 99.50th=[   60], 99.90th=[   93], 99.95th=[  116],
+     | 99.99th=[  153]
+   bw (  KiB/s): min=52116, max=62652, per=100.00%, avg=62200.91, stdev=241.71, samples=476
+   iops        : min=104232, max=125304, avg=124401.84, stdev=483.41, samples=476
+  lat (usec)   : 10=0.01%, 20=2.95%, 50=95.61%, 100=1.36%, 250=0.07%
+  lat (usec)   : 500=0.01%, 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.01%, 20=0.01%, 50=0.01%
+  cpu          : usr=8.32%, sys=16.61%, ctx=7455265, majf=0, minf=54
+/mnt/sdb/linux_build/linux-6.3.8-local/linux-6.3.8/tools/perf/perf stat -a -e cs -- taskset -c 0 /mnt/sdb/brynjar/fio-uring2/fio --ioengine=liburing --rw=randread --name=liburing-test --filename=/dev/nvme0n1:/dev/nvme1n1:/dev/nvme2n1:/dev/nvme3n1 --numjobs=4 --direct=1 --bs=512 --iodepth=16 --size=512G --runtime=600 --group_reporting
+/mnt/sdb/linux_build/linux-6.3.8-local/linux-6.3.8/tools/perf/perf stat -a -e cs -- taskset -c 0 /mnt/sdb/brynjar/fio-uring2/fio --ioengine=liburing --rw=randread --name=liburing-test --filename=/dev/nvme0n1:/dev/nvme1n1:/dev/nvme2n1:/dev/nvme3n1 --numjobs=4 --direct=1 --bs=512 --iodepth=16 --size=512G --runtime=600 --group_reporting --coop_taskrun
+
+/mnt/sdb/linux_build/linux-6.3.8-local/linux-6.3.8/tools/perf/perf stat -a -e cs -- taskset -c 0 /mnt/sdb/brynjar/fio-uring2/fio --ioengine=liburing --rw=randread --name=liburing-test --filename=/dev/nvme0n1:/dev/nvme1n1:/dev/nvme2n1:/dev/nvme3n1 --numjobs=4 --direct=1 --bs=512 --iodepth=32 --size=512G --runtime=600 --group_reporting
+/mnt/sdb/linux_build/linux-6.3.8-local/linux-6.3.8/tools/perf/perf stat -a -e cs -- taskset -c 0 /mnt/sdb/brynjar/fio-uring2/fio --ioengine=liburing --rw=randread --name=liburing-test --filename=/dev/nvme0n1:/dev/nvme1n1:/dev/nvme2n1:/dev/nvme3n1 --numjobs=4 --direct=1 --bs=512 --iodepth=32 --size=512G --runtime=600 --group_reporting --coop_taskrun
+
+/mnt/sdb/linux_build/linux-6.3.8-local/linux-6.3.8/tools/perf/perf stat -a -e cs -- taskset -c 0 /mnt/sdb/brynjar/fio-uring2/fio --ioengine=liburing --rw=randread --name=liburing-test --filename=/dev/nvme0n1:/dev/nvme1n1:/dev/nvme2n1:/dev/nvme3n1 --numjobs=4 --direct=1 --bs=512 --iodepth=64 --size=512G --runtime=600 --group_reporting
+/mnt/sdb/linux_build/linux-6.3.8-local/linux-6.3.8/tools/perf/perf stat -a -e cs -- taskset -c 0 /mnt/sdb/brynjar/fio-uring2/fio --ioengine=liburing --rw=randread --name=liburing-test --filename=/dev/nvme0n1:/dev/nvme1n1:/dev/nvme2n1:/dev/nvme3n1 --numjobs=4 --direct=1 --bs=512 --iodepth=64 --size=512G --runtime=600 --group_reporting --coop_taskrun
+
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=7459254,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: bw=60.7MiB/s (63.6MB/s), 60.7MiB/s-60.7MiB/s (63.6MB/s-63.6MB/s), io=3642MiB (3819MB), run=60004-60004msec
+
+Disk stats (read/write):
+  nvme0n1: ios=1858782/0, sectors=1858782/0, merge=0/0, ticks=15328/0, in_queue=15328, util=99.18%
+  nvme1n1: ios=1858782/0, sectors=1858782/0, merge=0/0, ticks=15486/0, in_queue=15486, util=99.20%
+  nvme2n1: ios=1858781/0, sectors=1858781/0, merge=0/0, ticks=15472/0, in_queue=15472, util=99.21%
+  nvme3n1: ios=1858779/0, sectors=1858779/0, merge=0/0, ticks=15511/0, in_queue=15511, util=99.20%
+
+ Performance counter stats for 'system wide':
+
+         7,479,417      cs
+
+      60.656716884 seconds time elapsed
+
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=2
+...
+fio-3.35-uring2
+Starting 4 processes
+^Cbs: 4 (f=16): [r(4)][53.3%][r=78.4MiB/s][r=160k IOPS][eta 00m:28s]
+fio: terminating on signal 2
+
+liburing-test: (groupid=0, jobs=4): err= 0: pid=143543: Sun Dec  3 17:48:30 2023
+  read: IOPS=160k, BW=77.9MiB/s (81.7MB/s)(2482MiB/31869msec)
+    slat (nsec): min=42, max=263793, avg=186.13, stdev=613.71
+    clat (usec): min=9, max=26611, avg=47.94, stdev=38.22
+     lat (usec): min=9, max=26611, avg=48.13, stdev=38.24
+    clat percentiles (usec):
+     |  1.00th=[   30],  5.00th=[   40], 10.00th=[   42], 20.00th=[   42],
+     | 30.00th=[   42], 40.00th=[   44], 50.00th=[   50], 60.00th=[   52],
+     | 70.00th=[   52], 80.00th=[   53], 90.00th=[   55], 95.00th=[   62],
+     | 99.00th=[   78], 99.50th=[   85], 99.90th=[  120], 99.95th=[  143],
+     | 99.99th=[  285]
+   bw (  KiB/s): min=65117, max=80577, per=100.00%, avg=79897.38, stdev=478.52, samples=252
+   iops        : min=130234, max=161154, avg=159794.76, stdev=957.04, samples=252
+  lat (usec)   : 10=0.05%, 20=0.47%, 50=49.57%, 100=49.70%, 250=0.20%
+  lat (usec)   : 500=0.01%, 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.01%, 20=0.01%, 50=0.01%
+  cpu          : usr=11.44%, sys=13.50%, ctx=2536745, majf=0, minf=62
+  IO depths    : 1=0.1%, 2=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=5084129,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=2
+
+Run status group 0 (all jobs):
+   READ: bw=77.9MiB/s (81.7MB/s), 77.9MiB/s-77.9MiB/s (81.7MB/s-81.7MB/s), io=2482MiB (2603MB), run=31869-31869msec
+
+Disk stats (read/write):
+  nvme0n1: ios=1269968/0, sectors=1269968/0, merge=0/0, ticks=10058/0, in_queue=10058, util=98.46%
+  nvme1n1: ios=1269967/0, sectors=1269967/0, merge=0/0, ticks=10148/0, in_queue=10148, util=98.48%
+  nvme2n1: ios=1269966/0, sectors=1269966/0, merge=0/0, ticks=10152/0, in_queue=10152, util=98.51%
+  nvme3n1: ios=1269964/0, sectors=1269964/0, merge=0/0, ticks=10173/0, in_queue=10173, util=98.47%
+
+ Performance counter stats for 'system wide':
+
+         2,547,370      cs
+
+      32.492247510 seconds time elapsed
+
+
+brynjar@node2:~/exp_1_2023-12-03$ ls
+run.sh
+brynjar@node2:~/exp_1_2023-12-03$ vim run.sh
+brynjar@node2:~/exp_1_2023-12-03$ who
+brynjar  pts/0        2023-12-03 16:31 (tmux(138947).%0)
+brynjar  pts/6        2023-11-28 19:14 (192.168.1.100)
+brynjar@node2:~/exp_1_2023-12-03$ sudo sh run.sh
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=1
+...
+fio-3.35-uring2
+Starting 4 processes
+Jobs: 4 (f=16): [r(4)][100.0%][r=60.1MiB/s][r=123k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=4): err= 0: pid=143594: Sun Dec  3 17:59:41 2023
+  read: IOPS=124k, BW=60.4MiB/s (63.3MB/s)(35.4GiB/600006msec)
+    slat (nsec): min=42, max=3146.4k, avg=222.97, stdev=916.75
+    clat (usec): min=9, max=15079, avg=31.11, stdev=14.53
+     lat (usec): min=9, max=15079, avg=31.33, stdev=14.61
+    clat percentiles (usec):
+     |  1.00th=[   15],  5.00th=[   23], 10.00th=[   24], 20.00th=[   29],
+     | 30.00th=[   30], 40.00th=[   31], 50.00th=[   32], 60.00th=[   32],
+     | 70.00th=[   32], 80.00th=[   32], 90.00th=[   39], 95.00th=[   40],
+     | 99.00th=[   53], 99.50th=[   59], 99.90th=[   92], 99.95th=[  165],
+     | 99.99th=[  229]
+   bw (  KiB/s): min=51327, max=62434, per=100.00%, avg=61852.47, stdev=101.90, samples=4796
+   iops        : min=102654, max=124868, avg=123705.09, stdev=203.78, samples=4796
+  lat (usec)   : 10=0.01%, 20=2.35%, 50=96.50%, 100=1.07%, 250=0.07%
+  lat (usec)   : 500=0.01%, 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.01%, 20=0.01%
+  cpu          : usr=7.69%, sys=17.24%, ctx=74147715, majf=0, minf=57
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=74183732,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: bw=60.4MiB/s (63.3MB/s), 60.4MiB/s-60.4MiB/s (63.3MB/s-63.3MB/s), io=35.4GiB (38.0GB), run=600006-600006msec
+
+Disk stats (read/write):
+  nvme0n1: ios=18539962/0, sectors=18539962/0, merge=0/0, ticks=156600/0, in_queue=156600, util=99.96%
+  nvme1n1: ios=18539960/0, sectors=18539960/0, merge=0/0, ticks=158216/0, in_queue=158216, util=99.97%
+  nvme2n1: ios=18539960/0, sectors=18539960/0, merge=0/0, ticks=158586/0, in_queue=158586, util=99.97%
+  nvme3n1: ios=18539959/0, sectors=18539959/0, merge=0/0, ticks=158882/0, in_queue=158882, util=99.97%
+
+ Performance counter stats for 'system wide':
+
+        74,372,241      cs
+
+     600.661205690 seconds time elapsed
+
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=1
+...
+fio-3.35-uring2
+Starting 4 processes
+Jobs: 4 (f=16): [r(4)][100.0%][r=62.7MiB/s][r=128k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=4): err= 0: pid=143731: Sun Dec  3 18:09:42 2023
+  read: IOPS=128k, BW=62.4MiB/s (65.5MB/s)(36.6GiB/600003msec)
+    slat (nsec): min=41, max=1414.2k, avg=188.17, stdev=756.50
+    clat (usec): min=9, max=16854, avg=30.09, stdev=14.71
+     lat (usec): min=9, max=16854, avg=30.28, stdev=14.78
+    clat percentiles (usec):
+     |  1.00th=[   15],  5.00th=[   15], 10.00th=[   23], 20.00th=[   23],
+     | 30.00th=[   28], 40.00th=[   29], 50.00th=[   31], 60.00th=[   31],
+     | 70.00th=[   31], 80.00th=[   37], 90.00th=[   39], 95.00th=[   45],
+     | 99.00th=[   54], 99.50th=[   60], 99.90th=[   89], 99.95th=[  106],
+     | 99.99th=[  165]
+   bw (  KiB/s): min=53236, max=64687, per=100.00%, avg=63956.57, stdev=107.03, samples=4796
+   iops        : min=106472, max=129374, avg=127913.24, stdev=214.04, samples=4796
+  lat (usec)   : 10=0.01%, 20=6.08%, 50=91.68%, 100=2.18%, 250=0.05%
+  lat (usec)   : 500=0.01%, 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.01%, 20=0.01%
+  cpu          : usr=7.32%, sys=17.61%, ctx=76653538, majf=0, minf=53
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=76707131,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: bw=62.4MiB/s (65.5MB/s), 62.4MiB/s-62.4MiB/s (65.5MB/s-65.5MB/s), io=36.6GiB (39.3GB), run=600003-600003msec
+
+Disk stats (read/write):
+  nvme0n1: ios=19170512/0, sectors=19170512/0, merge=0/0, ticks=155314/0, in_queue=155314, util=99.97%
+  nvme1n1: ios=19170511/0, sectors=19170511/0, merge=0/0, ticks=157552/0, in_queue=157552, util=99.97%
+  nvme2n1: ios=19170510/0, sectors=19170510/0, merge=0/0, ticks=157347/0, in_queue=157347, util=99.97%
+  nvme3n1: ios=19170510/0, sectors=19170510/0, merge=0/0, ticks=157431/0, in_queue=157431, util=99.97%
+
+ Performance counter stats for 'system wide':
+
+        76,885,313      cs
+
+     600.667172037 seconds time elapsed
+
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=2
+...
+fio-3.35-uring2
+Starting 4 processes
+Jobs: 4 (f=16): [r(4)][100.0%][r=77.7MiB/s][r=159k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=4): err= 0: pid=143866: Sun Dec  3 18:19:43 2023
+  read: IOPS=160k, BW=78.0MiB/s (81.8MB/s)(45.7GiB/600004msec)
+    slat (nsec): min=41, max=4335.3k, avg=176.22, stdev=1055.02
+    clat (usec): min=9, max=38103, avg=47.98, stdev=19.86
+     lat (usec): min=9, max=38103, avg=48.16, stdev=19.98
+    clat percentiles (usec):
+     |  1.00th=[   30],  5.00th=[   40], 10.00th=[   42], 20.00th=[   42],
+     | 30.00th=[   43], 40.00th=[   44], 50.00th=[   51], 60.00th=[   52],
+     | 70.00th=[   52], 80.00th=[   53], 90.00th=[   55], 95.00th=[   62],
+     | 99.00th=[   77], 99.50th=[   84], 99.90th=[  114], 99.95th=[  128],
+     | 99.99th=[  285]
+   bw (  KiB/s): min=67037, max=80503, per=100.00%, avg=79901.97, stdev=126.70, samples=4796
+   iops        : min=134074, max=161006, avg=159804.06, stdev=253.39, samples=4796
+  lat (usec)   : 10=0.05%, 20=0.42%, 50=49.39%, 100=49.95%, 250=0.18%
+  lat (usec)   : 500=0.01%, 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.01%, 20=0.01%, 50=0.01%
+  cpu          : usr=11.73%, sys=13.23%, ctx=47817994, majf=0, minf=54
+  IO depths    : 1=0.1%, 2=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=95832969,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=2
+
+Run status group 0 (all jobs):
+   READ: bw=78.0MiB/s (81.8MB/s), 78.0MiB/s-78.0MiB/s (81.8MB/s-81.8MB/s), io=45.7GiB (49.1GB), run=600004-600004msec
+
+Disk stats (read/write):
+  nvme0n1: ios=23949917/0, sectors=23949917/0, merge=0/0, ticks=189134/0, in_queue=189134, util=99.96%
+  nvme1n1: ios=23949917/0, sectors=23949917/0, merge=0/0, ticks=191051/0, in_queue=191051, util=99.97%
+  nvme2n1: ios=23958242/0, sectors=23958242/0, merge=0/0, ticks=191141/0, in_queue=191141, util=99.96%
+  nvme3n1: ios=23958240/0, sectors=23958240/0, merge=0/0, ticks=191629/0, in_queue=191629, util=99.96%
+
+ Performance counter stats for 'system wide':
+
+        48,003,893      cs
+
+     600.672144643 seconds time elapsed
+
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=2
+...
+fio-3.35-uring2
+Starting 4 processes
+Jobs: 4 (f=16): [r(4)][100.0%][r=78.8MiB/s][r=161k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=4): err= 0: pid=144006: Sun Dec  3 18:29:44 2023
+  read: IOPS=162k, BW=79.0MiB/s (82.8MB/s)(46.3GiB/600007msec)
+    slat (nsec): min=36, max=4118.2k, avg=205.40, stdev=1030.73
+    clat (usec): min=9, max=35480, avg=47.44, stdev=19.83
+     lat (usec): min=9, max=35481, avg=47.64, stdev=19.94
+    clat percentiles (usec):
+     |  1.00th=[   29],  5.00th=[   40], 10.00th=[   41], 20.00th=[   42],
+     | 30.00th=[   42], 40.00th=[   44], 50.00th=[   50], 60.00th=[   51],
+     | 70.00th=[   52], 80.00th=[   53], 90.00th=[   55], 95.00th=[   61],
+     | 99.00th=[   77], 99.50th=[   85], 99.90th=[  120], 99.95th=[  145],
+     | 99.99th=[  289]
+   bw (  KiB/s): min=68300, max=81808, per=100.00%, avg=80928.98, stdev=126.09, samples=4796
+   iops        : min=136600, max=163616, avg=161858.24, stdev=252.20, samples=4796
+  lat (usec)   : 10=0.06%, 20=0.47%, 50=49.79%, 100=49.49%, 250=0.19%
+  lat (usec)   : 500=0.01%, 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.01%, 20=0.01%, 50=0.01%
+  cpu          : usr=11.13%, sys=13.82%, ctx=48420422, majf=0, minf=58
+  IO depths    : 1=0.1%, 2=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=97066073,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=2
+
+Run status group 0 (all jobs):
+   READ: bw=79.0MiB/s (82.8MB/s), 79.0MiB/s-79.0MiB/s (82.8MB/s-82.8MB/s), io=46.3GiB (49.7GB), run=600007-600007msec
+
+Disk stats (read/write):
+  nvme0n1: ios=24258178/0, sectors=24258178/0, merge=0/0, ticks=191166/0, in_queue=191166, util=99.96%
+  nvme1n1: ios=24258177/0, sectors=24258177/0, merge=0/0, ticks=193187/0, in_queue=193187, util=99.97%
+  nvme2n1: ios=24258177/0, sectors=24258177/0, merge=0/0, ticks=193185/0, in_queue=193185, util=99.97%
+  nvme3n1: ios=24258175/0, sectors=24258175/0, merge=0/0, ticks=193617/0, in_queue=193617, util=99.96%
+
+ Performance counter stats for 'system wide':
+
+        48,604,493      cs
+
+     600.671595523 seconds time elapsed
+
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=4
+...
+fio-3.35-uring2
+Starting 4 processes
+Jobs: 4 (f=16): [r(4)][100.0%][r=104MiB/s][r=212k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=4): err= 0: pid=144147: Sun Dec  3 18:39:45 2023
+  read: IOPS=213k, BW=104MiB/s (109MB/s)(60.8GiB/600023msec)
+    slat (nsec): min=40, max=28322k, avg=264.48, stdev=32346.69
+    clat (usec): min=9, max=53708, avg=73.55, stdev=732.57
+     lat (usec): min=9, max=53709, avg=73.81, stdev=733.28
+    clat percentiles (usec):
+     |  1.00th=[   14],  5.00th=[   16], 10.00th=[   16], 20.00th=[   17],
+     | 30.00th=[   17], 40.00th=[   18], 50.00th=[   18], 60.00th=[   19],
+     | 70.00th=[   19], 80.00th=[   19], 90.00th=[   19], 95.00th=[   20],
+     | 99.00th=[   52], 99.50th=[ 4621], 99.90th=[11994], 99.95th=[14746],
+     | 99.99th=[20841]
+   bw (  KiB/s): min=87813, max=111237, per=100.00%, avg=106380.59, stdev=377.69, samples=4796
+   iops        : min=175626, max=222474, avg=212761.31, stdev=755.38, samples=4796
+  lat (usec)   : 10=0.08%, 20=95.50%, 50=3.41%, 100=0.09%, 250=0.01%
+  lat (usec)   : 500=0.04%, 750=0.01%, 1000=0.02%
+  lat (msec)   : 2=0.11%, 4=0.20%, 10=0.36%, 20=0.17%, 50=0.01%
+  lat (msec)   : 100=0.01%
+  cpu          : usr=4.79%, sys=20.15%, ctx=314296, majf=0, minf=58
+  IO depths    : 1=0.1%, 2=0.1%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=127590324,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=4
+
+Run status group 0 (all jobs):
+   READ: bw=104MiB/s (109MB/s), 104MiB/s-104MiB/s (109MB/s-109MB/s), io=60.8GiB (65.3GB), run=600023-600023msec
+
+Disk stats (read/write):
+  nvme0n1: ios=31886591/0, sectors=31886591/0, merge=0/0, ticks=253303/0, in_queue=253303, util=99.97%
+  nvme1n1: ios=31886590/0, sectors=31886590/0, merge=0/0, ticks=255466/0, in_queue=255466, util=99.97%
+  nvme2n1: ios=31886590/0, sectors=31886590/0, merge=0/0, ticks=255717/0, in_queue=255717, util=99.97%
+  nvme3n1: ios=31897579/0, sectors=31897579/0, merge=0/0, ticks=255911/0, in_queue=255911, util=99.96%
+
+ Performance counter stats for 'system wide':
+
+           497,053      cs
+
+     600.672592183 seconds time elapsed
+
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=4
+...
+fio-3.35-uring2
+Starting 4 processes
+Jobs: 4 (f=16): [r(4)][100.0%][r=105MiB/s][r=215k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=4): err= 0: pid=144282: Sun Dec  3 18:49:46 2023
+  read: IOPS=215k, BW=105MiB/s (110MB/s)(61.6GiB/600011msec)
+    slat (nsec): min=36, max=29809k, avg=208.04, stdev=31852.17
+    clat (usec): min=8, max=50615, avg=72.71, stdev=766.68
+     lat (usec): min=9, max=50616, avg=72.91, stdev=767.33
+    clat percentiles (usec):
+     |  1.00th=[   14],  5.00th=[   16], 10.00th=[   16], 20.00th=[   17],
+     | 30.00th=[   18], 40.00th=[   18], 50.00th=[   18], 60.00th=[   18],
+     | 70.00th=[   18], 80.00th=[   19], 90.00th=[   19], 95.00th=[   20],
+     | 99.00th=[   44], 99.50th=[ 3851], 99.90th=[13698], 99.95th=[15139],
+     | 99.99th=[22152]
+   bw (  KiB/s): min=87765, max=113125, per=100.00%, avg=107657.11, stdev=427.96, samples=4796
+   iops        : min=175530, max=226250, avg=215314.35, stdev=855.93, samples=4796
+  lat (usec)   : 10=0.09%, 20=95.63%, 50=3.35%, 100=0.05%, 250=0.05%
+  lat (usec)   : 500=0.06%, 750=0.03%, 1000=0.02%
+  lat (msec)   : 2=0.05%, 4=0.21%, 10=0.26%, 20=0.19%, 50=0.02%
+  lat (msec)   : 100=0.01%
+  cpu          : usr=4.54%, sys=20.41%, ctx=310615, majf=0, minf=54
+  IO depths    : 1=0.1%, 2=0.1%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=129121399,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=4
+
+Run status group 0 (all jobs):
+   READ: bw=105MiB/s (110MB/s), 105MiB/s-105MiB/s (110MB/s-110MB/s), io=61.6GiB (66.1GB), run=600011-600011msec
+
+Disk stats (read/write):
+  nvme0n1: ios=32269101/0, sectors=32269101/0, merge=0/0, ticks=254825/0, in_queue=254825, util=99.97%
+  nvme1n1: ios=32269100/0, sectors=32269100/0, merge=0/0, ticks=257457/0, in_queue=257457, util=99.97%
+  nvme2n1: ios=32280350/0, sectors=32280350/0, merge=0/0, ticks=257054/0, in_queue=257054, util=99.96%
+  nvme3n1: ios=32280348/0, sectors=32280348/0, merge=0/0, ticks=257904/0, in_queue=257904, util=99.96%
+
+ Performance counter stats for 'system wide':
+
+           494,789      cs
+
+     600.673435529 seconds time elapsed
+
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=8
+...
+fio-3.35-uring2
+Starting 4 processes
+Jobs: 4 (f=16): [r(4)][100.0%][r=104MiB/s][r=213k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=4): err= 0: pid=144415: Sun Dec  3 18:59:47 2023
+  read: IOPS=213k, BW=104MiB/s (109MB/s)(61.1GiB/600013msec)
+    slat (nsec): min=35, max=40018k, avg=527.11, stdev=91406.78
+    clat (usec): min=11, max=52453, avg=145.73, stdev=1539.80
+     lat (usec): min=11, max=52454, avg=146.26, stdev=1542.48
+    clat percentiles (usec):
+     |  1.00th=[   31],  5.00th=[   35], 10.00th=[   35], 20.00th=[   35],
+     | 30.00th=[   36], 40.00th=[   36], 50.00th=[   37], 60.00th=[   37],
+     | 70.00th=[   37], 80.00th=[   37], 90.00th=[   38], 95.00th=[   40],
+     | 99.00th=[   57], 99.50th=[ 8848], 99.90th=[27919], 99.95th=[30540],
+     | 99.99th=[32113]
+   bw (  KiB/s): min=88714, max=113529, per=100.00%, avg=106786.98, stdev=614.43, samples=4796
+   iops        : min=177429, max=227058, avg=213574.10, stdev=1228.87, samples=4796
+  lat (usec)   : 20=0.03%, 50=98.34%, 100=1.01%, 250=0.01%, 500=0.01%
+  lat (usec)   : 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.18%, 20=0.09%, 50=0.34%
+  lat (msec)   : 100=0.01%
+  cpu          : usr=4.85%, sys=20.10%, ctx=123423, majf=0, minf=57
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=100.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.1%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=128077233,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=8
+
+Run status group 0 (all jobs):
+   READ: bw=104MiB/s (109MB/s), 104MiB/s-104MiB/s (109MB/s-109MB/s), io=61.1GiB (65.6GB), run=600013-600013msec
+
+Disk stats (read/write):
+  nvme0n1: ios=32008452/0, sectors=32008452/0, merge=0/0, ticks=251000/0, in_queue=251000, util=99.97%
+  nvme1n1: ios=32008451/0, sectors=32008451/0, merge=0/0, ticks=253241/0, in_queue=253241, util=99.97%
+  nvme2n1: ios=32008450/0, sectors=32008450/0, merge=0/0, ticks=253591/0, in_queue=253591, util=99.97%
+  nvme3n1: ios=32008449/0, sectors=32008449/0, merge=0/0, ticks=254102/0, in_queue=254102, util=99.97%
+
+ Performance counter stats for 'system wide':
+
+           308,403      cs
+
+     600.666236153 seconds time elapsed
+
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=8
+...
+fio-3.35-uring2
+Starting 4 processes
+Jobs: 4 (f=16): [r(4)][100.0%][r=105MiB/s][r=214k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=4): err= 0: pid=144550: Sun Dec  3 19:09:48 2023
+  read: IOPS=215k, BW=105MiB/s (110MB/s)(61.6GiB/600021msec)
+    slat (nsec): min=36, max=40030k, avg=459.18, stdev=85701.28
+    clat (usec): min=12, max=54150, avg=144.91, stdev=1536.61
+     lat (usec): min=12, max=54151, avg=145.37, stdev=1538.98
+    clat percentiles (usec):
+     |  1.00th=[   31],  5.00th=[   34], 10.00th=[   35], 20.00th=[   35],
+     | 30.00th=[   36], 40.00th=[   36], 50.00th=[   37], 60.00th=[   37],
+     | 70.00th=[   37], 80.00th=[   37], 90.00th=[   38], 95.00th=[   39],
+     | 99.00th=[   62], 99.50th=[ 8717], 99.90th=[27919], 99.95th=[30540],
+     | 99.99th=[32113]
+   bw (  KiB/s): min=88887, max=114694, per=100.00%, avg=107680.84, stdev=636.31, samples=4796
+   iops        : min=177774, max=229389, avg=215361.80, stdev=1272.62, samples=4796
+  lat (usec)   : 20=0.04%, 50=98.23%, 100=1.11%, 250=0.01%, 500=0.01%
+  lat (usec)   : 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.18%, 20=0.08%, 50=0.34%
+  lat (msec)   : 100=0.01%
+  cpu          : usr=4.63%, sys=20.32%, ctx=123643, majf=0, minf=57
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=100.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.1%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=129148964,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=8
+
+Run status group 0 (all jobs):
+   READ: bw=105MiB/s (110MB/s), 105MiB/s-105MiB/s (110MB/s-110MB/s), io=61.6GiB (66.1GB), run=600021-600021msec
+
+Disk stats (read/write):
+  nvme0n1: ios=32276400/0, sectors=32276400/0, merge=0/0, ticks=254656/0, in_queue=254656, util=99.97%
+  nvme1n1: ios=32276398/0, sectors=32276398/0, merge=0/0, ticks=256919/0, in_queue=256919, util=99.97%
+  nvme2n1: ios=32276396/0, sectors=32276396/0, merge=0/0, ticks=257537/0, in_queue=257537, util=99.97%
+  nvme3n1: ios=32276396/0, sectors=32276396/0, merge=0/0, ticks=258078/0, in_queue=258078, util=99.97%
+
+ Performance counter stats for 'system wide':
+
+           307,887      cs
+
+     600.664683194 seconds time elapsed
+
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=16
+...
+fio-3.35-uring2
+Starting 4 processes
+Jobs: 4 (f=16): [r(4)][100.0%][r=102MiB/s][r=208k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=4): err= 0: pid=144687: Sun Dec  3 19:19:49 2023
+  read: IOPS=208k, BW=102MiB/s (107MB/s)(59.5GiB/600016msec)
+    slat (nsec): min=51, max=40026k, avg=968.86, stdev=124385.99
+    clat (usec): min=45, max=54983, avg=302.38, stdev=2210.42
+     lat (usec): min=46, max=54985, avg=303.35, stdev=2213.85
+    clat percentiles (usec):
+     |  1.00th=[   70],  5.00th=[   73], 10.00th=[   73], 20.00th=[   74],
+     | 30.00th=[   75], 40.00th=[   75], 50.00th=[   75], 60.00th=[   76],
+     | 70.00th=[   76], 80.00th=[   77], 90.00th=[   78], 95.00th=[   84],
+     | 99.00th=[ 9110], 99.50th=[21627], 99.90th=[30540], 99.95th=[31065],
+     | 99.99th=[32113]
+   bw (  KiB/s): min=84908, max=111210, per=100.00%, avg=104119.90, stdev=611.44, samples=4796
+   iops        : min=169816, max=222420, avg=208239.91, stdev=1222.89, samples=4796
+  lat (usec)   : 50=0.01%, 100=97.70%, 250=1.02%, 500=0.01%, 750=0.01%
+  lat (usec)   : 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.37%, 20=0.18%, 50=0.71%
+  lat (msec)   : 100=0.01%
+  cpu          : usr=5.22%, sys=19.73%, ctx=123565, majf=0, minf=65
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=100.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.1%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=124879755,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=16
+
+Run status group 0 (all jobs):
+   READ: bw=102MiB/s (107MB/s), 102MiB/s-102MiB/s (107MB/s-107MB/s), io=59.5GiB (63.9GB), run=600016-600016msec
+
+Disk stats (read/write):
+  nvme0n1: ios=31209343/0, sectors=31209343/0, merge=0/0, ticks=246392/0, in_queue=246392, util=99.97%
+  nvme1n1: ios=31209342/0, sectors=31209342/0, merge=0/0, ticks=248629/0, in_queue=248629, util=99.97%
+  nvme2n1: ios=31209341/0, sectors=31209341/0, merge=0/0, ticks=248474/0, in_queue=248474, util=99.97%
+  nvme3n1: ios=31209340/0, sectors=31209340/0, merge=0/0, ticks=249566/0, in_queue=249566, util=99.97%
+
+ Performance counter stats for 'system wide':
+
+           307,210      cs
+
+     600.679627431 seconds time elapsed
+
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=16
+...
+fio-3.35-uring2
+Starting 4 processes
+Jobs: 4 (f=16): [r(4)][100.0%][r=102MiB/s][r=209k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=4): err= 0: pid=144824: Sun Dec  3 19:29:50 2023
+  read: IOPS=208k, BW=102MiB/s (107MB/s)(59.6GiB/600026msec)
+    slat (nsec): min=42, max=40125k, avg=734.28, stdev=107928.87
+    clat (usec): min=47, max=54878, avg=301.66, stdev=2210.98
+     lat (usec): min=47, max=54879, avg=302.40, stdev=2213.56
+    clat percentiles (usec):
+     |  1.00th=[   70],  5.00th=[   73], 10.00th=[   73], 20.00th=[   74],
+     | 30.00th=[   74], 40.00th=[   75], 50.00th=[   75], 60.00th=[   76],
+     | 70.00th=[   76], 80.00th=[   77], 90.00th=[   78], 95.00th=[   85],
+     | 99.00th=[ 9110], 99.50th=[21627], 99.90th=[30540], 99.95th=[31065],
+     | 99.99th=[32113]
+   bw (  KiB/s): min=86227, max=110744, per=100.00%, avg=104264.72, stdev=624.48, samples=4796
+   iops        : min=172454, max=221488, avg=208529.58, stdev=1248.95, samples=4796
+  lat (usec)   : 50=0.01%, 100=98.64%, 250=0.09%, 500=0.01%, 750=0.01%
+  lat (usec)   : 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.37%, 20=0.17%, 50=0.71%
+  lat (msec)   : 100=0.01%
+  cpu          : usr=5.31%, sys=19.64%, ctx=123316, majf=0, minf=61
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=100.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.1%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=125053084,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=16
+
+Run status group 0 (all jobs):
+   READ: bw=102MiB/s (107MB/s), 102MiB/s-102MiB/s (107MB/s-107MB/s), io=59.6GiB (64.0GB), run=600026-600026msec
+
+Disk stats (read/write):
+  nvme0n1: ios=31252308/0, sectors=31252308/0, merge=0/0, ticks=245217/0, in_queue=245217, util=99.97%
+  nvme1n1: ios=31252306/0, sectors=31252306/0, merge=0/0, ticks=247626/0, in_queue=247626, util=99.97%
+  nvme2n1: ios=31252306/0, sectors=31252306/0, merge=0/0, ticks=247719/0, in_queue=247719, util=99.97%
+  nvme3n1: ios=31263269/0, sectors=31263269/0, merge=0/0, ticks=248378/0, in_queue=248378, util=99.96%
+
+ Performance counter stats for 'system wide':
+
+           309,956      cs
+
+     600.672422751 seconds time elapsed
+
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=32
+...
+fio-3.35-uring2
+Starting 4 processes
+Jobs: 4 (f=16): [r(4)][100.0%][r=102MiB/s][r=210k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=4): err= 0: pid=144960: Sun Dec  3 19:39:51 2023
+  read: IOPS=210k, BW=103MiB/s (108MB/s)(60.2GiB/600017msec)
+    slat (nsec): min=40, max=40038k, avg=749.96, stdev=111628.78
+    clat (usec): min=116, max=62483, avg=603.70, stdev=3113.11
+     lat (usec): min=116, max=62485, avg=604.45, stdev=3115.02
+    clat percentiles (usec):
+     |  1.00th=[  143],  5.00th=[  147], 10.00th=[  147], 20.00th=[  147],
+     | 30.00th=[  149], 40.00th=[  149], 50.00th=[  149], 60.00th=[  151],
+     | 70.00th=[  151], 80.00th=[  153], 90.00th=[  159], 95.00th=[  167],
+     | 99.00th=[21627], 99.50th=[24249], 99.90th=[31065], 99.95th=[32113],
+     | 99.99th=[33424]
+   bw (  KiB/s): min=85250, max=112206, per=100.00%, avg=105179.10, stdev=647.35, samples=4796
+   iops        : min=170500, max=224412, avg=210358.33, stdev=1294.69, samples=4796
+  lat (usec)   : 250=97.45%, 500=0.01%, 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.02%, 4=0.02%, 10=0.72%, 20=0.35%, 50=1.42%
+  lat (msec)   : 100=0.01%
+  cpu          : usr=5.18%, sys=19.77%, ctx=123504, majf=0, minf=68
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=100.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.1%, 64=0.0%, >=64=0.0%
+     issued rwts: total=126146746,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=32
+
+Run status group 0 (all jobs):
+   READ: bw=103MiB/s (108MB/s), 103MiB/s-103MiB/s (108MB/s-108MB/s), io=60.2GiB (64.6GB), run=600017-600017msec
+
+Disk stats (read/write):
+  nvme0n1: ios=31526275/0, sectors=31526275/0, merge=0/0, ticks=247565/0, in_queue=247565, util=99.97%
+  nvme1n1: ios=31526275/0, sectors=31526275/0, merge=0/0, ticks=249417/0, in_queue=249417, util=99.97%
+  nvme2n1: ios=31526273/0, sectors=31526273/0, merge=0/0, ticks=249672/0, in_queue=249672, util=99.97%
+  nvme3n1: ios=31526273/0, sectors=31526273/0, merge=0/0, ticks=250307/0, in_queue=250307, util=99.97%
+
+ Performance counter stats for 'system wide':
+
+           308,767      cs
+
+     600.668295525 seconds time elapsed
+
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=32
+...
+fio-3.35-uring2
+Starting 4 processes
+Jobs: 4 (f=16): [r(4)][100.0%][r=105MiB/s][r=214k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=4): err= 0: pid=145093: Sun Dec  3 19:49:52 2023
+  read: IOPS=213k, BW=104MiB/s (109MB/s)(61.0GiB/600008msec)
+    slat (nsec): min=37, max=40172k, avg=487.03, stdev=87926.35
+    clat (usec): min=20, max=77546, avg=595.84, stdev=3091.66
+     lat (usec): min=21, max=77548, avg=596.32, stdev=3092.86
+    clat percentiles (usec):
+     |  1.00th=[  141],  5.00th=[  145], 10.00th=[  145], 20.00th=[  145],
+     | 30.00th=[  147], 40.00th=[  147], 50.00th=[  147], 60.00th=[  149],
+     | 70.00th=[  149], 80.00th=[  151], 90.00th=[  157], 95.00th=[  165],
+     | 99.00th=[21627], 99.50th=[24249], 99.90th=[31065], 99.95th=[32113],
+     | 99.99th=[32375]
+   bw (  KiB/s): min=88157, max=113296, per=100.00%, avg=106683.20, stdev=614.92, samples=4796
+   iops        : min=176314, max=226592, avg=213366.53, stdev=1229.84, samples=4796
+  lat (usec)   : 50=0.01%, 100=0.01%, 250=97.48%, 500=0.02%, 750=0.01%
+  lat (usec)   : 1000=0.01%
+  lat (msec)   : 2=0.02%, 4=0.02%, 10=0.71%, 20=0.35%, 50=1.40%
+  lat (msec)   : 100=0.01%
+  cpu          : usr=4.84%, sys=20.10%, ctx=123582, majf=0, minf=64
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=100.0%, >=64=0.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.1%, 64=0.0%, >=64=0.0%
+     issued rwts: total=127953551,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=32
+
+Run status group 0 (all jobs):
+   READ: bw=104MiB/s (109MB/s), 104MiB/s-104MiB/s (109MB/s-109MB/s), io=61.0GiB (65.5GB), run=600008-600008msec
+
+Disk stats (read/write):
+  nvme0n1: ios=31977211/0, sectors=31977211/0, merge=0/0, ticks=251039/0, in_queue=251039, util=99.97%
+  nvme1n1: ios=31988388/0, sectors=31988388/0, merge=0/0, ticks=253680/0, in_queue=253680, util=99.97%
+  nvme2n1: ios=31988387/0, sectors=31988387/0, merge=0/0, ticks=252910/0, in_queue=252910, util=99.97%
+  nvme3n1: ios=31988387/0, sectors=31988387/0, merge=0/0, ticks=254103/0, in_queue=254103, util=99.96%
+
+ Performance counter stats for 'system wide':
+
+           308,554      cs
+
+     600.679501566 seconds time elapsed
+
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=64
+...
+fio-3.35-uring2
+Starting 4 processes
+Jobs: 4 (f=16): [r(4)][100.0%][r=105MiB/s][r=215k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=4): err= 0: pid=145224: Sun Dec  3 19:59:52 2023
+  read: IOPS=216k, BW=105MiB/s (110MB/s)(61.7GiB/600022msec)
+    slat (nsec): min=36, max=40031k, avg=474.76, stdev=86774.65
+    clat (usec): min=263, max=48453, avg=1183.31, stdev=4319.07
+     lat (usec): min=263, max=48454, avg=1183.79, stdev=4319.87
+    clat percentiles (usec):
+     |  1.00th=[  285],  5.00th=[  289], 10.00th=[  289], 20.00th=[  289],
+     | 30.00th=[  289], 40.00th=[  293], 50.00th=[  293], 60.00th=[  293],
+     | 70.00th=[  297], 80.00th=[  297], 90.00th=[  318], 95.00th=[  338],
+     | 99.00th=[24249], 99.50th=[29754], 99.90th=[32375], 99.95th=[32375],
+     | 99.99th=[40109]
+   bw (  KiB/s): min=86874, max=114664, per=100.00%, avg=107888.07, stdev=646.19, samples=4796
+   iops        : min=173748, max=229328, avg=215776.24, stdev=1292.38, samples=4796
+  lat (usec)   : 500=95.05%, 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.03%, 4=0.04%, 10=1.38%, 20=0.69%, 50=2.81%
+  cpu          : usr=4.58%, sys=20.37%, ctx=122888, majf=0, minf=80
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+     issued rwts: total=129400521,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+   READ: bw=105MiB/s (110MB/s), 105MiB/s-105MiB/s (110MB/s-110MB/s), io=61.7GiB (66.3GB), run=600022-600022msec
+
+Disk stats (read/write):
+  nvme0n1: ios=32339527/0, sectors=32339527/0, merge=0/0, ticks=255263/0, in_queue=255263, util=99.96%
+  nvme1n1: ios=32339526/0, sectors=32339526/0, merge=0/0, ticks=257834/0, in_queue=257834, util=99.97%
+  nvme2n1: ios=32339525/0, sectors=32339525/0, merge=0/0, ticks=257480/0, in_queue=257480, util=99.97%
+  nvme3n1: ios=32339523/0, sectors=32339523/0, merge=0/0, ticks=258605/0, in_queue=258605, util=99.97%
+
+ Performance counter stats for 'system wide':
+
+           306,666      cs
+
+     600.659757618 seconds time elapsed
+
+liburing-test: (g=0): rw=randread, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=liburing, iodepth=64
+...
+fio-3.35-uring2
+Starting 4 processes
+Jobs: 4 (f=16): [r(4)][100.0%][r=103MiB/s][r=212k IOPS][eta 00m:00s]
+liburing-test: (groupid=0, jobs=4): err= 0: pid=145359: Sun Dec  3 20:09:53 2023
+  read: IOPS=212k, BW=103MiB/s (108MB/s)(60.5GiB/600030msec)
+    slat (nsec): min=39, max=40513k, avg=512.04, stdev=91054.08
+    clat (usec): min=18, max=53626, avg=1205.52, stdev=4360.22
+     lat (usec): min=18, max=53627, avg=1206.03, stdev=4361.09
+    clat percentiles (usec):
+     |  1.00th=[  289],  5.00th=[  293], 10.00th=[  293], 20.00th=[  293],
+     | 30.00th=[  297], 40.00th=[  297], 50.00th=[  297], 60.00th=[  297],
+     | 70.00th=[  302], 80.00th=[  306], 90.00th=[  322], 95.00th=[ 2573],
+     | 99.00th=[24249], 99.50th=[30540], 99.90th=[32375], 99.95th=[32375],
+     | 99.99th=[40109]
+   bw (  KiB/s): min=86976, max=112918, per=100.00%, avg=105857.27, stdev=622.70, samples=4796
+   iops        : min=173952, max=225836, avg=211714.67, stdev=1245.40, samples=4796
+  lat (usec)   : 20=0.01%, 50=0.01%, 100=0.01%, 250=0.01%, 500=94.95%
+  lat (usec)   : 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.03%, 4=0.04%, 10=1.37%, 20=0.76%, 50=2.84%
+  lat (msec)   : 100=0.01%
+  cpu          : usr=4.95%, sys=20.00%, ctx=123235, majf=0, minf=84
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+     issued rwts: total=126963822,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+   READ: bw=103MiB/s (108MB/s), 103MiB/s-103MiB/s (108MB/s-108MB/s), io=60.5GiB (65.0GB), run=600030-600030msec
+
+Disk stats (read/write):
+  nvme0n1: ios=31729789/0, sectors=31729789/0, merge=0/0, ticks=250183/0, in_queue=250183, util=99.97%
+  nvme1n1: ios=31740956/0, sectors=31740956/0, merge=0/0, ticks=252435/0, in_queue=252435, util=99.96%
+  nvme2n1: ios=31740955/0, sectors=31740955/0, merge=0/0, ticks=252592/0, in_queue=252592, util=99.96%
+  nvme3n1: ios=31740954/0, sectors=31740954/0, merge=0/0, ticks=253593/0, in_queue=253593, util=99.96%
+
+ Performance counter stats for 'system wide':
+
+           308,178      cs
+
+     600.674004644 seconds time elapsed
+
+brynjar@node2:~/exp_1_2023-12-03$ vim run.sh
+brynjar@node2:~/exp_1_2023-12-03$
